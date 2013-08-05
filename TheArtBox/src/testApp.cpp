@@ -7,8 +7,8 @@ void testApp::setup(){
     // Screen
     ofEnableAlphaBlending();
     ofBackground(100);
-    int width = ofGetWindowWidth();
-    int height = ofGetWindowHeight();
+    width = ofGetWindowWidth();
+    height = ofGetWindowHeight();
 
     // XML ASSETS
     assets.loadFile("xml/assets.xml");
@@ -33,9 +33,6 @@ void testApp::setup(){
     video.loadMovie("movies/fingers.mov");
     video.firstFrame();
     video.setPaused(true);
-
-    // Image
-    image.loadImage("images/A.jpg");
 
     // Set Colour Thumbnail
     setColourThumbnailImage(width, height);
@@ -207,6 +204,19 @@ void testApp::setAssets(int _currentIndex) {
     else if (fileExtension == "JPG" || fileExtension == "PNG") {
         ofLogNotice("FILE IS AN IMAGE");
         currentAssetIsMovie = false;
+
+        // Clear Image ?
+        if(image.bAllocated() == true) {
+            ofLog(OF_LOG_NOTICE, "Clearing Image Pixels...");
+            image.clear();
+        }
+        else {
+            ofLog(OF_LOG_NOTICE, "Image Pixels Already Empty...");
+        }
+
+        // Image
+        image.loadImage(artistMedia[_currentIndex]);
+
     }
 
 }
@@ -286,6 +296,14 @@ void testApp::setupGL(int width, int height) {
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
+
+    // Index
+    currentIndex++;
+    setAssets(currentIndex);
+    // Set Colour Thumbnail
+    setColourThumbnailImage(width, height);
+    // Convert To Grayscale
+    setBlackAndWhiteThumbnailImage(thumbnail);
 
 }
 
