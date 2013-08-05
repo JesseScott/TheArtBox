@@ -70,10 +70,13 @@ void testApp::setup(){
         // Load Artist Names
         loadArtists();
 
+        // Load Media Names
+        loadAssets();
+
 
     }
     else {
-        ofLog(OF_LOG_NOTICE, "UNABLE to load xml file :( \n");
+        ofLog(OF_LOG_ERROR, "UNABLE to load xml file :( \n");
     }
 
     bBrushDown = false;
@@ -133,6 +136,7 @@ void testApp::draw(){
 //--------------------------------------------------------------
 // CUSTOM XML FUNCTIONS
 void testApp::loadFonts() {
+
     // Push In
     assets.pushTag("assets");
     assets.pushTag("fonts");
@@ -140,6 +144,9 @@ void testApp::loadFonts() {
     // Get Font Path
     string fontName = assets.getValue("file", "null", 0);
     ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
+
+    // Console Padding
+    cout << "" << endl;
 
     // Make Sure Its Valid
     if(fontName.length() > 0) {
@@ -152,9 +159,10 @@ void testApp::loadFonts() {
 }
 
 void testApp::loadArtists() {
+
     // Push In
     assets.pushTag("assets");
-    assets.pushTag("titles");
+    assets.pushTag("artists");
 
     // Find Number
     int num = assets.getNumTags("file");
@@ -163,8 +171,11 @@ void testApp::loadArtists() {
     // Iterate & Assign
     for(int i = 0; i < artistNames.size(); i++) {
         artistNames[i] = assets.getValue("file", "null", i);
-        cout << "Name #" << i << " is " << artistNames[i] << endl;
+        ofLog(OF_LOG_NOTICE, "Name #" + ofToString(i) + " is " + artistNames[i]);
     }
+
+    // Console Padding
+    cout << "" << endl;
 
     // Pop Out
     assets.popTag();
@@ -173,6 +184,27 @@ void testApp::loadArtists() {
 }
 
 void testApp::loadAssets() {
+
+    // Push In
+    assets.pushTag("assets");
+    assets.pushTag("media");
+
+    // Find Number
+    int num = assets.getNumTags("file");
+    artistMedia.resize(num);
+
+    // Iterate & Assign
+    for(int i = 0; i < artistMedia.size(); i++) {
+        artistMedia[i] = assets.getValue("file", "null", i);
+        ofLog(OF_LOG_NOTICE, "File #" + ofToString(i) + " is " + artistMedia[i]);
+    }
+
+    // Console Padding
+    cout << "" << endl;
+
+    // Pop Out
+    assets.popTag();
+    assets.popTag();
 
 }
 
@@ -200,12 +232,6 @@ void testApp::mouseDragged(int x, int y, int button){
 void testApp::mousePressed(int x, int y, int button){
 
     bBrushDown = true;
-
-    /*
-    cout << "BG COLOR: " << thumbnail.getColor(x, y) << endl;
-    cout << "FG COLOR: " << foreground.getColor(x, y) << endl;
-    cout << endl;
-    */
 }
 
 //--------------------------------------------------------------
