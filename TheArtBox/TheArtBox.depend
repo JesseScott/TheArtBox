@@ -1132,8 +1132,9 @@
 	"ofCamera.h"
 	"ofEvents.h"
 
-1375727102 c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.h
+1375729870 c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.h
 	"ofMain.h"
+	"ofxXmlSettings.h"
 
 1361294488 c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\libs\openframeworks\app\ofappglutwindow.h
 	"ofConstants.h"
@@ -1145,7 +1146,7 @@
 	"ofPoint.h"
 	"ofTypes.h"
 
-1375727102 source:c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.cpp
+1375729751 source:c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.cpp
 	"testApp.h"
 
 1361294480 source:c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\addons\ofxxmlsettings\libs\tinyxml.cpp
@@ -1173,4 +1174,15 @@
 	<stddef.h>
 	"tinyxml.h"
 	<windows.h>
+
+1361294480 source:c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\addons\ofxxmlsettings\src\ofxxmlsettings.cpp
+	"ofxXmlSettings.h"
+	<vector>
+	<string>
+	<iostream>
+
+1361294480 c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\addons\ofxxmlsettings\src\ofxxmlsettings.h
+	"ofMain.h"
+	<string.h>
+	"tinyxml.h"
 

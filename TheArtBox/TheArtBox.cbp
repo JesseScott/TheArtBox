@@ -67,6 +67,8 @@
 			<Add directory="../../../libs/poco/include" />
 			<Add directory="../../../libs/tess2/include" />
 			<Add directory="../../../libs/cairo/include/cairo" />
+			<Add directory="../../../addons/ofxXmlSettings/src" />
+			<Add directory="../../../addons/ofxXmlSettings/libs" />
 		</Compiler>
 		<Linker>
 			<Add library="..\..\..\libs\FreeImage\lib\win_cb\FreeImage.lib" />
