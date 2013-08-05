@@ -63,14 +63,13 @@ void testApp::setup(){
     assets.loadFile("xml/assets.xml");
     if( assets.loadFile("xml/assets.xml") ) {
         ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
-        // Load Font
-        assets.pushTag("assets");
-        assets.pushTag("fonts");
-        string fontName = assets.getValue("file", "null", 0);
-        ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
-        if(fontName.length() > 0) {
-            font.loadFont(fontName, 48);
-        }
+
+        // Load Fonts
+        loadFonts();
+
+        // Load Artist Names
+        loadArtists();
+
 
     }
     else {
@@ -129,6 +128,52 @@ void testApp::draw(){
     font.drawString("HELLO", 200, 200);
 
     //cout << ofGetFrameRate() << endl;
+}
+
+//--------------------------------------------------------------
+// CUSTOM XML FUNCTIONS
+void testApp::loadFonts() {
+    // Push In
+    assets.pushTag("assets");
+    assets.pushTag("fonts");
+
+    // Get Font Path
+    string fontName = assets.getValue("file", "null", 0);
+    ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
+
+    // Make Sure Its Valid
+    if(fontName.length() > 0) {
+        font.loadFont(fontName, 48);
+    }
+
+    // Pop Out
+    assets.popTag();
+    assets.popTag();
+}
+
+void testApp::loadArtists() {
+    // Push In
+    assets.pushTag("assets");
+    assets.pushTag("titles");
+
+    // Find Number
+    int num = assets.getNumTags("file");
+    artistNames.resize(num);
+
+    // Iterate & Assign
+    for(int i = 0; i < artistNames.size(); i++) {
+        artistNames[i] = assets.getValue("file", "null", i);
+        cout << "Name #" << i << " is " << artistNames[i] << endl;
+    }
+
+    // Pop Out
+    assets.popTag();
+    assets.popTag();
+
+}
+
+void testApp::loadAssets() {
+
 }
 
 //--------------------------------------------------------------

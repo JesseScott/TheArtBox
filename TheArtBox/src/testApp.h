@@ -21,7 +21,9 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		// Added
+		void loadFonts();
 		void loadAssets();
+		void loadArtists();
 
         // Variables
         ofImage foreground;
@@ -36,5 +38,8 @@ class testApp : public ofBaseApp{
 
         ofxXmlSettings assets;
         ofTrueTypeFont font;
+
+        vector<string> artistNames;
+        vector<string> artistMedia;
 
 };
