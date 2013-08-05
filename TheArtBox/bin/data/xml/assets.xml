@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<assets>
+
+	<!--	==== media====	-->
+	<media>
+		<file>movies/fingers.mov</file>
+            	<file>images/A.jpg</file>
+            	<file>images/B.jpg</file>
+           	<file>movies/fingers.mov</file>
+            	<file>images/A.jpg</file>
+            	<file>images/B.jpg</file>
+	</media>
+
+	<!--	==== fonts ====	-->
+	<fonts>
+		<file>fonts/Futura-Bold.ttf</file>
+	</fonts>
+
+	<!--	==== titles ====	-->
+	<titles>
+		<file>Rhiannon Collett</file>
+		<file>Calvin Nimmo</file>
+		<file>Annette Cheung</file>
+		<file>Sterling Megas</file>
+		<file>Josh Stuible</file>
+		<file>Robyn Moore</file>
+	</titles>
+
+</assets>
