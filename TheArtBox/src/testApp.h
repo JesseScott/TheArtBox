@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxXmlSettings.h"
 
 class testApp : public ofBaseApp{
 
@@ -18,17 +19,22 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-    
+
+		// Added
+		void loadAssets();
+
         // Variables
         ofImage foreground;
         ofImage thumbnail;
         ofVideoPlayer video;
         ofImage brush;
-        ofImage     srcImg;
-        ofImage     dstImg;
+
         ofShader shader;
         ofFbo maskFbo;
         ofFbo fbo;
         bool bBrushDown;
-    
+
+        ofxXmlSettings assets;
+        ofTrueTypeFont font;
+
 };

@@ -3,35 +3,43 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-    
+
     ofEnableAlphaBlending();
     ofBackground(100);
-    
+
     // Video
     video.loadMovie("movies/fingers.mov");
     video.firstFrame();
     video.setPaused(true);
-    
+
     // Resize
-    int width = 800;
-    int height = 600;
+    int width = ofGetWindowWidth();
+    int height = ofGetWindowHeight();
     ofSetWindowShape(width, height);
 
     // Background
     thumbnail.setFromPixels(video.getPixels(), video.getWidth(), video.getHeight(), OF_IMAGE_COLOR); // A
     thumbnail.resize(width, height);
-    
+
     // Convert To Grayscale
     foreground = thumbnail;
     foreground.setImageType(OF_IMAGE_GRAYSCALE); // B
-    
+
     // Brush
     brush.loadImage("images/brush.png");
-    
+
     // FBOs
     maskFbo.allocate(width,height);
     fbo.allocate(width,height);
-    
+
+    maskFbo.begin();
+        ofClear(0,0,0,255);
+    maskFbo.end();
+
+    fbo.begin();
+        ofClear(0,0,0,255);
+    fbo.end();
+
     // Shader
     string shaderProgram = "#version 120\n \
     #extension GL_ARB_texture_rectangle : enable\n \
@@ -47,25 +55,36 @@ void testApp::setup(){
     \
     gl_FragColor = vec4( src , mask);\
     }";
-    
+
     shader.setupShaderFromSource(GL_FRAGMENT_SHADER, shaderProgram);
     shader.linkProgram();
-    
-    maskFbo.begin();
-        ofClear(0,0,0,255);
-    maskFbo.end();
-    
-    fbo.begin();
-        ofClear(0,0,0,255);
-    fbo.end();
+
+    // XML ASSETS
+    assets.loadFile("xml/assets.xml");
+    if( assets.loadFile("xml/assets.xml") ) {
+        ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
+        cout << "here" << endl;
+        // Load Font
+        assets.pushTag("assets");
+        assets.pushTag("fonts");
+        cout << assets.getPushLevel() << endl;
+        string fontName = assets.getValue("file", "null", 0);
+        ofLog(OF_LOG_NOTICE, "\t The Name Of Asset #0 Is: " + fontName);
+
+    }
+    else {
+        ofLog(OF_LOG_NOTICE, "UNABLE to load xml file :( \n");
+    }
 
     bBrushDown = false;
+
+
 
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-    
+
     //
     maskFbo.begin();
         if (bBrushDown){
@@ -73,7 +92,7 @@ void testApp::update(){
             brush.draw(mouseX-25, mouseY-25, 50, 50);
         }
     maskFbo.end();
-    
+
     //
     fbo.begin();
         ofClear(0, 0, 0, 0);
@@ -82,7 +101,7 @@ void testApp::update(){
             thumbnail.draw(0, 0);
         shader.end();
     fbo.end();
-    
+
     // Idle Video
     video.update();
 
@@ -90,22 +109,22 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    
+
     ofSetColor(255,255);
-    
+
     // Draw Video
     //video.draw(0, 0);
 
     // Draw Color Thumbnail
     //thumbnail.draw(0, 0);
-    
+
     // Draw B+W Foreground
     foreground.draw(0, 0);
-    
+
     // Dra FBO
     fbo.draw(0, 0);
-    
-    cout << ofGetFrameRate() << endl;
+
+    //cout << ofGetFrameRate() << endl;
 }
 
 //--------------------------------------------------------------
@@ -130,9 +149,9 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-    
+
     bBrushDown = true;
-    
+
     /*
     cout << "BG COLOR: " << thumbnail.getColor(x, y) << endl;
     cout << "FG COLOR: " << foreground.getColor(x, y) << endl;
@@ -156,6 +175,6 @@ void testApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
+void testApp::dragEvent(ofDragInfo dragInfo){
 
 }
