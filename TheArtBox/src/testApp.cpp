@@ -34,9 +34,9 @@ void testApp::setup(){
     video.firstFrame();
     video.setPaused(true);
 
-    // Background
-    thumbnail.setFromPixels(video.getPixels(), video.getWidth(), video.getHeight(), OF_IMAGE_COLOR);
-    thumbnail.resize(width, height);
+    // Set Colour Thumbnail
+    setColourThumbnailImage(width, height);
+
 
     // Convert To Grayscale
     foreground = thumbnail;
@@ -179,10 +179,12 @@ void testApp::loadAssets() {
 
 }
 
+//--------------------------------------------------------------
+// CUSTOM IMAGE FUNCTIONS
+
 void testApp::setAssets(int _currentIndex) {
 
     // Cast to String
-    //string file( ofToString(dragInfo.files[0]) );
     string file = artistMedia[_currentIndex];
     ofLogNotice("File Path Is " + file);
 
@@ -197,22 +199,56 @@ void testApp::setAssets(int _currentIndex) {
     // Video
     if (fileExtension == "MP4" || fileExtension == "MOV") {
         ofLogNotice("FILE IS A MOVIE");
+        currentAssetIsMovie = true;
     }
     // Image
     else if (fileExtension == "JPG" || fileExtension == "PNG") {
         ofLogNotice("FILE IS AN IMAGE");
+        currentAssetIsMovie = false;
+    }
+
+}
+
+void testApp::setColourThumbnailImage(int width, int height) {
+
+    // Clear Thumbnail ?
+    if(thumbnail.bAllocated() == true) {
+        ofLog(OF_LOG_NOTICE, "Clearing Thumbnail Pixels...");
+        thumbnail.clear();
+    }
+    else {
+        ofLog(OF_LOG_NOTICE, "Thumbnail Pixels Already Empty...");
+    }
+
+    // Set From ofVideoPlayer
+    if(currentAssetIsMovie == true) {
+        ofLog(OF_LOG_NOTICE, "Setting Thumbnail Pixels From Video");
+        thumbnail.setFromPixels(video.getPixels(), video.getWidth(), video.getHeight(), OF_IMAGE_COLOR);
+        thumbnail.resize(width, height);
+    }
+    // Set From ofImage
+    else {
+        ofLog(OF_LOG_NOTICE, "Setting Thumbnail Pixels From Image");
+        thumbnail.setFromPixels(image.getPixels(), image.getWidth(), image.getHeight(), OF_IMAGE_COLOR);
+        thumbnail.resize(width, height);
     }
 
 
 }
 
+void testApp::setBlackAndWhiteThumbnailImage(ofImage img) {
+
+
+}
+
+
 //--------------------------------------------------------------
 // CUSTOM GL FUNCTIONS
 
-void testApp::setupGL(int _width, int _height) {
+void testApp::setupGL(int width, int height) {
     // FBOs
-    maskFbo.allocate(_width, _height);
-    fbo.allocate(_width, _height);
+    maskFbo.allocate(width, height);
+    fbo.allocate(width, height);
 
     maskFbo.begin();
         ofClear(0,0,0,255);

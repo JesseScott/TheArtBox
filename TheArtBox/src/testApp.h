@@ -26,6 +26,8 @@ class testApp : public ofBaseApp{
         void setAssets(int index);
 		void loadAssets();
 		void setupGL(int _width, int _height);
+		void setColourThumbnailImage(int _width, int _height);
+		void setBlackAndWhiteThumbnailImage(ofImage img);
 
         // Canvas
         ofImage foreground;
@@ -33,7 +35,7 @@ class testApp : public ofBaseApp{
         ofVideoPlayer video;
         ofImage image;
         int currentIndex;
-        bool isMovie;
+        bool currentAssetIsMovie;
 
         // GL / GPU
         ofShader shader;
