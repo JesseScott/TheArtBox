@@ -63,13 +63,14 @@ void testApp::setup(){
     assets.loadFile("xml/assets.xml");
     if( assets.loadFile("xml/assets.xml") ) {
         ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
-        cout << "here" << endl;
         // Load Font
         assets.pushTag("assets");
         assets.pushTag("fonts");
-        cout << assets.getPushLevel() << endl;
         string fontName = assets.getValue("file", "null", 0);
-        ofLog(OF_LOG_NOTICE, "\t The Name Of Asset #0 Is: " + fontName);
+        ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
+        if(fontName.length() > 0) {
+            font.loadFont(fontName, 48);
+        }
 
     }
     else {
@@ -79,7 +80,7 @@ void testApp::setup(){
     bBrushDown = false;
 
 
-
+    cout << "Setup Is Done" << endl;
 }
 
 //--------------------------------------------------------------
@@ -121,8 +122,11 @@ void testApp::draw(){
     // Draw B+W Foreground
     foreground.draw(0, 0);
 
-    // Dra FBO
+    // Draw FBO
     fbo.draw(0, 0);
+
+    // Caption
+    font.drawString("HELLO", 200, 200);
 
     //cout << ofGetFrameRate() << endl;
 }
