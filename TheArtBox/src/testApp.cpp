@@ -4,81 +4,51 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 
+    // Screen
     ofEnableAlphaBlending();
     ofBackground(100);
+    int width = ofGetWindowWidth();
+    int height = ofGetWindowHeight();
+
+    // XML ASSETS
+    assets.loadFile("xml/assets.xml");
+    if( assets.loadFile("xml/assets.xml") ) {
+        ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
+        // Load Fonts
+        loadFonts();
+        // Load Artist Names
+        loadArtists();
+        // Load Media Names
+        loadAssets();
+    }
+    else {
+        ofLog(OF_LOG_ERROR, "UNABLE to load xml file :( \n");
+    }
+
+    // Index
+    currentIndex = 0;
+    setAssets(currentIndex);
 
     // Video
     video.loadMovie("movies/fingers.mov");
     video.firstFrame();
     video.setPaused(true);
 
-    // Resize
-    int width = ofGetWindowWidth();
-    int height = ofGetWindowHeight();
-    ofSetWindowShape(width, height);
-
     // Background
-    thumbnail.setFromPixels(video.getPixels(), video.getWidth(), video.getHeight(), OF_IMAGE_COLOR); // A
+    thumbnail.setFromPixels(video.getPixels(), video.getWidth(), video.getHeight(), OF_IMAGE_COLOR);
     thumbnail.resize(width, height);
 
     // Convert To Grayscale
     foreground = thumbnail;
-    foreground.setImageType(OF_IMAGE_GRAYSCALE); // B
+    foreground.setImageType(OF_IMAGE_GRAYSCALE);
 
     // Brush
     brush.loadImage("images/brush.png");
 
-    // FBOs
-    maskFbo.allocate(width,height);
-    fbo.allocate(width,height);
+    // FBO & GLSL SHADER
+    setupGL(width, height);
 
-    maskFbo.begin();
-        ofClear(0,0,0,255);
-    maskFbo.end();
-
-    fbo.begin();
-        ofClear(0,0,0,255);
-    fbo.end();
-
-    // Shader
-    string shaderProgram = "#version 120\n \
-    #extension GL_ARB_texture_rectangle : enable\n \
-    \
-    uniform sampler2DRect tex0;\
-    uniform sampler2DRect maskTex;\
-    \
-    void main (void){\
-    vec2 pos = gl_TexCoord[0].st;\
-    \
-    vec3 src = texture2DRect(tex0, pos).rgb;\
-    float mask = texture2DRect(maskTex, pos).r;\
-    \
-    gl_FragColor = vec4( src , mask);\
-    }";
-
-    shader.setupShaderFromSource(GL_FRAGMENT_SHADER, shaderProgram);
-    shader.linkProgram();
-
-    // XML ASSETS
-    assets.loadFile("xml/assets.xml");
-    if( assets.loadFile("xml/assets.xml") ) {
-        ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
-
-        // Load Fonts
-        loadFonts();
-
-        // Load Artist Names
-        loadArtists();
-
-        // Load Media Names
-        loadAssets();
-
-
-    }
-    else {
-        ofLog(OF_LOG_ERROR, "UNABLE to load xml file :( \n");
-    }
-
+    // Paint
     bBrushDown = false;
 
 
@@ -135,6 +105,7 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 // CUSTOM XML FUNCTIONS
+
 void testApp::loadFonts() {
 
     // Push In
@@ -205,6 +176,71 @@ void testApp::loadAssets() {
     // Pop Out
     assets.popTag();
     assets.popTag();
+
+}
+
+void testApp::setAssets(int _currentIndex) {
+
+    // Cast to String
+    //string file( ofToString(dragInfo.files[0]) );
+    string file = artistMedia[_currentIndex];
+    ofLogNotice("File Path Is " + file);
+
+    // Copy & Trim String
+    string temp = file;
+    temp.erase(temp.begin(), temp.end() - 3);
+
+    // Convert Copy To Uppercase
+    string fileExtension = ofToUpper(temp);
+    ofLogNotice("Object Is A " + fileExtension + " File ");
+
+    // Video
+    if (fileExtension == "MP4" || fileExtension == "MOV") {
+        ofLogNotice("FILE IS A MOVIE");
+    }
+    // Image
+    else if (fileExtension == "JPG" || fileExtension == "PNG") {
+        ofLogNotice("FILE IS AN IMAGE");
+    }
+
+
+}
+
+//--------------------------------------------------------------
+// CUSTOM GL FUNCTIONS
+
+void testApp::setupGL(int _width, int _height) {
+    // FBOs
+    maskFbo.allocate(_width, _height);
+    fbo.allocate(_width, _height);
+
+    maskFbo.begin();
+        ofClear(0,0,0,255);
+    maskFbo.end();
+
+    fbo.begin();
+        ofClear(0,0,0,255);
+    fbo.end();
+
+    // SHADER
+    string shaderProgram = "#version 120\n \
+    #extension GL_ARB_texture_rectangle : enable\n \
+    \
+    uniform sampler2DRect tex0;\
+    uniform sampler2DRect maskTex;\
+    \
+    void main (void){\
+    vec2 pos = gl_TexCoord[0].st;\
+    \
+    vec3 src = texture2DRect(tex0, pos).rgb;\
+    float mask = texture2DRect(maskTex, pos).r;\
+    \
+    gl_FragColor = vec4( src , mask);\
+    }";
+
+    shader.setupShaderFromSource(GL_FRAGMENT_SHADER, shaderProgram);
+    shader.linkProgram();
+
 
 }
 

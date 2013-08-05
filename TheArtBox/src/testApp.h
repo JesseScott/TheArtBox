@@ -20,25 +20,33 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		// Added
+		// Added Methods
 		void loadFonts();
-		void loadAssets();
 		void loadArtists();
+        void setAssets(int index);
+		void loadAssets();
+		void setupGL(int _width, int _height);
 
-        // Variables
+        // Canvas
         ofImage foreground;
         ofImage thumbnail;
         ofVideoPlayer video;
-        ofImage brush;
+        ofImage image;
+        int currentIndex;
+        bool isMovie;
 
+        // GL / GPU
         ofShader shader;
         ofFbo maskFbo;
         ofFbo fbo;
+
+        // Painting
+        ofImage brush;
         bool bBrushDown;
 
+        // Assets
         ofxXmlSettings assets;
         ofTrueTypeFont font;
-
         vector<string> artistNames;
         vector<string> artistMedia;
 
