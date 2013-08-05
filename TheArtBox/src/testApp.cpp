@@ -26,7 +26,7 @@ void testApp::setup(){
     }
 
     // Index
-    currentIndex = 0;
+    currentIndex = 1;
     setAssets(currentIndex);
 
     // Video
@@ -34,13 +34,15 @@ void testApp::setup(){
     video.firstFrame();
     video.setPaused(true);
 
+    // Image
+    image.loadImage("images/A.jpg");
+
     // Set Colour Thumbnail
     setColourThumbnailImage(width, height);
 
 
     // Convert To Grayscale
-    foreground = thumbnail;
-    foreground.setImageType(OF_IMAGE_GRAYSCALE);
+    setBlackAndWhiteThumbnailImage(thumbnail);
 
     // Brush
     brush.loadImage("images/brush.png");
@@ -238,6 +240,8 @@ void testApp::setColourThumbnailImage(int width, int height) {
 
 void testApp::setBlackAndWhiteThumbnailImage(ofImage img) {
 
+    foreground = img;
+    foreground.setImageType(OF_IMAGE_GRAYSCALE);
 
 }
 
