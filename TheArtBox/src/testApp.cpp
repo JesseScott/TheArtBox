@@ -25,21 +25,10 @@ void testApp::setup(){
         ofLog(OF_LOG_ERROR, "UNABLE to load xml file :( \n");
     }
 
-    // Index
-    currentIndex = 1;
-    setAssets(currentIndex);
-
-    // Video
-    video.loadMovie("movies/fingers.mov");
-    video.firstFrame();
-    video.setPaused(true);
-
-    // Set Colour Thumbnail
-    setColourThumbnailImage(width, height);
-
-
-    // Convert To Grayscale
-    setBlackAndWhiteThumbnailImage(thumbnail);
+    // Set Index
+    currentIndex = 0;
+    // Update Assets
+    updateCurrentIndex();
 
     // Brush
     brush.loadImage("images/brush.png");
@@ -51,7 +40,7 @@ void testApp::setup(){
     bBrushDown = false;
 
 
-    cout << "Setup Is Done" << endl;
+    cout << "Setup Is Done \n" << endl;
 }
 
 //--------------------------------------------------------------
@@ -199,6 +188,21 @@ void testApp::setAssets(int _currentIndex) {
     if (fileExtension == "MP4" || fileExtension == "MOV") {
         ofLogNotice("FILE IS A MOVIE");
         currentAssetIsMovie = true;
+
+        // Clear Movie ?
+        if(video.isLoaded() == true) {
+            ofLog(OF_LOG_NOTICE, "Clearing Video Pixels...");
+            video.closeMovie();
+        }
+        else {
+            ofLog(OF_LOG_NOTICE, "Video Pixels Already Empty...");
+        }
+
+        // Load Movie
+        video.loadMovie(artistMedia[_currentIndex]);
+        video.firstFrame();
+        video.setPaused(true);
+
     }
     // Image
     else if (fileExtension == "JPG" || fileExtension == "PNG") {
@@ -214,11 +218,12 @@ void testApp::setAssets(int _currentIndex) {
             ofLog(OF_LOG_NOTICE, "Image Pixels Already Empty...");
         }
 
-        // Image
+        // Load Image
         image.loadImage(artistMedia[_currentIndex]);
-
     }
 
+    // Console Padding
+    cout << "" << endl;
 }
 
 void testApp::setColourThumbnailImage(int width, int height) {
@@ -252,6 +257,17 @@ void testApp::setBlackAndWhiteThumbnailImage(ofImage img) {
 
     foreground = img;
     foreground.setImageType(OF_IMAGE_GRAYSCALE);
+
+}
+
+void testApp::updateCurrentIndex() {
+
+    // Index
+    setAssets(currentIndex);
+    // Set Colour Thumbnail
+    setColourThumbnailImage(width, height);
+    // Convert To Grayscale
+    setBlackAndWhiteThumbnailImage(thumbnail);
 
 }
 
@@ -297,13 +313,10 @@ void testApp::setupGL(int width, int height) {
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
 
-    // Index
+    // Increase PlayCount
     currentIndex++;
-    setAssets(currentIndex);
-    // Set Colour Thumbnail
-    setColourThumbnailImage(width, height);
-    // Convert To Grayscale
-    setBlackAndWhiteThumbnailImage(thumbnail);
+    // Update Assets
+    updateCurrentIndex();
 
 }
 

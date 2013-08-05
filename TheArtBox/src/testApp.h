@@ -28,6 +28,7 @@ class testApp : public ofBaseApp{
 		void setupGL(int _width, int _height);
 		void setColourThumbnailImage(int _width, int _height);
 		void setBlackAndWhiteThumbnailImage(ofImage img);
+		void updateCurrentIndex();
 
         // Canvas
         ofImage foreground;
