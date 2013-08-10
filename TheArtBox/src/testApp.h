@@ -36,6 +36,7 @@ class testApp : public ofBaseApp{
         ofVideoPlayer video;
         ofImage image;
         int width, height;
+        int maxIndex;
         int currentIndex;
         bool currentAssetIsMovie;
 

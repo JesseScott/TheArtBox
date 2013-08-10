@@ -86,7 +86,7 @@ void testApp::draw(){
     fbo.draw(0, 0);
 
     // Caption
-    font.drawString("HELLO", 200, 200);
+    font.drawString(artistNames[currentIndex], 200, 200);
 
     //cout << ofGetFrameRate() << endl;
 }
@@ -151,6 +151,7 @@ void testApp::loadAssets() {
     // Find Number
     int num = assets.getNumTags("file");
     artistMedia.resize(num);
+    maxIndex = num;
 
     // Iterate & Assign
     for(int i = 0; i < artistMedia.size(); i++) {
@@ -315,6 +316,10 @@ void testApp::keyPressed(int key){
 
     // Increase PlayCount
     currentIndex++;
+    // Check Limit
+    if(currentIndex >= maxIndex) {
+        currentIndex = 0;
+    }
     // Update Assets
     updateCurrentIndex();
 
