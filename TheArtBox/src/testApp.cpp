@@ -312,25 +312,17 @@ void testApp::setupGL(int width, int height) {
 
 }
 
-void testApp::getIdealBrightness() {
+int testApp::getCurrentBrightness() {
 
-    int a = 0;
-    for(int i = 0; i < thumbnail.getPixelsRef().size(); i++) {
-        //a += thumbnail.getPixelsRef().
-
-    }
-
-
-}
-
-void testApp::getCurrentBrightness() {
-
-    int alpha;
+    // Counters
+    int alpha = 0;
     int count = 0;
+
+    // Convert to Pixels
     ofPixels pixels;
     maskFbo.readToPixels(pixels, 0);
-    ofPixels pixa = pixels.getChannel(3);
 
+    // Loop Through And Add All The Alpha Values
     for(int x = 0; x < pixels.getWidth(); x++) {
         for(int y = 0; y < pixels.getHeight(); y++) {
             ofColor c = pixels.getColor(x, y);
@@ -338,9 +330,12 @@ void testApp::getCurrentBrightness() {
             count++;
         }
     }
+
+    // Average Over the Total Number Of Pixels
     alpha = alpha / count;
     cout << "ALPHA IS " << alpha << endl;
 
+    return alpha;
 }
 
 

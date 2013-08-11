@@ -31,8 +31,7 @@ class testApp : public ofBaseApp{
 		void updateCurrentIndex();
 
         void setupGL(int _width, int _height);
-        void getIdealBrightness();
-        void getCurrentBrightness();
+        int getCurrentBrightness();
 
         // Canvas
         ofImage foreground;
@@ -48,7 +47,6 @@ class testApp : public ofBaseApp{
         ofShader shader;
         ofFbo maskFbo;
         ofFbo fbo;
-        int idealBrightness;
         int currentBrightness;
 
         // Painting
