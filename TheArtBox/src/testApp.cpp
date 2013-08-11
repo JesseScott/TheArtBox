@@ -269,6 +269,10 @@ void testApp::updateCurrentIndex() {
     setColourThumbnailImage(width, height);
     // Convert To Grayscale
     setBlackAndWhiteThumbnailImage(thumbnail);
+    // Clear FBO
+    maskFbo.begin();
+        ofClear(0,0,0,255);
+    maskFbo.end();
 
 }
 
