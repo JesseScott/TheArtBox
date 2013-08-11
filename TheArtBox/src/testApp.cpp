@@ -39,6 +39,8 @@ void testApp::setup(){
     // Paint
     bBrushDown = false;
 
+    // Check Memory
+    checkMemory();
 
     cout << "Setup Is Done \n" << endl;
 }
@@ -342,6 +344,33 @@ int testApp::getCurrentBrightness() {
     return alpha;
 }
 
+//--------------------------------------------------------------
+// CUSTOM UTILITY FUNCTIONS
+
+void testApp::checkMemory() {
+
+    // Check  Memory
+    MEMORYSTATUS memInfo;
+    memInfo.dwLength = sizeof(MEMORYSTATUS);
+    GlobalMemoryStatus(&memInfo);
+
+    // Virtual Memory
+    DWORDLONG totalVirtualMem = memInfo.dwTotalVirtual;
+    DWORDLONG totalVirtualMemMB = totalVirtualMem / DIV;
+    DWORDLONG virtualMemUsed = memInfo.dwTotalVirtual - memInfo.dwAvailVirtual;
+    DWORDLONG virtualMemUsedMB = virtualMemUsed / DIV;
+    cout << "Total Virtual Memory Is " << totalVirtualMemMB << " MB (" << (totalVirtualMemMB / 1000) / 1000 << " GB)." << endl;
+    cout << "We Are Using " << virtualMemUsedMB  << " MB (" << (virtualMemUsedMB / 1000) / 1000 << " GB) Of That Amount. " << endl;
+
+    // Physical Memory
+    DWORDLONG totalPhysMem = memInfo.dwTotalPhys;
+    DWORDLONG totalPhysMemMB = totalPhysMem / DIV;
+    DWORDLONG physMemUsed = memInfo.dwTotalPhys - memInfo.dwAvailPhys;
+    DWORDLONG physMemUsedMB = physMemUsed / DIV;
+    cout << "Total Physical Memory Is " << totalPhysMemMB << " MB (" << (totalPhysMemMB / 1000) / 1000 << " GB)." << endl;
+    cout << "We Are Using " << physMemUsedMB  << " MB (" << (physMemUsedMB / 1000) / 1000 << " GB) Of That Amount. " << endl;
+
+}
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){

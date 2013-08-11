@@ -3,6 +3,13 @@
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
 
+#define WINVER 0x0601
+#define DIV 1024
+
+#include "ofMain.h"
+#include <windows.h>
+#include "psapi.h"
+
 class testApp : public ofBaseApp{
 
 	public:
@@ -32,6 +39,8 @@ class testApp : public ofBaseApp{
 
         void setupGL(int _width, int _height);
         int getCurrentBrightness();
+
+        void checkMemory();
 
         // Canvas
         ofImage foreground;
