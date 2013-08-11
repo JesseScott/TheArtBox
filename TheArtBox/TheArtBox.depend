@@ -2356,7 +2356,7 @@
 	"testApp.h"
 	"ofAppGlutWindow.h"
 
-1376172010 c:\users\user\documents\code\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.h
+1376176729 c:\users\user\documents\code\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.h
 	"ofMain.h"
 	"ofxXmlSettings.h"
 
@@ -2369,4 +2369,7 @@
 1374967136 c:\users\user\documents\code\of_v0.7.4_win_cb_release\libs\openframeworks\app\ofappbasewindow.h
 	"ofPoint.h"
 	"ofTypes.h"
+
+1376179766 source:c:\users\user\documents\code\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.cpp
+	"testApp.h"
 

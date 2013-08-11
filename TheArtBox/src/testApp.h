@@ -25,10 +25,14 @@ class testApp : public ofBaseApp{
 		void loadArtists();
         void setAssets(int index);
 		void loadAssets();
-		void setupGL(int _width, int _height);
+
 		void setColourThumbnailImage(int _width, int _height);
 		void setBlackAndWhiteThumbnailImage(ofImage img);
 		void updateCurrentIndex();
+
+        void setupGL(int _width, int _height);
+        void getIdealBrightness();
+        void getCurrentBrightness();
 
         // Canvas
         ofImage foreground;
@@ -44,6 +48,8 @@ class testApp : public ofBaseApp{
         ofShader shader;
         ofFbo maskFbo;
         ofFbo fbo;
+        int idealBrightness;
+        int currentBrightness;
 
         // Painting
         ofImage brush;

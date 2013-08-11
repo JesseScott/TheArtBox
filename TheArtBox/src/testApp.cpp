@@ -86,7 +86,7 @@ void testApp::draw(){
     fbo.draw(0, 0);
 
     // Caption
-    font.drawString(artistNames[currentIndex], 200, 200);
+    font.drawString(artistNames[currentIndex], 100, 200);
 
     //cout << ofGetFrameRate() << endl;
 }
@@ -277,9 +277,10 @@ void testApp::updateCurrentIndex() {
 // CUSTOM GL FUNCTIONS
 
 void testApp::setupGL(int width, int height) {
+
     // FBOs
-    maskFbo.allocate(width, height);
-    fbo.allocate(width, height);
+    maskFbo.allocate(width, height, GL_RGBA);
+    fbo.allocate(width, height, GL_RGBA);
 
     maskFbo.begin();
         ofClear(0,0,0,255);
@@ -311,10 +312,42 @@ void testApp::setupGL(int width, int height) {
 
 }
 
+void testApp::getIdealBrightness() {
+
+    int a = 0;
+    for(int i = 0; i < thumbnail.getPixelsRef().size(); i++) {
+        //a += thumbnail.getPixelsRef().
+
+    }
+
+
+}
+
+void testApp::getCurrentBrightness() {
+
+    int alpha;
+    int count = 0;
+    ofPixels pixels;
+    maskFbo.readToPixels(pixels, 0);
+    ofPixels pixa = pixels.getChannel(3);
+
+    for(int x = 0; x < pixels.getWidth(); x++) {
+        for(int y = 0; y < pixels.getHeight(); y++) {
+            ofColor c = pixels.getColor(x, y);
+            alpha += c.a;
+            count++;
+        }
+    }
+    alpha = alpha / count;
+    cout << "ALPHA IS " << alpha << endl;
+
+}
+
+
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
 
-    // Increase PlayCount
+    // Increase Play
     currentIndex++;
     // Check Limit
     if(currentIndex >= maxIndex) {
@@ -323,6 +356,7 @@ void testApp::keyPressed(int key){
     // Update Assets
     updateCurrentIndex();
 
+    getCurrentBrightness();
 }
 
 //--------------------------------------------------------------
