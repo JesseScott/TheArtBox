@@ -372,6 +372,42 @@ void testApp::checkMemory() {
 
 }
 
+void testApp::getFilesFromFTP() {
+   // Connect
+    try {
+        client.setup("ftp.memelab.ca", "SITC_APP", "SITC_6");
+        client.setVerbose(true);
+        cout << "Connection Success! \n" << endl;
+    }
+    catch (int e) {
+        cout << "The Exception #" << e << " Occured." << endl;
+    }
+
+    // List Files
+    try {
+        fileNames = client.list("/");
+        cout << "Listing Success! \n" << endl;
+
+        for(int i = 0; i < fileNames.size(); i++) {
+            cout << "Item #" << i << " is " << fileNames[i] << "\n" << endl;
+        }
+    }
+    catch(int e) {
+        cout << "The Exception #" << e << " Occured." << endl;
+    }
+
+    // Get Files
+    try {
+        client.get("BOXIcon.png", ofToDataPath(""), "/");
+        cout << "Downloading Success!" << endl;
+    }
+    catch(int e) {
+        cout << "The Exception #" << e << " Occured." << endl;
+    }
+
+
+}
+
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
 

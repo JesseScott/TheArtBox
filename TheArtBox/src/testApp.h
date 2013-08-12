@@ -1,14 +1,19 @@
 #pragma once
 
+// OF
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
+#include "ofxFTP.h"
 
+// MEMORY USAGE
 #define WINVER 0x0601
 #define DIV 1024
-
-#include "ofMain.h"
 #include <windows.h>
 #include "psapi.h"
+
+// CPU USAGE
+//#include "TCHAR.h"
+//#include "pdh.h"
 
 class testApp : public ofBaseApp{
 
@@ -41,6 +46,7 @@ class testApp : public ofBaseApp{
         int getCurrentBrightness();
 
         void checkMemory();
+        void getFilesFromFTP();
 
         // Canvas
         ofImage foreground;
@@ -67,5 +73,8 @@ class testApp : public ofBaseApp{
         ofTrueTypeFont font;
         vector<string> artistNames;
         vector<string> artistMedia;
+
+        // FTP
+        ofxFTPClient client;
 
 };

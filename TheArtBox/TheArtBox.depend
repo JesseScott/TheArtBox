@@ -1132,10 +1132,10 @@
 	"ofCamera.h"
 	"ofEvents.h"
 
-1376258637 c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.h
+1376269736 c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.h
 	"ofMain.h"
 	"ofxXmlSettings.h"
-	"ofMain.h"
+	"ofxFTP.h"
 	<windows.h>
 	"psapi.h"
 
@@ -2375,4 +2375,35 @@
 
 1376179766 source:c:\users\user\documents\code\of_v0.7.4_win_cb_release\apps\theartbox\theartbox\src\testapp.cpp
 	"testApp.h"
+
+1345317696 source:c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\addons\ofxftp\libs\cftpserver\cftpserver.cpp
+	"CFtpServer.h"
+	"CFtpServerGlobal.h"
+
+1345317696 c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\addons\ofxftp\libs\cftpserver\cftpserver.h
+	<ctime>
+	<cctype>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<fcntl.h>
+	<stdarg.h>
+	<sys/stat.h>
+	<limits.h>
+	<dirent.h>
+	<pthread.h>
+	<sys/socket.h>
+	<netinet/in_systm.h>
+	<netinet/in.h>
+	<netinet/ip.h>
+	<sys/select.h>
+	<arpa/inet.h>
+	<errno.h>
+	<unistd.h>
+	<io.h>
+	<direct.h>
+	<winsock2.h>
+	<process.h>
+
+1345317696 c:\users\jesse\documents\programming\openframeworks\of_v0.7.4_win_cb_release\addons\ofxftp\libs\cftpserver\cftpserverglobal.h
 

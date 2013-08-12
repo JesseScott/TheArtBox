@@ -69,6 +69,8 @@
 			<Add directory="../../../libs/cairo/include/cairo" />
 			<Add directory="../../../addons/ofxXmlSettings/src" />
 			<Add directory="../../../addons/ofxXmlSettings/libs" />
+			<Add directory="../../addons/ofxFTP/src" />
+			<Add directory="../../addons/ofxFTP/libs" />
 		</Compiler>
 		<Linker>
 			<Add library="..\..\..\libs\FreeImage\lib\win_cb\FreeImage.lib" />
@@ -111,6 +113,11 @@
 			<Add after='cmd /c if not exist &quot;$(PROJECT_DIR)bin/data&quot; mkdir &quot;$(PROJECT_DIR)bin/data&quot;' />
 			<Mode after="always" />
 		</ExtraCommands>
+		<Unit filename="../../../addons/ofxFTP/libs/CFtpServer/CFtpServer.cpp" />
+		<Unit filename="../../../addons/ofxFTP/libs/CFtpServer/CFtpServer.h" />
+		<Unit filename="../../../addons/ofxFTP/libs/CFtpServer/CFtpServerGlobal.h" />
+		<Unit filename="../../../addons/ofxFTP/src/ofxFTP.cpp" />
+		<Unit filename="../../../addons/ofxFTP/src/ofxFTP.h" />
 		<Unit filename="../../../addons/ofxXmlSettings/libs/tinyxml.cpp" />
 		<Unit filename="../../../addons/ofxXmlSettings/libs/tinyxml.h" />
 		<Unit filename="../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp" />
