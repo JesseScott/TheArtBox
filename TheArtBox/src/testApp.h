@@ -3,7 +3,7 @@
 // OF
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
-#include "ofxFTP.h"
+//#include "ofxFTP.h"
 
 // MEMORY USAGE
 #define WINVER 0x0601
@@ -75,6 +75,6 @@ class testApp : public ofBaseApp{
         vector<string> artistMedia;
 
         // FTP
-        ofxFTPClient client;
+        //ofxFTPClient client;
 
 };
