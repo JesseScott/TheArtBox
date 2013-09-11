@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<VisualStudioPropertySheet 
+	ProjectType="Visual C++" 
+	Version="8.00" 
+	Name="OmekSDK"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="&quot;$(OMEKSDK)\include&quot;"
+		PreprocessorDefinitions=""
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies="Platform.lib Foundation.lib Vision.lib BodyMotion.lib Shadow.lib Gesture.lib FBXReader.lib"
+		AdditionalLibraryDirectories="&quot;$(OMEKSDK)\lib\release&quot;"
+	/>
+</VisualStudioPropertySheet>
