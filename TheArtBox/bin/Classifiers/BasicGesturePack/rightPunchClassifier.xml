@@ -1,0 +1,173 @@
+<ClassifierParams hidden="false">
+    <GestureDataParams vectorSize="15" voteSize="3" refractoryPeriod="0" isRefractoryPerGroup="true" usePositions="false" useRelativePositions="true" useDeltas="false" flipx="true" useHeadConfidence="true" relativeJoint="torso" isRepetitive="false" testFlag="false">
+        <Joints>
+            <Joint name="rightFingerTip" X="true" Y="true" Z="true" />
+        </Joints>
+        <Scale normalizeMean="true" normalizeSTD="false" doLocalScale="false" doGlobalScale="true" perCoordScaling="true" useSmooth="false">
+            <Attribute meanValue="15.298" std="1.000" />
+            <Attribute meanValue="-11.346" std="1.000" />
+            <Attribute meanValue="-7.640" std="1.000" />
+            <Attribute meanValue="73.457" std="1.000" />
+        </Scale>
+    </GestureDataParams>
+    <LearningParams useLinear="false" useExactParams="true" gestureExpand="0" otherOverlap="0.0000" useWeights="true" weightFactor1="1.00" weightFactor2="5" testTolerance="5">
+        <TrainFiles>
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq8\uppercuts_seq8.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq6\uppercuts_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq5\uppercuts_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq4\uppercuts_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq3\uppercuts_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq2\uppercuts_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq13\uppercuts_seq13.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq12\uppercuts_seq12.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq10\uppercuts_seq10.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\mixedBoxing\seq9\mixedBoxing_seq9.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\mixedBoxing\seq7\mixedBoxing_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\mixedBoxing\seq3\mixedBoxing_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\mixedBoxing\seq1\mixedBoxing_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\headbutt\seq8\headbutt_seq8.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\headbutt\seq5\headbutt_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\headbutt\seq3\headbutt_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\headbutt\seq1\headbutt_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\uppercuts\seq3\uppercuts_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\uppercuts\seq1\uppercuts_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\punches\seq2\punches_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\hooks\seq3\hooks_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\hooks\seq1\hooks_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq7\boxing_and_defence_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq4\boxing_and_defence_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq2\boxing_and_defence_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq10\boxing_and_defence_seq10.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\test\sideDodges\seq9\sideDodges_seq9.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\test\sideDodges\seq14\sideDodges_seq14.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\test\sideDodges\seq12\sideDodges_seq12.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\test\sideDodges\seq10\sideDodges_seq10.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq6\sideDodges_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq3\sideDodges_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq20\sideDodges_seq20.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq19\sideDodges_seq19.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq17\sideDodges_seq17.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq15\sideDodges_seq15.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq1\sideDodges_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq6\punches_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq4\punches_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq2\punches_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq12\punches_seq12.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq1\punches_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\falsepunches\seq8\falsePunches_seq8.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\falsepunches\seq6\falsePunches_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\falsepunches\seq3\falsePunches_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\falsepunches\seq1\falsePunches_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq7\Boxing_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq5\Boxing_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq3\Boxing_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq12\Boxing_seq12.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq10\Boxing_seq10.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq9\hooks_seq9.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq5\hooks_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq3\hooks_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq13\hooks_seq13.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq1\hooks_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq8\headbutt_seq8.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq6\headbutt_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq4\headbutt_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq12\haedButt_seq12.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq10\headbutt_seq10.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq9\falsePunches_seq9.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq7\falsePunches_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq6\falsePunches_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq4\falsePunches_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq3\falsePunches_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq2\falsePunches_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq19\falsePunches_seq19.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq17\falsePunches_seq17.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq15\falsePunches_seq15.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq13\falsePunches_seq13.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq11\falsePunches_seq11.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq1\falsePunches_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq7\defence_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq4\defence_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq2\defence_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq14\defence_seq14.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq10\defence_seq10.seq" />
+        </TrainFiles>
+        <TestFiles>
+            <File path="P:\data\primesense\gestures\training\boxing\uppercuts\seq1\uppercuts_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\mixedBoxing\seq8\mixedBoxing_seq8.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\mixedBoxing\seq6\mixedBoxing_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\mixedBoxing\seq2\mixedBoxing_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\headbutt\seq9\headbutt_seq9.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\headbutt\seq6\headbutt_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\headbutt\seq4\headbutt_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\headbutt\seq2\headbutt_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\defence\seq3\defence_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\uppercuts\seq2\uppercuts_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\punches\seq3\punches_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\punches\seq1\punches_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defense\hooks\seq2\hooks_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq9\boxing_and_defence_seq9.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq6\boxing_and_defence_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq3\boxing_and_defence_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq12\boxing_and_defence_seq12.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\test\boxing\boxing_and_defence\seq1\boxing_and_defence_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\test\sideDodges\seq8\sideDodges_seq8.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\test\sideDodges\seq13\sideDodges_seq13.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\test\sideDodges\seq11\sideDodges_seq11.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq7\sideDodges_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq5\sideDodges_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq21\sideDodges_seq21.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq2\sideDodges_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq18\sideDodges_seq18.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq16\sideDodges_seq16.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\sideDodges\seq14\sideDodges_seq14.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq7\punches_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq5\punches_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq3\punches_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq13\punches_seq13.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\seq10\punches_seq10.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\falsepunches\seq9\falsePunches_seq9.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\falsepunches\seq7\falsePunches_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\falsepunches\seq5\falsePunches_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\punches\falsepunches\seq2\falsePunches_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq8\Boxing_seq8.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq6\Boxing_seq6.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq4\Boxing_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq2\Boxing_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq11\Boxing_seq11.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\mixedBoxing\seq1\mixedBoxing_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq7\hooks_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq4\hooks_seq4.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq2\hooks_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\hooks\seq10\hooks_seq10.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq9\headbutt_seq9.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq7\headbutt_seq7.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq5\headbutt_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq2\headbutt_seq2.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq11\haedButt_seq11.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\headbutt\seq1\headbutt_seq1.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq18\falsePunches_seq18.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq16\falsePunches_seq16.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq14\falsePunches_seq14.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq12\falsePunches_seq12.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\falsePunches\seq10\falsePunches_seq10.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq8\defence_seq8.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq5\defence_seq5.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq3\defence_seq3.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq15\defence_seq15.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq11\defence_seq11.seq" />
+            <File path="P:\data\primesense\gestures\training\boxing\defence\seq1\defence_seq1.seq" />
+        </TestFiles>
+        <OutputFile path="C:/Program Files (x86)/Omek/Beckon SDK/bin/Classifiers/BasicGesturePack\rightPunchClassifier.xml" />
+        <Result c="3" g="-14" s="0" avgAccuracy="0.918436" trainAccuracy="0.998823" testAccuracy="0.883984" confusionMatrix="132;0;0;0;0;130;0;0;0;0;186;0;0;0;23;4862;" />
+    </LearningParams>
+    <Gestures framesBefore="14">
+        <Gesture categoryName="negative" gestureName="rightUppercutPunch" label="3" />
+        <Gesture categoryName="rightFrontPunch" gestureName="rightFrontPunch" label="4" />
+        <Gesture categoryName="negative" gestureName="rightHookPunch" label="5" />
+        <Gesture categoryName="negative" gestureName="defence" label="2" />
+        <Gesture categoryName="other" gestureName="other" label="1" />
+    </Gestures>
+    <Model fileName="leftPunchClassifier.model" />
+    <Date created="" published="28/06/2011 16:11:48" />
+    <Comment value="" />
+</ClassifierParams>

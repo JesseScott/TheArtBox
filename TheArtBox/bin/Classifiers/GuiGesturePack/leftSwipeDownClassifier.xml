@@ -1,0 +1,29 @@
+<ClassifierParams hidden="false">
+    <GestureDataParams vectorSize="13" voteSize="2" refractoryPeriod="0" isRefractoryPerGroup="true" usePositions="false" usePositionsX="true" usePositionsY="false" usePositionsZ="false" useDeltas="false" useDeltasX="false" useDeltasY="false" useDeltasZ="false" useRelativePositions="false" useRelativePositionsX="false" useRelativePositionsY="true" useRelativePositionsZ="true" flipx="true" useHeadConfidence="false" relativeJoint="torso" isRepetitive="false" fps="30">
+        <Joints>
+            <Joint name="leftFingerTip" X="true" Y="true" Z="true" />
+        </Joints>
+        <Scale normalizeMean="true" normalizeSTD="false" doLocalScale="false" doGlobalScale="false" perCoordScaling="false" useSmooth="false" smoothStrength="0" />
+    </GestureDataParams>
+    <LearningParams useLinear="false" gestureExpand="0" otherOverlap="0.0000" useWeights="true" weightFactor1="1.00" weightFactor2="10" testToleranceRight="3" testToleranceLeft="7" cost="3.50" gamma="-13.00" linearSolver="0" useSynthetic="false">
+        <TrainFiles>
+        </TrainFiles>
+        <TestFiles>
+        </TestFiles>
+        <OutputFile path="C:/Program Files (x86)/Omek/Beckon SDK/bin/Classifiers/GuiGesturePack\leftSwipeDownClassifier.xml" />
+        <Result avgAccuracy="1" trainAccuracy="1" testAccuracy="0.979657" confusionMatrix="" />
+    </LearningParams>
+    <Gestures framesBefore="13">
+        <Gesture categoryName="pLeftSwipeDown" gestureName="leftSwipeDown" label="3" />
+        <Gesture categoryName="negative" gestureName="notPush" label="1" />
+        <Gesture categoryName="xnegative" gestureName="pLeftPush" label="2" />
+        <Gesture categoryName="xnegative" gestureName="pNoSwipe" label="2" />
+        <Gesture categoryName="xnegative" gestureName="pLeftSwipeRight" label="2" />
+        <Gesture categoryName="xnegative" gestureName="pLeftSwipeLeft" label="2" />
+        <Gesture categoryName="xnegative" gestureName="pLeftSwipeUp" label="2" />
+        <Gesture categoryName="other" gestureName="other" label="1" />
+    </Gestures>
+    <Model fileName="rightSwipeDownClassifier.model" />
+    <Date created="06/11/2011 16:50:23" published="07/11/2011 11:15:39" />
+    <Comment value="" />
+</ClassifierParams>

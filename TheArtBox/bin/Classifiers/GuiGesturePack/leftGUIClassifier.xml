@@ -1,0 +1,35 @@
+<ClassifierParams hidden="true">
+    <GestureDataParams vectorSize="2" voteSize="1" refractoryPeriod="22" isRefractoryPerGroup="true" usePositions="true" useRelativePositions="false" useDeltas="false" flipx="true" useHeadConfidence="false" relativeJoint="unknown" isRepetitive="false" testFlag="false">
+        <Joints>
+            <Joint name="head" X="true" Y="true" Z="true" />
+            <Joint name="leftFingerTip" X="true" Y="true" Z="true" />
+            <Joint name="rightFingerTip" X="true" Y="true" Z="true" />
+            <Joint name="hips" X="true" Y="true" Z="true" />
+        </Joints>
+        <Scale normalizeMean="false" normalizeSTD="false" doLocalScale="false" doGlobalScale="false" perCoordScaling="false" />
+    </GestureDataParams>
+    <LearningParams useLinear="false" useExactParams="false" gestureExpand="0" otherOverlap="0.0000" useWeights="false" weightFactor1="0.00" weightFactor2="0" testTolerance="0">
+        <TrainFiles />
+        <TestFiles />
+        <OutputFile path="leftGUIClassifier.xml" />
+        <Result c="1.000000" g="1.000000" s="0" avgAccuracy="-1.000000" trainAccuracy="-1.000000" testAccuracy="-1.000000" confusionMatrix="" />
+    </LearningParams>
+    <Gestures framesBefore="0">
+        <Gesture categoryName="pLeftSwipeLeft" gestureName="leftSwipeLeft" label="3" />
+        <Gesture categoryName="pLeftSwipeRight" gestureName="leftSwipeRight" label="4" />
+		<Gesture categoryName="pLeftPush" gestureName="leftSelect" label="7" />
+        <Gesture categoryName="pLeftSwipeUp" gestureName="leftSwipeUp" label="5" />
+        <Gesture categoryName="pLeftSwipeDown" gestureName="leftSwipeDown" label="6" />
+        <Gesture categoryName="other" gestureName="other" label="1" />
+    </Gestures>
+    <DependentGestures>
+        <Gesture name="pLeftSwipeRight" />
+        <Gesture name="pLeftSwipeLeft" />
+        <Gesture name="pLeftSwipeUp" />
+        <Gesture name="pLeftPush" />
+        <Gesture name="pLeftSwipeDown" />
+    </DependentGestures>
+    <Model fileName="XORClassifier.dll" />
+    <Date created="" published="1/12/2011 7:43:22 PM" />
+    <Comment value="" />
+</ClassifierParams>

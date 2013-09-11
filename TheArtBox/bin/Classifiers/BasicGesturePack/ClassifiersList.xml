@@ -1,0 +1,15 @@
+<!--
+Omek Interactive - Classifiers File List
+-->
+<Classifiers>
+    <Classifier filename="rightPushClassifier.xml" />
+    <Classifier filename="rightPunchClassifier.xml" />
+    <Classifier filename="leftPushClassifier.xml" />
+    <Classifier filename="jumpRightClassifier.xml" />
+    <Classifier filename="leftPunchClassifier.xml" />
+    <Classifier filename="jumpClassifier.xml" />
+    <Classifier filename="jumpLeftClassifier.xml" />
+    <Classifier filename="dodgeLeftClassifier.xml" />
+    <Classifier filename="dodgeRightClassifier.xml" />
+    <Classifier filename="XORJumpsClassifier.xml" />
+</Classifiers>

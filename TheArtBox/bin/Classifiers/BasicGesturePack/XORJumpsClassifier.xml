@@ -1,0 +1,31 @@
+<ClassifierParams hidden="false">
+    <GestureDataParams vectorSize="2" voteSize="1" refractoryPeriod="15" isRefractoryPerGroup="true" usePositions="true" useRelativePositions="false" useDeltas="false" flipx="true" useHeadConfidence="false" relativeJoint="unknown" isRepetitive="false" testFlag="false">
+        <Joints>
+            <Joint name="head" X="true" Y="true" Z="true" />
+            <Joint name="leftFingerTip" X="true" Y="true" Z="true" />
+            <Joint name="rightFingerTip" X="true" Y="true" Z="true" />
+            <Joint name="hips" X="true" Y="true" Z="true" />
+        </Joints>
+        <Scale normalizeMean="false" normalizeSTD="false" doLocalScale="false" doGlobalScale="false" perCoordScaling="false" useSmooth="false" />
+    </GestureDataParams>
+    <LearningParams useLinear="false" useExactParams="false" gestureExpand="0" otherOverlap="0.0000" useWeights="false" weightFactor1="0.00" weightFactor2="0" testTolerance="0">
+        <TrainFiles />
+        <TestFiles />
+        <OutputFile path="C:/Program Files (x86)/Omek/Beckon SDK/bin/Classifiers/BasicGesturePack\XORJumpsClassifier.xml" />
+        <Result c="1" g="1" s="0" avgAccuracy="-1" trainAccuracy="-1" testAccuracy="-1" confusionMatrix="" />
+    </LearningParams>
+    <Gestures framesBefore="0">
+        <Gesture categoryName="other" gestureName="other" label="1" />
+        <Gesture categoryName="inner_jump" gestureName="jumpUp" label="3" />
+        <Gesture categoryName="inner_jumpLeft" gestureName="sideJumpLeft" label="4" />
+        <Gesture categoryName="inner_jumpRight" gestureName="sideJumpRight" label="5" />
+    </Gestures>
+    <DependentGestures>
+        <Gesture name="inner_jump" />
+        <Gesture name="inner_jumpLeft" />
+        <Gesture name="inner_jumpRight" />
+    </DependentGestures>
+    <Model fileName="XORClassifier.dll" />
+    <Date created="" published="09/06/2011 11:44:48" />
+    <Comment value="" />
+</ClassifierParams>

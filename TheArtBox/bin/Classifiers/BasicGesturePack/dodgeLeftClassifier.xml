@@ -1,0 +1,71 @@
+<ClassifierParams hidden="false">
+    <GestureDataParams vectorSize="2" voteSize="1" refractoryPeriod="10" isRefractoryPerGroup="true" usePositions="false" useRelativePositions="true" useDeltas="false" flipx="true" useHeadConfidence="true" relativeJoint="head" isRepetitive="false" testFlag="false">
+        <Joints>
+            <Joint name="head" X="true" Y="true" Z="true" />
+            <Joint name="torso" X="true" Y="true" Z="true" />
+            <Joint name="leftShoulder" X="true" Y="true" Z="true" />
+            <Joint name="rightShoulder" X="true" Y="true" Z="true" />
+            <Joint name="hips" X="true" Y="true" Z="true" />
+            <Joint name="leftKnee" X="true" Y="true" Z="true" />
+            <Joint name="rightKnee" X="true" Y="true" Z="true" />
+            <Joint name="leftFoot" X="true" Y="true" Z="true" />
+            <Joint name="rightFoot" X="true" Y="true" Z="true" />
+        </Joints>
+        <Scale normalizeMean="true" normalizeSTD="true" doLocalScale="false" doGlobalScale="true" perCoordScaling="true" useSmooth="false">
+            <Attribute meanValue="15.274" std="34.675" />
+            <Attribute meanValue="-35.316" std="23.992" />
+            <Attribute meanValue="157.086" std="65.121" />
+            <Attribute meanValue="-2.725" std="8.092" />
+            <Attribute meanValue="30.743" std="11.985" />
+            <Attribute meanValue="15.154" std="7.262" />
+            <Attribute meanValue="-14.158" std="6.814" />
+            <Attribute meanValue="8.953" std="6.064" />
+            <Attribute meanValue="9.071" std="7.589" />
+            <Attribute meanValue="12.634" std="7.383" />
+            <Attribute meanValue="10.458" std="6.475" />
+            <Attribute meanValue="8.955" std="7.368" />
+            <Attribute meanValue="-3.405" std="13.465" />
+            <Attribute meanValue="58.637" std="22.067" />
+            <Attribute meanValue="40.743" std="15.582" />
+            <Attribute meanValue="-14.010" std="17.104" />
+            <Attribute meanValue="73.136" std="28.753" />
+            <Attribute meanValue="48.414" std="21.099" />
+            <Attribute meanValue="7.888" std="15.844" />
+            <Attribute meanValue="72.374" std="31.738" />
+            <Attribute meanValue="48.543" std="22.116" />
+            <Attribute meanValue="-14.954" std="19.418" />
+            <Attribute meanValue="91.954" std="35.849" />
+            <Attribute meanValue="60.261" std="26.143" />
+            <Attribute meanValue="8.850" std="18.946" />
+            <Attribute meanValue="91.059" std="36.966" />
+            <Attribute meanValue="60.931" std="26.340" />
+            <Attribute meanValue="83.493" std="32.162" />
+        </Scale>
+    </GestureDataParams>
+    <LearningParams useLinear="false" useExactParams="true" gestureExpand="0" otherOverlap="0.0000" useWeights="false" weightFactor1="0.55" weightFactor2="1" testTolerance="2">
+        <TrainFiles>
+            <File path="P:\sequences\Gestures\Panasonic-Up-HighMode-NewGP\standardGesturesPack\good_tracking\jumpLeftRight\Efi\seq1\seq1.seq" />
+            <File path="P:\sequences\Gestures\Panasonic-Up-HighMode-NewGP\standardGesturesPack\good_tracking\jumpLeftRight\Barak\seq1\seq1.seq" />
+            <File path="P:\sequences\Gestures\Panasonic-Up-HighMode-NewGP\standardGesturesPack\good_tracking\jump\Israel\seq1\seq1.seq" />
+            <File path="P:\sequences\Gestures\Panasonic-Up-HighMode-NewGP\standardGesturesPack\good_tracking\dodges\Israel\seq1\seq1.seq" />
+        </TrainFiles>
+        <TestFiles>
+            <File path="P:\sequences\Gestures\Panasonic-Up-HighMode-NewGP\standardGesturesPack\good_tracking\jumpLeftRight\Israel\seq1\seq1.seq" />
+            <File path="P:\sequences\Gestures\Panasonic-Up-HighMode-NewGP\standardGesturesPack\good_tracking\jump\Shachar\seq1\seq1.seq" />
+            <File path="P:\sequences\Gestures\Panasonic-Up-HighMode-NewGP\standardGesturesPack\good_tracking\dodges\Efrat\seq1\seq1.seq" />
+        </TestFiles>
+        <OutputFile path="C:/Program Files (x86)/Omek/Beckon SDK/bin/Classifiers/BasicGesturePack\dodgeLeftClassifier.xml" />
+        <Result c="3" g="-14" s="0" avgAccuracy="0.970983" trainAccuracy="0.99963" testAccuracy="0.958706" confusionMatrix="" />
+    </LearningParams>
+    <Gestures framesBefore="1">
+        <Gesture categoryName="xnegative" gestureName="jumpRight" label="2" />
+        <Gesture categoryName="xnegative" gestureName="jumpLeft" label="2" />
+        <Gesture categoryName="xnegative" gestureName="jump" label="2" />
+        <Gesture categoryName="xnegative" gestureName="dodgeRight" label="2" />
+        <Gesture categoryName="dodgeLeft" gestureName="dodgeLeft" label="3" />
+        <Gesture categoryName="other" gestureName="dodgeLeftRecover" label="1" />
+    </Gestures>
+    <Model fileName="dodgeRightClassifier.model" />
+    <Date created="27/06/2011 16:12:35" published="28/06/2011 16:09:49" />
+    <Comment value="" />
+</ClassifierParams>

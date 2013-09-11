@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<assets>
+
+	<!--	==== media====	-->
+	<media>
+		<file>movies/fingers.mov</file>
+            	<file>images/A.jpg</file>
+            	<file>images/B.jpg</file>
+           	<file>movies/fingers.mov</file>
+            	<file>images/A.jpg</file>
+            	<file>images/B.jpg</file>
+		<file>movies/fingers.mov</file>
+            	<file>images/A.jpg</file>
+            	<file>images/B.jpg</file>
+           	<file>movies/fingers.mov</file>
+            	<file>images/A.jpg</file>
+	</media>
+
+
+	<!--	==== artists ====	-->
+	<artists>
+		<file>ANNETTE CHEUNG</file>
+		<file>AZI EBRAHIMI</file>
+		<file>CALVIN NIMMO</file>
+		<file>JOSH STUIBLE</file>
+		<file>MIKAEL LANGWORTH</file>
+		<file>NIKNAZ MALEKAFZALI</file>
+		<file>RHIANNON COLLETT</file>
+		<file>ROBYN MOORE</file>
+		<file>SAM MERCHANT</file>
+		<file>STERLING MEGAS</file>
+		<file>SUMMER-ANGEL McDONALD</file>
+		<file>TD BEASLEY</file>
+	</artists>
+
+	<!--	==== fonts ====	-->
+	<fonts>
+		<file>fonts/Futura-Bold.ttf</file>
+	</fonts>
+
+</assets>
