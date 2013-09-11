@@ -1,4 +1,4 @@
-OMK_ERROR_FLOOR_PLANE_EST_UNINITIALIZED	..\..\Shadow\DataManager.cpp	669	Omek::DataManager::setCameraSetup	Tue Sep 10 18:00:02 2013
-OMK_ERROR_TRACKING_GENERAL_FAILURE	..\..\BodyMotion\PlayerManager.cpp	1078	Omek::PlayerManager::setTrackSkeleton	Tue Sep 10 18:00:02 2013
-b00	..\..\BodyMotion\TrackingAlgorithmHPU.cpp	114	Omek::TrackingAlgorithmHPU::setTrackSkeleton	Tue Sep 10 18:00:02 2013
-b00	..\..\Shadow\DataManager.cpp	559	Omek::DataManager::startTracking	Tue Sep 10 18:00:02 2013
+OMK_ERROR_FLOOR_PLANE_EST_UNINITIALIZED	..\..\Shadow\DataManager.cpp	669	Omek::DataManager::setCameraSetup	Tue Sep 10 18:39:20 2013
+OMK_ERROR_TRACKING_GENERAL_FAILURE	..\..\BodyMotion\PlayerManager.cpp	1078	Omek::PlayerManager::setTrackSkeleton	Tue Sep 10 18:39:20 2013
+b00	..\..\BodyMotion\TrackingAlgorithmHPU.cpp	114	Omek::TrackingAlgorithmHPU::setTrackSkeleton	Tue Sep 10 18:39:20 2013
+b00	..\..\Shadow\DataManager.cpp	559	Omek::DataManager::startTracking	Tue Sep 10 18:39:20 2013
