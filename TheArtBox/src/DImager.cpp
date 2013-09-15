@@ -25,8 +25,7 @@ DIMager::DIMager() {
 	mask.allocate(width, height, GL_LUMINANCE);
 
 	if (motionSensor->run() == OMK_SUCCESS) cout << "DImager Running" << endl;
-	cout << "Candiates " << motionSensor->getNumOfCandidates() << endl;
-	motionSensor->startTracking(1);
+
 }
 
 void DIMager::update() {
@@ -34,6 +33,10 @@ void DIMager::update() {
 	updateMask();
 	updateDepth();
 	
+	//
+	cout << "Candiates " << motionSensor->getNumOfCandidates() << endl;
+	//motionSensor->startTracking(1);
+
 }
 
 void DIMager::updateDepth() {

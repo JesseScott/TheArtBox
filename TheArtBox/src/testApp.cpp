@@ -56,7 +56,9 @@ void testApp::update(){
 	// Update Camera
 	dimager.update();
 	tex.readToPixels(dimager.getPixels(1));
+	//tex.loadData(dimager.getPixels(0));
 	img.setFromPixels(dimager.getPixels(1));
+	
 
 	// Update FBOs
     maskFbo.begin();
@@ -93,7 +95,7 @@ void testApp::draw(){
     foreground.draw(0, 0);
 
     // Draw FBO
-    fbo.draw(0, 0);
+    //fbo.draw(0, 0);
 
     // Caption
     font.drawString(artistNames[currentIndex], 100, 200);
@@ -102,6 +104,7 @@ void testApp::draw(){
 	
 	// Texture
 	dimager.getTexture(0).draw(0, 0, dimager.getWidth(), dimager.getHeight());
+	//dimager.get
 
 	// Pixels
 	if(tex.bAllocated()) {
