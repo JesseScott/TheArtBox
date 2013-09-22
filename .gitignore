@@ -4,6 +4,10 @@
   
 [Bb]in/* 
 ![Bb]in/data/ 
+[Bb]in/data/artbox/*
+[Bb]in/data/demo/*
+[Bb]in/data/images/*
+[Bb]in/data/movies/*
 [Bb]uild/ 
 [Oo]bj/ 
 *.o 
