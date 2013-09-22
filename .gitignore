@@ -4,10 +4,10 @@
   
 [Bb]in/* 
 ![Bb]in/data/ 
-[Bb]in/data/artbox/*
-[Bb]in/data/demo/*
-[Bb]in/data/images/*
-[Bb]in/data/movies/*
+TheArtBox/bin/data/artbox/*
+TheArtBox/bin/data/demo/*
+TheArtBox/bin/data/images/*
+TheArtBox/bin/data/movies/*
 [Bb]uild/ 
 [Oo]bj/ 
 *.o 
@@ -34,3 +34,6 @@ Thumbs.db
   
 # Folder config file  
 Desktop.ini  
+
+# OSX
+*.DS_Store
