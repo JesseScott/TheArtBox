@@ -3,157 +3,87 @@
 
 //--------------------------------------------------------------
 void testApp::setup() {
+
+	// SYSTEM
 	ofSetLogLevel(OF_LOG_VERBOSE);
 	ofHideCursor();
+	ofSetFrameRate(60);
 	
-	// enable depth->video image calibration
+	// SCREEN
+    ofEnableAlphaBlending();
+    ofBackground(100);
+    width = ofGetWindowWidth();
+    height = ofGetWindowHeight();
+	
+	// KINECT
 	kinect.setRegistration(true);
-    
-	kinect.init();
-	//kinect.init(true); // shows infrared instead of RGB video image
-	//kinect.init(false, true); // disable video image (faster fps)
-	
-	kinect.open();		// opens first available kinect
-	//kinect.open(1);	// open a kinect by id, starting with 0 (sorted by serial # lexicographically))
-	//kinect.open("A00362A08602047A");	// open a kinect using it's unique serial #
-	
-	// print the intrinsic IR sensor values
+	kinect.init();	
+	kinect.open();
 	if(kinect.isConnected()) {
 		ofLogNotice() << "sensor-emitter dist: " << kinect.getSensorEmitterDistance() << "cm";
 		ofLogNotice() << "sensor-camera dist:  " << kinect.getSensorCameraDistance() << "cm";
 		ofLogNotice() << "zero plane pixel size: " << kinect.getZeroPlanePixelSize() << "mm";
 		ofLogNotice() << "zero plane dist: " << kinect.getZeroPlaneDistance() << "mm";
 	}
+	angle = 23;
+	kinect.setCameraTiltAngle(angle);
 	
+	// OPENCV
 	colorImg.allocate(kinect.width, kinect.height);
 	grayImage.allocate(kinect.width, kinect.height);
 	grayThreshNear.allocate(kinect.width, kinect.height);
 	grayThreshFar.allocate(kinect.width, kinect.height);
 	grayBg.allocate(kinect.width, kinect.height);
 	grayDiff.allocate(kinect.width, kinect.height);
-	
 	closePoints.allocate(kinect.width, kinect.height, GL_RGBA32F_ARB); 
-
-	imageTimer = 0; 
-	playState = 1;
 
 	nearThreshold = 250;
 	farThreshold = 112;
 	bLearnBakground = true;
 	threshold = 80;
 	bThreshWithOpenCV = false;
-	tooSunny = true;
-	
-	ofSetFrameRate(60);
-	
 	minBlob = 25; 
 	maxBlob = (kinect.width*kinect.height)/2; 
 	
-	// zero the tilt on startup
-	angle = 23;
-	kinect.setCameraTiltAngle(angle);
-	
-	// start from the front
+	// STATE
 	bDrawPointCloud = false;
-
-	// Screen
-
-    ofEnableAlphaBlending();
-
-    ofBackground(100);
-
-    width = ofGetWindowWidth();
-
-    height = ofGetWindowHeight();
-
-
-
-    // XML ASSETS
-
-    assets.loadFile("xml/assets.xml");
-
-    if( assets.loadFile("xml/assets.xml") ) {
-
-        ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
-
-        // Load Fonts
-
-        loadFonts();
-
-        // Load Artist Names
-
-        loadArtists();
-
-        // Load Media Names
-
-        loadAssets();
-
-    }
-
-    else {
-
-        ofLog(OF_LOG_ERROR, "UNABLE to load xml file :( \n");
-
-    }
-
-
-
-    // Set Index
-
-    currentIndex = 0;
-
+	presenting = true;
+	tooSunny = true;
+	fboAge = 0; 
+	imageTimer = 0; 
+	playState = 1;
 	currentBrightness = 0;
-
 	targetAlpha = 155;
+	
+    // XML ASSETS
+    assets.loadFile("xml/assets.xml");
+    if( assets.loadFile("xml/assets.xml") ) {
+        ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
+        // Load Fonts
+        loadFonts();
+        // Load Artist Names
+        loadArtists();
+        // Load Media Names
+        loadAssets();
+    }
+    else {
+        ofLog(OF_LOG_ERROR, "UNABLE to load xml file :( \n");
+    }
 
-    // Update Assets
-
+    //  INDEX
+    currentIndex = 0;
     updateCurrentIndex();
 
-
-
-    // Brush
-
+    // ASSETS
     brush.loadImage("images/brush.png");
-
-
-
 	stamp.loadImage("logo/stamp_white2.png");
-
-
-
-	// Demo
-
 	demo.loadMovie("demo/studio_in_the_city_6_promo.mp4");
 
-
-
-	width = ofGetWindowWidth();
-
-	height = ofGetWindowHeight();
-
-
-
     // FBO & GLSL SHADER
-
     setupGL(width, height);
-
-
-
-    // Paint
-
-    bBrushDown = false;
-
-
-
-    // Check Memory
-
+    
+    // MEMORY
     checkMemory();
-
-	presenting = true;
-
-
-	fboAge = 0; 
 
 	cout << "Setup Is Done \n" << endl;
 
