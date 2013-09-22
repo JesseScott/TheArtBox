@@ -39,6 +39,7 @@ public:
     void checkMemory();
     void getFilesFromFTP();
 	void drawPointCloud();
+	void autoPlay();
 	
 	// KINECT & OPENCV	
 	ofxKinect kinect;

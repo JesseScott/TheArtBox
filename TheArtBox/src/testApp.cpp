@@ -103,32 +103,7 @@ void testApp::update() {
 			// load grayscale depth image from the kinect source
 			if(tooSunny) {
 				// AUTOPLAY
-				/*
-				//currentBrightness = targetAlpha + 1;
-					//Play Media
-
-				if (currentAssetIsMovie) {
-
-					video.stop();
-
-					video.setFrame(0);
-
-					video.play(); 
-
-					video.setLoopState(OF_LOOP_NONE);
-
-				}
-
-				else {
-
-					imageTimer = 0; 
-
-				}
-
-				playState = 2;
-
-				currentBrightness = 0;
-				*/
+				
 
 				// RGB
 				colorImg.setFromPixels(kinect.getPixels(), kinect.width, kinect.height);
@@ -509,6 +484,23 @@ void testApp::drawPointCloud() {
 	mesh.drawVertices();
 	ofDisableDepthTest();
 	ofPopMatrix();
+}
+
+
+void testApp::autoPlay() {
+
+	if (currentAssetIsMovie) {
+		video.stop();
+		video.setFrame(0);
+		video.play(); 
+		video.setLoopState(OF_LOOP_NONE);
+	}
+	else {
+		imageTimer = 0; 
+	}
+
+	playState = 2;
+	currentBrightness = 0;
 }
 
 
