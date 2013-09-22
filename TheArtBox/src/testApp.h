@@ -4,7 +4,6 @@
 #include "ofxOpenCv.h"
 #include "ofxKinect.h"
 #include "ofxXmlSettings.h"
-#include "WorkerThread.h"
 
 // MEMORY USAGE
 #define WINVER 0x0601
@@ -63,55 +62,100 @@ public:
 	ofEasyCam easyCam;
 
 	// Added Methods
+
 		void loadFonts();
+
 		void loadArtists();
+
         void setAssets(int index);
+
 		void loadAssets();
 
+
+
 		void setColourThumbnailImage(int _width, int _height);
+
 		void setBlackAndWhiteThumbnailImage(ofImage img);
+
 		void updateCurrentIndex();
 
+
+
         void setupGL(int _width, int _height);
+
         int getCurrentBrightness();
 
+
+
         void checkMemory();
+
         void getFilesFromFTP();
 
+
+
         // Canvas
+
         ofImage foreground;
+
         ofImage thumbnail;
+
 		ofVideoPlayer demo;
+
         ofVideoPlayer video;
+
         ofImage image;
+
 		int imageTimer; 
+
 		int playState;
+
         int width, height;
+
         int maxIndex;
+
         int currentIndex;
+
         bool currentAssetIsMovie;
+
 		bool presenting;
+
 		bool showDemo;
 
+
+
         // GL / GPU
+
         ofShader shader;
+
         ofFbo maskFbo;
+
         ofFbo fbo;
+
         int currentBrightness;
+
 		int fboAge; 
+
 		int targetAlpha;
 
+
+
         // Painting
+
         ofImage brush;
+
         bool bBrushDown;
 
+
+
         // Assets
+
         ofxXmlSettings assets;
+
         ofTrueTypeFont font;
+
         vector<string> artistNames;
+
         vector<string> artistMedia;
 
-		// Thread
-		WorkerThread thread;
 
 };
