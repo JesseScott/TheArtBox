@@ -91,21 +91,21 @@ void testApp::setup() {
 
 //--------------------------------------------------------------
 void testApp::update() {
-	fboAge++; 
+	
+	// Screen
 	ofBackground(0);
+	
+	// Age FBO
+	if(fboAge < 100) {
+		fboAge++; 
+	}
 	
 	if(playState < 2) {
 		kinect.update();
-	
-		// there is a new frame and we are connected
-		if(kinect.isFrameNew()) {
-		
-			// load grayscale depth image from the kinect source
-			if(tooSunny) {
-				// AUTOPLAY
-				
-
-				// RGB
+		if(kinect.isFrameNew()) {	
+			
+			// RGB
+			if(tooSunny) {				
 				colorImg.setFromPixels(kinect.getPixels(), kinect.width, kinect.height);
 				colorImg.mirror(false, true);
 				grayImage = colorImg;
@@ -157,11 +157,11 @@ void testApp::update() {
 				contourFinder.findContours(grayImage, minBlob, maxBlob, 20, false);
 			}
 
-		}
+		} // new frame
 	
-
 		// Are There Blobs ?
 		if (contourFinder.nBlobs > 0 ) {
+			// Draw Logo Into FBO and Fade Everything Else
 			closePoints.begin();
 				ofFill(); 
 				ofSetColor(ofColor(0, 2));
@@ -170,12 +170,11 @@ void testApp::update() {
 				stamp.draw(75, 0, closePoints.getWidth()- 130, closePoints.getHeight());
 			closePoints.end();
 		
-
+			// Loop Through All The Blobs
 			for (int i = 0; i < contourFinder.nBlobs; i ++) {
-				ofVec2f frontPoint = ofVec2f (0,0); 
+				ofVec2f frontPoint = ofVec2f (0, 0); 
 				unsigned char * pix = grayImage.getPixels();
-		
-				grayImage.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height);
+				grayImage.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height); // ???
 
 				int tempBright;
 				int brightPixel = grayImage.getWidth()*contourFinder.blobs[i].boundingRect.getMinY() +contourFinder.blobs[i].boundingRect.getMinX();
@@ -191,12 +190,13 @@ void testApp::update() {
 					}
 				}
 
+				// Trace The Contour Into A Shape
 				ofPath blobShape ; 
-
 				for (int p = 0; p < contourFinder.blobs[i].pts.size(); p++) {
 					blobShape.lineTo(contourFinder.blobs[i].pts[p]); 
 				}
 
+				// Draw That Shape Into The FBO
 				if(fboAge > 90) {
 					closePoints.begin();
 						ofFill(); 
@@ -209,8 +209,10 @@ void testApp::update() {
 				blobShape.clear();
 			}
 		}
+		
 		// No Blobs
 		else {
+			// Still Draw The Logo & Fade
 			closePoints.begin();
 				ofFill(); 
 				ofSetColor(ofColor(0, 2));
@@ -220,78 +222,43 @@ void testApp::update() {
 			closePoints.end();
 		}
 
-
 		// Update FBOs
-
 		maskFbo.begin();
-
-			ofSetColor(ofColor::aliceBlue);
-
-			//closePoints.draw(0, 0, maskFbo.getWidth() + 0, maskFbo.getHeight() +0);
-
-			closePoints.draw(-250, -250, maskFbo.getWidth() + 450, maskFbo.getHeight() +250);
-
+			ofSetColor(ofColor::aliceBlue); // Color ??
+			closePoints.draw(-250, -250, maskFbo.getWidth() + 450, maskFbo.getHeight() +250); // Magic Numbers ??
 		maskFbo.end();
 
-
-
 		fbo.begin();
-
 			ofClear(0, 0, 0, 0);
-
 			shader.begin();
-
 				shader.setUniformTexture("maskTex", maskFbo.getTextureReference(), 1);
-
 				thumbnail.draw(0, 0);
-
 			shader.end();
-
 		fbo.end();
 
-
-
-		// Check Brightness
+		// Check Brightness Every Two Seconds
 		if(ofGetFrameNum() % 60 == 0) {
 			currentBrightness = getCurrentBrightness();
 			if(currentBrightness >= targetAlpha) {
-
 				//Play Media
-
 				if (currentAssetIsMovie) {
-
 					video.stop();
-
 					video.setFrame(0);
-
 					video.play(); 
-
 					video.setLoopState(OF_LOOP_NONE);
-
 				}
-
 				else {
-
 					imageTimer = 0; 
-
 				}
-
 				playState = 2;
-
 				currentBrightness = 0;
-
-	
 			}
 		}
 
-	} // play state
+	} // play state < 2
 		
-
-
     // Idle Video
-
 	if(currentAssetIsMovie) {
-
 		video.update();
 	}
 
@@ -299,8 +266,6 @@ void testApp::update() {
 		demo.update();
 	}
 
-	//cout << " -- PS -- " << playState << endl;
-	//cout << maskFbo.getWidth() << "\t" << maskFbo.getHeight() << endl;
 }
 
 //--------------------------------------------------------------
