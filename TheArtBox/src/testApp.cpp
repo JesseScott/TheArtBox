@@ -46,7 +46,6 @@ void testApp::setup() {
 	maxBlob = (kinect.width*kinect.height)/2; 
 	
 	// STATE
-	bDrawPointCloud = false;
 	presenting = true;
 	tooSunny = true;
 	fboAge = 0; 
@@ -271,30 +270,24 @@ void testApp::update() {
 //--------------------------------------------------------------
 void testApp::draw() {
 
+	// DEBUG VIEW
 	if(presenting == false ) {
 	
-		// Draw Depth Image
-		kinect.drawDepth(10, 10, 400, 300);
-
-		// Draw kinect RGB
-		kinect.draw(420, 10, 400, 300);
-		
-		// Draw Blob Contours
-		contourFinder.draw(10, 320, 400, 300);
-
-		// Draw Mask FBO
-		closePoints.draw(420, 320, 400, 300); 
+		// Draw IR Images
+		kinect.drawDepth(10, 10, 400, 300); // Depth
+		kinect.draw(420, 10, 400, 300); // RGB
+		contourFinder.draw(10, 320, 400, 300); // Blobs
+		closePoints.draw(420, 320, 400, 300); // FBO
 
 		// Draw The CV Images
-		colorImg.draw(1100, 10, 400, 300);
-		grayImage.draw(1510, 20, 400, 300);
-		grayBg.draw(1100, 280, 400, 300);
-		grayDiff.draw(1510, 280, 400, 300);
+		colorImg.draw(1100, 10, 400, 300); // RGB
+		grayImage.draw(1510, 20, 400, 300); // Grayscale
+		grayBg.draw(1100, 280, 400, 300); // Background
+		grayDiff.draw(1510, 280, 400, 300); // Difference
 	
 		// Debug Info
 		ofSetColor(255, 255, 255);
 		stringstream reportStream;
-    
 		reportStream 
 		<< "using opencv threshold = " << bThreshWithOpenCV <<" (press spacebar)" << endl
 		<< "set near threshold " << nearThreshold << " (press: + -)" << endl
@@ -305,57 +298,42 @@ void testApp::draw() {
 		<< "play state is " << playState << endl
 		<< "Too Sunny ? = " << int(tooSunny) << endl
 		<< "press c to close the connection and o to open it again, connection is: " << kinect.isConnected() << endl;
-
 		if(kinect.hasCamTiltControl()) {
     		reportStream << "press UP and DOWN to change the tilt angle: " << angle << " degrees" << endl
 			<< "press 1-5 & 0 to change the led mode" << endl;
 		}
-    
 		ofDrawBitmapString(reportStream.str(), 20, 652);
 
-	} // 
+	} // presenting
 
+	// INTERACTIVE VIEW
 	else if(presenting == true && playState == 1) {
-
 		// Draw FBO
-
 		fbo.draw(0, 0, maskFbo.getWidth(), maskFbo.getHeight());
-
 	}
 
-	// DEBUG SCREEN
+	// PLAYING VIEW
 	else if(presenting == true && playState == 2) {
-		
-
+		// Movie
 		if (currentAssetIsMovie) {
-
 			video.draw(0, 0, 3240, 1920); 
-
 		}
-
+		
+		// Image
 		else {
-
 			image.draw(0, 0, 3240, 1920);
-
-			//image.draw(0, 0, image.getWidth() * (3240)/image.getWidth(), image.getHeight() * (1920/image.getHeight()));
-
 			imageTimer++; 
-
 		}
-
-
 
 		// Caption
-
-		ofSetColor(0,255);
-
+		ofSetColor(0, 255);
 		font.drawString(artistNames[currentIndex], 105, ofGetScreenHeight() - 95);
-
-		ofSetColor(255,255);
-
+		ofSetColor(255, 255);
 		font.drawString(artistNames[currentIndex], 100, ofGetScreenHeight() - 100);
 
-		// Done ?
+		// DONE ???
+		
+		// Movie
 		if(currentAssetIsMovie) {
 			if(video.getIsMovieDone()) {
 				cout << "DONE" << endl;
@@ -364,24 +342,19 @@ void testApp::draw() {
 				video.stop(); 
 			
 				// Increase Play
-
 				currentIndex++;
 
-    
-
 				// Check Limit
-
 				if(currentIndex >= maxIndex) {
-
 					currentIndex = 0;
-
 				}
 
 				// Update Assets
-
 				updateCurrentIndex();
 			}
 		}
+		
+		// Image
 		else {
 			if (imageTimer > 500 ) {
 				cout << "DONE" << endl;
@@ -389,28 +362,21 @@ void testApp::draw() {
 				imageTimer = 0; 
 			
 				// Increase Play
-
 				currentIndex++;
 
-    
-
 				// Check Limit
-
 				if(currentIndex >= maxIndex) {
-
 					currentIndex = 0;
-
 				}
 
 				// Update Assets
-
 				updateCurrentIndex();
-
 			}
 		}
 
-	}
+	} // playback
 
+	// TRAILER VIEW
 	else if(presenting == true && playState == 4) {
 		if(demo.getIsMovieDone()) {
 			playState = 1;
@@ -422,34 +388,10 @@ void testApp::draw() {
 			}
 			demo.draw(0, 0, 3240, 1920); 
 		}
-	}
+	} // trailer
 
-}
+} // draw()
 
-void testApp::drawPointCloud() {
-	int w = 640;
-	int h = 480;
-	ofMesh mesh;
-	mesh.setMode(OF_PRIMITIVE_POINTS);
-	int step = 2;
-	for(int y = 0; y < h; y += step) {
-		for(int x = 0; x < w; x += step) {
-			if(kinect.getDistanceAt(x, y) > 0) {
-				mesh.addColor(kinect.getColorAt(x,y));
-				mesh.addVertex(kinect.getWorldCoordinateAt(x, y));
-			}
-		}
-	}
-	glPointSize(3);
-	ofPushMatrix();
-	// the projected points are 'upside down' and 'backwards' 
-	ofScale(1, -1, -1);
-	ofTranslate(0, 0, -1000); // center the points a bit
-	ofEnableDepthTest();
-	mesh.drawVertices();
-	ofDisableDepthTest();
-	ofPopMatrix();
-}
 
 
 void testApp::autoPlay() {
@@ -1134,10 +1076,6 @@ void testApp::keyPressed (int key) {
 	switch (key) {
 		case ' ':
 			bThreshWithOpenCV = !bThreshWithOpenCV;
-			break;
-			
-		case'p':
-			bDrawPointCloud = !bDrawPointCloud;
 			break;
 			
 		case '>':

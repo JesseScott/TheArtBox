@@ -38,7 +38,6 @@ public:
     int getCurrentBrightness();
     void checkMemory();
     void getFilesFromFTP();
-	void drawPointCloud();
 	void autoPlay();
 	
 	// KINECT & OPENCV	
@@ -54,7 +53,6 @@ public:
 	int minBlob; 
 	int maxBlob; 
 	bool bThreshWithOpenCV;
-	bool bDrawPointCloud;
 	bool tooSunny;
 	int  threshold;
 	bool bLearnBakground;
