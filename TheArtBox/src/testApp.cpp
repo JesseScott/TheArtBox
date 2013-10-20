@@ -110,7 +110,7 @@ void testApp::update() {
 				grayImage = colorImg;
 
 				// Set Timer For New BG
-				if(ofGetMinutes % 10 == 0) {
+				if(ofGetMinutes() % 10 == 0) {
 					bLearnBakground = true;
 				}
 				
@@ -270,6 +270,22 @@ void testApp::update() {
 	if(playState == 4) {
 		demo.update();
 	}
+
+
+	// Time To Write Soem Diagnostic Info To File
+	if(ofGetMinutes() % 10 == 0) {
+		// Set File
+		ofLogToFile("artboxLog.txt", true);
+		
+		// FPS
+		ofLog() << "Frame Rate is " << ofToString(ofGetFrameRate()) << endl;
+		
+		// State
+		ofLog() << "Current State is " << ofToString(playState) << endl;
+		
+		
+	}
+
 
 }
 
