@@ -39,6 +39,7 @@ public:
     void checkMemory();
     void getFilesFromFTP();
 	void autoPlay();
+	void learnBackground();
 	
 	// KINECT & OPENCV	
 	ofxKinect kinect;

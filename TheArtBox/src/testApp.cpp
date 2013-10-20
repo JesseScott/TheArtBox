@@ -109,6 +109,12 @@ void testApp::update() {
 				colorImg.mirror(false, true);
 				grayImage = colorImg;
 
+				// Set Timer For New BG
+				if(ofGetMinutes % 10 == 0) {
+					bLearnBakground = true;
+				}
+				
+				// Learn A New Background Image
 				if (bLearnBakground == true){
 					grayBg = grayImage;		
 					bLearnBakground = false;
@@ -929,6 +935,11 @@ int testApp::getCurrentBrightness() {
 
 }
 
+void testApp::learnBackground() {
+
+
+
+}
 
 
 //--------------------------------------------------------------
