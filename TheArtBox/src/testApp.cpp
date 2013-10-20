@@ -275,7 +275,7 @@ void testApp::update() {
 	// Time To Write Soem Diagnostic Info To File
 	if(ofGetMinutes() % 10 == 0) {
 		// Set File
-		ofLogToFile("artboxLog.txt", true);
+		ofLogToFile("logs/ArtBoxLog.txt", true);
 		
 		// FPS
 		ofLog() << "Frame Rate is " << ofToString(ofGetFrameRate()) << endl;
