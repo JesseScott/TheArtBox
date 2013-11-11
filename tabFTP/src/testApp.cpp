@@ -1,13 +1,20 @@
 #include "testApp.h"
+#include <stdlib.h>
 
 //--------------------------------------------------------------
-void testApp::setup(){
+void testApp::setup() {
     
+    // Read Credentials File
+    credentials = ofBufferFromFile("credentials.txt");
+    host = credentials.getFirstLine();
+    username = credentials.getNextLine();
+    password = credentials.getNextLine();
+    port = credentials.getNextLine();
+   
     // Connect
-    
     try {
-        //client.connect("ftp.memelab.ca", 21, "SITC_APP", "SITC_6");
-        client.setup("ftp.memelab.ca", "SITC_APP", "SITC_6", 21);
+        cout << "Attempting To Connect To FTP:" << endl;
+        client.setup(host, username, password, 21);
         client.setVerbose(true);
         cout << "Connection Success! \n" << endl;
     }
@@ -17,11 +24,12 @@ void testApp::setup(){
     
     // List Files
     try {
+        cout << "Attempting To List All Files:" << endl;
         fileNames = client.list("/");
-        cout << "Listing Success! \n" << endl;
         for(int i = 0; i < fileNames.size(); i++) {
-            cout << "Item #" << i << " is " << fileNames[i] << "\n" << endl;
+            cout << "Item #" << i << " is " << fileNames[i] << endl;
         }
+        cout << "Listing Success!\n" << endl;
     }
     catch(int e) {
         cout << "The Exception #" << e << " Occured." << endl;
@@ -29,11 +37,12 @@ void testApp::setup(){
     
     // Get Files
     try {
-        client.get("BOXIcon.png", ofToDataPath(""), "/");
+        cout << "Attempting To Download All Files:" << endl;
+        //client.get("BOXIcon.png", ofToDataPath(""), "/");
         for(int i = 0; i < fileNames.size(); i++) {
             //client.get(fileNames[i], ofToDataPath(""), "/");
         }
-        cout << "Downloading Success!" << endl;
+        cout << "Downloading Success!\n" << endl;
     }
     catch(int e) {
         cout << "The Exception #" << e << " Occured." << endl;

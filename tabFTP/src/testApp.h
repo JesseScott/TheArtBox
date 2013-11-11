@@ -22,5 +22,9 @@ class testApp : public ofBaseApp{
     
         ofxFTPClient client;
         vector<string> fileNames;
-		
+    
+        string pathToDataDirectory;
+    
+        ofBuffer    credentials;
+        string      host, username, password, port;
 };
