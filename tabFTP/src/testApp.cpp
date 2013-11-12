@@ -4,6 +4,16 @@
 //--------------------------------------------------------------
 void testApp::setup() {
     
+    
+    /*  INTRO   */
+    
+    // Preamble
+    cout << "Starting Program " << endl;
+    cout << " ----- \n" << endl;
+    
+    // Set Log Level (To Ensure Serial Debug Info Prints)
+    ofSetLogLevel(OF_LOG_NOTICE);
+    
     // Read Credentials File
     credentials = ofBufferFromFile("settings/credentials.txt");
     host = credentials.getFirstLine();
@@ -15,6 +25,31 @@ void testApp::setup() {
     pathToDataDirectory = "../../../MEDIA";
     pathToLogsDirectory = "../../../LOGS";
     pathToUploadsDirectory = "/filefrontend/data/files/uploads/";
+    
+    
+    /*  READ EXISTING FILES */
+    
+    // Set Path To Root Data Folder
+    string mediaPath = pathToDataDirectory;
+    mediaDirectory = ofDirectory(mediaPath);
+    
+    //Allow Media Types
+    mediaDirectory.allowExt("jpg");
+    mediaDirectory.allowExt("png");
+    mediaDirectory.allowExt("mp4");
+    mediaDirectory.allowExt("zip");
+    
+    // List
+    mediaDirectory.sort();
+    mediaDirectory.listDir();
+    cout << "Media Directory Has " << mediaDirectory.size() << " Valid Files \n" << endl;
+    existingFileNames.resize(mediaDirectory.size());
+    for (int i = 0; i < mediaDirectory.size(); i++) {
+        existingFileNames[i] = mediaDirectory.getName(i);
+        cout << "Existing File Name #" << i << " is " << existingFileNames[i] << endl;
+    }
+    
+    cout << "Existing Parse Success! \n" << endl;
     
     // Connect
     try {
@@ -30,6 +65,9 @@ void testApp::setup() {
         cout << "The Exception #" << e << " Occured." << endl;
     }
     
+    
+    /*  LIST REMOTE FILES */
+    
     // List Files
     try {
         cout << "Attempting To List All Files:" << endl;
@@ -39,13 +77,16 @@ void testApp::setup() {
         
         // Resize Trimmed Vector To Match
         trimmedFileNames.resize(fileNames.size());
+        existingFileNames.resize(trimmedFileNames.size());
 
         // Loop Through File Names, Trim At Path, And Assign To New Vector
         for(int i = 0; i < fileNames.size(); i++) {
-            cout << "Item #" << i << " is " << fileNames[i] << endl;
+            cout << "Original Item #" << i << " is " << fileNames[i] << endl;
             vector<string> trimmedName = ofSplitString(fileNames[i], "uploads/");
             trimmedFileNames[i] = trimmedName[1];
         }
+        
+        cout << "" << endl;
         
         // Loop Through New Vector To Make Sure
         for(int i = 0; i < trimmedFileNames.size(); i++) {
@@ -58,13 +99,49 @@ void testApp::setup() {
         cout << "The Exception #" << e << " Occured." << endl;
     }
     
+    
+    /*  COMPARE EXISTING AND REMOTE FILES */
+    
+    // Compare Files
+    cout << "Attempting To Compare All Files:" << endl;
+    
+    for(int i = 0; i < trimmedFileNames.size(); i++) {
+        Boolean match = false; // Set Boolean To Test Matches
+        for(int j = 0; j < existingFileNames.size(); j++) {
+            // If The Current File Matches Any File In The Existing List
+            if(trimmedFileNames[i].compare(existingFileNames[j]) == 0 ) {
+                match = true;
+                break;
+            }
+            // Otherwise Mark It As New
+            else {
+                match = false;
+            }
+        }
+        
+        // Test
+        if(match) {
+            cout << "The File " << trimmedFileNames[i] << " Has Previously Been Downloaded" << endl;
+        }
+        else {
+            cout << "The File " << trimmedFileNames[i] << " Seems To Be New" << endl;
+            newFileNames.push_back(trimmedFileNames[i]); // Add To New List
+        }
+    }
+    
+    cout << "Comparing Success!\n" << endl;
+    
+    
+    /*  DOWNLOAD NEW FILES */
+    
     // Get Files
     try {
-        cout << "Attempting To Download All Files:" << endl;
+        cout << "Attempting To Download " << newFileNames.size() << " Files:" << endl;
         
         // Download All Files From Uploads Directory To Data Directory
-        for(int i = 0; i < trimmedFileNames.size(); i++) {
-            client.get(trimmedFileNames[i], ofToDataPath(""), pathToUploadsDirectory);
+        for(int i = 0; i < newFileNames.size(); i++) {
+            cout << "Downloading The File " << newFileNames[i] << endl;
+            client.get(newFileNames[i], ofToDataPath(""), pathToUploadsDirectory);
         }
         
         cout << "Downloading Success!\n" << endl;
@@ -73,29 +150,32 @@ void testApp::setup() {
         cout << "The Exception #" << e << " Occured." << endl;
     }
     
-    // Move Files
+    
+    /*  MOVE FILES */
+    
     cout << "Listing Files In Data Directory" << endl;
     
     // Set Path To Root Data Folder
-    string path = "";
-    ofDirectory dir(path);
+    string dataPath = "";
+    dataDirectory = ofDirectory(dataPath);
     
     //Allow Media Types
-    dir.allowExt("jpg");
-    dir.allowExt("png");
-    dir.allowExt("mp4");
-    dir.allowExt("zip");
+    dataDirectory.allowExt("jpg");
+    dataDirectory.allowExt("png");
+    dataDirectory.allowExt("mp4");
+    dataDirectory.allowExt("zip");
     
     // List
-    dir.listDir();
-    cout << "Directory Has " << dir.size() << " Valid Files" << endl;
+    dataDirectory.sort();
+    dataDirectory.listDir();
+    cout << "Data Directory Has " << dataDirectory.size() << " Valid Files" << endl;
     
     // Move To Data Directory
     cout << "Moving To Data Directory" << endl;
-    for (int i = 0; i < dir.size(); i++) {
-        ofFile file = dir.getFile(i);
+    for (int i = 0; i < dataDirectory.size(); i++) {
+        ofFile file = dataDirectory.getFile(i);
         cout << "Moving File #" << i << endl;
-        file.moveTo(pathToDataDirectory);
+        file.moveTo(pathToDataDirectory, true, false);
     }
     
     cout << "Moving Success!\n" << endl;
