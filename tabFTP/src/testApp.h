@@ -23,9 +23,12 @@ class testApp : public ofBaseApp{
         ofxFTPClient client;
         vector<string> fileNames;
         vector<string> trimmedFileNames;
+        vector<string> existingFileNames;
+        vector<string> newFileNames;
     
-        ofDirectory directory;
-        ofFile file;
+        ofDirectory dataDirectory;
+        ofDirectory mediaDirectory;
+        ofDirectory ftpDirectory;
     
         string pathToDataDirectory;
         string pathToLogsDirectory;

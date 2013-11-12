@@ -12,7 +12,7 @@ void testApp::setup() {
     port = credentials.getNextLine();
     
     // Set Paths
-    pathToDataDirectory = "../../../DATA";
+    pathToDataDirectory = "../../../MEDIA";
     pathToLogsDirectory = "../../../LOGS";
     pathToUploadsDirectory = "/filefrontend/data/files/uploads/";
     
