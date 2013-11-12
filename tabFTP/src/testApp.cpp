@@ -10,7 +10,12 @@ void testApp::setup() {
     username = credentials.getNextLine();
     password = credentials.getNextLine();
     port = credentials.getNextLine();
-   
+    
+    // Set Paths
+    pathToDataDirectory = "../../DATA";
+    pathToLogsDirectory = "../../LOGS";
+    pathToUploadsDirectory = "/filefrontend/data/files/uploads/";
+    
     // Connect
     try {
         cout << "Attempting To Connect To FTP:" << endl;
@@ -25,10 +30,27 @@ void testApp::setup() {
     // List Files
     try {
         cout << "Attempting To List All Files:" << endl;
-        fileNames = client.list("/");
+
+        // Assign List Of Directory To Base String Vector
+        fileNames = client.list(pathToUploadsDirectory);
+        cout << "File Name Size Is " << fileNames.size() << endl;
+        
+        // Resize Trimmed Vector To Match
+        trimmedFileNames.resize(fileNames.size());
+        cout << "Trim Name Size Is " << trimmedFileNames.size() << endl;
+
+        // Loop Through File Names, Trim At Path, And Assign To New Vector
         for(int i = 0; i < fileNames.size(); i++) {
             cout << "Item #" << i << " is " << fileNames[i] << endl;
+            vector<string> trimmedName = ofSplitString(fileNames[i], "uploads/");
+            trimmedFileNames[i] = trimmedName[1];
         }
+        
+        // Loop Through New Vector To Make Sure
+        for(int i = 0; i < trimmedFileNames.size(); i++) {
+            cout << "Trim #" << i << " is " << trimmedFileNames[i] << endl;
+        }
+        
         cout << "Listing Success!\n" << endl;
     }
     catch(int e) {
@@ -38,15 +60,19 @@ void testApp::setup() {
     // Get Files
     try {
         cout << "Attempting To Download All Files:" << endl;
-        //client.get("BOXIcon.png", ofToDataPath(""), "/");
-        for(int i = 0; i < fileNames.size(); i++) {
-            //client.get(fileNames[i], ofToDataPath(""), "/");
+        
+        // Download All Files From Uploads Directory To Data Directory
+        for(int i = 0; i < trimmedFileNames.size(); i++) {
+            client.get(trimmedFileNames[i], ofToDataPath(""), pathToUploadsDirectory);
         }
+        
         cout << "Downloading Success!\n" << endl;
     }
     catch(int e) {
         cout << "The Exception #" << e << " Occured." << endl;
     }
+    
+    // Move Files
 
     
 }
