@@ -5,7 +5,7 @@
 void testApp::setup() {
     
     // Read Credentials File
-    credentials = ofBufferFromFile("credentials.txt");
+    credentials = ofBufferFromFile("settings/credentials.txt");
     host = credentials.getFirstLine();
     username = credentials.getNextLine();
     password = credentials.getNextLine();

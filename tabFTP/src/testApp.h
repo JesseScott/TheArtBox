@@ -24,6 +24,9 @@ class testApp : public ofBaseApp{
         vector<string> fileNames;
         vector<string> trimmedFileNames;
     
+        ofDirectory directory;
+        ofFile file;
+    
         string pathToDataDirectory;
         string pathToLogsDirectory;
         string pathToUploadsDirectory;
