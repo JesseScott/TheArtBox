@@ -12,8 +12,8 @@ void testApp::setup() {
     port = credentials.getNextLine();
     
     // Set Paths
-    pathToDataDirectory = "../../DATA";
-    pathToLogsDirectory = "../../LOGS";
+    pathToDataDirectory = "../../../DATA";
+    pathToLogsDirectory = "../../../LOGS";
     pathToUploadsDirectory = "/filefrontend/data/files/uploads/";
     
     // Connect
