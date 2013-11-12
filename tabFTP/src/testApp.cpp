@@ -19,8 +19,11 @@ void testApp::setup() {
     // Connect
     try {
         cout << "Attempting To Connect To FTP:" << endl;
+        
+        // Log In To FTP
         client.setup(host, username, password, 21);
         client.setVerbose(true);
+        
         cout << "Connection Success! \n" << endl;
     }
     catch(int e) {
@@ -33,11 +36,9 @@ void testApp::setup() {
 
         // Assign List Of Directory To Base String Vector
         fileNames = client.list(pathToUploadsDirectory);
-        cout << "File Name Size Is " << fileNames.size() << endl;
         
         // Resize Trimmed Vector To Match
         trimmedFileNames.resize(fileNames.size());
-        cout << "Trim Name Size Is " << trimmedFileNames.size() << endl;
 
         // Loop Through File Names, Trim At Path, And Assign To New Vector
         for(int i = 0; i < fileNames.size(); i++) {
@@ -48,7 +49,7 @@ void testApp::setup() {
         
         // Loop Through New Vector To Make Sure
         for(int i = 0; i < trimmedFileNames.size(); i++) {
-            cout << "Trim #" << i << " is " << trimmedFileNames[i] << endl;
+            cout << "Trimmed Item #" << i << " is " << trimmedFileNames[i] << endl;
         }
         
         cout << "Listing Success!\n" << endl;
@@ -73,13 +74,37 @@ void testApp::setup() {
     }
     
     // Move Files
-
+    cout << "Listing Files In Data Directory" << endl;
+    
+    // Set Path To Root Data Folder
+    string path = "";
+    ofDirectory dir(path);
+    
+    //Allow Media Types
+    dir.allowExt("jpg");
+    dir.allowExt("png");
+    dir.allowExt("mp4");
+    dir.allowExt("zip");
+    
+    // List
+    dir.listDir();
+    cout << "Directory Has " << dir.size() << " Valid Files" << endl;
+    
+    // Move To Data Directory
+    cout << "Moving To Data Directory" << endl;
+    for (int i = 0; i < dir.size(); i++) {
+        ofFile file = dir.getFile(i);
+        cout << "Moving File #" << i << endl;
+        file.moveTo(pathToDataDirectory);
+    }
+    
+    cout << "Moving Success!\n" << endl;
     
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+    
     
 }
 
