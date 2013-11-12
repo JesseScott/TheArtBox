@@ -45,3 +45,5 @@ TheArtBox/bin/data/demo/*
 TheArtBox/bin/data/images/*
 TheArtBox/bin/data/movies/*
 /tabFTP/bin/data/*
+/MEDIA/*
+/LOGS/*
