@@ -3,35 +3,53 @@
 <assets>
 
 	<!--	==== media====	-->
-	<media>
-		<file>movies/fingers.mov</file>
-            	<file>images/A.jpg</file>
-            	<file>images/B.jpg</file>
-           	<file>movies/fingers.mov</file>
-            	<file>images/A.jpg</file>
-            	<file>images/B.jpg</file>
-		<file>movies/fingers.mov</file>
-            	<file>images/A.jpg</file>
-            	<file>images/B.jpg</file>
-           	<file>movies/fingers.mov</file>
-            	<file>images/A.jpg</file>
+	<media>  	
+		<file>images/lady.jpg</file>
+		<file>images/ringmaster.jpg</file>  
+        <file>images/Goddess.jpg</file>		
+        <file>images/comic1.jpg</file>
+		<file>images/comic2.jpg</file>
+		<file>images/comic3.jpg</file>            	
+		<file>images/DSC_0423.jpg</file>
+		<file>images/DSC_3975.jpg</file>
+		<file>images/DSC_6135.jpg</file>
+		<file>images/untitled.jpg</file>
+		<file>movies/collections.mov</file>  
+		<file>movies/MotionGraphics.mp4</file>
+        <file>images/CastleInTheShadows.jpg</file>
+        <file>images/LookUp.jpg</file>
+		<file>images/TrintThomas-360Flip.jpg</file>
+		<file>images/YogaAtThePrecipice.jpg</file>
+		<file>images/Cathedral.jpg</file>
+		<file>images/TheSummerTime.jpg</file>
+		<file>images/Knots.jpg</file>
+		<file>images/dazed.jpg</file>
+
 	</media>
 
 
 	<!--	==== artists ====	-->
 	<artists>
-		<file>ANNETTE CHEUNG</file>
-		<file>AZI EBRAHIMI</file>
-		<file>CALVIN NIMMO</file>
-		<file>JOSH STUIBLE</file>
-		<file>MIKAEL LANGWORTH</file>
-		<file>NIKNAZ MALEKAFZALI</file>
 		<file>RHIANNON COLLETT</file>
+		<file>RHIANNON COLLETT</file>
+		<file>AZI EBRAHIMI</file>
+		<file>ANONYMOUS</file>
+		<file>ANONYMOUS</file>		
+		<file>ANONYMOUS</file>
+		<file>ANONYMOUS</file>
+		<file>ANONYMOUS</file>		
+		<file>ANONYMOUS</file>	
+		<file>LAUREL DUNDEE</file>
+		<file>TERRY-DAYNE BEASLEY</file>
+		<file>LAKES</file>
+		<file>ALEXI LIOTTI</file>
+		<file>ALEXI LIOTTI</file>
+		<file>ALEXI LIOTTI</file>
+		<file>ALEXI LIOTTI</file>
+		<file>NIKNAZ MALEKAFZALI</file>
+		<file>NIKNAZ MALEKAFZALI</file>
 		<file>ROBYN MOORE</file>
-		<file>SAM MERCHANT</file>
-		<file>STERLING MEGAS</file>
-		<file>SUMMER-ANGEL McDONALD</file>
-		<file>TD BEASLEY</file>
+		<file>WAKANA SHIMAMURA</file>
 	</artists>
 
 	<!--	==== fonts ====	-->
