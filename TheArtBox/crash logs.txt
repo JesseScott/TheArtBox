@@ -1,0 +1,27 @@
+
+BSOD - Apr 13
+
+Problem signature:
+  Problem Event Name:	BlueScreen
+  OS Version:	6.1.7601.2.1.0.768.3
+  Locale ID:	1033
+
+Additional information about the problem:
+  BCCode:	d1
+  BCP1:	0000000000000010
+  BCP2:	0000000000000002
+  BCP3:	0000000000000000
+  BCP4:	FFFFF88004A56A9E
+  OS Version:	6_1_7601
+  Service Pack:	1_0
+  Product:	768_1
+
+Files that help describe the problem:
+  C:\Windows\Minidump\041414-8314-01.dmp
+  C:\Users\User\AppData\Local\Temp\WER-10764-0.sysdata.xml
+
+Read our privacy statement online:
+  http://go.microsoft.com/fwlink/?linkid=104288&clcid=0x0409
+
+If the online privacy statement is not available, please read our privacy statement offline:
+  C:\Windows\system32\en-US\erofflps.txt
