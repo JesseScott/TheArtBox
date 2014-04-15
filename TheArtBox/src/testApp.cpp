@@ -110,7 +110,7 @@ void testApp::update() {
 				grayImage = colorImg;
 
 				// Set Timer For New BG
-				if(ofGetMinutes() % 10 == 0) {
+				if(ofGetMinutes() % 1 == 0) {
 					bLearnBakground = true;
 				}
 				
