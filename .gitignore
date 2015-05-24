@@ -1,9 +1,7 @@
 #################  
 ## openFrameworks  
 #################  
-  
-[Bb]in/* 
-![Bb]in/data/ 
+
 [Bb]uild/ 
 [Oo]bj/ 
 *.o 
@@ -30,3 +28,23 @@ Thumbs.db
   
 # Folder config file  
 Desktop.ini  
+
+#################  
+## OSX 
+#################  
+
+*.DS_Store
+
+#################  
+## FILES
+#################  
+[Bb]in/* 
+![Bb]in/data/ 
+TheArtBox/bin/data/artbox/*
+TheArtBox/bin/data/demo/*
+TheArtBox/bin/data/images/*
+TheArtBox/bin/data/movies/*
+TheArtBox/bin/data/logs/*
+/tabFTP/bin/data/*
+/MEDIA/*
+/LOGS/*
