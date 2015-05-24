@@ -16,27 +16,43 @@ void ofApp::setup() {
     width = ofGetWindowWidth();
     height = ofGetWindowHeight();
 	
+    
 	// KINECT
-	kinect.setRegistration(true);
-	kinect.init();	
-	kinect.open();
-	if(kinect.isConnected()) {
-		ofLogNotice() << "sensor-emitter dist: " << kinect.getSensorEmitterDistance() << "cm";
-		ofLogNotice() << "sensor-camera dist:  " << kinect.getSensorCameraDistance() << "cm";
-		ofLogNotice() << "zero plane pixel size: " << kinect.getZeroPlanePixelSize() << "mm";
-		ofLogNotice() << "zero plane dist: " << kinect.getZeroPlaneDistance() << "mm";
-	}
-	angle = 23;
-	kinect.setCameraTiltAngle(angle);
-	
+    #ifdef KINECT
+        kinect.setRegistration(true);
+        kinect.init();	
+        kinect.open();
+        if(kinect.isConnected()) {
+            ofLogNotice() << "sensor-emitter dist: " << kinect.getSensorEmitterDistance() << "cm";
+            ofLogNotice() << "sensor-camera dist:  " << kinect.getSensorCameraDistance() << "cm";
+            ofLogNotice() << "zero plane pixel size: " << kinect.getZeroPlanePixelSize() << "mm";
+            ofLogNotice() << "zero plane dist: " << kinect.getZeroPlaneDistance() << "mm";
+        }
+        angle = 23;
+        kinect.setCameraTiltAngle(angle);
+    #else
+        camera.setVerbose(true);
+        camera.initGrabber(320, 240);
+    #endif
+    
+    // CAPTURE SIZE
+    int capture_width, capture_height;
+    #ifdef KINECT
+        capture_width = kinect.width;
+        capture_height = kinect.height;
+    #else
+        capture_width = camera.width;
+        capture_height = camera.height;
+    #endif
+    
 	// OPENCV
-	colorImg.allocate(kinect.width, kinect.height);
-	grayImage.allocate(kinect.width, kinect.height);
-	grayThreshNear.allocate(kinect.width, kinect.height);
-	grayThreshFar.allocate(kinect.width, kinect.height);
-	grayBg.allocate(kinect.width, kinect.height);
-	grayDiff.allocate(kinect.width, kinect.height);
-	closePoints.allocate(kinect.width, kinect.height, GL_RGBA32F_ARB); 
+	colorImg.allocate(capture_width, capture_height);
+	grayImage.allocate(capture_width, capture_height);
+	grayThreshNear.allocate(capture_width, capture_height);
+	grayThreshFar.allocate(capture_width, capture_height);
+	grayBg.allocate(capture_width, capture_height);
+	grayDiff.allocate(capture_width, capture_height);
+	closePoints.allocate(capture_width, capture_height, GL_RGBA32F_ARB);
 
 	nearThreshold = 250;
 	farThreshold = 112;
@@ -44,10 +60,10 @@ void ofApp::setup() {
 	threshold = 80;
 	bThreshWithOpenCV = false;
 	minBlob = 25; 
-	maxBlob = (kinect.width*kinect.height)/2; 
+	maxBlob = (capture_width * capture_height)/2;
 	
 	// STATE
-	presenting = true;
+	presenting = false;
 	tooSunny = true;
 	fboAge = 0; 
 	imageTimer = 0; 
@@ -86,7 +102,6 @@ void ofApp::setup() {
     checkMemory();
 
 	cout << "Setup Is Done \n" << endl;
-
 }
 
 //--------------------------------------------------------------
@@ -101,70 +116,13 @@ void ofApp::update() {
 	}
 	
 	if(playState < 2) {
-		kinect.update();
-		if(kinect.isFrameNew()) {	
-			
-			// RGB
-			if(tooSunny) {				
-				colorImg.setFromPixels(kinect.getPixels(), kinect.width, kinect.height);
-				colorImg.mirror(false, true);
-				grayImage = colorImg;
 
-				// Set Timer For New BG
-				if(ofGetMinutes() % 1 == 0) {
-					bLearnBakground = true;
-				}
-				
-				// Learn A New Background Image
-				if (bLearnBakground == true){
-					grayBg = grayImage;		
-					bLearnBakground = false;
-				}
-
-				// take the abs value of the difference between background and incoming and then threshold:
-				grayDiff.absDiff(grayBg, grayImage);
-				grayDiff.threshold(threshold);
-
-				// update the cv images
-				grayImage.flagImageChanged();
-		
-				// Find The Blobs
-				contourFinder.findContours(grayDiff, minBlob, maxBlob, 20, false);
-
-			}
-
-			// IR
-			else {
-				grayImage.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height);
-				grayImage.mirror(false, true);
-				if(bThreshWithOpenCV) {
-					grayThreshNear = grayImage;
-					grayThreshFar = grayImage;
-					grayThreshNear.threshold(nearThreshold, true);
-					grayThreshFar.threshold(farThreshold);
-					cvAnd(grayThreshNear.getCvImage(), grayThreshFar.getCvImage(), grayImage.getCvImage(), NULL);
-				} 
-				else {
-					unsigned char * pix = grayImage.getPixels();
-					int numPixels = grayImage.getWidth() * grayImage.getHeight();
-					for(int i = 0; i < numPixels; i++) {
-						if(pix[i] < nearThreshold && pix[i] > farThreshold) {
-							pix[i] = 155;
-						} else {
-							pix[i] = 0;
-						}
-					}
-				}
-
-				// update the cv images
-				grayImage.flagImageChanged();
-		
-				// Find The Blobs
-				contourFinder.findContours(grayImage, minBlob, maxBlob, 20, false);
-			}
-
-		} // new frame
-	
+        #ifdef KINECT
+            updateKinect();
+        #else
+            updateWebcam();
+        #endif
+        
 		// Are There Blobs ?
 		if (contourFinder.nBlobs > 0 ) {
 			// Draw Logo Into FBO and Fade Everything Else
@@ -180,10 +138,14 @@ void ofApp::update() {
 			for (int i = 0; i < contourFinder.nBlobs; i ++) {
 				ofVec2f frontPoint = ofVec2f (0, 0); 
 				unsigned char * pix = grayImage.getPixels();
-				grayImage.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height); // ???
+                #ifdef KINECT
+                    grayImage.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height); // ???
+                #else
+                    grayImage.setFromPixels(camera.getPixels(), camera.width, camera.height); // ???
+                #endif
 
 				int tempBright;
-				int brightPixel = grayImage.getWidth()*contourFinder.blobs[i].boundingRect.getMinY() +contourFinder.blobs[i].boundingRect.getMinX();
+				int brightPixel = grayImage.getWidth() * contourFinder.blobs[i].boundingRect.getMinY() +contourFinder.blobs[i].boundingRect.getMinX();
 				tempBright = pix[brightPixel]; 
 		
 				for (int j = contourFinder.blobs[i].boundingRect.getMinY(); j <= contourFinder.blobs[i].boundingRect.getMaxY(); j++){ 
@@ -272,8 +234,7 @@ void ofApp::update() {
 		demo.update();
 	}
 
-
-	// Time To Write Soem Diagnostic Info To File
+	// Time To Write Some Diagnostic Info To File
 	if(ofGetMinutes() % 10 == 0) {
 		// Set File
 		ofLogToFile("logs/ArtBoxLog.txt", true);
@@ -284,10 +245,7 @@ void ofApp::update() {
 		// State
 		ofLog() << "Current State is " << ofToString(playState) << endl;
 		ofLog() << "Presenting State is " << ofToString(int(presenting)) << endl;
-		
-		
 	}
-
 
 }
 
@@ -298,8 +256,13 @@ void ofApp::draw() {
 	if(presenting == false ) {
 	
 		// Draw IR Images
-		kinect.drawDepth(10, 10, 400, 300); // Depth
-		kinect.draw(420, 10, 400, 300); // RGB
+        #ifdef KINECT
+                kinect.drawDepth(10, 10, 400, 300); // Depth
+                kinect.draw(420, 10, 400, 300); // RGB
+        #else
+                camera.draw(420, 10, 400, 300); // RGB
+        #endif
+
 		contourFinder.draw(10, 320, 400, 300); // Blobs
 		closePoints.draw(420, 320, 400, 300); // FBO
 
@@ -417,9 +380,102 @@ void ofApp::draw() {
 } // draw()
 
 
+# pragma mark - CAMERA
 
+void ofApp::updateKinect() {
+    kinect.update();
+    if(kinect.isFrameNew()) {
+        // RGB
+        if(tooSunny) {
+            colorImg.setFromPixels(kinect.getPixels(), kinect.width, kinect.height);
+            colorImg.mirror(false, true);
+            grayImage = colorImg;
+            
+            // Set Timer For New BG
+            if(ofGetMinutes() % 1 == 0) {
+                bLearnBakground = true;
+            }
+            
+            // Learn A New Background Image
+            if (bLearnBakground == true){
+                grayBg = grayImage;
+                bLearnBakground = false;
+            }
+            
+            // take the abs value of the difference between background and incoming and then threshold:
+            grayDiff.absDiff(grayBg, grayImage);
+            grayDiff.threshold(threshold);
+            
+            // update the cv images
+            grayImage.flagImageChanged();
+            
+            // Find The Blobs
+            contourFinder.findContours(grayDiff, minBlob, maxBlob, 20, false);
+        }
+        
+        // IR
+        else {
+            grayImage.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height);
+            grayImage.mirror(false, true);
+            if(bThreshWithOpenCV) {
+                grayThreshNear = grayImage;
+                grayThreshFar = grayImage;
+                grayThreshNear.threshold(nearThreshold, true);
+                grayThreshFar.threshold(farThreshold);
+                cvAnd(grayThreshNear.getCvImage(), grayThreshFar.getCvImage(), grayImage.getCvImage(), NULL);
+            }
+            else {
+                unsigned char * pix = grayImage.getPixels();
+                int numPixels = grayImage.getWidth() * grayImage.getHeight();
+                for(int i = 0; i < numPixels; i++) {
+                    if(pix[i] < nearThreshold && pix[i] > farThreshold) {
+                        pix[i] = 155;
+                    } else {
+                        pix[i] = 0;
+                    }
+                }
+            }
+            
+            // update the cv images
+            grayImage.flagImageChanged();
+            
+            // Find The Blobs
+            contourFinder.findContours(grayImage, minBlob, maxBlob, 20, false);
+        }
+        
+    }
+}
 
-
+void ofApp::updateWebcam() {
+    camera.update();
+    if (camera.isFrameNew()) {
+        colorImg.setFromPixels(camera.getPixels(), camera.width, camera.height);
+        colorImg.mirror(false, true);
+        grayImage = colorImg;
+        
+        // Set Timer For New BG
+        if(ofGetMinutes() % 1 == 0) {
+            bLearnBakground = true;
+        }
+        
+        // Learn A New Background Image
+        if (bLearnBakground == true){
+            grayBg = grayImage;
+            bLearnBakground = false;
+        }
+        
+        // take the abs value of the difference between background and incoming and then threshold:
+        grayDiff.absDiff(grayBg, grayImage);
+        grayDiff.threshold(threshold);
+        
+        // update the cv images
+        grayImage.flagImageChanged();
+        
+        // Find The Blobs
+        contourFinder.findContours(grayDiff, minBlob, maxBlob, 20, false);
+    }
+    cout << "FOUND " << contourFinder.nBlobs << " BLOBS" << endl;
+}
 
 //--------------------------------------------------------------
 
@@ -511,8 +567,6 @@ void ofApp::loadAssets() {
 //--------------------------------------------------------------
 
 // CUSTOM IMAGE FUNCTIONS
-
-
 
 void ofApp::setAssets(int _currentIndex) {
 

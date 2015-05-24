@@ -11,10 +11,10 @@
 //#include <windows.h>
 //#include "psapi.h"
 
-// CAMERA
-#define KINECT
+// KINECT | CAMERA
 
-
+//#define KINECT
+#define WEBCAM
 
 class ofApp : public ofBaseApp {
 public:
@@ -31,6 +31,8 @@ public:
 	void windowResized(int w, int h);
 	
 	// CUSTOM METHODS
+    void updateKinect();
+    void updateWebcam();
 	void loadFonts();
 	void loadArtists();
     void setAssets(int index);
@@ -47,6 +49,7 @@ public:
 	
 	// KINECT & OPENCV	
 	ofxKinect kinect;
+    ofVideoGrabber camera;
 	ofxCvColorImage colorImg;
 	ofxCvGrayscaleImage grayImage;
 	ofxCvGrayscaleImage grayThreshNear;
