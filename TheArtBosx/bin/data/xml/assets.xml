@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<assets>
+
+	<!--	==== media====	-->
+	<media>  	
+		<file>images/lady.jpg</file>
+		<file>images/ringmaster.jpg</file>  
+        <file>images/Goddess.jpg</file>		
+        <file>images/comic1.jpg</file>
+		<file>images/comic2.jpg</file>
+		<file>images/comic3.jpg</file>            	
+		<file>images/DSC_0423.jpg</file>
+		<file>images/DSC_3975.jpg</file>
+		<file>images/DSC_6135.jpg</file>
+		<file>images/untitled.jpg</file>
+		<file>movies/collections.mov</file>  
+		<file>movies/MotionGraphics.mp4</file>
+        <file>images/CastleInTheShadows.jpg</file>
+        <file>images/LookUp.jpg</file>
+		<file>images/TrintThomas-360Flip.jpg</file>
+		<file>images/YogaAtThePrecipice.jpg</file>
+		<file>images/Cathedral.jpg</file>
+		<file>images/TheSummerTime.jpg</file>
+		<file>images/Knots.jpg</file>
+		<file>images/dazed.jpg</file>
+
+	</media>
+
+
+	<!--	==== artists ====	-->
+	<artists>
+		<file>RHIANNON COLLETT</file>
+		<file>RHIANNON COLLETT</file>
+		<file>AZI EBRAHIMI</file>
+		<file>ANONYMOUS</file>
+		<file>ANONYMOUS</file>		
+		<file>ANONYMOUS</file>
+		<file>ANONYMOUS</file>
+		<file>ANONYMOUS</file>		
+		<file>ANONYMOUS</file>	
+		<file>LAUREL DUNDEE</file>
+		<file>TERRY-DAYNE BEASLEY</file>
+		<file>LAKES</file>
+		<file>ALEXI LIOTTI</file>
+		<file>ALEXI LIOTTI</file>
+		<file>ALEXI LIOTTI</file>
+		<file>ALEXI LIOTTI</file>
+		<file>NIKNAZ MALEKAFZALI</file>
+		<file>NIKNAZ MALEKAFZALI</file>
+		<file>ROBYN MOORE</file>
+		<file>WAKANA SHIMAMURA</file>
+	</artists>
+
+	<!--	==== fonts ====	-->
+	<fonts>
+		<file>fonts/Futura-Bold.ttf</file>
+	</fonts>
+
+</assets>
