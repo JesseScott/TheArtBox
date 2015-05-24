@@ -11,6 +11,9 @@
 //#include <windows.h>
 //#include "psapi.h"
 
+// CAMERA
+#define KINECT
+
 
 
 class ofApp : public ofBaseApp {

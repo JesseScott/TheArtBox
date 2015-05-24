@@ -1,5 +1,6 @@
 #include "ofApp.h"
 
+#pragma mark - BASE OF
 
 //--------------------------------------------------------------
 void ofApp::setup() {
@@ -417,26 +418,12 @@ void ofApp::draw() {
 
 
 
-void ofApp::autoPlay() {
 
-	if (currentAssetIsMovie) {
-		video.stop();
-		video.setFrame(0);
-		video.play(); 
-		video.setLoopState(OF_LOOP_NONE);
-	}
-	else {
-		imageTimer = 0; 
-	}
-
-	playState = 2;
-	currentBrightness = 0;
-}
 
 
 //--------------------------------------------------------------
 
-// CUSTOM XML FUNCTIONS
+# pragma mark - CUSTOM XML FUNCTIONS
 
 
 
@@ -449,7 +436,6 @@ void ofApp::loadFonts() {
     // Get Font Path
     string fontName = assets.getValue("file", "null", 0);
     ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
-
 
     // Console Padding
     cout << "" << endl;
@@ -478,7 +464,6 @@ void ofApp::loadArtists() {
     artistNames.resize(num);
 
     // Iterate & Assign
-
     for(int i = 0; i < artistNames.size(); i++) {
         artistNames[i] = assets.getValue("file", "null", i);
         ofLog(OF_LOG_NOTICE, "Name #" + ofToString(i) + " is " + artistNames[i]);
@@ -490,7 +475,6 @@ void ofApp::loadArtists() {
     // Pop Out
     assets.popTag();
     assets.popTag();
-
 
 }
 
@@ -532,270 +516,158 @@ void ofApp::loadAssets() {
 
 void ofApp::setAssets(int _currentIndex) {
 
-
-
     // Cast to String
-
     string file = artistMedia[_currentIndex];
-
     ofLogNotice("File Path Is " + file);
 
-
-
     // Copy & Trim String
-
     string temp = file;
-
     temp.erase(temp.begin(), temp.end() - 3);
 
-
-
     // Convert Copy To Uppercase
-
     string fileExtension = ofToUpper(temp);
-
     ofLogNotice("Object Is A " + fileExtension + " File ");
 
-
-
     // Video
-
     if (fileExtension == "MP4" || fileExtension == "MOV") {
-
         ofLogNotice("FILE IS A MOVIE");
-
         currentAssetIsMovie = true;
 
-
-
         // Clear Movie ?
-
         if(video.isLoaded() == true) {
-
             ofLog(OF_LOG_NOTICE, "Clearing Video Pixels...");
-
             video.closeMovie();
-
         }
-
         else {
-
             ofLog(OF_LOG_NOTICE, "Video Pixels Already Empty...");
-
         }
-
-
 
         // Load Movie
-
         video.loadMovie(artistMedia[_currentIndex]);
-
-		
-
         video.firstFrame();
-
 		video.setFrame(video.getTotalNumFrames() - 100);
-
 		video.update();
-
         video.setPaused(true);
-
-
-
     }
-
     // Image
-
     else if (fileExtension == "JPG" || fileExtension == "PNG") {
-
         ofLogNotice("FILE IS AN IMAGE");
-
         currentAssetIsMovie = false;
 
-
-
         // Clear Image ?
-
         if(image.bAllocated() == true) {
-
             ofLog(OF_LOG_NOTICE, "Clearing Image Pixels...");
-
             image.clear();
-
         }
-
         else {
-
             ofLog(OF_LOG_NOTICE, "Image Pixels Already Empty...");
-
         }
-
-
-
+        
         // Load Image
-
         image.loadImage(artistMedia[_currentIndex]);
-
     }
 
-
-
     // Console Padding
-
     cout << "" << endl;
 
 }
 
-
-
 void ofApp::setColourThumbnailImage(int width, int height) {
 
-
-
     // Clear Thumbnail ?
-
     if(thumbnail.bAllocated() == true) {
-
         ofLog(OF_LOG_NOTICE, "Clearing Thumbnail Pixels...");
-
         thumbnail.clear();
-
     }
-
     else {
-
         ofLog(OF_LOG_NOTICE, "Thumbnail Pixels Already Empty...");
-
     }
-
-
 
     // Set From ofVideoPlayer
-
     if(currentAssetIsMovie == true) {
-
         ofLog(OF_LOG_NOTICE, "Setting Thumbnail Pixels From Video");
-
         thumbnail.setFromPixels(video.getPixels(), video.getWidth(), video.getHeight(), OF_IMAGE_COLOR);
-
         thumbnail.resize(width, height);
-
     }
-
     // Set From ofImage
-
     else {
-
         ofLog(OF_LOG_NOTICE, "Setting Thumbnail Pixels From Image");
-
         thumbnail.setFromPixels(image.getPixels(), image.getWidth(), image.getHeight(), OF_IMAGE_COLOR);
-
         thumbnail.resize(width, height);
-
     }
-
-
-
-
 
 }
 
 
 
 void ofApp::setBlackAndWhiteThumbnailImage(ofImage img) {
-
-
-
     foreground = img;
-
     foreground.setImageType(OF_IMAGE_GRAYSCALE);
-
-
-
 }
 
+# pragma mark - PLAYBACK
+
+void ofApp::autoPlay() {
+    
+    if (currentAssetIsMovie) {
+        video.stop();
+        video.setFrame(0);
+        video.play();
+        video.setLoopState(OF_LOOP_NONE);
+    }
+    else {
+        imageTimer = 0;
+    }
+    
+    playState = 2;
+    currentBrightness = 0;
+}
 
 
 void ofApp::updateCurrentIndex() {
 
-
-
     // Index
-
     setAssets(currentIndex);
-
+    
     // Set Colour Thumbnail
-
     setColourThumbnailImage(width, height);
 
     // Convert To Grayscale
-
     setBlackAndWhiteThumbnailImage(thumbnail);
 
-	
-
-	
-
 	// Clear FBOs
-
     closePoints.begin();
-
         ofClear(0,0,0,255);
-
     closePoints.end();
 
     maskFbo.begin();
-
         ofClear(0,0,0,255);
-
     maskFbo.end();
 
 	currentBrightness = 0;
 
-
-
 }
-
-
-
 
 
 //--------------------------------------------------------------
 
-// CUSTOM GL FUNCTIONS
-
-
+# pragma mark - CUSTOM GL FUNCTIONS
 
 void ofApp::setupGL(int width, int height) {
 
-
-
     // FBOs
-
     maskFbo.allocate(width, height, GL_RGBA);
-
     fbo.allocate(width, height, GL_RGBA);
 
-
-
     maskFbo.begin();
-
         ofClear(0,0,0,255);
-
     maskFbo.end();
 
-
-
     fbo.begin();
-
         ofClear(0,0,0,255);
-
     fbo.end();
 
-
-
     // SHADER
-
     string shaderProgram = "#version 120\n \
     #extension GL_ARB_texture_rectangle : enable\n \
     \
@@ -811,68 +683,36 @@ void ofApp::setupGL(int width, int height) {
     gl_FragColor = vec4( src , mask);\
     }";
 
-
-
     shader.setupShaderFromSource(GL_FRAGMENT_SHADER, shaderProgram);
-
     shader.linkProgram();
-
-
-
-
 
 }
 
 
-
 int ofApp::getCurrentBrightness() {
 
-
-
     // Counters
-
     int alpha = 0;
-
     int count = 0;
 
-
-
     // Convert to Pixels
-
     ofPixels pixels;
-
     maskFbo.readToPixels(pixels, 0);
 
-
-
     // Loop Through And Add All The Alpha Values
-
     for(int x = 0; x < pixels.getWidth(); x += 4) {
-
         for(int y = 0; y < pixels.getHeight(); y += 4) {
-
             ofColor c = pixels.getColor(x, y);
-
             alpha += c.r;
-
             count++;
-
         }
-
     }
 
-
-
     // Average Over the Total Number Of Pixels
-
     alpha = alpha / count;
-
     //cout << "ALPHA IS " << alpha << endl;
 
-
-
     return alpha;
-
 }
 
 void ofApp::learnBackground() {
@@ -884,54 +724,33 @@ void ofApp::learnBackground() {
 
 //--------------------------------------------------------------
 
-// CUSTOM UTILITY FUNCTIONS
+# pragma mark - CUSTOM UTILITY FUNCTIONS
 
 
 
 void ofApp::checkMemory() {
 /*
-
-
     // Check  Memory
 
     MEMORYSTATUS memInfo;
-
     memInfo.dwLength = sizeof(MEMORYSTATUS);
-
     GlobalMemoryStatus(&memInfo);
 
-
-
     // Virtual Memory
-
     DWORDLONG totalVirtualMem = memInfo.dwTotalVirtual;
-
     DWORDLONG totalVirtualMemMB = totalVirtualMem / DIV;
-
     DWORDLONG virtualMemUsed = memInfo.dwTotalVirtual - memInfo.dwAvailVirtual;
-
     DWORDLONG virtualMemUsedMB = virtualMemUsed / DIV;
-
     cout << "Total Virtual Memory Is " << totalVirtualMemMB << " MB (" << (totalVirtualMemMB / 1000) / 1000 << " GB)." << endl;
-
     cout << "We Are Using " << virtualMemUsedMB  << " MB (" << (virtualMemUsedMB / 1000) / 1000 << " GB) Of That Amount. " << endl;
 
-
-
     // Physical Memory
-
     DWORDLONG totalPhysMem = memInfo.dwTotalPhys;
-
     DWORDLONG totalPhysMemMB = totalPhysMem / DIV;
-
     DWORDLONG physMemUsed = memInfo.dwTotalPhys - memInfo.dwAvailPhys;
-
     DWORDLONG physMemUsedMB = physMemUsed / DIV;
-
     cout << "Total Physical Memory Is " << totalPhysMemMB << " MB (" << (totalPhysMemMB / 1000) / 1000 << " GB)." << endl;
-
     cout << "We Are Using " << physMemUsedMB  << " MB (" << (physMemUsedMB / 1000) / 1000 << " GB) Of That Amount. " << endl;
-
 */
 
 }
@@ -939,85 +758,52 @@ void ofApp::checkMemory() {
 
 
 void ofApp::getFilesFromFTP() {
-
    /*
-
 	// Connect
-
     try {
-
         client.setup("ftp.memelab.ca", "SITC_APP", "SITC_6");
-
         client.setVerbose(true);
-
         cout << "Connection Success! \n" << endl;
-
     }
-
     catch (int e) {
-
         cout << "The Exception #" << e << " Occured." << endl;
-
     }
-
-
 
     // List Files
-
     try {
-
         fileNames = client.list("/");
-
         cout << "Listing Success! \n" << endl;
-
-
-
         for(int i = 0; i < fileNames.size(); i++) {
-
             cout << "Item #" << i << " is " << fileNames[i] << "\n" << endl;
-
         }
-
     }
-
     catch(int e) {
-
         cout << "The Exception #" << e << " Occured." << endl;
-
     }
-
-
 
     // Get Files
-
     try {
-
         client.get("BOXIcon.png", ofToDataPath(""), "/");
-
         cout << "Downloading Success!" << endl;
-
     }
-
     catch(int e) {
-
         cout << "The Exception #" << e << " Occured." << endl;
-
     }
-
 	*/
-
-
-
 }
 
 
+#pragma mark - MISC OF
+
 //--------------------------------------------------------------
 void ofApp::exit() {
-	kinect.setCameraTiltAngle(0); // zero the tilt on exit
-	kinect.close();
-
+    
+    #ifdef KINECT
+        kinect.setCameraTiltAngle(0); // zero the tilt on exit
+        kinect.close();
+    #endif
+    
 	// stop the thread
-
     //thread.stopThread();
 	
 }
@@ -1128,23 +914,14 @@ void ofApp::keyPressed (int key) {
 
 		case 'n':
 			// Increase Play
-
 			currentIndex++;
 
-    
-
 			// Check Limit
-
 			if(currentIndex >= maxIndex) {
-
 				currentIndex = 0;
-
 			}
 
-    
-
 			// Update Assets
-
 			updateCurrentIndex();
 
 			break;
@@ -1167,7 +944,6 @@ void ofApp::keyPressed (int key) {
 			bLearnBakground = true;
 			break;
 
-		
 	}
 }
 
@@ -1178,13 +954,13 @@ void ofApp::mouseDragged(int x, int y, int button)
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button)
 {
-bBrushDown = true;
+    bBrushDown = true;
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button)
 {
-bBrushDown = false;
+    bBrushDown = false;
 }
 
 //--------------------------------------------------------------
