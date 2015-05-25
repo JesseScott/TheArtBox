@@ -1,0 +1,1339 @@
+
+
+--------------------------------------- 2015-05-24-16-00-52-393
+[notice ] Frame Rate is 60
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-015
+[notice ] Frame Rate is 0
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-054
+[notice ] Frame Rate is 0.249856
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-071
+[notice ] Frame Rate is 0.594231
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-088
+[notice ] Frame Rate is 0.993316
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-105
+[notice ] Frame Rate is 1.42321
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-121
+[notice ] Frame Rate is 1.87418
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-138
+[notice ] Frame Rate is 2.33798
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-154
+[notice ] Frame Rate is 2.81247
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-171
+[notice ] Frame Rate is 3.29182
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-188
+[notice ] Frame Rate is 3.77521
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-205
+[notice ] Frame Rate is 4.26107
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-221
+[notice ] Frame Rate is 4.75046
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-237
+[notice ] Frame Rate is 5.23984
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-254
+[notice ] Frame Rate is 5.72889
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-271
+[notice ] Frame Rate is 6.21498
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-288
+[notice ] Frame Rate is 6.70009
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-304
+[notice ] Frame Rate is 7.1838
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-321
+[notice ] Frame Rate is 7.66455
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-338
+[notice ] Frame Rate is 8.14277
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-355
+[notice ] Frame Rate is 8.61847
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-371
+[notice ] Frame Rate is 9.09231
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-388
+[notice ] Frame Rate is 9.56239
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-404
+[notice ] Frame Rate is 10.0307
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-421
+[notice ] Frame Rate is 10.4947
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-437
+[notice ] Frame Rate is 10.9565
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-455
+[notice ] Frame Rate is 11.4138
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-471
+[notice ] Frame Rate is 11.8684
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-488
+[notice ] Frame Rate is 12.3189
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-505
+[notice ] Frame Rate is 12.7661
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-521
+[notice ] Frame Rate is 13.2097
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-538
+[notice ] Frame Rate is 13.6499
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-555
+[notice ] Frame Rate is 14.0865
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-571
+[notice ] Frame Rate is 14.5195
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-588
+[notice ] Frame Rate is 14.9489
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-605
+[notice ] Frame Rate is 15.3747
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-621
+[notice ] Frame Rate is 15.7979
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-637
+[notice ] Frame Rate is 16.2172
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-654
+[notice ] Frame Rate is 16.6331
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-671
+[notice ] Frame Rate is 17.0446
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-687
+[notice ] Frame Rate is 17.4533
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-748
+[notice ] Frame Rate is 17.8577
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-772
+[notice ] Frame Rate is 18.2362
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-773
+[notice ] Frame Rate is 18.6066
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-804
+[notice ] Frame Rate is 18.9741
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-807
+[notice ] Frame Rate is 19.3391
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-824
+[notice ] Frame Rate is 19.701
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-854
+[notice ] Frame Rate is 20.0601
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-857
+[notice ] Frame Rate is 20.4169
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-888
+[notice ] Frame Rate is 20.7707
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-890
+[notice ] Frame Rate is 21.1219
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-920
+[notice ] Frame Rate is 21.4705
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-941
+[notice ] Frame Rate is 21.8163
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-942
+[notice ] Frame Rate is 22.1583
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-971
+[notice ] Frame Rate is 22.497
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-53-975
+[notice ] Frame Rate is 22.8335
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-005
+[notice ] Frame Rate is 23.1671
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-009
+[notice ] Frame Rate is 23.4982
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-038
+[notice ] Frame Rate is 56.2905
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-042
+[notice ] Frame Rate is 56.3568
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-107
+[notice ] Frame Rate is 56.3946
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-125
+[notice ] Frame Rate is 56.1945
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-126
+[notice ] Frame Rate is 56.0321
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-143
+[notice ] Frame Rate is 55.8995
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-171
+[notice ] Frame Rate is 55.79
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-176
+[notice ] Frame Rate is 55.6983
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-206
+[notice ] Frame Rate is 55.6201
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-210
+[notice ] Frame Rate is 55.5541
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-238
+[notice ] Frame Rate is 55.4969
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-243
+[notice ] Frame Rate is 55.449
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-271
+[notice ] Frame Rate is 55.4072
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-288
+[notice ] Frame Rate is 55.372
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-293
+[notice ] Frame Rate is 55.3421
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-310
+[notice ] Frame Rate is 55.3176
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-337
+[notice ] Frame Rate is 55.2964
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-343
+[notice ] Frame Rate is 55.2799
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-372
+[notice ] Frame Rate is 55.2658
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-388
+[notice ] Frame Rate is 55.2551
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-393
+[notice ] Frame Rate is 55.2475
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-421
+[notice ] Frame Rate is 55.2419
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-427
+[notice ] Frame Rate is 55.2386
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-454
+[notice ] Frame Rate is 55.2371
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-460
+[notice ] Frame Rate is 55.2379
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-488
+[notice ] Frame Rate is 55.2398
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-493
+[notice ] Frame Rate is 55.2439
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-522
+[notice ] Frame Rate is 55.2487
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-527
+[notice ] Frame Rate is 55.2556
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-555
+[notice ] Frame Rate is 55.2638
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-560
+[notice ] Frame Rate is 55.2732
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-577
+[notice ] Frame Rate is 55.2838
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-606
+[notice ] Frame Rate is 55.2945
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-610
+[notice ] Frame Rate is 55.3069
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-638
+[notice ] Frame Rate is 55.3202
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-655
+[notice ] Frame Rate is 55.334
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-660
+[notice ] Frame Rate is 55.3489
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-688
+[notice ] Frame Rate is 55.3637
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-693
+[notice ] Frame Rate is 55.3796
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-721
+[notice ] Frame Rate is 55.3956
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-727
+[notice ] Frame Rate is 55.4126
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-754
+[notice ] Frame Rate is 55.4299
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-760
+[notice ] Frame Rate is 55.4479
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-787
+[notice ] Frame Rate is 55.4664
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-794
+[notice ] Frame Rate is 55.4852
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-822
+[notice ] Frame Rate is 55.504
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-827
+[notice ] Frame Rate is 55.5236
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-854
+[notice ] Frame Rate is 55.5432
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-860
+[notice ] Frame Rate is 55.5633
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-888
+[notice ] Frame Rate is 55.5834
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-893
+[notice ] Frame Rate is 55.6042
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-922
+[notice ] Frame Rate is 55.6249
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-927
+[notice ] Frame Rate is 55.6461
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-954
+[notice ] Frame Rate is 55.6673
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-960
+[notice ] Frame Rate is 55.6888
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-988
+[notice ] Frame Rate is 55.7102
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-54-993
+[notice ] Frame Rate is 55.7321
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-023
+[notice ] Frame Rate is 55.7542
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-026
+[notice ] Frame Rate is 57.9853
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-055
+[notice ] Frame Rate is 57.9956
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-060
+[notice ] Frame Rate is 58.0121
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-076
+[notice ] Frame Rate is 58.0335
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-142
+[notice ] Frame Rate is 58.0466
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-157
+[notice ] Frame Rate is 57.8947
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-160
+[notice ] Frame Rate is 57.7649
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-188
+[notice ] Frame Rate is 57.6509
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-194
+[notice ] Frame Rate is 57.5529
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-222
+[notice ] Frame Rate is 57.4657
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-227
+[notice ] Frame Rate is 57.3901
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-255
+[notice ] Frame Rate is 57.3216
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-260
+[notice ] Frame Rate is 57.2618
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-289
+[notice ] Frame Rate is 57.2073
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-293
+[notice ] Frame Rate is 57.1601
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-322
+[notice ] Frame Rate is 57.1161
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-326
+[notice ] Frame Rate is 57.0782
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+[warning] ofGLRenderer: drawing an unallocated texture
+
+
+--------------------------------------- 2015-05-24-16-00-55-356
+[notice ] Frame Rate is 57.0432
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
