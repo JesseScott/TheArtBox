@@ -1,20 +1,18 @@
 #pragma once
 
+// IMPORTS
 #include "ofMain.h"
 #include "ofxOpenCv.h"
 #include "ofxKinect.h"
 #include "ofxXmlSettings.h"
-
-// MEMORY USAGE
-#define WINVER 0x0601
-#define DIV 1024
 //#include <windows.h>
 //#include "psapi.h"
 
-// KINECT | CAMERA
-
+// DEFINES
+#define WINVER 0x0601
+#define DIV 1024
+//#define INTERACTIVE
 //#define KINECT
-#define WEBCAM
 
 class ofApp : public ofBaseApp {
     
