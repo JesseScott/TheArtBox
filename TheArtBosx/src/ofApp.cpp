@@ -15,52 +15,57 @@ void ofApp::setup() {
     width = ofGetWindowWidth();
     height = ofGetWindowHeight();
 	
+    #ifdef INTERACTIVE
+        // KINECT
+        #ifdef KINECT
+            kinect.setRegistration(true);
+            kinect.init();	
+            kinect.open();
+            if(kinect.isConnected()) {
+                ofLogNotice() << "sensor-emitter dist: " << kinect.getSensorEmitterDistance() << "cm";
+                ofLogNotice() << "sensor-camera dist:  " << kinect.getSensorCameraDistance() << "cm";
+                ofLogNotice() << "zero plane pixel size: " << kinect.getZeroPlanePixelSize() << "mm";
+                ofLogNotice() << "zero plane dist: " << kinect.getZeroPlaneDistance() << "mm";
+            }
+            angle = 23;
+            kinect.setCameraTiltAngle(angle);
+        #else
+            camera.setVerbose(true);
+            camera.initGrabber(320, 240);
+        #endif
     
-	// KINECT
-    #ifdef KINECT
-        kinect.setRegistration(true);
-        kinect.init();	
-        kinect.open();
-        if(kinect.isConnected()) {
-            ofLogNotice() << "sensor-emitter dist: " << kinect.getSensorEmitterDistance() << "cm";
-            ofLogNotice() << "sensor-camera dist:  " << kinect.getSensorCameraDistance() << "cm";
-            ofLogNotice() << "zero plane pixel size: " << kinect.getZeroPlanePixelSize() << "mm";
-            ofLogNotice() << "zero plane dist: " << kinect.getZeroPlaneDistance() << "mm";
-        }
-        angle = 23;
-        kinect.setCameraTiltAngle(angle);
-    #else
-        camera.setVerbose(true);
-        camera.initGrabber(320, 240);
-    #endif
-    
-    // CAPTURE SIZE
-    int capture_width, capture_height;
-    #ifdef KINECT
-        capture_width = kinect.width;
-        capture_height = kinect.height;
-    #else
-        capture_width = camera.width;
-        capture_height = camera.height;
-    #endif
-    
-	// OPENCV
-	colorImg.allocate(capture_width, capture_height);
-	grayImage.allocate(capture_width, capture_height);
-	grayThreshNear.allocate(capture_width, capture_height);
-	grayThreshFar.allocate(capture_width, capture_height);
-	grayBg.allocate(capture_width, capture_height);
-	grayDiff.allocate(capture_width, capture_height);
-	closePoints.allocate(capture_width, capture_height, GL_RGBA32F_ARB);
+        // CAPTURE SIZE
+        int capture_width, capture_height;
+        #ifdef KINECT
+            capture_width = kinect.width;
+            capture_height = kinect.height;
+        #else
+            capture_width = camera.width;
+            capture_height = camera.height;
+        #endif
+        
+        // OPENCV
+        colorImg.allocate(capture_width, capture_height);
+        grayImage.allocate(capture_width, capture_height);
+        grayThreshNear.allocate(capture_width, capture_height);
+        grayThreshFar.allocate(capture_width, capture_height);
+        grayBg.allocate(capture_width, capture_height);
+        grayDiff.allocate(capture_width, capture_height);
+        closePoints.allocate(capture_width, capture_height, GL_RGBA32F_ARB);
 
-	nearThreshold = 250;
-	farThreshold = 112;
-	bLearnBakground = true;
-	threshold = 80;
-	bThreshWithOpenCV = false;
-	minBlob = 25; 
-	maxBlob = (capture_width * capture_height)/2;
+        nearThreshold = 250;
+        farThreshold = 112;
+        bLearnBakground = true;
+        threshold = 80;
+        bThreshWithOpenCV = false;
+        minBlob = 25; 
+        maxBlob = (capture_width * capture_height)/2;
+    
+        // FBO & GLSL SHADER
+        setupGL(width, height);
 	
+    #endif
+    
 	// STATE
 	presenting = false;
 	tooSunny = true;
@@ -71,6 +76,7 @@ void ofApp::setup() {
 	targetAlpha = 155;
 	
     // XML ASSETS
+    BASEPATH = "../../../MEDIA/";
     assets.loadFile("xml/assets.xml");
     if( assets.loadFile("xml/assets.xml") ) {
         ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
@@ -90,12 +96,9 @@ void ofApp::setup() {
     updateCurrentIndex();
 
     // ASSETS
-    brush.loadImage("images/brush.png");
+    brush.loadImage("mouse/brush.png");
 	stamp.loadImage("logo/stamp_white2.png");
-	demo.loadMovie("demo/studio_in_the_city_6_promo.mp4");
-
-    // FBO & GLSL SHADER
-    setupGL(width, height);
+	demo.loadMovie(BASEPATH + "demo/studio_in_the_city_6_promo.mp4");
     
     // MEMORY
     checkMemory();
@@ -106,22 +109,26 @@ void ofApp::setup() {
 void ofApp::update() {
 	ofBackground(0);
 	
-	if(playState <= 1) {
-        #ifdef KINECT
-            updateKinect();
-        #else
-            updateWebcam();
-        #endif
-        
-        updateBlobs();
-        updateFBOs();
-		if(ofGetFrameNum() % 60 == 0) {
-            updateBrightness();
-		}
-	}
-    else if(playState >= 2) {
-        updateMovies();
-    }
+    #ifdef INTERACTIVE
+        if(playState <= 1) {
+            #ifdef KINECT
+                updateKinect();
+            #else
+                updateWebcam();
+            #endif
+            
+            updateBlobs();
+            updateFBOs();
+            if(ofGetFrameNum() % 60 == 0) {
+                updateBrightness();
+            }
+        }
+        else if(playState >= 2) {
+            updateMovies();
+        }
+    #else
+    
+    #endif
 
 	// Write
 	if(ofGetMinutes() % 10 == 0) {
@@ -131,31 +138,35 @@ void ofApp::update() {
 }
 
 void ofApp::draw() {
-	if(presenting == false ) {
-        drawDebugView();
-	}
-    else {
-        switch (playState) {
-            case 1:
-                drawFBOView();
-                break;
-                
-            case 2:
-                drawMediaView();
-                break;
-                
-            case 3:
-                
-                break;
-                
-            case 4:
-                drawTrailerView();
-                break;
-                
-            default:
-                break;
+    #ifdef INTERACTIVE
+        if(presenting == false ) {
+            drawDebugView();
         }
-    }
+        else {
+            switch (playState) {
+                case 1:
+                    drawFBOView();
+                    break;
+                    
+                case 2:
+                    drawMediaView();
+                    break;
+                    
+                case 3:
+                    
+                    break;
+                    
+                case 4:
+                    drawTrailerView();
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+    #else
+        
+    #endif
 }
 
 # pragma mark - UPDATES
@@ -548,10 +559,13 @@ void ofApp::loadAssets() {
     int num = assets.getNumTags("file");
     artistMedia.resize(num);
     maxIndex = num;
+    
+    ofDirectory dir(BASEPATH);
+    dir.listDir();
 
     // Iterate & Assign
     for(int i = 0; i < artistMedia.size(); i++) {
-        artistMedia[i] = assets.getValue("file", "null", i);
+        artistMedia[i] = BASEPATH + assets.getValue("file", "null", i);
         ofLog(OF_LOG_NOTICE, "File #" + ofToString(i) + " is " + artistMedia[i]);
     }
 
