@@ -89,7 +89,8 @@ public:
 	ofVideoPlayer demo;
 	ofVideoPlayer video;
 	ofImage image;
-	int imageTimer; 
+	int imageTimer;
+    int imageMAX;
 	int playState;
 	int width, height;
 	int maxIndex;
