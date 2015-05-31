@@ -14,6 +14,16 @@ void ofApp::setup() {
     ofBackground(100);
     width = ofGetWindowWidth();
     height = ofGetWindowHeight();
+    
+    // STATE
+    presenting = true;
+    tooSunny = true;
+    fboAge = 0;
+    imageTimer = 0;
+    imageMAX = 500;
+    playState = 1;
+    currentBrightness = 0;
+    targetAlpha = 155;
 	
     #ifdef INTERACTIVE
         // KINECT
@@ -63,28 +73,20 @@ void ofApp::setup() {
     
         // FBO & GLSL SHADER
         setupGL(width, height);
-	
+    #else
+        playState = 2;
+        imageMAX = 2500;
     #endif
     
-	// STATE
-	presenting = false;
-	tooSunny = true;
-	fboAge = 0; 
-	imageTimer = 0; 
-	playState = 1;
-	currentBrightness = 0;
-	targetAlpha = 155;
+
 	
     // XML ASSETS
     BASEPATH = "../../../MEDIA/";
     assets.loadFile("xml/assets.xml");
     if( assets.loadFile("xml/assets.xml") ) {
         ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
-        // Load Fonts
         loadFonts();
-        // Load Artist Names
         loadArtists();
-        // Load Media Names
         loadAssets();
     }
     else {
@@ -127,7 +129,8 @@ void ofApp::update() {
             updateMovies();
         }
     #else
-    
+        if (playState == 1) playState = 2;
+        updateMovies();
     #endif
 
 	// Write
@@ -147,25 +150,27 @@ void ofApp::draw() {
                 case 1:
                     drawFBOView();
                     break;
-                    
                 case 2:
                     drawMediaView();
                     break;
-                    
-                case 3:
-                    
-                    break;
-                    
                 case 4:
                     drawTrailerView();
                     break;
-                    
                 default:
                     break;
             }
         }
     #else
-        
+        switch (playState) {
+            case 2:
+                drawMediaView();
+                break;
+            case 4:
+                drawTrailerView();
+                break;
+            default:
+                break;
+        }
     #endif
 }
 
@@ -301,22 +306,24 @@ void ofApp::writeDiagnostics() {
 # pragma mark - DRAWING
 
 void ofApp::drawDebugView() {
-    // Draw IR Images
-    #ifdef KINECT
-        kinect.drawDepth(10, 10, 400, 300); // Depth
-        kinect.draw(420, 10, 400, 300); // RGB
-    #else
-        camera.draw(420, 10, 400, 300); // RGB
+    #ifdef INTERACTIVE
+        // Draw IR Images
+        #ifdef KINECT
+            kinect.drawDepth(10, 10, 400, 300); // Depth
+            kinect.draw(420, 10, 400, 300); // RGB
+        #else
+            camera.draw(420, 10, 400, 300); // RGB
+        #endif
+        
+        contourFinder.draw(10, 320, 400, 300); // Blobs
+        closePoints.draw(420, 320, 400, 300); // FBO
+        
+        // Draw The CV Images
+        colorImg.draw(1100, 10, 400, 300); // RGB
+        grayImage.draw(1510, 20, 400, 300); // Grayscale
+        grayBg.draw(1100, 280, 400, 300); // Background
+        grayDiff.draw(1510, 280, 400, 300); // Difference
     #endif
-    
-    contourFinder.draw(10, 320, 400, 300); // Blobs
-    closePoints.draw(420, 320, 400, 300); // FBO
-    
-    // Draw The CV Images
-    colorImg.draw(1100, 10, 400, 300); // RGB
-    grayImage.draw(1510, 20, 400, 300); // Grayscale
-    grayBg.draw(1100, 280, 400, 300); // Background
-    grayDiff.draw(1510, 280, 400, 300); // Difference
     
     // Debug Info
     ofSetColor(255, 255, 255);
@@ -372,7 +379,7 @@ void ofApp::drawMediaView() {
         }
     }
     else {
-        if (imageTimer > 500 ) {
+        if (imageTimer > imageMAX ) {
             cout << "DONE" << endl;
             playState = 1;
             imageTimer = 0; 
@@ -394,7 +401,7 @@ void ofApp::drawTrailerView() {
     }
     else {
         if(currentAssetIsMovie) {
-            video.stop()	;
+            video.stop();
         }
         demo.draw(0, 0, 3240, 1920);
     }
@@ -501,81 +508,60 @@ void ofApp::updateWebcam() {
 # pragma mark - CUSTOM XML FUNCTIONS
 
 void ofApp::loadFonts() {
-
-    // Push In
     assets.pushTag("assets");
-    assets.pushTag("fonts");
+        assets.pushTag("fonts");
+            // Get Font Path
+            string fontName = assets.getValue("file", "null", 0);
+            ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
 
-    // Get Font Path
-    string fontName = assets.getValue("file", "null", 0);
-    ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
+            // Console Padding
+            cout << "" << endl;
 
-    // Console Padding
-    cout << "" << endl;
-
-    // Make Sure Its Valid
-    if(fontName.length() > 0) {
-        font.loadFont(fontName, 48);
-    }
-
-    // Pop Out
+            // Make Sure Its Valid
+            if(fontName.length() > 0) {
+                font.loadFont(fontName, 48);
+            }
+        assets.popTag();
     assets.popTag();
-    assets.popTag();
-
 }
 
 void ofApp::loadArtists() {
-
-    // Push In
     assets.pushTag("assets");
-    assets.pushTag("artists");
+        assets.pushTag("artists");
+            // Find Number
+            int num = assets.getNumTags("file");
+            artistNames.resize(num);
 
-    // Find Number
-    int num = assets.getNumTags("file");
-    artistNames.resize(num);
+            // Iterate & Assign
+            for(int i = 0; i < artistNames.size(); i++) {
+                artistNames[i] = assets.getValue("file", "null", i);
+                ofLog(OF_LOG_NOTICE, "Name #" + ofToString(i) + " is " + artistNames[i]);
+            }
 
-    // Iterate & Assign
-    for(int i = 0; i < artistNames.size(); i++) {
-        artistNames[i] = assets.getValue("file", "null", i);
-        ofLog(OF_LOG_NOTICE, "Name #" + ofToString(i) + " is " + artistNames[i]);
-    }
-
-    // Console Padding
-    cout << "" << endl;
-
-    // Pop Out
+            // Console Padding
+            cout << "" << endl;
+        assets.popTag();
     assets.popTag();
-    assets.popTag();
-
 }
 
 void ofApp::loadAssets() {
-
-    // Push In
     assets.pushTag("assets");
-    assets.pushTag("media");
+        assets.pushTag("media");
+            // Find Number
+            int num = assets.getNumTags("file");
+            artistMedia.resize(num);
+            maxIndex = num;
 
-    // Find Number
-    int num = assets.getNumTags("file");
-    artistMedia.resize(num);
-    maxIndex = num;
-    
-    ofDirectory dir(BASEPATH);
-    dir.listDir();
+            // Iterate & Assign
+            for(int i = 0; i < artistMedia.size(); i++) {
+                artistMedia[i] = BASEPATH + assets.getValue("file", "null", i);
+                ofLog(OF_LOG_NOTICE, "File #" + ofToString(i) + " is " + artistMedia[i]);
+            }
 
-    // Iterate & Assign
-    for(int i = 0; i < artistMedia.size(); i++) {
-        artistMedia[i] = BASEPATH + assets.getValue("file", "null", i);
-        ofLog(OF_LOG_NOTICE, "File #" + ofToString(i) + " is " + artistMedia[i]);
-    }
-
-    // Console Padding
-    cout << "" << endl;
-
-    // Pop Out
+            // Console Padding
+            cout << "" << endl;
+        assets.popTag();
     assets.popTag();
-    assets.popTag();
-
 }
 
 
@@ -700,17 +686,15 @@ void ofApp::updateCurrentIndex() {
     // Convert To Grayscale
     setBlackAndWhiteThumbnailImage(thumbnail);
 
-	// Clear FBOs
-    closePoints.begin();
-        ofClear(0,0,0,255);
-    closePoints.end();
-
-    maskFbo.begin();
-        ofClear(0,0,0,255);
-    maskFbo.end();
-
-	currentBrightness = 0;
-
+    #ifdef INTERACTIVE
+        closePoints.begin();
+            ofClear(0,0,0,255);
+        closePoints.end();
+        maskFbo.begin();
+            ofClear(0,0,0,255);
+        maskFbo.end();
+        currentBrightness = 0;
+    #endif
 }
 
 
@@ -851,15 +835,12 @@ void ofApp::getFilesFromFTP() {
 #pragma mark - MISC OF
 
 void ofApp::exit() {
-    
-    #ifdef KINECT
-        kinect.setCameraTiltAngle(0); // zero the tilt on exit
-        kinect.close();
+    #ifdef INTERACTIVE
+        #ifdef KINECT
+            kinect.setCameraTiltAngle(0); // zero the tilt on exit
+            kinect.close();
+        #endif
     #endif
-    
-	// stop the thread
-    //thread.stopThread();
-	
 }
 
 void ofApp::keyPressed (int key) {
@@ -1010,3 +991,5 @@ void ofApp::mouseReleased(int x, int y, int button) {
 }
 
 void ofApp::windowResized(int w, int h){}
+
+
