@@ -17,6 +17,7 @@
 #define WEBCAM
 
 class ofApp : public ofBaseApp {
+    
 public:
 	
 	// BASE METHODS
@@ -33,18 +34,34 @@ public:
 	// CUSTOM METHODS
     void updateKinect();
     void updateWebcam();
-	void loadFonts();
+    
+    void updateBlobs();
+    void updateMovies();
+    void updateFBOs();
+    void updateBrightness();
+    void writeDiagnostics();
+    
+    void drawDebugView();
+    void drawFBOView();
+    void drawMediaView();
+    void drawTrailerView();
+	
+    void loadFonts();
 	void loadArtists();
     void setAssets(int index);
 	void loadAssets();
-	void setColourThumbnailImage(int _width, int _height);
+    void updateCurrentIndex();
+	
+    void setColourThumbnailImage(int _width, int _height);
 	void setBlackAndWhiteThumbnailImage(ofImage img);
-	void updateCurrentIndex();
+	
     void setupGL(int _width, int _height);
     int getCurrentBrightness();
+    
     void checkMemory();
     void getFilesFromFTP();
-	void autoPlay();
+	
+    void autoPlay();
 	void learnBackground();
 	
 	// KINECT & OPENCV	
@@ -67,7 +84,6 @@ public:
 	int nearThreshold;
 	int farThreshold;
 	int angle;
-	ofEasyCam easyCam;
 
     // Canvas
 	ofImage foreground;
