@@ -251,133 +251,138 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-
-	// DEBUG VIEW
 	if(presenting == false ) {
-	
-		// Draw IR Images
-        #ifdef KINECT
-                kinect.drawDepth(10, 10, 400, 300); // Depth
-                kinect.draw(420, 10, 400, 300); // RGB
-        #else
-                camera.draw(420, 10, 400, 300); // RGB
-        #endif
-
-		contourFinder.draw(10, 320, 400, 300); // Blobs
-		closePoints.draw(420, 320, 400, 300); // FBO
-
-		// Draw The CV Images
-		colorImg.draw(1100, 10, 400, 300); // RGB
-		grayImage.draw(1510, 20, 400, 300); // Grayscale
-		grayBg.draw(1100, 280, 400, 300); // Background
-		grayDiff.draw(1510, 280, 400, 300); // Difference
-	
-		// Debug Info
-		ofSetColor(255, 255, 255);
-		stringstream reportStream;
-		reportStream 
-		<< "using opencv threshold = " << bThreshWithOpenCV <<" (press spacebar)" << endl
-		<< "set near threshold " << nearThreshold << " (press: + -)" << endl
-		<< "set far threshold " << farThreshold << " (press: < >)" << endl
-		<< "num blobs found " << contourFinder.nBlobs << endl
-		<< "current brightness is " << currentBrightness << endl
-		<< "fps: " << ofGetFrameRate() << endl
-		<< "play state is " << playState << endl
-		<< "Too Sunny ? = " << int(tooSunny) << endl
-		<< "press c to close the connection and o to open it again, connection is: " << kinect.isConnected() << endl;
-		if(kinect.hasCamTiltControl()) {
-    		reportStream << "press UP and DOWN to change the tilt angle: " << angle << " degrees" << endl
-			<< "press 1-5 & 0 to change the led mode" << endl;
-		}
-		ofDrawBitmapString(reportStream.str(), 20, 652);
-
-	} // presenting
-
-	// INTERACTIVE VIEW
-	else if(presenting == true && playState == 1) {
-		// Draw FBO
-		fbo.draw(0, 0, maskFbo.getWidth(), maskFbo.getHeight());
+        drawDebugView();
 	}
+    else {
+        switch (playState) {
+            case 1:
+                drawFBOView();
+                break;
+                
+            case 2:
+                drawMediaView();
+                break;
+                
+            case 3:
+                
+                break;
+                
+            case 4:
+                drawTrailerView();
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
 
-	// PLAYING VIEW
-	else if(presenting == true && playState == 2) {
-		// Movie
-		if (currentAssetIsMovie) {
-			video.draw(0, 0, 3240, 1920); 
-		}
-		
-		// Image
-		else {
-			image.draw(0, 0, 3240, 1920);
-			imageTimer++; 
-		}
+# pragma mark - DRAWING
 
-		// Caption
-		ofSetColor(0, 255);
-		font.drawString(artistNames[currentIndex], 105, ofGetScreenHeight() - 95);
-		ofSetColor(255, 255);
-		font.drawString(artistNames[currentIndex], 100, ofGetScreenHeight() - 100);
+void ofApp::drawDebugView() {
+    // Draw IR Images
+    #ifdef KINECT
+        kinect.drawDepth(10, 10, 400, 300); // Depth
+        kinect.draw(420, 10, 400, 300); // RGB
+    #else
+        camera.draw(420, 10, 400, 300); // RGB
+    #endif
+    
+    contourFinder.draw(10, 320, 400, 300); // Blobs
+    closePoints.draw(420, 320, 400, 300); // FBO
+    
+    // Draw The CV Images
+    colorImg.draw(1100, 10, 400, 300); // RGB
+    grayImage.draw(1510, 20, 400, 300); // Grayscale
+    grayBg.draw(1100, 280, 400, 300); // Background
+    grayDiff.draw(1510, 280, 400, 300); // Difference
+    
+    // Debug Info
+    ofSetColor(255, 255, 255);
+    stringstream reportStream;
+    reportStream
+    << "using opencv threshold = " << bThreshWithOpenCV <<" (press spacebar)" << endl
+    << "set near threshold " << nearThreshold << " (press: + -)" << endl
+    << "set far threshold " << farThreshold << " (press: < >)" << endl
+    << "num blobs found " << contourFinder.nBlobs << endl
+    << "current brightness is " << currentBrightness << endl
+    << "fps: " << ofGetFrameRate() << endl
+    << "play state is " << playState << endl
+    << "Too Sunny ? = " << int(tooSunny) << endl
+    << "press c to close the connection and o to open it again, connection is: " << kinect.isConnected() << endl;
+    if(kinect.hasCamTiltControl()) {
+        reportStream << "press UP and DOWN to change the tilt angle: " << angle << " degrees" << endl
+        << "press 1-5 & 0 to change the led mode" << endl;
+    }
+    ofDrawBitmapString(reportStream.str(), 20, 652);
+}
 
-		// DONE ???
-		
-		// Movie
-		if(currentAssetIsMovie) {
-			if(video.getIsMovieDone()) {
-				cout << "DONE" << endl;
-				playState = 1; 
-				imageTimer = 0; 
-				video.stop(); 
-			
-				// Increase Play
-				currentIndex++;
+void ofApp::drawFBOView() {
+    fbo.draw(0, 0, maskFbo.getWidth(), maskFbo.getHeight());
+}
 
-				// Check Limit
-				if(currentIndex >= maxIndex) {
-					currentIndex = 0;
-				}
+void ofApp::drawMediaView() {
+    if (currentAssetIsMovie) {
+        video.draw(0, 0, 3240, 1920);
+    }
+    else {
+        image.draw(0, 0, 3240, 1920);
+        imageTimer++;
+    }
+    
+    // Caption
+    ofSetColor(0, 255);
+    font.drawString(artistNames[currentIndex], 105, ofGetScreenHeight() - 95);
+    ofSetColor(255, 255);
+    font.drawString(artistNames[currentIndex], 100, ofGetScreenHeight() - 100);
+    
+    if(currentAssetIsMovie) {
+        if(video.getIsMovieDone()) {
+            cout << "DONE" << endl;
+            playState = 1;
+            imageTimer = 0;
+            video.stop();
+            // Increase Play
+            currentIndex++;
+            // Check Limit
+            if(currentIndex >= maxIndex) {
+                currentIndex = 0;
+            }
+            // Update Assets
+            updateCurrentIndex();
+        }
+    }
+    else {
+        if (imageTimer > 500 ) {
+            cout << "DONE" << endl;
+            playState = 1;
+            imageTimer = 0; 
+            
+            // Increase Play
+            currentIndex++;
+            // Check Limit
+            if(currentIndex >= maxIndex) {
+                currentIndex = 0;
+            }
+            // Update Assets
+            updateCurrentIndex();
+        }
+    }
+}
 
-				// Update Assets
-				updateCurrentIndex();
-			}
-		}
-		
-		// Image
-		else {
-			if (imageTimer > 500 ) {
-				cout << "DONE" << endl;
-				playState = 1; 
-				imageTimer = 0; 
-			
-				// Increase Play
-				currentIndex++;
-
-				// Check Limit
-				if(currentIndex >= maxIndex) {
-					currentIndex = 0;
-				}
-
-				// Update Assets
-				updateCurrentIndex();
-			}
-		}
-
-	} // playback
-
-	// TRAILER VIEW
-	else if(presenting == true && playState == 4) {
-		if(demo.getIsMovieDone()) {
-			playState = 1;
-			demo.stop();
-		}
-		else {
-			if(currentAssetIsMovie) {
-				video.stop()	;
-			}
-			demo.draw(0, 0, 3240, 1920); 
-		}
-	} // trailer
-
-} // draw()
+void ofApp::drawTrailerView() {
+    if(demo.getIsMovieDone()) {
+        playState = 1;
+        demo.stop();
+    }
+    else {
+        if(currentAssetIsMovie) {
+            video.stop()	;
+        }
+        demo.draw(0, 0, 3240, 1920);
+    }
+}
 
 
 # pragma mark - CAMERA
@@ -477,10 +482,10 @@ void ofApp::updateWebcam() {
     cout << "FOUND " << contourFinder.nBlobs << " BLOBS" << endl;
 }
 
+
 //--------------------------------------------------------------
 
 # pragma mark - CUSTOM XML FUNCTIONS
-
 
 
 void ofApp::loadFonts() {
@@ -507,8 +512,6 @@ void ofApp::loadFonts() {
 
 }
 
-
-
 void ofApp::loadArtists() {
 
     // Push In
@@ -533,8 +536,6 @@ void ofApp::loadArtists() {
     assets.popTag();
 
 }
-
-
 
 void ofApp::loadAssets() {
 
@@ -652,12 +653,11 @@ void ofApp::setColourThumbnailImage(int width, int height) {
 
 }
 
-
-
 void ofApp::setBlackAndWhiteThumbnailImage(ofImage img) {
     foreground = img;
     foreground.setImageType(OF_IMAGE_GRAYSCALE);
 }
+
 
 # pragma mark - PLAYBACK
 
@@ -772,7 +772,6 @@ int ofApp::getCurrentBrightness() {
 void ofApp::learnBackground() {
 
 
-
 }
 
 
@@ -850,6 +849,7 @@ void ofApp::getFilesFromFTP() {
 #pragma mark - MISC OF
 
 //--------------------------------------------------------------
+
 void ofApp::exit() {
     
     #ifdef KINECT
@@ -863,6 +863,7 @@ void ofApp::exit() {
 }
 
 //--------------------------------------------------------------
+
 void ofApp::keyPressed (int key) {
 	switch (key) {
 		case ' ':

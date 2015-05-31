@@ -33,6 +33,10 @@ public:
 	// CUSTOM METHODS
     void updateKinect();
     void updateWebcam();
+    void drawDebugView();
+    void drawFBOView();
+    void drawMediaView();
+    void drawTrailerView();
 	void loadFonts();
 	void loadArtists();
     void setAssets(int index);
@@ -67,7 +71,6 @@ public:
 	int nearThreshold;
 	int farThreshold;
 	int angle;
-	ofEasyCam easyCam;
 
     // Canvas
 	ofImage foreground;
