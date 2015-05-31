@@ -76,6 +76,7 @@ void ofApp::setup() {
 	targetAlpha = 155;
 	
     // XML ASSETS
+    BASEPATH = "../../../MEDIA/";
     assets.loadFile("xml/assets.xml");
     if( assets.loadFile("xml/assets.xml") ) {
         ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
@@ -97,7 +98,7 @@ void ofApp::setup() {
     // ASSETS
     brush.loadImage("mouse/brush.png");
 	stamp.loadImage("logo/stamp_white2.png");
-	demo.loadMovie("demo/studio_in_the_city_6_promo.mp4");
+	demo.loadMovie(BASEPATH + "demo/studio_in_the_city_6_promo.mp4");
     
     // MEMORY
     checkMemory();
@@ -558,10 +559,13 @@ void ofApp::loadAssets() {
     int num = assets.getNumTags("file");
     artistMedia.resize(num);
     maxIndex = num;
+    
+    ofDirectory dir(BASEPATH);
+    dir.listDir();
 
     // Iterate & Assign
     for(int i = 0; i < artistMedia.size(); i++) {
-        artistMedia[i] = assets.getValue("file", "null", i);
+        artistMedia[i] = BASEPATH + assets.getValue("file", "null", i);
         ofLog(OF_LOG_NOTICE, "File #" + ofToString(i) + " is " + artistMedia[i]);
     }
 

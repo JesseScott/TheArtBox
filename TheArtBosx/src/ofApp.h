@@ -114,6 +114,7 @@ public:
 	// Assets
 	ofxXmlSettings assets;
 	ofTrueTypeFont font;
+    string BASEPATH;
 	vector<string> artistNames;
 	vector<string> artistMedia;
 
