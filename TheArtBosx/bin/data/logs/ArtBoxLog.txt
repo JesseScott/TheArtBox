@@ -1,0 +1,3609 @@
+
+
+--------------------------------------- 2015-06-03-09-50-00-976
+[notice ] Frame Rate is 60
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-117
+[notice ] Frame Rate is 0
+
+[notice ] Current State is 1
+
+[notice ] Presenting State is 1
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-194
+[notice ] Frame Rate is 0.128765
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-214
+[notice ] Frame Rate is 0.334735
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-231
+[notice ] Frame Rate is 0.594504
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-247
+[notice ] Frame Rate is 0.896171
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-262
+[notice ] Frame Rate is 1.23232
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-280
+[notice ] Frame Rate is 1.58716
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-295
+[notice ] Frame Rate is 1.96387
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-311
+[notice ] Frame Rate is 2.35542
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-328
+[notice ] Frame Rate is 2.75718
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-344
+[notice ] Frame Rate is 3.16848
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-362
+[notice ] Frame Rate is 3.58406
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-382
+[notice ] Frame Rate is 4.00042
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-399
+[notice ] Frame Rate is 4.42104
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-416
+[notice ] Frame Rate is 4.84394
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-437
+[notice ] Frame Rate is 5.26314
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-454
+[notice ] Frame Rate is 5.68458
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-471
+[notice ] Frame Rate is 6.10738
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-488
+[notice ] Frame Rate is 6.53085
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-505
+[notice ] Frame Rate is 6.95437
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-521
+[notice ] Frame Rate is 7.37912
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-538
+[notice ] Frame Rate is 7.80357
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-555
+[notice ] Frame Rate is 8.22754
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-572
+[notice ] Frame Rate is 8.65099
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-588
+[notice ] Frame Rate is 9.07418
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-605
+[notice ] Frame Rate is 9.4951
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-622
+[notice ] Frame Rate is 9.91519
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-641
+[notice ] Frame Rate is 10.3329
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-656
+[notice ] Frame Rate is 10.7493
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-673
+[notice ] Frame Rate is 11.1639
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-689
+[notice ] Frame Rate is 11.5764
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-706
+[notice ] Frame Rate is 11.9878
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-722
+[notice ] Frame Rate is 12.3963
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-740
+[notice ] Frame Rate is 12.8029
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-755
+[notice ] Frame Rate is 13.2076
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-771
+[notice ] Frame Rate is 13.6105
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-790
+[notice ] Frame Rate is 14.0099
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-805
+[notice ] Frame Rate is 14.4076
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-824
+[notice ] Frame Rate is 14.802
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-837
+[notice ] Frame Rate is 15.1951
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-856
+[notice ] Frame Rate is 15.5849
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-872
+[notice ] Frame Rate is 15.9717
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-891
+[notice ] Frame Rate is 16.3558
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-905
+[notice ] Frame Rate is 16.7378
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-924
+[notice ] Frame Rate is 17.1165
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-938
+[notice ] Frame Rate is 17.493
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-956
+[notice ] Frame Rate is 17.8667
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-972
+[notice ] Frame Rate is 18.2377
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-01-990
+[notice ] Frame Rate is 18.6061
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-005
+[notice ] Frame Rate is 18.9715
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-024
+[notice ] Frame Rate is 19.3339
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-040
+[notice ] Frame Rate is 19.6936
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-056
+[notice ] Frame Rate is 20.0506
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-073
+[notice ] Frame Rate is 20.405
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-089
+[notice ] Frame Rate is 20.7564
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-105
+[notice ] Frame Rate is 21.1056
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-123
+[notice ] Frame Rate is 55.6795
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-140
+[notice ] Frame Rate is 55.724
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-154
+[notice ] Frame Rate is 55.7928
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-201
+[notice ] Frame Rate is 55.8357
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-203
+[notice ] Frame Rate is 55.7798
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-220
+[notice ] Frame Rate is 55.7355
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-238
+[notice ] Frame Rate is 55.7031
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-253
+[notice ] Frame Rate is 55.6832
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-272
+[notice ] Frame Rate is 55.6655
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-287
+[notice ] Frame Rate is 55.6547
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-306
+[notice ] Frame Rate is 55.6484
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-320
+[notice ] Frame Rate is 55.6469
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-338
+[notice ] Frame Rate is 55.6508
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-353
+[notice ] Frame Rate is 55.6575
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-372
+[notice ] Frame Rate is 55.6647
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-387
+[notice ] Frame Rate is 55.6746
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-406
+[notice ] Frame Rate is 55.6859
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-421
+[notice ] Frame Rate is 55.6989
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-438
+[notice ] Frame Rate is 55.7156
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-453
+[notice ] Frame Rate is 55.7332
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-472
+[notice ] Frame Rate is 55.7502
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-487
+[notice ] Frame Rate is 55.7683
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-504
+[notice ] Frame Rate is 55.7886
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-521
+[notice ] Frame Rate is 55.8085
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-538
+[notice ] Frame Rate is 55.8305
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-553
+[notice ] Frame Rate is 55.8524
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-572
+[notice ] Frame Rate is 55.8738
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-587
+[notice ] Frame Rate is 55.8959
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-605
+[notice ] Frame Rate is 55.9185
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-621
+[notice ] Frame Rate is 55.9414
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-639
+[notice ] Frame Rate is 55.9646
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-653
+[notice ] Frame Rate is 55.9891
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-672
+[notice ] Frame Rate is 56.0128
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-687
+[notice ] Frame Rate is 56.0369
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-706
+[notice ] Frame Rate is 56.0611
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-720
+[notice ] Frame Rate is 56.0865
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-738
+[notice ] Frame Rate is 56.1111
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-753
+[notice ] Frame Rate is 56.1366
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-772
+[notice ] Frame Rate is 56.1615
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-787
+[notice ] Frame Rate is 56.1865
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-804
+[notice ] Frame Rate is 56.2126
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-821
+[notice ] Frame Rate is 56.2376
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-837
+[notice ] Frame Rate is 56.2635
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-853
+[notice ] Frame Rate is 56.2893
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-871
+[notice ] Frame Rate is 56.315
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-888
+[notice ] Frame Rate is 56.3401
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-905
+[notice ] Frame Rate is 56.3653
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-921
+[notice ] Frame Rate is 56.3905
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-939
+[notice ] Frame Rate is 56.4158
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-953
+[notice ] Frame Rate is 56.4416
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-971
+[notice ] Frame Rate is 56.4673
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-02-987
+[notice ] Frame Rate is 56.4927
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-005
+[notice ] Frame Rate is 56.5177
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-021
+[notice ] Frame Rate is 56.5425
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-039
+[notice ] Frame Rate is 56.5672
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-053
+[notice ] Frame Rate is 56.5923
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-072
+[notice ] Frame Rate is 56.617
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-087
+[notice ] Frame Rate is 56.6417
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-104
+[notice ] Frame Rate is 56.6669
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-120
+[notice ] Frame Rate is 56.6914
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-139
+[notice ] Frame Rate is 59.1306
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-153
+[notice ] Frame Rate is 59.1777
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-171
+[notice ] Frame Rate is 59.2001
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-225
+[notice ] Frame Rate is 59.2181
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-228
+[notice ] Frame Rate is 59.0722
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-247
+[notice ] Frame Rate is 58.9414
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-260
+[notice ] Frame Rate is 58.8393
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-280
+[notice ] Frame Rate is 58.744
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-294
+[notice ] Frame Rate is 58.6677
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-312
+[notice ] Frame Rate is 58.5983
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-327
+[notice ] Frame Rate is 58.5377
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-346
+[notice ] Frame Rate is 58.4831
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-360
+[notice ] Frame Rate is 58.4358
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-378
+[notice ] Frame Rate is 58.3935
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-394
+[notice ] Frame Rate is 58.3554
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-412
+[notice ] Frame Rate is 58.3197
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-427
+[notice ] Frame Rate is 58.2883
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-445
+[notice ] Frame Rate is 58.26
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-461
+[notice ] Frame Rate is 58.2331
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-479
+[notice ] Frame Rate is 58.2078
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-495
+[notice ] Frame Rate is 58.1846
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-513
+[notice ] Frame Rate is 58.163
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-528
+[notice ] Frame Rate is 58.1441
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-546
+[notice ] Frame Rate is 58.1272
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-561
+[notice ] Frame Rate is 58.1119
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-580
+[notice ] Frame Rate is 58.0973
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-595
+[notice ] Frame Rate is 58.0842
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-614
+[notice ] Frame Rate is 58.072
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-629
+[notice ] Frame Rate is 58.0612
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-646
+[notice ] Frame Rate is 58.0515
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-661
+[notice ] Frame Rate is 58.0435
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-680
+[notice ] Frame Rate is 58.0358
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-695
+[notice ] Frame Rate is 58.0292
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-713
+[notice ] Frame Rate is 58.0229
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-729
+[notice ] Frame Rate is 58.0175
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-745
+[notice ] Frame Rate is 58.0136
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-761
+[notice ] Frame Rate is 58.0103
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-780
+[notice ] Frame Rate is 58.007
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-795
+[notice ] Frame Rate is 58.0044
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-812
+[notice ] Frame Rate is 58.003
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-828
+[notice ] Frame Rate is 58.0015
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-847
+[notice ] Frame Rate is 58.0005
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-861
+[notice ] Frame Rate is 58.0005
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-880
+[notice ] Frame Rate is 58.0004
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-895
+[notice ] Frame Rate is 58.0008
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-913
+[notice ] Frame Rate is 58.0015
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-929
+[notice ] Frame Rate is 58.0028
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-946
+[notice ] Frame Rate is 58.0046
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-961
+[notice ] Frame Rate is 58.0069
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-980
+[notice ] Frame Rate is 58.009
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-03-995
+[notice ] Frame Rate is 58.0116
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-013
+[notice ] Frame Rate is 58.0144
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-029
+[notice ] Frame Rate is 58.0175
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-047
+[notice ] Frame Rate is 58.021
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-061
+[notice ] Frame Rate is 58.0252
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-079
+[notice ] Frame Rate is 58.0295
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-095
+[notice ] Frame Rate is 58.0336
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-113
+[notice ] Frame Rate is 58.0383
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-128
+[notice ] Frame Rate is 58.0433
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-146
+[notice ] Frame Rate is 58.5556
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-161
+[notice ] Frame Rate is 58.5809
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-180
+[notice ] Frame Rate is 58.5838
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-195
+[notice ] Frame Rate is 58.5986
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-239
+[notice ] Frame Rate is 58.6081
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-241
+[notice ] Frame Rate is 58.5456
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-259
+[notice ] Frame Rate is 58.4877
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-277
+[notice ] Frame Rate is 58.4383
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-292
+[notice ] Frame Rate is 58.3958
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-310
+[notice ] Frame Rate is 58.3611
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-324
+[notice ] Frame Rate is 58.3366
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-343
+[notice ] Frame Rate is 58.3113
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-357
+[notice ] Frame Rate is 58.293
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-377
+[notice ] Frame Rate is 58.2729
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-392
+[notice ] Frame Rate is 58.2572
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-411
+[notice ] Frame Rate is 58.2419
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-426
+[notice ] Frame Rate is 58.2285
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-444
+[notice ] Frame Rate is 58.217
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-459
+[notice ] Frame Rate is 58.2085
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-477
+[notice ] Frame Rate is 58.2005
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-492
+[notice ] Frame Rate is 58.1941
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-509
+[notice ] Frame Rate is 58.1908
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-526
+[notice ] Frame Rate is 58.1861
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-543
+[notice ] Frame Rate is 58.1843
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-558
+[notice ] Frame Rate is 58.1828
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-574
+[notice ] Frame Rate is 58.1837
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-591
+[notice ] Frame Rate is 58.1846
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-609
+[notice ] Frame Rate is 58.1859
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-625
+[notice ] Frame Rate is 58.1871
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-644
+[notice ] Frame Rate is 58.1878
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-658
+[notice ] Frame Rate is 58.1902
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-677
+[notice ] Frame Rate is 58.1927
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-692
+[notice ] Frame Rate is 58.196
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-709
+[notice ] Frame Rate is 58.2005
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-724
+[notice ] Frame Rate is 58.2057
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-743
+[notice ] Frame Rate is 58.2094
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-759
+[notice ] Frame Rate is 58.2139
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-776
+[notice ] Frame Rate is 58.2191
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-792
+[notice ] Frame Rate is 58.2243
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-809
+[notice ] Frame Rate is 58.2296
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-825
+[notice ] Frame Rate is 58.235
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-844
+[notice ] Frame Rate is 58.2402
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-860
+[notice ] Frame Rate is 58.2445
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-881
+[notice ] Frame Rate is 58.2466
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-898
+[notice ] Frame Rate is 58.2482
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-917
+[notice ] Frame Rate is 58.2497
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-932
+[notice ] Frame Rate is 58.2512
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-952
+[notice ] Frame Rate is 58.2517
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-968
+[notice ] Frame Rate is 58.2521
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-04-986
+[notice ] Frame Rate is 58.2527
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-002
+[notice ] Frame Rate is 58.2538
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-019
+[notice ] Frame Rate is 58.2553
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-035
+[notice ] Frame Rate is 58.2568
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-052
+[notice ] Frame Rate is 58.259
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-068
+[notice ] Frame Rate is 58.2616
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-086
+[notice ] Frame Rate is 58.264
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-102
+[notice ] Frame Rate is 58.2666
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-119
+[notice ] Frame Rate is 58.2697
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-135
+[notice ] Frame Rate is 58.2729
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-152
+[notice ] Frame Rate is 58.6221
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-169
+[notice ] Frame Rate is 58.6116
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-187
+[notice ] Frame Rate is 58.6119
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-202
+[notice ] Frame Rate is 58.6172
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-220
+[notice ] Frame Rate is 58.6241
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-265
+[notice ] Frame Rate is 58.6319
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-267
+[notice ] Frame Rate is 58.5652
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-284
+[notice ] Frame Rate is 58.5083
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-300
+[notice ] Frame Rate is 58.4589
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-319
+[notice ] Frame Rate is 58.4164
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-333
+[notice ] Frame Rate is 58.3806
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-351
+[notice ] Frame Rate is 58.3487
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-367
+[notice ] Frame Rate is 58.3208
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-385
+[notice ] Frame Rate is 58.295
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-401
+[notice ] Frame Rate is 58.2722
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-419
+[notice ] Frame Rate is 58.2521
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-434
+[notice ] Frame Rate is 58.2344
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-453
+[notice ] Frame Rate is 58.2169
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-470
+[notice ] Frame Rate is 58.1998
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-488
+[notice ] Frame Rate is 58.1847
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-502
+[notice ] Frame Rate is 58.1722
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-521
+[notice ] Frame Rate is 58.1603
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-537
+[notice ] Frame Rate is 58.1496
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-553
+[notice ] Frame Rate is 58.1411
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-570
+[notice ] Frame Rate is 58.1332
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-588
+[notice ] Frame Rate is 58.1262
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-603
+[notice ] Frame Rate is 58.1203
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-621
+[notice ] Frame Rate is 58.1153
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-636
+[notice ] Frame Rate is 58.1112
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-654
+[notice ] Frame Rate is 58.1082
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-670
+[notice ] Frame Rate is 58.1057
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-687
+[notice ] Frame Rate is 58.1039
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-704
+[notice ] Frame Rate is 58.1033
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-720
+[notice ] Frame Rate is 58.1026
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-738
+[notice ] Frame Rate is 58.1026
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-753
+[notice ] Frame Rate is 58.1034
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-770
+[notice ] Frame Rate is 58.1046
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-786
+[notice ] Frame Rate is 58.1063
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-804
+[notice ] Frame Rate is 58.1073
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-822
+[notice ] Frame Rate is 58.109
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-837
+[notice ] Frame Rate is 58.1109
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-855
+[notice ] Frame Rate is 58.1137
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-871
+[notice ] Frame Rate is 58.1164
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-888
+[notice ] Frame Rate is 58.1201
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-904
+[notice ] Frame Rate is 58.1235
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-922
+[notice ] Frame Rate is 58.1273
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-937
+[notice ] Frame Rate is 58.1312
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-954
+[notice ] Frame Rate is 58.1361
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-971
+[notice ] Frame Rate is 58.1406
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-05-987
+[notice ] Frame Rate is 58.1458
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-004
+[notice ] Frame Rate is 58.1506
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-022
+[notice ] Frame Rate is 58.1558
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-037
+[notice ] Frame Rate is 58.161
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-055
+[notice ] Frame Rate is 58.1667
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-071
+[notice ] Frame Rate is 58.1725
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-087
+[notice ] Frame Rate is 58.1787
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-103
+[notice ] Frame Rate is 58.1853
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-122
+[notice ] Frame Rate is 58.1916
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-137
+[notice ] Frame Rate is 58.198
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-155
+[notice ] Frame Rate is 58.8628
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-169
+[notice ] Frame Rate is 58.9028
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-189
+[notice ] Frame Rate is 58.9105
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-203
+[notice ] Frame Rate is 58.9263
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-222
+[notice ] Frame Rate is 58.9351
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-237
+[notice ] Frame Rate is 58.944
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-290
+[notice ] Frame Rate is 58.9592
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-292
+[notice ] Frame Rate is 58.8786
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-309
+[notice ] Frame Rate is 58.8059
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-328
+[notice ] Frame Rate is 58.737
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-342
+[notice ] Frame Rate is 58.6797
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-362
+[notice ] Frame Rate is 58.6253
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-378
+[notice ] Frame Rate is 58.5765
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-393
+[notice ] Frame Rate is 58.5346
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-408
+[notice ] Frame Rate is 58.4982
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-427
+[notice ] Frame Rate is 58.4641
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-442
+[notice ] Frame Rate is 58.4335
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-460
+[notice ] Frame Rate is 58.4072
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-476
+[notice ] Frame Rate is 58.3821
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-494
+[notice ] Frame Rate is 58.358
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-510
+[notice ] Frame Rate is 58.3362
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-528
+[notice ] Frame Rate is 58.3156
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-542
+[notice ] Frame Rate is 58.299
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-560
+[notice ] Frame Rate is 58.2831
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-575
+[notice ] Frame Rate is 58.2702
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-594
+[notice ] Frame Rate is 58.2567
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-609
+[notice ] Frame Rate is 58.2449
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-628
+[notice ] Frame Rate is 58.2333
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-643
+[notice ] Frame Rate is 58.2237
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-662
+[notice ] Frame Rate is 58.214
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-676
+[notice ] Frame Rate is 58.2062
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-693
+[notice ] Frame Rate is 58.2005
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-710
+[notice ] Frame Rate is 58.1936
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-726
+[notice ] Frame Rate is 58.1889
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-743
+[notice ] Frame Rate is 58.1843
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-761
+[notice ] Frame Rate is 58.1795
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-776
+[notice ] Frame Rate is 58.176
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-794
+[notice ] Frame Rate is 58.173
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-809
+[notice ] Frame Rate is 58.1714
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-828
+[notice ] Frame Rate is 58.1692
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-843
+[notice ] Frame Rate is 58.1675
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-861
+[notice ] Frame Rate is 58.1666
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-876
+[notice ] Frame Rate is 58.1662
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-893
+[notice ] Frame Rate is 58.1672
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-910
+[notice ] Frame Rate is 58.1674
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-928
+[notice ] Frame Rate is 58.1677
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-943
+[notice ] Frame Rate is 58.1689
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-959
+[notice ] Frame Rate is 58.1715
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-977
+[notice ] Frame Rate is 58.173
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-06-994
+[notice ] Frame Rate is 58.1755
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-009
+[notice ] Frame Rate is 58.1781
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-028
+[notice ] Frame Rate is 58.1805
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-042
+[notice ] Frame Rate is 58.1838
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-060
+[notice ] Frame Rate is 58.1872
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-076
+[notice ] Frame Rate is 58.191
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-093
+[notice ] Frame Rate is 58.1954
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-108
+[notice ] Frame Rate is 58.2
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-128
+[notice ] Frame Rate is 58.2038
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-142
+[notice ] Frame Rate is 58.2089
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-161
+[notice ] Frame Rate is 58.6535
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-175
+[notice ] Frame Rate is 58.7038
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-193
+[notice ] Frame Rate is 58.7306
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-209
+[notice ] Frame Rate is 58.7535
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-226
+[notice ] Frame Rate is 58.7812
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-242
+[notice ] Frame Rate is 58.7975
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-261
+[notice ] Frame Rate is 58.8107
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-301
+[notice ] Frame Rate is 58.8208
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-303
+[notice ] Frame Rate is 58.7919
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-322
+[notice ] Frame Rate is 58.7635
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-337
+[notice ] Frame Rate is 58.7401
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-354
+[notice ] Frame Rate is 58.7222
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-370
+[notice ] Frame Rate is 58.7048
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-395
+[notice ] Frame Rate is 58.6717
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-413
+[notice ] Frame Rate is 58.6405
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-430
+[notice ] Frame Rate is 58.6094
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-447
+[notice ] Frame Rate is 58.5823
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-462
+[notice ] Frame Rate is 58.5592
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-481
+[notice ] Frame Rate is 58.5353
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-496
+[notice ] Frame Rate is 58.514
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-514
+[notice ] Frame Rate is 58.4946
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-530
+[notice ] Frame Rate is 58.4758
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-548
+[notice ] Frame Rate is 58.4595
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-561
+[notice ] Frame Rate is 58.4476
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-578
+[notice ] Frame Rate is 58.437
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-598
+[notice ] Frame Rate is 58.4253
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-611
+[notice ] Frame Rate is 58.417
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-631
+[notice ] Frame Rate is 58.4071
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-644
+[notice ] Frame Rate is 58.4002
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-665
+[notice ] Frame Rate is 58.3916
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-678
+[notice ] Frame Rate is 58.3868
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-698
+[notice ] Frame Rate is 58.3802
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-713
+[notice ] Frame Rate is 58.3755
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-731
+[notice ] Frame Rate is 58.37
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-748
+[notice ] Frame Rate is 58.365
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-763
+[notice ] Frame Rate is 58.3615
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-777
+[notice ] Frame Rate is 58.3603
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-798
+[notice ] Frame Rate is 58.3571
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-812
+[notice ] Frame Rate is 58.3566
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-828
+[notice ] Frame Rate is 58.3564
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-846
+[notice ] Frame Rate is 58.3567
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-862
+[notice ] Frame Rate is 58.3572
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-877
+[notice ] Frame Rate is 58.3585
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-898
+[notice ] Frame Rate is 58.358
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-917
+[notice ] Frame Rate is 58.3558
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-933
+[notice ] Frame Rate is 58.3541
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-951
+[notice ] Frame Rate is 58.3526
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+
+
+
+--------------------------------------- 2015-06-03-09-50-07-966
+[notice ] Frame Rate is 58.3516
+
+[notice ] Current State is 0
+
+[notice ] Presenting State is 0
+

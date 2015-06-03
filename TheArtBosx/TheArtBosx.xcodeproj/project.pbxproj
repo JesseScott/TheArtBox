@@ -18,6 +18,8 @@
 		68FE25DEF56B90EDB6DF4EF8 /* ofxCvContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD4D9A1B379E1E09E57786EF /* ofxCvContourFinder.cpp */; };
 		72CEEFF669D21538BA336662 /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDC938ECB6BDB8E319F89A40 /* ofxCvColorImage.cpp */; };
 		77399DCF819EAE2674D467DF /* ofxCvImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 201244234EB9CF0C8DADBA63 /* ofxCvImage.cpp */; };
+		7A08199D1B1F6FC9000069FC /* tabPromoCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A08199B1B1F6FC9000069FC /* tabPromoCell.cpp */; };
+		7A0819A01B1F789E000069FC /* tabPromoManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A08199E1B1F789E000069FC /* tabPromoManager.cpp */; };
 		8AAF2BA4AFCBEC334841B989 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0FB861B0D843DF212503B18 /* tinyxmlparser.cpp */; };
 		92434C5EB6D0EC4486055062 /* flags.c in Sources */ = {isa = PBXBuildFile; fileRef = DB4269E7D40F60C2706EA19A /* flags.c */; };
 		93AB204B1A6472C752E821D5 /* cameras.c in Sources */ = {isa = PBXBuildFile; fileRef = F17F078DBC28A70A1EE2A1C0 /* cameras.c */; };
@@ -149,6 +151,10 @@
 		7798E79566AB663542F62524 /* composite_index.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = composite_index.h; path = ../../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/composite_index.h; sourceTree = SOURCE_ROOT; };
 		77EFFAD5BAEBF32DB956F7AD /* cvaux.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cvaux.hpp; path = ../../../../addons/ofxOpenCv/libs/opencv/include/opencv/cvaux.hpp; sourceTree = SOURCE_ROOT; };
 		78090C405D308CDB638AB19D /* ofxCvGrayscaleImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCvGrayscaleImage.h; path = ../../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.h; sourceTree = SOURCE_ROOT; };
+		7A08199B1B1F6FC9000069FC /* tabPromoCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tabPromoCell.cpp; sourceTree = "<group>"; };
+		7A08199C1B1F6FC9000069FC /* tabPromoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabPromoCell.h; sourceTree = "<group>"; };
+		7A08199E1B1F789E000069FC /* tabPromoManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tabPromoManager.cpp; sourceTree = "<group>"; };
+		7A08199F1B1F789E000069FC /* tabPromoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabPromoManager.h; sourceTree = "<group>"; };
 		7AF8CE40FB72CC0BAC709AAC /* loader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = loader.h; path = ../../../../addons/ofxKinect/libs/libfreenect/src/loader.h; sourceTree = SOURCE_ROOT; };
 		7D5571E60DEB08241D06512D /* opencv.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = opencv.hpp; path = ../../../../addons/ofxOpenCv/libs/opencv/include/opencv2/opencv.hpp; sourceTree = SOURCE_ROOT; };
 		7DF491C1B1FACBA6A695D7FB /* ofxCvImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCvImage.h; path = ../../../../addons/ofxOpenCv/src/ofxCvImage.h; sourceTree = SOURCE_ROOT; };
@@ -677,6 +683,10 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				7A08199B1B1F6FC9000069FC /* tabPromoCell.cpp */,
+				7A08199C1B1F6FC9000069FC /* tabPromoCell.h */,
+				7A08199E1B1F789E000069FC /* tabPromoManager.cpp */,
+				7A08199F1B1F789E000069FC /* tabPromoManager.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -831,10 +841,12 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				7A08199D1B1F6FC9000069FC /* tabPromoCell.cpp in Sources */,
 				A410FD233F75B688B03CBAE3 /* ofxKinectExtras.cpp in Sources */,
 				4F535557DDB78E33E89755AB /* ofxKinect.cpp in Sources */,
 				07925661608857C519CE1E55 /* audio.c in Sources */,
 				93AB204B1A6472C752E821D5 /* cameras.c in Sources */,
+				7A0819A01B1F789E000069FC /* tabPromoManager.cpp in Sources */,
 				BFFEF79AA60E1FB214C0D2D2 /* core.c in Sources */,
 				92434C5EB6D0EC4486055062 /* flags.c in Sources */,
 				BD008A9DDBF06272F667877B /* keep_alive.c in Sources */,

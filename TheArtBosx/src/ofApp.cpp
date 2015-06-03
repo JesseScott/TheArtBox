@@ -66,7 +66,7 @@ void ofApp::setup() {
         nearThreshold = 250;
         farThreshold = 112;
         bLearnBakground = true;
-        threshold = 80;
+        threshold = 20;
         bThreshWithOpenCV = false;
         minBlob = 25; 
         maxBlob = (capture_width * capture_height)/2;
@@ -275,6 +275,10 @@ void ofApp::updateMovies() {
     else if(playState == 4) {
         demo.update();
     }
+    else if (playState == 5) {
+        promo.update();
+    }
+    
 }
 
 void ofApp::updateFBOs() {
@@ -475,6 +479,7 @@ void ofApp::updateKinect() {
 
 void ofApp::updateWebcam() {
     camera.update();
+    
     if (camera.isFrameNew()) {
         colorImg.setFromPixels(camera.getPixels(), camera.width, camera.height);
         colorImg.mirror(false, true);

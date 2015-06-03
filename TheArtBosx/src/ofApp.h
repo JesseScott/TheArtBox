@@ -5,13 +5,14 @@
 #include "ofxOpenCv.h"
 #include "ofxKinect.h"
 #include "ofxXmlSettings.h"
+#include "tabPromoManager.h"
 //#include <windows.h>
 //#include "psapi.h"
 
 // DEFINES
 #define WINVER 0x0601
 #define DIV 1024
-//#define INTERACTIVE
+#define INTERACTIVE
 //#define KINECT
 
 class ofApp : public ofBaseApp {
@@ -89,7 +90,10 @@ public:
 	ofVideoPlayer demo;
 	ofVideoPlayer video;
 	ofImage image;
-	int imageTimer;
+    
+    tabPromoManager promo;
+	
+    int imageTimer;
     int imageMAX;
 	int playState;
 	int width, height;
