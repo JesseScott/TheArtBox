@@ -2,7 +2,6 @@
 
 #pragma mark - BASE OF
 
-//--------------------------------------------------------------
 void ofApp::setup() {
 
 	// SYSTEM
@@ -15,71 +14,79 @@ void ofApp::setup() {
     ofBackground(100);
     width = ofGetWindowWidth();
     height = ofGetWindowHeight();
+    
+    // STATE
+    presenting = true;
+    tooSunny = true;
+    fboAge = 0;
+    imageTimer = 0;
+    imageMAX = 500;
+    playState = 1;
+    currentBrightness = 0;
+    targetAlpha = 155;
 	
+    #ifdef INTERACTIVE
+        // KINECT
+        #ifdef KINECT
+            kinect.setRegistration(true);
+            kinect.init();	
+            kinect.open();
+            if(kinect.isConnected()) {
+                ofLogNotice() << "sensor-emitter dist: " << kinect.getSensorEmitterDistance() << "cm";
+                ofLogNotice() << "sensor-camera dist:  " << kinect.getSensorCameraDistance() << "cm";
+                ofLogNotice() << "zero plane pixel size: " << kinect.getZeroPlanePixelSize() << "mm";
+                ofLogNotice() << "zero plane dist: " << kinect.getZeroPlaneDistance() << "mm";
+            }
+            angle = 23;
+            kinect.setCameraTiltAngle(angle);
+        #else
+            camera.setVerbose(true);
+            camera.initGrabber(320, 240);
+        #endif
     
-	// KINECT
-    #ifdef KINECT
-        kinect.setRegistration(true);
-        kinect.init();	
-        kinect.open();
-        if(kinect.isConnected()) {
-            ofLogNotice() << "sensor-emitter dist: " << kinect.getSensorEmitterDistance() << "cm";
-            ofLogNotice() << "sensor-camera dist:  " << kinect.getSensorCameraDistance() << "cm";
-            ofLogNotice() << "zero plane pixel size: " << kinect.getZeroPlanePixelSize() << "mm";
-            ofLogNotice() << "zero plane dist: " << kinect.getZeroPlaneDistance() << "mm";
-        }
-        angle = 23;
-        kinect.setCameraTiltAngle(angle);
-    #else
-        camera.setVerbose(true);
-        camera.initGrabber(320, 240);
-    #endif
-    
-    // CAPTURE SIZE
-    int capture_width, capture_height;
-    #ifdef KINECT
-        capture_width = kinect.width;
-        capture_height = kinect.height;
-    #else
-        capture_width = camera.width;
-        capture_height = camera.height;
-    #endif
-    
-	// OPENCV
-	colorImg.allocate(capture_width, capture_height);
-	grayImage.allocate(capture_width, capture_height);
-	grayThreshNear.allocate(capture_width, capture_height);
-	grayThreshFar.allocate(capture_width, capture_height);
-	grayBg.allocate(capture_width, capture_height);
-	grayDiff.allocate(capture_width, capture_height);
-	closePoints.allocate(capture_width, capture_height, GL_RGBA32F_ARB);
+        // CAPTURE SIZE
+        int capture_width, capture_height;
+        #ifdef KINECT
+            capture_width = kinect.width;
+            capture_height = kinect.height;
+        #else
+            capture_width = camera.width;
+            capture_height = camera.height;
+        #endif
+        
+        // OPENCV
+        colorImg.allocate(capture_width, capture_height);
+        grayImage.allocate(capture_width, capture_height);
+        grayThreshNear.allocate(capture_width, capture_height);
+        grayThreshFar.allocate(capture_width, capture_height);
+        grayBg.allocate(capture_width, capture_height);
+        grayDiff.allocate(capture_width, capture_height);
+        closePoints.allocate(capture_width, capture_height, GL_RGBA32F_ARB);
 
-	nearThreshold = 250;
-	farThreshold = 112;
-	bLearnBakground = true;
-	threshold = 80;
-	bThreshWithOpenCV = false;
-	minBlob = 25; 
-	maxBlob = (capture_width * capture_height)/2;
-	
-	// STATE
-	presenting = false;
-	tooSunny = true;
-	fboAge = 0; 
-	imageTimer = 0; 
-	playState = 1;
-	currentBrightness = 0;
-	targetAlpha = 155;
+        nearThreshold = 250;
+        farThreshold = 112;
+        bLearnBakground = true;
+        threshold = 80;
+        bThreshWithOpenCV = false;
+        minBlob = 25; 
+        maxBlob = (capture_width * capture_height)/2;
+    
+        // FBO & GLSL SHADER
+        setupGL(width, height);
+    #else
+        playState = 2;
+        imageMAX = 2500;
+    #endif
+    
+
 	
     // XML ASSETS
+    BASEPATH = "../../../MEDIA/";
     assets.loadFile("xml/assets.xml");
     if( assets.loadFile("xml/assets.xml") ) {
         ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
-        // Load Fonts
         loadFonts();
-        // Load Artist Names
         loadArtists();
-        // Load Media Names
         loadAssets();
     }
     else {
@@ -91,12 +98,9 @@ void ofApp::setup() {
     updateCurrentIndex();
 
     // ASSETS
-    brush.loadImage("images/brush.png");
+    brush.loadImage("mouse/brush.png");
 	stamp.loadImage("logo/stamp_white2.png");
-	demo.loadMovie("demo/studio_in_the_city_6_promo.mp4");
-
-    // FBO & GLSL SHADER
-    setupGL(width, height);
+	demo.loadMovie(BASEPATH + "demo/studio_in_the_city_6_promo.mp4");
     
     // MEMORY
     checkMemory();
@@ -104,280 +108,304 @@ void ofApp::setup() {
 	cout << "Setup Is Done \n" << endl;
 }
 
-//--------------------------------------------------------------
 void ofApp::update() {
-	
-	// Screen
 	ofBackground(0);
 	
-	// Age FBO
-	if(fboAge < 100) {
-		fboAge++; 
-	}
-	
-	if(playState < 2) {
+    #ifdef INTERACTIVE
+        if(playState <= 1) {
+            #ifdef KINECT
+                updateKinect();
+            #else
+                updateWebcam();
+            #endif
+            
+            updateBlobs();
+            updateFBOs();
+            if(ofGetFrameNum() % 60 == 0) {
+                updateBrightness();
+            }
+        }
+        else if(playState >= 2) {
+            updateMovies();
+        }
+    #else
+        if (playState == 1) playState = 2;
+        updateMovies();
+    #endif
 
-        #ifdef KINECT
-            updateKinect();
-        #else
-            updateWebcam();
-        #endif
-        
-		// Are There Blobs ?
-		if (contourFinder.nBlobs > 0 ) {
-			// Draw Logo Into FBO and Fade Everything Else
-			closePoints.begin();
-				ofFill(); 
-				ofSetColor(ofColor(0, 2));
-				ofRect(0, 0, closePoints.getWidth(), closePoints.getHeight());
-				ofSetColor(ofColor::white);
-				stamp.draw(75, 0, closePoints.getWidth()- 130, closePoints.getHeight());
-			closePoints.end();
-		
-			// Loop Through All The Blobs
-			for (int i = 0; i < contourFinder.nBlobs; i ++) {
-				ofVec2f frontPoint = ofVec2f (0, 0); 
-				unsigned char * pix = grayImage.getPixels();
-                #ifdef KINECT
-                    grayImage.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height); // ???
-                #else
-                    grayImage.setFromPixels(camera.getPixels(), camera.width, camera.height); // ???
-                #endif
-
-				int tempBright;
-				int brightPixel = grayImage.getWidth() * contourFinder.blobs[i].boundingRect.getMinY() +contourFinder.blobs[i].boundingRect.getMinX();
-				tempBright = pix[brightPixel]; 
-		
-				for (int j = contourFinder.blobs[i].boundingRect.getMinY(); j <= contourFinder.blobs[i].boundingRect.getMaxY(); j++){ 
-					for (int k = contourFinder.blobs[i].boundingRect.getMinX(); k <= contourFinder.blobs[i].boundingRect.getMaxX(); k++){
-						int brightestPixelCandidate = (grayImage.getWidth()*j+k);
-						if (pix[brightestPixelCandidate] > tempBright) {
-							tempBright = pix[brightestPixelCandidate]; 
-							frontPoint = ofVec2f(k,j); 
-						}
-					}
-				}
-
-				// Trace The Contour Into A Shape
-				ofPath blobShape ; 
-				for (int p = 0; p < contourFinder.blobs[i].pts.size(); p++) {
-					blobShape.lineTo(contourFinder.blobs[i].pts[p]); 
-				}
-
-				// Draw That Shape Into The FBO
-				if(fboAge > 90) {
-					closePoints.begin();
-						ofFill(); 
-						ofSetColor(ofColor(0,0,255)); 
-						blobShape.setFillColor(ofColor::red); 
-						blobShape.draw();  
-					closePoints.end(); 
-				}
-		
-				blobShape.clear();
-			}
-		}
-		
-		// No Blobs
-		else {
-			// Still Draw The Logo & Fade
-			closePoints.begin();
-				ofFill(); 
-				ofSetColor(ofColor(0, 2));
-				ofRect(0, 0, closePoints.getWidth(), closePoints.getHeight());
-				ofSetColor(ofColor::white);
-				stamp.draw(75, 0, closePoints.getWidth()- 130, closePoints.getHeight());
-			closePoints.end();
-		}
-
-		// Update FBOs
-		maskFbo.begin();
-			ofSetColor(ofColor::aliceBlue); // Color ??
-			closePoints.draw(-250, -250, maskFbo.getWidth() + 450, maskFbo.getHeight() +250); // Magic Numbers ??
-		maskFbo.end();
-
-		fbo.begin();
-			ofClear(0, 0, 0, 0);
-			shader.begin();
-				shader.setUniformTexture("maskTex", maskFbo.getTextureReference(), 1);
-				thumbnail.draw(0, 0);
-			shader.end();
-		fbo.end();
-
-		// Check Brightness Every Two Seconds
-		if(ofGetFrameNum() % 60 == 0) {
-			currentBrightness = getCurrentBrightness();
-			if(currentBrightness >= targetAlpha) {
-				//Play Media
-				if (currentAssetIsMovie) {
-					video.stop();
-					video.setFrame(0);
-					video.play(); 
-					video.setLoopState(OF_LOOP_NONE);
-				}
-				else {
-					imageTimer = 0; 
-				}
-				playState = 2;
-				currentBrightness = 0;
-			}
-		}
-
-	} // play state < 2
-		
-    // Idle Video
-	if(currentAssetIsMovie) {
-		video.update();
-	}
-
-	if(playState == 4) {
-		demo.update();
-	}
-
-	// Time To Write Some Diagnostic Info To File
+	// Write
 	if(ofGetMinutes() % 10 == 0) {
-		// Set File
-		ofLogToFile("logs/ArtBoxLog.txt", true);
-		
-		// FPS
-		ofLog() << "Frame Rate is " << ofToString(ofGetFrameRate()) << endl;
-		
-		// State
-		ofLog() << "Current State is " << ofToString(playState) << endl;
-		ofLog() << "Presenting State is " << ofToString(int(presenting)) << endl;
+        writeDiagnostics();
 	}
 
 }
 
-//--------------------------------------------------------------
 void ofApp::draw() {
+    #ifdef INTERACTIVE
+        if(presenting == false ) {
+            drawDebugView();
+        }
+        else {
+            switch (playState) {
+                case 1:
+                    drawFBOView();
+                    break;
+                case 2:
+                    drawMediaView();
+                    break;
+                case 4:
+                    drawTrailerView();
+                    break;
+                default:
+                    break;
+            }
+        }
+    #else
+        switch (playState) {
+            case 2:
+                drawMediaView();
+                break;
+            case 4:
+                drawTrailerView();
+                break;
+            default:
+                break;
+        }
+    #endif
+}
 
-	// DEBUG VIEW
-	if(presenting == false ) {
-	
-		// Draw IR Images
+# pragma mark - UPDATES
+
+void ofApp::updateBlobs() {
+    // Age FBO
+    if(fboAge < 100) {
+        fboAge++;
+    }
+    // Are There Blobs ?
+    if (contourFinder.nBlobs > 0 ) {
+        // Draw Logo Into FBO and Fade Everything Else
+        closePoints.begin();
+            ofFill();
+            ofSetColor(ofColor(0, 2));
+            ofRect(0, 0, closePoints.getWidth(), closePoints.getHeight());
+            ofSetColor(ofColor::white);
+            stamp.draw(75, 0, closePoints.getWidth()- 130, closePoints.getHeight());
+        closePoints.end();
+        
+        // Loop Through All The Blobs
+        for (int i = 0; i < contourFinder.nBlobs; i ++) {
+            ofVec2f frontPoint = ofVec2f (0, 0);
+            unsigned char * pix = grayImage.getPixels();
+            
+            #ifdef KINECT
+                grayImage.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height); // ???
+            #else
+                grayImage.setFromPixels(camera.getPixels(), camera.width, camera.height); // ???
+            #endif
+            
+            int tempBright;
+            int brightPixel = grayImage.getWidth() * contourFinder.blobs[i].boundingRect.getMinY() +contourFinder.blobs[i].boundingRect.getMinX();
+            tempBright = pix[brightPixel];
+            
+            for (int j = contourFinder.blobs[i].boundingRect.getMinY(); j <= contourFinder.blobs[i].boundingRect.getMaxY(); j++){
+                for (int k = contourFinder.blobs[i].boundingRect.getMinX(); k <= contourFinder.blobs[i].boundingRect.getMaxX(); k++){
+                    int brightestPixelCandidate = (grayImage.getWidth()*j+k);
+                    if (pix[brightestPixelCandidate] > tempBright) {
+                        tempBright = pix[brightestPixelCandidate];
+                        frontPoint = ofVec2f(k,j);
+                    }
+                }
+            }
+            
+            // Trace The Contour Into A Shape
+            ofPath blobShape ;
+            for (int p = 0; p < contourFinder.blobs[i].pts.size(); p++) {
+                blobShape.lineTo(contourFinder.blobs[i].pts[p]);
+            }
+            
+            // Draw That Shape Into The FBO
+            if(fboAge > 90) {
+                closePoints.begin();
+                    ofFill();
+                    ofSetColor(ofColor(0,0,255));
+                    blobShape.setFillColor(ofColor::red);
+                    blobShape.draw();
+                closePoints.end();
+            }
+            
+            blobShape.clear();
+        }
+    }
+    else {    // No Blobs
+        // Still Draw The Logo & Fade
+        closePoints.begin();
+        ofFill(); 
+        ofSetColor(ofColor(0, 2));
+        ofRect(0, 0, closePoints.getWidth(), closePoints.getHeight());
+        ofSetColor(ofColor::white);
+        stamp.draw(75, 0, closePoints.getWidth()- 130, closePoints.getHeight());
+        closePoints.end();
+    }
+}
+
+void ofApp::updateBrightness() {
+    currentBrightness = getCurrentBrightness();
+    if(currentBrightness >= targetAlpha) {
+        //Play Media
+        if (currentAssetIsMovie) {
+            video.stop();
+            video.setFrame(0);
+            video.play();
+            video.setLoopState(OF_LOOP_NONE);
+        }
+        else {
+            imageTimer = 0;
+        }
+        playState = 2;
+        currentBrightness = 0;
+    }
+}
+
+void ofApp::updateMovies() {
+    if (playState == 2) {
+        if(currentAssetIsMovie) {
+            video.update();
+        }
+    }
+    else if(playState == 4) {
+        demo.update();
+    }
+}
+
+void ofApp::updateFBOs() {
+    maskFbo.begin();
+        ofSetColor(ofColor::aliceBlue); // Color ??
+        closePoints.draw(-250, -250, maskFbo.getWidth() + 450, maskFbo.getHeight() +250); // Magic Numbers ??
+    maskFbo.end();
+    fbo.begin();
+        ofClear(0, 0, 0, 0);
+        shader.begin();
+            shader.setUniformTexture("maskTex", maskFbo.getTextureReference(), 1);
+            thumbnail.draw(0, 0);
+        shader.end();
+    fbo.end();
+}
+
+void ofApp::writeDiagnostics() {
+    // Set File
+    ofLogToFile("logs/ArtBoxLog.txt", true);
+    
+    // FPS
+    ofLog() << "Frame Rate is " << ofToString(ofGetFrameRate()) << endl;
+    
+    // State
+    ofLog() << "Current State is " << ofToString(playState) << endl;
+    ofLog() << "Presenting State is " << ofToString(int(presenting)) << endl;
+}
+
+# pragma mark - DRAWING
+
+void ofApp::drawDebugView() {
+    #ifdef INTERACTIVE
+        // Draw IR Images
         #ifdef KINECT
-                kinect.drawDepth(10, 10, 400, 300); // Depth
-                kinect.draw(420, 10, 400, 300); // RGB
+            kinect.drawDepth(10, 10, 400, 300); // Depth
+            kinect.draw(420, 10, 400, 300); // RGB
         #else
-                camera.draw(420, 10, 400, 300); // RGB
+            camera.draw(420, 10, 400, 300); // RGB
         #endif
+        
+        contourFinder.draw(10, 320, 400, 300); // Blobs
+        closePoints.draw(420, 320, 400, 300); // FBO
+        
+        // Draw The CV Images
+        colorImg.draw(1100, 10, 400, 300); // RGB
+        grayImage.draw(1510, 20, 400, 300); // Grayscale
+        grayBg.draw(1100, 280, 400, 300); // Background
+        grayDiff.draw(1510, 280, 400, 300); // Difference
+    #endif
+    
+    // Debug Info
+    ofSetColor(255, 255, 255);
+    stringstream reportStream;
+    reportStream
+    << "using opencv threshold = " << bThreshWithOpenCV <<" (press spacebar)" << endl
+    << "set near threshold " << nearThreshold << " (press: + -)" << endl
+    << "set far threshold " << farThreshold << " (press: < >)" << endl
+    << "num blobs found " << contourFinder.nBlobs << endl
+    << "current brightness is " << currentBrightness << endl
+    << "fps: " << ofGetFrameRate() << endl
+    << "play state is " << playState << endl
+    << "Too Sunny ? = " << int(tooSunny) << endl
+    << "press c to close the connection and o to open it again, connection is: " << kinect.isConnected() << endl;
+    if(kinect.hasCamTiltControl()) {
+        reportStream << "press UP and DOWN to change the tilt angle: " << angle << " degrees" << endl
+        << "press 1-5 & 0 to change the led mode" << endl;
+    }
+    ofDrawBitmapString(reportStream.str(), 20, 652);
+}
 
-		contourFinder.draw(10, 320, 400, 300); // Blobs
-		closePoints.draw(420, 320, 400, 300); // FBO
+void ofApp::drawFBOView() {
+    fbo.draw(0, 0, maskFbo.getWidth(), maskFbo.getHeight());
+}
 
-		// Draw The CV Images
-		colorImg.draw(1100, 10, 400, 300); // RGB
-		grayImage.draw(1510, 20, 400, 300); // Grayscale
-		grayBg.draw(1100, 280, 400, 300); // Background
-		grayDiff.draw(1510, 280, 400, 300); // Difference
-	
-		// Debug Info
-		ofSetColor(255, 255, 255);
-		stringstream reportStream;
-		reportStream 
-		<< "using opencv threshold = " << bThreshWithOpenCV <<" (press spacebar)" << endl
-		<< "set near threshold " << nearThreshold << " (press: + -)" << endl
-		<< "set far threshold " << farThreshold << " (press: < >)" << endl
-		<< "num blobs found " << contourFinder.nBlobs << endl
-		<< "current brightness is " << currentBrightness << endl
-		<< "fps: " << ofGetFrameRate() << endl
-		<< "play state is " << playState << endl
-		<< "Too Sunny ? = " << int(tooSunny) << endl
-		<< "press c to close the connection and o to open it again, connection is: " << kinect.isConnected() << endl;
-		if(kinect.hasCamTiltControl()) {
-    		reportStream << "press UP and DOWN to change the tilt angle: " << angle << " degrees" << endl
-			<< "press 1-5 & 0 to change the led mode" << endl;
-		}
-		ofDrawBitmapString(reportStream.str(), 20, 652);
+void ofApp::drawMediaView() {
+    if (currentAssetIsMovie) {
+        video.draw(0, 0, 3240, 1920);
+    }
+    else {
+        image.draw(0, 0, 3240, 1920);
+        imageTimer++;
+    }
+    
+    // Caption
+    ofSetColor(0, 255);
+    font.drawString(artistNames[currentIndex], 105, ofGetScreenHeight() - 95);
+    ofSetColor(255, 255);
+    font.drawString(artistNames[currentIndex], 100, ofGetScreenHeight() - 100);
+    
+    if(currentAssetIsMovie) {
+        if(video.getIsMovieDone()) {
+            cout << "DONE" << endl;
+            playState = 1;
+            imageTimer = 0;
+            video.stop();
+            // Increase Play
+            currentIndex++;
+            if(currentIndex >= maxIndex) {
+                currentIndex = 0;
+            }
+            updateCurrentIndex();
+        }
+    }
+    else {
+        if (imageTimer > imageMAX ) {
+            cout << "DONE" << endl;
+            playState = 1;
+            imageTimer = 0; 
+            
+            // Increase Play
+            currentIndex++;
+            if(currentIndex >= maxIndex) {
+                currentIndex = 0;
+            }
+            updateCurrentIndex();
+        }
+    }
+}
 
-	} // presenting
-
-	// INTERACTIVE VIEW
-	else if(presenting == true && playState == 1) {
-		// Draw FBO
-		fbo.draw(0, 0, maskFbo.getWidth(), maskFbo.getHeight());
-	}
-
-	// PLAYING VIEW
-	else if(presenting == true && playState == 2) {
-		// Movie
-		if (currentAssetIsMovie) {
-			video.draw(0, 0, 3240, 1920); 
-		}
-		
-		// Image
-		else {
-			image.draw(0, 0, 3240, 1920);
-			imageTimer++; 
-		}
-
-		// Caption
-		ofSetColor(0, 255);
-		font.drawString(artistNames[currentIndex], 105, ofGetScreenHeight() - 95);
-		ofSetColor(255, 255);
-		font.drawString(artistNames[currentIndex], 100, ofGetScreenHeight() - 100);
-
-		// DONE ???
-		
-		// Movie
-		if(currentAssetIsMovie) {
-			if(video.getIsMovieDone()) {
-				cout << "DONE" << endl;
-				playState = 1; 
-				imageTimer = 0; 
-				video.stop(); 
-			
-				// Increase Play
-				currentIndex++;
-
-				// Check Limit
-				if(currentIndex >= maxIndex) {
-					currentIndex = 0;
-				}
-
-				// Update Assets
-				updateCurrentIndex();
-			}
-		}
-		
-		// Image
-		else {
-			if (imageTimer > 500 ) {
-				cout << "DONE" << endl;
-				playState = 1; 
-				imageTimer = 0; 
-			
-				// Increase Play
-				currentIndex++;
-
-				// Check Limit
-				if(currentIndex >= maxIndex) {
-					currentIndex = 0;
-				}
-
-				// Update Assets
-				updateCurrentIndex();
-			}
-		}
-
-	} // playback
-
-	// TRAILER VIEW
-	else if(presenting == true && playState == 4) {
-		if(demo.getIsMovieDone()) {
-			playState = 1;
-			demo.stop();
-		}
-		else {
-			if(currentAssetIsMovie) {
-				video.stop()	;
-			}
-			demo.draw(0, 0, 3240, 1920); 
-		}
-	} // trailer
-
-} // draw()
+void ofApp::drawTrailerView() {
+    if(demo.getIsMovieDone()) {
+        playState = 1;
+        demo.stop();
+    }
+    else {
+        if(currentAssetIsMovie) {
+            video.stop();
+        }
+        demo.draw(0, 0, 3240, 1920);
+    }
+}
 
 
 # pragma mark - CAMERA
@@ -442,7 +470,6 @@ void ofApp::updateKinect() {
             // Find The Blobs
             contourFinder.findContours(grayImage, minBlob, maxBlob, 20, false);
         }
-        
     }
 }
 
@@ -477,96 +504,68 @@ void ofApp::updateWebcam() {
     cout << "FOUND " << contourFinder.nBlobs << " BLOBS" << endl;
 }
 
-//--------------------------------------------------------------
 
 # pragma mark - CUSTOM XML FUNCTIONS
 
-
-
 void ofApp::loadFonts() {
-
-    // Push In
     assets.pushTag("assets");
-    assets.pushTag("fonts");
+        assets.pushTag("fonts");
+            // Get Font Path
+            string fontName = assets.getValue("file", "null", 0);
+            ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
 
-    // Get Font Path
-    string fontName = assets.getValue("file", "null", 0);
-    ofLog(OF_LOG_NOTICE, "The Name Of The Font Is: " + fontName);
+            // Console Padding
+            cout << "" << endl;
 
-    // Console Padding
-    cout << "" << endl;
-
-    // Make Sure Its Valid
-    if(fontName.length() > 0) {
-        font.loadFont(fontName, 48);
-    }
-
-    // Pop Out
+            // Make Sure Its Valid
+            if(fontName.length() > 0) {
+                font.loadFont(fontName, 48);
+            }
+        assets.popTag();
     assets.popTag();
-    assets.popTag();
-
 }
-
-
 
 void ofApp::loadArtists() {
-
-    // Push In
     assets.pushTag("assets");
-    assets.pushTag("artists");
+        assets.pushTag("artists");
+            // Find Number
+            int num = assets.getNumTags("file");
+            artistNames.resize(num);
 
-    // Find Number
-    int num = assets.getNumTags("file");
-    artistNames.resize(num);
+            // Iterate & Assign
+            for(int i = 0; i < artistNames.size(); i++) {
+                artistNames[i] = assets.getValue("file", "null", i);
+                ofLog(OF_LOG_NOTICE, "Name #" + ofToString(i) + " is " + artistNames[i]);
+            }
 
-    // Iterate & Assign
-    for(int i = 0; i < artistNames.size(); i++) {
-        artistNames[i] = assets.getValue("file", "null", i);
-        ofLog(OF_LOG_NOTICE, "Name #" + ofToString(i) + " is " + artistNames[i]);
-    }
-
-    // Console Padding
-    cout << "" << endl;
-
-    // Pop Out
+            // Console Padding
+            cout << "" << endl;
+        assets.popTag();
     assets.popTag();
-    assets.popTag();
-
 }
-
-
 
 void ofApp::loadAssets() {
-
-    // Push In
     assets.pushTag("assets");
-    assets.pushTag("media");
+        assets.pushTag("media");
+            // Find Number
+            int num = assets.getNumTags("file");
+            artistMedia.resize(num);
+            maxIndex = num;
 
-    // Find Number
-    int num = assets.getNumTags("file");
-    artistMedia.resize(num);
-    maxIndex = num;
+            // Iterate & Assign
+            for(int i = 0; i < artistMedia.size(); i++) {
+                artistMedia[i] = BASEPATH + assets.getValue("file", "null", i);
+                ofLog(OF_LOG_NOTICE, "File #" + ofToString(i) + " is " + artistMedia[i]);
+            }
 
-    // Iterate & Assign
-    for(int i = 0; i < artistMedia.size(); i++) {
-        artistMedia[i] = assets.getValue("file", "null", i);
-        ofLog(OF_LOG_NOTICE, "File #" + ofToString(i) + " is " + artistMedia[i]);
-    }
-
-    // Console Padding
-    cout << "" << endl;
-
-    // Pop Out
+            // Console Padding
+            cout << "" << endl;
+        assets.popTag();
     assets.popTag();
-    assets.popTag();
-
 }
 
 
-
-//--------------------------------------------------------------
-
-// CUSTOM IMAGE FUNCTIONS
+# pragma mark - CUSTOM IMAGE FUNCTIONS
 
 void ofApp::setAssets(int _currentIndex) {
 
@@ -652,12 +651,11 @@ void ofApp::setColourThumbnailImage(int width, int height) {
 
 }
 
-
-
 void ofApp::setBlackAndWhiteThumbnailImage(ofImage img) {
     foreground = img;
     foreground.setImageType(OF_IMAGE_GRAYSCALE);
 }
+
 
 # pragma mark - PLAYBACK
 
@@ -677,7 +675,6 @@ void ofApp::autoPlay() {
     currentBrightness = 0;
 }
 
-
 void ofApp::updateCurrentIndex() {
 
     // Index
@@ -689,21 +686,17 @@ void ofApp::updateCurrentIndex() {
     // Convert To Grayscale
     setBlackAndWhiteThumbnailImage(thumbnail);
 
-	// Clear FBOs
-    closePoints.begin();
-        ofClear(0,0,0,255);
-    closePoints.end();
-
-    maskFbo.begin();
-        ofClear(0,0,0,255);
-    maskFbo.end();
-
-	currentBrightness = 0;
-
+    #ifdef INTERACTIVE
+        closePoints.begin();
+            ofClear(0,0,0,255);
+        closePoints.end();
+        maskFbo.begin();
+            ofClear(0,0,0,255);
+        maskFbo.end();
+        currentBrightness = 0;
+    #endif
 }
 
-
-//--------------------------------------------------------------
 
 # pragma mark - CUSTOM GL FUNCTIONS
 
@@ -742,7 +735,6 @@ void ofApp::setupGL(int width, int height) {
 
 }
 
-
 int ofApp::getCurrentBrightness() {
 
     // Counters
@@ -772,15 +764,10 @@ int ofApp::getCurrentBrightness() {
 void ofApp::learnBackground() {
 
 
-
 }
 
 
-//--------------------------------------------------------------
-
 # pragma mark - CUSTOM UTILITY FUNCTIONS
-
-
 
 void ofApp::checkMemory() {
 /*
@@ -808,8 +795,6 @@ void ofApp::checkMemory() {
 */
 
 }
-
-
 
 void ofApp::getFilesFromFTP() {
    /*
@@ -849,20 +834,15 @@ void ofApp::getFilesFromFTP() {
 
 #pragma mark - MISC OF
 
-//--------------------------------------------------------------
 void ofApp::exit() {
-    
-    #ifdef KINECT
-        kinect.setCameraTiltAngle(0); // zero the tilt on exit
-        kinect.close();
+    #ifdef INTERACTIVE
+        #ifdef KINECT
+            kinect.setCameraTiltAngle(0); // zero the tilt on exit
+            kinect.close();
+        #endif
     #endif
-    
-	// stop the thread
-    //thread.stopThread();
-	
 }
 
-//--------------------------------------------------------------
 void ofApp::keyPressed (int key) {
 	switch (key) {
 		case ' ':
@@ -991,7 +971,6 @@ void ofApp::keyPressed (int key) {
 				demo.play();
 				demo.setLoopState(OF_LOOP_NONE);
 			}
-	
 			break;
 
 		case 'b':
@@ -1001,22 +980,16 @@ void ofApp::keyPressed (int key) {
 	}
 }
 
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button)
-{}
+void ofApp::mouseDragged(int x, int y, int button) {}
 
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button)
-{
+void ofApp::mousePressed(int x, int y, int button) {
     bBrushDown = true;
 }
 
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button)
-{
+void ofApp::mouseReleased(int x, int y, int button) {
     bBrushDown = false;
 }
 
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h)
-{}
+void ofApp::windowResized(int w, int h){}
+
+

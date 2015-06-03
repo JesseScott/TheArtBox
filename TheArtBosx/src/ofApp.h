@@ -1,22 +1,21 @@
 #pragma once
 
+// IMPORTS
 #include "ofMain.h"
 #include "ofxOpenCv.h"
 #include "ofxKinect.h"
 #include "ofxXmlSettings.h"
-
-// MEMORY USAGE
-#define WINVER 0x0601
-#define DIV 1024
 //#include <windows.h>
 //#include "psapi.h"
 
-// KINECT | CAMERA
-
+// DEFINES
+#define WINVER 0x0601
+#define DIV 1024
+//#define INTERACTIVE
 //#define KINECT
-#define WEBCAM
 
 class ofApp : public ofBaseApp {
+    
 public:
 	
 	// BASE METHODS
@@ -33,18 +32,34 @@ public:
 	// CUSTOM METHODS
     void updateKinect();
     void updateWebcam();
-	void loadFonts();
+    
+    void updateBlobs();
+    void updateMovies();
+    void updateFBOs();
+    void updateBrightness();
+    void writeDiagnostics();
+    
+    void drawDebugView();
+    void drawFBOView();
+    void drawMediaView();
+    void drawTrailerView();
+	
+    void loadFonts();
 	void loadArtists();
     void setAssets(int index);
 	void loadAssets();
-	void setColourThumbnailImage(int _width, int _height);
+    void updateCurrentIndex();
+	
+    void setColourThumbnailImage(int _width, int _height);
 	void setBlackAndWhiteThumbnailImage(ofImage img);
-	void updateCurrentIndex();
+	
     void setupGL(int _width, int _height);
     int getCurrentBrightness();
+    
     void checkMemory();
     void getFilesFromFTP();
-	void autoPlay();
+	
+    void autoPlay();
 	void learnBackground();
 	
 	// KINECT & OPENCV	
@@ -67,7 +82,6 @@ public:
 	int nearThreshold;
 	int farThreshold;
 	int angle;
-	ofEasyCam easyCam;
 
     // Canvas
 	ofImage foreground;
@@ -75,7 +89,8 @@ public:
 	ofVideoPlayer demo;
 	ofVideoPlayer video;
 	ofImage image;
-	int imageTimer; 
+	int imageTimer;
+    int imageMAX;
 	int playState;
 	int width, height;
 	int maxIndex;
@@ -100,6 +115,7 @@ public:
 	// Assets
 	ofxXmlSettings assets;
 	ofTrueTypeFont font;
+    string BASEPATH;
 	vector<string> artistNames;
 	vector<string> artistMedia;
 
