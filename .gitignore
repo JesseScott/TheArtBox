@@ -32,6 +32,10 @@ Desktop.ini
 # Compiled Obj
 TheArtBox/obj/*
 
+#SDF
+TheArtBox/kinectExampe.sdf
+
+
 #################  
 ## OSX 
 #################  
