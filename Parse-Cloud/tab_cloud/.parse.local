@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "TheArtBox": {
+      "applicationId": "jipZruxdWwERhPzDTQkE8lffqh47aI5wv89QKgps"
+    },
+    "_default": {
+      "link": "TheArtBox"
+    }
+  }
+}
