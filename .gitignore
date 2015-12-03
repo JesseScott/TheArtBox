@@ -29,6 +29,9 @@ Thumbs.db
 # Folder config file  
 Desktop.ini  
 
+# Compiled Obj
+TheArtBox/obj/*
+
 #################  
 ## OSX 
 #################  
