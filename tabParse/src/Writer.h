@@ -1,5 +1,5 @@
 //
-//  Writer.hpp
+//  Writer.h
 //  tabParse
 //
 //  Created by Jesse Scott on 2015-12-06.
@@ -8,10 +8,7 @@
 
 #ifndef Writer_hpp
 #define Writer_hpp
-
-#include <stdio.h>
-
-#endif /* Writer_hpp */
+#endif
 
 #pragma once
 
@@ -22,9 +19,7 @@ class Writer {
     
 public:
     void setup();
-    void update();
     void write();
-    
     
     // Variables
     ofxXmlSettings xml;

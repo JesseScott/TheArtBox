@@ -6,7 +6,7 @@
 //
 //
 
-#include "Writer.hpp"
+#include "Writer.h"
 
 
 //--------------------------------------------------------------
@@ -20,29 +20,12 @@ void Writer::setup()
     PATH = "../../../MEDIA/";
     xml.loadFile("xml/assets.xml");
     
-    //    if( assets.loadFile("xml/assets.xml") ) {
-    //        ofLog(OF_LOG_NOTICE, "Loaded xml file !!! \n");
-    //        loadFonts();
-    //        loadArtists();
-    //        loadAssets();
-    //    }
-    //    else {
-    //        ofLog(OF_LOG_ERROR, "UNABLE to load xml file :( \n");
-    //    }
-    
-    
-    
-    
-    
-    cout << "Writer Setup Is Done \n" << endl;
-    
-}
 
-//--------------------------------------------------------------
-
-void Writer::update()
-{
     
+    
+    
+    
+    cout << "Writer Setup Is Done \n" << endl;    
 }
 
 //--------------------------------------------------------------
