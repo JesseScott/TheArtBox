@@ -11,9 +11,9 @@ class ofApp : public ofBaseApp {
 		void update();
 		void draw();
 
+    Writer writer;
+    Postman postman;
     
-    // Variables
-    ofxXmlSettings xml;
-    string PATH;
+    string kClassArticle = "Article";
 		
 };

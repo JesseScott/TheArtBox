@@ -17,6 +17,6 @@ class Postman {
     
 public:
     void setup();
-    void fetch();
+    void fetchDataByClass(string className);
     
 };
