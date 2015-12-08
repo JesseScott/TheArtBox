@@ -52,6 +52,7 @@ void Postman::fetchDataByClass(string className)
         curl_easy_cleanup(curl);
 
         cout << "RB: \n" << readBuffer << endl;
+        passToJSON(readBuffer);
     }
 
     
@@ -66,84 +67,27 @@ size_t Postman::WriteCallback(void *contents, size_t size, size_t nmemb, void *u
 
 //--------------------------------------------------------------
 
-void Postman::callSystem(string _request)
+void Postman::passToJSON(string _stream)
 {
-    ofSystem(_request);
-}
-
-void Postman::loadURL(string _request)
-{
-    //int id = ofLoadURLAsync(request, "state");
-    ofLoadURL(_request);
-}
-
-void Postman::urlResponse(ofHttpResponse &response)
-{
-    if (response.status == 200 && response.request.name == "state") {
-        cout << response.status <<  " " << response.data << endl;
-    }
-    else {
-        cout << response.status <<  " - FAILURE - " << response.data << endl;
-    }
-}
-
-void Postman::curlIt(string _request)
-{
-    //ofxCurl curl;
     
-    
-    CURL *curl;
-    CURLcode res;
-    struct curl_slist *headerlist=NULL;
-    headerlist = curl_slist_append( headerlist, "X-Parse-Application-Id: jipZruxdWwERhPzDTQkE8lffqh47aI5wv89QKgps");
-    headerlist = curl_slist_append( headerlist, "X-Parse-REST-API-Key: XlNPX5LyS5w8X3HsVQ9OkikfvDvgijr004O63G6R");
-    headerlist = curl_slist_append( headerlist, "Content-Type: application/json");
-    
-    curl = curl_easy_init();
-    if(curl)
+    // Now parse the JSON
+    bool parsingSuccessful = result.parse(_stream);
+    if (parsingSuccessful)
     {
-        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headerlist);
-        curl_easy_setopt(curl, CURLOPT_URL, "https://api.parse.com/1/classes/Article");
-        //curl_easy_setopt(curl, CURLOPT_POSTFIELDS, "{\"direction\" : \"south\"}");
+        ofLogNotice("ofApp::setup") << result.getRawString();
         
-        res = curl_easy_perform(curl);
-        if(res != CURLE_OK){
-            fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
+        // now write pretty print
+        if (!result.save("example_output_pretty.json", true))
+        {
+            ofLogNotice("ofApp::setup") << "example_output_pretty.json written unsuccessfully.";
         }
-        else {
-            cout << "Result: " << res << endl;
+        else
+        {
+            ofLogNotice("ofApp::setup") << "example_output_pretty.json written successfully.";
         }
     }
-    
-    /*
-    
-    ofxCurlForm* form = curl.createForm(_request);
-    
-    
-    //form->addInput("X-Parse-Application-Id", "jipZruxdWwERhPzDTQkE8lffqh47aI5wv89QKgps");
-    //form->addInput("X-Parse-REST-API-Key","XlNPX5LyS5w8X3HsVQ9OkikfvDvgijr004O63G6R");
-    //form->addInput("secret", "call me roxlu");
-    //form->addFile("photo",ofToDataPath("image_to_upload.png",true));
-    
-    // Perform the post.
-    try {
-        form->post();
+    else
+    {
+        ofLogError("ofApp::setup")  << "Failed to parse JSON" << endl;
     }
-    catch(...) {
-        cout << "OOPS.. something went wrong while posting" << endl;
-    }
-    
-    // Do something with the response from the post.
-    vector<char> response_buf = form->getPostResponseAsBuffer();
-    string response_str = form->getPostResponseAsString();
-    cout << "Size of response buffer: " << response_buf.size() << endl << endl;
-    cout << "Response string:" << endl;
-    cout << "-----------------" << endl;
-    cout << response_str <<endl;
-    
-    // Cleanup
-    delete form;
-     */
 }
-
-

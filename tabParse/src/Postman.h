@@ -13,6 +13,7 @@
 
 #include "ofMain.h"
 #include "ofxCurl.h"
+#include "ofxJSON.h"
 
 class Postman {
     
@@ -21,11 +22,9 @@ class Postman {
     
         void fetchDataByClass(string className);
         static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp);
+        void passToJSON(string _stream);
+
     
-        void getRequestToURL();
-        void loadURL(string _request);
-        void urlResponse(ofHttpResponse &response);
-        void callSystem(string _request);
-        void curlIt(string _request);
+    ofxJSONElement result;
     
 };
