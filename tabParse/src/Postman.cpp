@@ -28,17 +28,27 @@ void Postman::fetchDataByClass(string className)
     -H \"X-Parse-REST-API-Key: XlNPX5LyS5w8X3HsVQ9OkikfvDvgijr004O63G6R\" \
     https://api.parse.com/1/classes/Article";
 
-    curlIt("https://api.parse.com/1/classes/Article");
+    curlIt(request);
     
-    //ofSystem(request);
+    //callSystem(request);
     
-    //int id = ofLoadURLAsync(request, "state");
-    //ofLoadURL(request);
+    //loadURL(request);
     
 }
 
 
 //--------------------------------------------------------------
+
+void Postman::callSystem(string _request)
+{
+    ofSystem(_request);
+}
+
+void Postman::loadURL(string _request)
+{
+    //int id = ofLoadURLAsync(request, "state");
+    ofLoadURL(_request);
+}
 
 void Postman::urlResponse(ofHttpResponse &response)
 {
@@ -52,12 +62,39 @@ void Postman::urlResponse(ofHttpResponse &response)
 
 void Postman::curlIt(string _request)
 {
-    ofxCurl curl;
-    ofxCurlForm* form = curl.createForm("https://api.parse.com/1/classes/Article");
+    //ofxCurl curl;
     
     
-    form->addInput("X-Parse-Application-Id", "jipZruxdWwERhPzDTQkE8lffqh47aI5wv89QKgps");
-    form->addInput("X-Parse-REST-API-Key","XlNPX5LyS5w8X3HsVQ9OkikfvDvgijr004O63G6R");
+    CURL *curl;
+    CURLcode res;
+    struct curl_slist *headerlist=NULL;
+    headerlist = curl_slist_append( headerlist, "X-Parse-Application-Id: jipZruxdWwERhPzDTQkE8lffqh47aI5wv89QKgps");
+    headerlist = curl_slist_append( headerlist, "X-Parse-REST-API-Key: XlNPX5LyS5w8X3HsVQ9OkikfvDvgijr004O63G6R");
+    headerlist = curl_slist_append( headerlist, "Content-Type: application/json");
+    
+    curl = curl_easy_init();
+    if(curl)
+    {
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headerlist);
+        curl_easy_setopt(curl, CURLOPT_URL, "https://api.parse.com/1/classes/Article");
+        //curl_easy_setopt(curl, CURLOPT_POSTFIELDS, "{\"direction\" : \"south\"}");
+        
+        res = curl_easy_perform(curl);
+        if(res != CURLE_OK){
+            fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
+        }
+        else {
+            cout << "Result: " << res << endl;
+        }
+    }
+    
+    /*
+    
+    ofxCurlForm* form = curl.createForm(_request);
+    
+    
+    //form->addInput("X-Parse-Application-Id", "jipZruxdWwERhPzDTQkE8lffqh47aI5wv89QKgps");
+    //form->addInput("X-Parse-REST-API-Key","XlNPX5LyS5w8X3HsVQ9OkikfvDvgijr004O63G6R");
     //form->addInput("secret", "call me roxlu");
     //form->addFile("photo",ofToDataPath("image_to_upload.png",true));
     
@@ -79,6 +116,7 @@ void Postman::curlIt(string _request)
     
     // Cleanup
     delete form;
+     */
 }
 
 

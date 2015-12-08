@@ -18,9 +18,13 @@ class Postman {
     
     public:
         void setup();
+    
         void fetchDataByClass(string className);
         void getRequestToURL();
+    
+        void loadURL(string _request);
         void urlResponse(ofHttpResponse &response);
+        void callSystem(string _request);
         void curlIt(string _request);
     
 };
