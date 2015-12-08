@@ -20,8 +20,9 @@ class Postman {
         void setup();
     
         void fetchDataByClass(string className);
-        void getRequestToURL();
+        static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp);
     
+        void getRequestToURL();
         void loadURL(string _request);
         void urlResponse(ofHttpResponse &response);
         void callSystem(string _request);
