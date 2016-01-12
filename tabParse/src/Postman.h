@@ -26,5 +26,8 @@ class Postman {
 
     
     ofxJSONElement result;
+    string BASEPATH = "../../../MEDIA/json/";
+    string FILENAME = "article.json";
+
     
 };

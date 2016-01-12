@@ -76,14 +76,18 @@ void Postman::passToJSON(string _stream)
     {
         ofLogNotice("ofApp::setup") << result.getRawString();
         
+        // PATH
+        string path = BASEPATH + FILENAME;
+        
+        
         // now write pretty print
-        if (!result.save("example_output_pretty.json", true))
+        if (!result.save(path, true))
         {
-            ofLogNotice("ofApp::setup") << "example_output_pretty.json written unsuccessfully.";
+            ofLogNotice("ofApp::setup") << "json written unsuccessfully.";
         }
         else
         {
-            ofLogNotice("ofApp::setup") << "example_output_pretty.json written successfully.";
+            ofLogNotice("ofApp::setup") << "json written successfully.";
         }
     }
     else
