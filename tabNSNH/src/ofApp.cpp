@@ -1,8 +1,31 @@
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-void ofApp::setup(){
+void ofApp::setup()
+{
 
+    // SYSTEM
+    ofSetLogLevel(OF_LOG_VERBOSE);
+    ofHideCursor();
+    ofSetFrameRate(60);
+    
+    // SCREEN
+    ofEnableAlphaBlending();
+    ofBackground(100);
+
+    
+    // PATH
+    string path = BASEPATH + FILENAME;
+    bool parsingSuccessful = json.open(path);
+    if (parsingSuccessful)
+    {
+        ofLogNotice("ofApp::setup") << json.getRawString();
+    }
+    else
+    {
+        ofLogError("ofApp::setup")  << "Failed to parse JSON" << endl;
+    }
+    
 }
 
 //--------------------------------------------------------------
@@ -15,47 +38,3 @@ void ofApp::draw(){
 
 }
 
-//--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
-}
