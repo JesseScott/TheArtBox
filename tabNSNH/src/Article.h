@@ -32,7 +32,13 @@ public:
         subtitle = _subtitle;
         body = _body;
         date = _date;
+        
+        setup();
     }
+
+    void setup();
+    void update();
+    void draw();
     
     string getTitle();
     string getSubtitle();
@@ -41,6 +47,9 @@ public:
     
     void logData();
 
+
+    int yOffset;
+    ofTrueTypeFont	mFont;
 
 private:
     

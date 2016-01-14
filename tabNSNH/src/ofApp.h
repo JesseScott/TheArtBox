@@ -15,6 +15,7 @@ class ofApp : public ofBaseApp{
     void writeJSONToArticleArray();
     
     vector<Article> mArticles;
+    int current_article = 0;
 
     ofxJSONElement json;
     string BASEPATH = "../../../MEDIA/json/";

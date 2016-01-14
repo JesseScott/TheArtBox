@@ -74,18 +74,10 @@ void ofApp::update()
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-
-    ofBackground(0);
-    ofSetColor(255);
+    ofBackground(100);
+ 
+    mArticles[current_article].draw();
     
-    for (Json::ArrayIndex i = 0; i < json["results"].size(); ++i)
-    {
-        std::string title  = json["results"][i]["title"].asString();
-        std::string subtitle = json["results"][i]["subtitle"].asString();
-        std::string body = json["results"][i]["body"].asString();
-        std::string date   = json["results"][i]["createdAt"].asString();
-        std::string text   = title + " - " + subtitle + " " + body + " (" + date + ")";
-        ofDrawBitmapString(text, 20, i * 24 + 40);
-    }
+    
 }
 
