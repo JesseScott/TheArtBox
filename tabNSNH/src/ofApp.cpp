@@ -14,7 +14,17 @@ void ofApp::setup()
     ofBackground(100);
 
     
-    // PATH
+    // JSON
+    if(readJSON())
+    {
+        writeJSONToArticleArray();
+    }
+    
+}
+
+
+bool ofApp::readJSON()
+{
     string path = BASEPATH + FILENAME;
     bool parsingSuccessful = json.open(path);
     if (parsingSuccessful)
@@ -25,8 +35,33 @@ void ofApp::setup()
     {
         ofLogError("ofApp::setup")  << "Failed to parse JSON" << endl;
     }
+    return parsingSuccessful;
+}
+
+void ofApp::writeJSONToArticleArray()
+{
+    for (Json::ArrayIndex i = 0; i < json["results"].size(); ++i)
+    {
+        
+        // Read Vars From JSON
+        string title  = json["results"][i]["title"].asString();
+        string subtitle = json["results"][i]["subtitle"].asString();
+        string body = json["results"][i]["body"].asString();
+        string date   = json["results"][i]["createdAt"].asString();
+        
+        // Instantiate New Article
+        Article article = *new Article(title, subtitle, body, date);
+        
+        // Add To Vector
+        mArticles.push_back(article);
+    }
+    
+    for (int i = 0; i < mArticles.size(); i++) {
+        mArticles[i].logData();
+    }
     
 }
+
 
 //--------------------------------------------------------------
 void ofApp::update()
