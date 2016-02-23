@@ -49,14 +49,19 @@ public:
 
 
     int yOffset;
-    ofTrueTypeFont	mFont;
-
+    ofTrueTypeFont	mTitleFont;
+    ofTrueTypeFont	mSubtitleFont;
+    ofTrueTypeFont	mBodyFont;
+    
 private:
     
     string title;
     string subtitle;
     string body;
     string date;
+    
+    int width = 540;
+    int height = 960;
     
     
 };

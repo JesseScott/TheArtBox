@@ -10,8 +10,12 @@ void ofApp::setup()
     ofSetFrameRate(60);
     
     // SCREEN
+    ofSetVerticalSync(true);
     ofEnableAlphaBlending();
-    ofBackground(100);
+    ofBackground(0);
+    
+    setupFBOs();
+    
 
     
     // JSON
@@ -20,6 +24,41 @@ void ofApp::setup()
         writeJSONToArticleArray();
     }
     
+}
+
+void ofApp::setupFBOs()
+{
+    image_screen.allocate(FBO_WIDTH, FBO_HEIGHT, GL_RGB);
+    image_screen.begin();
+        ofClear(255,255);
+    image_screen.end();
+
+    meta_screen.allocate(FBO_WIDTH, FBO_HEIGHT, GL_RGB);
+    meta_screen.begin();
+        ofClear(255,255);
+    meta_screen.end();
+    
+    news_screen.allocate(FBO_WIDTH, FBO_HEIGHT, GL_RGB);
+    news_screen.begin();
+        ofClear(255,255);
+    news_screen.end();
+    
+    ////
+    
+    image_screen.begin();
+        ofSetColor(0, 0, 255);
+        ofRect(0, 0, image_screen.getWidth(), image_screen.getHeight());
+    image_screen.end();
+    
+    meta_screen.begin();
+        ofSetColor(0, 0, 255);
+        ofRect(0, 0, meta_screen.getWidth(), meta_screen.getHeight());
+    meta_screen.end();
+    
+    news_screen.begin();
+        ofSetColor(255, 0, 0);
+        ofRect(0, 0, news_screen.getWidth(), news_screen.getHeight());
+    news_screen.end();
 }
 
 
@@ -57,7 +96,7 @@ void ofApp::writeJSONToArticleArray()
     }
     
     for (int i = 0; i < mArticles.size(); i++) {
-        mArticles[i].logData();
+        //mArticles[i].logData();
     }
     
 }
@@ -68,15 +107,29 @@ void ofApp::update()
 {
 
     
+    // NEWS
+    
+    news_screen.begin();
+        ofSetColor(255, 0, 0);
+        ofRect(0, 0, news_screen.getWidth(), news_screen.getHeight());
+        mArticles[current_article].draw();
+    news_screen.end();
+
     
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-    ofBackground(100);
+    ofBackground(155);
+    ofSetColor(255,255,255);
  
-    mArticles[current_article].draw();
+
+    image_screen.draw(0, 0);
+    meta_screen.draw(FBO_WIDTH, 0);
+    news_screen.draw(FBO_WIDTH * 2, 0);
+    
+    //mArticles[current_article].draw();
     
     
 }

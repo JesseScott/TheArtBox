@@ -8,7 +8,7 @@ int main( ){
      
      */
     
-	ofSetupOpenGL(540, 960, OF_WINDOW);
+	ofSetupOpenGL(540 * 3, 960, OF_WINDOW);
 	ofRunApp(new ofApp());
 
 }

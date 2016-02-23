@@ -43,9 +43,17 @@ void Article::logData()
 void Article::setup()
 {
     ofTrueTypeFont::setGlobalDpi(72);
-    mFont.loadFont("fonts/verdana.ttf", 30, true, true);
-    mFont.setLineHeight(34.0f);
-    mFont.setLetterSpacing(1.035);
+    mTitleFont.loadFont("fonts/Open Sans.ttf", 30, true, true);
+    mTitleFont.setLineHeight(37.5f);
+    mTitleFont.setLetterSpacing(1.0f);
+    
+    mSubtitleFont.loadFont("fonts/Open Sans.ttf", 24, true, true);
+    mSubtitleFont.setLineHeight(30.0f);
+    mSubtitleFont.setLetterSpacing(1.0f);
+    
+    mBodyFont.loadFont("fonts/Open Sans.ttf", 14, true, true);
+    mBodyFont.setLineHeight(17.5f);
+    mBodyFont.setLetterSpacing(1.0f);
 }
 
 void Article::update()
@@ -56,8 +64,18 @@ void Article::update()
 
 void Article::draw()
 {
-    ofSetColor(245, 58, 135);
-    mFont.drawString(title, 155, 92);
+    ofSetColor(50);
+    
+    mTitleFont.drawString("TITLE", width/2 - (mTitleFont.stringWidth(title)/2), 96);
+    ofLine(54, 104, width - 54, 104);
+    
+    mSubtitleFont.drawString("subtitle subtitle", width/2 - (mTitleFont.stringWidth(title)), 144);
+
+    string b = "asdsadsads asdsadsadj  asdsa dsadsa  asd sdjl kask asdlsajd   \nlasjdsalj dasld  lsjdslajddas lsa ";
+    mBodyFont.drawString(b, 54, 192);
+
+    
+    
 }
 
 
