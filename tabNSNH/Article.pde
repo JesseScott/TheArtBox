@@ -5,13 +5,13 @@ class Article {
     PFont  mTitleFont;
     PFont  mSubtitleFont;
     PFont  mBodyFont;
+    int mWidth = pgwidth;
+    int mXPos = pgwidth * 2;
     
     private String title;
     private String subtitle;
     private String body;
     private String date;
-    private int width = 540;
-    private int height = 960;
     
     
     // Constructors
@@ -76,15 +76,15 @@ class Article {
     {
         fill(50);
         textFont(mTitleFont);
-        text("TITLE", width/2 /*- (mTitleFont.stringWidth(title)/2)*/, 96);
-        line(54, 104, width - 54, 104);
+        text("TITLE", mXPos + mWidth/2 /*- (mTitleFont.stringWidth(title)/2)*/, 96);
+        line(mXPos + 54, 104, width - 54, 104);
         
         textFont(mSubtitleFont);
-        text("subtitle subtitle", width/2 /*- (mTitleFont.stringWidth(title))*/, 144);
+        text("subtitle subtitle", mXPos + mWidth/2 /*- (mTitleFont.stringWidth(title))*/, 144);
     
         String b = "asdsadsads asdsadsadj  asdsa dsadsa  asd sdjl kask asdlsajd   \nlasjdsalj dasld  lsjdslajddas lsa ";
         textFont(mBodyFont);
-        text(b, 54, 192);  
+        text(b, mXPos + 54, 192);  
     }
     
     
