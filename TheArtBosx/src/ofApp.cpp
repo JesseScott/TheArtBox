@@ -831,6 +831,23 @@ void ofApp::getFilesFromFTP() {
 	*/
 }
 
+void ofApp::postData(string someIdStr, string updateObjectStr){
+    
+    // https://gist.github.com/jmsaavedra/e1d61d6b747ad3762584
+    
+    cout << "updating parse. objectId: "<<someIdStr<<endl;
+    cout << "\tupdate object: "<<updateObjectStr<<endl;
+    
+    string cmd = "curl -X POST \
+    -H \"X-Parse-Application-Id: jipZruxdWwERhPzDTQkE8lffqh47aI5wv89QKgps\" \
+    -H \"X-Parse-REST-API-Key: XlNPX5LyS5w8X3HsVQ9OkikfvDvgijr004O63G6R\" \
+    -H \"Content-Type: application/json\" \
+    -d '"+updateObjectStr+"' \
+    https://api.parse.com/1/classes/Day";
+    
+    ofSystem( cmd );
+}
+
 
 #pragma mark - MISC OF
 
@@ -976,6 +993,13 @@ void ofApp::keyPressed (int key) {
 		case 'b':
 			bLearnBakground = true;
 			break;
+            
+        case 'p':
+            string someId = "5c0F1d6Wcg";
+            string completeUpdate = "{\"numMediaPlayed\":10}";
+        
+            postData(someId, completeUpdate);
+            break;
 
 	}
 }

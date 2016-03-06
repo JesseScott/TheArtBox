@@ -37,6 +37,12 @@ TheArtBox/obj/*
 #################  
 
 *.DS_Store
+*.pbxuser
+*.perspectivev3
+xcuserdata
+build
+*.app
+
 
 #################  
 ## FILES

@@ -58,6 +58,8 @@ public:
     
     void checkMemory();
     void getFilesFromFTP();
+    
+    void postData(string someIdStr, string updateObjectStr);
 	
     void autoPlay();
 	void learnBackground();
@@ -118,6 +120,7 @@ public:
     string BASEPATH;
 	vector<string> artistNames;
 	vector<string> artistMedia;
+
 
 
 };

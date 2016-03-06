@@ -1,0 +1,15 @@
+ofxGui
+ofxNetwork
+ofxOpenCv
+ofxThreadedImageLoader
+ofxXmlSettings
+ofxCurl
+ofxHTTP
+ofxHttpUtils
+ofxIO
+ofxJSON
+ofxMediaType
+ofxNetworkUtils
+ofxSSLManager
+ofxTaskQueue
+ofxThreadedVideo

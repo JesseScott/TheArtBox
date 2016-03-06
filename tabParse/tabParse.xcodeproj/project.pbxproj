@@ -1,0 +1,2079 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0094B7C956E4890A6B6D8398 /* StreamUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8DD2E6E20C64E2DFD910C0B /* StreamUtils.cpp */; };
+		02B02FE7D809030071CAEB38 /* DeviceFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88FCF47B23FC1FF359118820 /* DeviceFilter.cpp */; };
+		042C1224FDA073D4898E6FB1 /* NetworkUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CA620ECBC535AF47934E128 /* NetworkUtils.cpp */; };
+		0638064E94E86B32FD1B987B /* Session.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D62B0D6E82F85DA1381849B /* Session.cpp */; };
+		07598047748F925DB0398A9B /* FileSystemRouteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3AD347765786B18B793BC1 /* FileSystemRouteHandler.cpp */; };
+		095CB55515FA60050324EA26 /* WebSocketRoute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED48F5FF1DDE29ADC163AD56 /* WebSocketRoute.cpp */; };
+		09D006C4501A83E7A07E4607 /* ThreadSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BB90728FFDA1BDECB05D43E /* ThreadSettings.cpp */; };
+		0AA57038F831D0D5FF48327B /* IPVideoFrameQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A620DED2276BC470F35C0D09 /* IPVideoFrameQueue.cpp */; };
+		0ABBA788D686393A544F521D /* IPVideoFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87149CBE656D0EB05425A7A0 /* IPVideoFrame.cpp */; };
+		0C2C8F82B747F53EA6007BA9 /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D55D02C18CE4A7FA07A403B7 /* jsoncpp.cpp */; };
+		0E54FFC5BA3428B898FCE736 /* COBSEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A40C5B47D40CE3E4BCB102CA /* COBSEncoding.cpp */; };
+		0F78FC142B9080B7F3F0035A /* DefaultClientTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBE2316468351B0CD2E18818 /* DefaultClientTask.cpp */; };
+		119FB057E5E817B9424C845E /* SLIPEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D9DE1DA27554F03953831A6 /* SLIPEncoding.cpp */; };
+		1C10D381A2C55AE21314661E /* BasicWebSocketServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0353DE3F85F9D8387218183E /* BasicWebSocketServer.cpp */; };
+		1E1E4E7CA7043776D8448F2B /* ClientProgressStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 697F5F61D7E08EA6A28C2FC8 /* ClientProgressStream.cpp */; };
+		20EF3F70ECE0BB1C1ED0307C /* cidr_to_str.c in Sources */ = {isa = PBXBuildFile; fileRef = CC845E3F602DB5122E0D60A9 /* cidr_to_str.c */; };
+		22CE066401BC317F45C32142 /* PutRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3735D76B38C2CA6E267BF869 /* PutRequest.cpp */; };
+		2459D13CBC763577E05871A1 /* WebSocketFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E110C27DC1EC0C947630C2D /* WebSocketFrame.cpp */; };
+		24FBAC24EDB97A06143D8C05 /* DefaultRequestStreamFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE1D512978F3E97B31E8D596 /* DefaultRequestStreamFilter.cpp */; };
+		28DCB9949680410908EFD4D5 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AED12DBC5DC04739E95CD26 /* tinyxmlerror.cpp */; };
+		294E5220B982D2C60BBCC0AA /* cidr_addr.c in Sources */ = {isa = PBXBuildFile; fileRef = A0ED22A26C9AB04328DB996C /* cidr_addr.c */; };
+		2A0E93150672208ADD4D9ACF /* HexBinaryEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC2EC08A672D803A38144DCB /* HexBinaryEncoding.cpp */; };
+		2D4BBE281C157242003394A1 /* Postman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE241C157242003394A1 /* Postman.cpp */; };
+		2D4BBE291C157242003394A1 /* Writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE261C157242003394A1 /* Writer.cpp */; };
+		2D4BBE751C157706003394A1 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4BBE3A1C157706003394A1 /* libcurl.a */; };
+		2D4BBE761C157706003394A1 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4BBE3C1C157706003394A1 /* libcurl.a */; };
+		2D4BBE791C157706003394A1 /* ofxCurl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE661C157706003394A1 /* ofxCurl.cpp */; };
+		2D4BBE7A1C157706003394A1 /* ofxCurlException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE681C157706003394A1 /* ofxCurlException.cpp */; };
+		2D4BBE7B1C157706003394A1 /* ofxCurlFileDownload.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE6A1C157706003394A1 /* ofxCurlFileDownload.cpp */; };
+		2D4BBE7C1C157706003394A1 /* ofxCurlForm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE6C1C157706003394A1 /* ofxCurlForm.cpp */; };
+		2D4BBE7D1C157706003394A1 /* ofxCurlFormType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE6E1C157706003394A1 /* ofxCurlFormType.cpp */; };
+		2D4BBE7E1C157706003394A1 /* ofxCurlFormTypeFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE701C157706003394A1 /* ofxCurlFormTypeFile.cpp */; };
+		2D4BBE7F1C157706003394A1 /* ofxCurlFormTypeInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BBE721C157706003394A1 /* ofxCurlFormTypeInput.cpp */; };
+		2ECACEC81C8F2265FBE57E79 /* BaseAuthenticationRoute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D05DC1D3810B9184B5F5BAE0 /* BaseAuthenticationRoute.cpp */; };
+		3487813720F593EA9F715B8D /* OAuth10RequestFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3B7F5A4AA3147215BF3916C /* OAuth10RequestFilter.cpp */; };
+		3624F6E249355C6AD52F2246 /* cidr_get.c in Sources */ = {isa = PBXBuildFile; fileRef = 68C5C479BE90595F1AFB1869 /* cidr_get.c */; };
+		384812B733207AC01221CE99 /* OAuth20Credentials.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1370A5C3EC2FC70161D3A70 /* OAuth20Credentials.cpp */; };
+		3B7D4012455D6A0D520692CC /* LinkFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5249A57906B8AF8F221EC39 /* LinkFilter.cpp */; };
+		40755491CDDD7249B25A1F2D /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA80450995764F8FABAB1604 /* ofxXmlSettings.cpp */; };
+		43D40A0DB1737BEC443B1370 /* BaseRouteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0367E11F133E86D0C32A7467 /* BaseRouteHandler.cpp */; };
+		467538F9ECE61DD5229DB7DF /* DirectoryWatcherManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE551DF2F48BEFA1C488B04C /* DirectoryWatcherManager.cpp */; };
+		48345E13969909271026905B /* snappy-sinksource.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF26CF6C2B0D42114A3E06 /* snappy-sinksource.cc */; };
+		48939C170D2BA531CD665CB7 /* CIDRAddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 474CEE5179D21225F9BD21D9 /* CIDRAddress.cpp */; };
+		49311DA2B2E6AF5197DD10C0 /* Compression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 345373628DA451A8CF14C2EE /* Compression.cpp */; };
+		4C2C4D34977A82DFC8441E67 /* DirectoryWatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B04B40FC57075FF85857437 /* DirectoryWatcher.cpp */; };
+		4CE8741D8B1242B0049B02F6 /* PostRouteSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9E176FE1833BCA1425EAC7E /* PostRouteSettings.cpp */; };
+		4D00A502289526B62801CCD8 /* BaseServerSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13B963D840064739E2CAD68F /* BaseServerSettings.cpp */; };
+		51DDF0413FAAF0570B9F63CF /* DefaultResponseStreamFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 267D4E0182FDA311FA4CD255 /* DefaultResponseStreamFilter.cpp */; };
+		543A45609D350B0B2170790A /* NetworkInterfaceListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30A1D0B8BD4E7EB3FC1AC8D8 /* NetworkInterfaceListener.cpp */; };
+		5556E1AED1AFE6AAC136A6B9 /* cidr_num.c in Sources */ = {isa = PBXBuildFile; fileRef = 166BB487B37D4AA5146DA948 /* cidr_num.c */; };
+		56D1C894F543951FD01C43B5 /* GetRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9E52F156110E298AC455FE1 /* GetRequest.cpp */; };
+		57753805D2FDAD6521FF2A81 /* ofxJSONElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ECB0C56B07AE128C7D55CD /* ofxJSONElement.cpp */; };
+		5B1D0986136169099DBEAF75 /* DefaultClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7550F0FA2A375D7071F8871A /* DefaultClient.cpp */; };
+		5C54D45F450D5CA6E5342949 /* Base64Encoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B473107A1D00CCBB50716F4C /* Base64Encoding.cpp */; };
+		5E509743BF2440EE6640FB4E /* RecursiveDirectoryIteratorStategies.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 732F2E4679FDBD91FC544385 /* RecursiveDirectoryIteratorStategies.cpp */; };
+		5F802B3B69EA29B59309B226 /* BasicIPVideoServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94F0A60BDCAA64C7344B86D9 /* BasicIPVideoServer.cpp */; };
+		60761634232A3971F078C89C /* MediaTypeMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80828BFE1E8827CDF5BD312F /* MediaTypeMap.cpp */; };
+		627B9C05E4CF2CBE3AFDA1D7 /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14ABA4BD999649A551BC4BE8 /* Context.cpp */; };
+		62DA540C4C24E292746A6402 /* DefaultClientTaskQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6028500321D57F48F3B5786E /* DefaultClientTaskQueue.cpp */; };
+		6518722324B737EE32C7602A /* SearchPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBCB22288613E38CE3F073E9 /* SearchPath.cpp */; };
+		6B9CFABC810B67A8E45718C8 /* URIBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F33879AEF54DAFDD6D539A9A /* URIBuilder.cpp */; };
+		6F610E0F9C11EE90BE468000 /* snappy-stubs-internal.cc in Sources */ = {isa = PBXBuildFile; fileRef = 635827E085CB69B044531AB9 /* snappy-stubs-internal.cc */; };
+		6F757086B1E96DA4CDEF9C72 /* ClientEvents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67DBE90223BD3B02683FF2E7 /* ClientEvents.cpp */; };
+		6FD01B6D610C05BE5478B678 /* Cookie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD1D7BDAD39687C8D4D8527E /* Cookie.cpp */; };
+		7301B53C2B4B3A929B45D466 /* PostRouteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E191FEF32D660AB2666EABDF /* PostRouteHandler.cpp */; };
+		75874080B2D7959FB461AB92 /* BaseRouteSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 886CF81858D714DC74935AD5 /* BaseRouteSettings.cpp */; };
+		7701B972B156FBCC8A542553 /* DefaultClientHeaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98FC691E4FB69B5E6C314D5D /* DefaultClientHeaders.cpp */; };
+		78D761EF12E55A423437DF82 /* CookieStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE12B1784B404002408D3FED /* CookieStore.cpp */; };
+		7A2AAAADE1F016D18814EA83 /* PostRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C04561477D0F91280BF99B2E /* PostRequest.cpp */; };
+		7B77D6300DD83374F4D5F353 /* ByteBufferWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87B684A3739F8A707A9E0D23 /* ByteBufferWriter.cpp */; };
+		806C55028919E8FD6604ACB0 /* lz4.c in Sources */ = {isa = PBXBuildFile; fileRef = BE74E1FF1279003FAF0B4A9F /* lz4.c */; };
+		81DA782400651E878FAB961D /* Credentials.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9634C4FDE80EB767A4286F8E /* Credentials.cpp */; };
+		85A8376A5E6F146EC85A9E2C /* DefaultSessionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A021BCA51A20EB942D50010 /* DefaultSessionProvider.cpp */; };
+		85B2799B3E4BF3C3C71A8308 /* CredentialStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C37B3671048A176F5AA43CCC /* CredentialStore.cpp */; };
+		8658DA74AEA96271340193AD /* ByteBufferUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 711F0316288C4B0BD00F84E6 /* ByteBufferUtils.cpp */; };
+		88FAE4D2C64B6340EF5C9534 /* HTTPAuthenticationRoute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74B737EC78BE8327AF250F14 /* HTTPAuthenticationRoute.cpp */; };
+		8AAF2BA4AFCBEC334841B989 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0FB861B0D843DF212503B18 /* tinyxmlparser.cpp */; };
+		8AB7068786D43186E0B4E200 /* AuthScope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57198E33C7E5D9B827BEDB65 /* AuthScope.cpp */; };
+		8CB390E9F6AE52F5ABC26323 /* ByteBufferReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C735C6479489D7679AFD7D40 /* ByteBufferReader.cpp */; };
+		8D7CD672CFFD0A71651AD237 /* DefaultCookieProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97BF8D89D9F0E210A72F6248 /* DefaultCookieProcessor.cpp */; };
+		8EF16D9E4ECEFF6D6EDAF4DF /* BaseClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2DE28BEA9143B96E209F9C5 /* BaseClient.cpp */; };
+		8F8D94A8DC04BD3F46BBCB09 /* ByteBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 281542957C25BFC80A7B3092 /* ByteBuffer.cpp */; };
+		908E35E8C3112BF401854331 /* ofSSLManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C9069F9AD2670389CE273FD /* ofSSLManager.cpp */; };
+		94F2B6420119C34BEB1AB705 /* snappy.cc in Sources */ = {isa = PBXBuildFile; fileRef = 73A603B2E67AD0060E7B9C6C /* snappy.cc */; };
+		963A643498277B120C810E60 /* Compression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CB88510AEE6C8D66EB6CFAA /* Compression.cpp */; };
+		96A67791267C6409AD7F5208 /* IPVideoRouteHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0560B52D46AD5D387C856BA /* IPVideoRouteHandler.cpp */; };
+		99EB33B4483C497524FBEBBE /* DefaultRedirectProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C44A53DF5807C4A96DF505D9 /* DefaultRedirectProcessor.cpp */; };
+		9BE3C0DE22A4D1D2C40E1BD3 /* cidr_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 06A559E15743573B01A4F736 /* cidr_misc.c */; };
+		9DC76F152856B337E4C60739 /* WebSocketConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7FE46B40A9DAE2331C96377 /* WebSocketConnection.cpp */; };
+		A02F4D0E8AE2892A1CA16B91 /* FileExtensionFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59256D99829B2BC14C12B954 /* FileExtensionFilter.cpp */; };
+		A06D22C525F88B6A778AF19C /* WebSocketRouteSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61B2D32135C9CA4884C36567 /* WebSocketRouteSettings.cpp */; };
+		A2600C76EADF2D1D2BBC257E /* cidr_net.c in Sources */ = {isa = PBXBuildFile; fileRef = 07728838766EA1071541003E /* cidr_net.c */; };
+		A5609F2EA5A7A664CB96E40C /* cidr_compare.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EAB733905551F63E1498CCA /* cidr_compare.c */; };
+		A745C5F0863AF40098BAD203 /* ProxySettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 069B22C648596A80F0716834 /* ProxySettings.cpp */; };
+		A8BF7C04D0347B605B5A0916 /* FileSystemRoute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1118190D1B14ADEF7A353DFC /* FileSystemRoute.cpp */; };
+		A9A5D726930122BCAA126E6B /* BaseResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDF3CF11A611677CE992E4D4 /* BaseResponse.cpp */; };
+		AA16654F013932A46493A0B8 /* IPVideoFrameSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9591DECC7807B8414AFF68CB /* IPVideoFrameSettings.cpp */; };
+		ABD5DFFB0C4F5453AF2AA3C0 /* ProgressMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF9469B6E77C8B9423CA9E0D /* ProgressMonitor.cpp */; };
+		AF5361D54EBA2496FA315C5B /* DefaultProxyProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 396B34372CE6F7900C055156 /* DefaultProxyProcessor.cpp */; };
+		B4784D22FE2771E19BAB95EE /* OAuth10Credentials.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47A8271C7D5A2B4D5579F4FC /* OAuth10Credentials.cpp */; };
+		B824B3FB8017669EBF3D853B /* HiddenFileFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B6059021600597FCD9CAE9E /* HiddenFileFilter.cpp */; };
+		B8A4986AE3CFD44755D311C7 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 126B1BBACED427BD4F54BC45 /* tinyxml.cpp */; };
+		B8E92BE5338965AD25E5405D /* DirectoryFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2260F3321A9C6C811B3AFE14 /* DirectoryFilter.cpp */; };
+		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		BE1B11D222F2F9E2261DA17D /* PostRouteFileHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BE0619E3C261818331D9615 /* PostRouteFileHandler.cpp */; };
+		C36147486BE72D0DA5B0306F /* CookieUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CFEFA8E64E6A31192D7081B /* CookieUtils.cpp */; };
+		C3E5B13E45A726EF0F1AA8C1 /* BaseRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 120BCFAF95A0C844F1E92EC1 /* BaseRequest.cpp */; };
+		C8A3654340FA19CCEF85E57D /* DirectoryUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA7D8730B775ECE7907803 /* DirectoryUtils.cpp */; };
+		D65A66D5B9EE15D0CCDEA3B1 /* IPVideoRouteSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BA0F9207EBA98C868216FC /* IPVideoRouteSettings.cpp */; };
+		D66CF2FC629FAD0491AC85F2 /* BasicPostServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3368C460B7F9600FBC1B8FE0 /* BasicPostServer.cpp */; };
+		D87C21C0D14BA31F5985A4C0 /* cidr_inaddr.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CF40A0F354BD3FA050960D0 /* cidr_inaddr.c */; };
+		DD07EB78C73B8448B41DD3BB /* cidr_from_str.c in Sources */ = {isa = PBXBuildFile; fileRef = A8EAA362B5020032C52CF5B3 /* cidr_from_str.c */; };
+		DF372613DBE8D2ED83D61FBD /* RegexPathFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9337585FE37D499C86AF1ED8 /* RegexPathFilter.cpp */; };
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
+		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
+		E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */; };
+		E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */; };
+		E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */; };
+		E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9770E8CC7DD009D7055 /* CoreServices.framework */; };
+		E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9790E8CC7DD009D7055 /* OpenGL.framework */; };
+		E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */; };
+		E4AEC4634BC9FB82CFFDEA34 /* SessionSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 477A96FB8F969FDA7CDEDBB5 /* SessionSettings.cpp */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
+		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
+		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
+		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E6B6D9E199133D3EC4F86D64 /* HTTPUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8EB2EE1A903C9FBC47FF06A /* HTTPUtils.cpp */; };
+		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
+		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
+		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		EB7D0650D82FB939E1442966 /* FileSystemRouteSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77BBAEAB3D1B7EB9791927E7 /* FileSystemRouteSettings.cpp */; };
+		EFADA672A662E7EDFE4DCB76 /* RecursiveDirectoryIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 544774376A21416B0DE0A785 /* RecursiveDirectoryIterator.cpp */; };
+		F2878EC4D1E27145AFB329D5 /* SessionAuthenticationRoute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6252892E0DC507C7FD813CF2 /* SessionAuthenticationRoute.cpp */; };
+		F4EE33DEA65A77ADCAF8C31A /* SessionCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B4DBE7E916830607C2B0A /* SessionCache.cpp */; };
+		F6BAF12EC174B695747D1AC0 /* PathFilterCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 720FC053F46F18DA7967AB46 /* PathFilterCollection.cpp */; };
+		F8552291B3E66E56FF5C4D75 /* cidr_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 0189C4C0BA9D0F4453903282 /* cidr_mem.c */; };
+		F889C3E281AFF84BF3750BAD /* BasicServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE49D6C200F587CC7DBEAC /* BasicServer.cpp */; };
+		FC4046CCF3B53689DA98875A /* PostRoute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2D51597CA68B9360B51679 /* PostRoute.cpp */; };
+		FE63147F1A1D2BE15DF11CF4 /* IPVideoRoute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92EA61B0C2D646EAA1A75880 /* IPVideoRoute.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0189C4C0BA9D0F4453903282 /* cidr_mem.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_mem.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_mem.c; sourceTree = SOURCE_ROOT; };
+		01910C9D01A83A56A01F6D2F /* DefaultSessionProvider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultSessionProvider.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultSessionProvider.h; sourceTree = SOURCE_ROOT; };
+		0353DE3F85F9D8387218183E /* BasicWebSocketServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BasicWebSocketServer.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BasicWebSocketServer.cpp; sourceTree = SOURCE_ROOT; };
+		0367E11F133E86D0C32A7467 /* BaseRouteHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BaseRouteHandler.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BaseRouteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		04B7358BA25AA4EF8FA86D9B /* IPVideoRouteSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IPVideoRouteSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/IPVideoRouteSettings.h; sourceTree = SOURCE_ROOT; };
+		069B22C648596A80F0716834 /* ProxySettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ProxySettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/ProxySettings.cpp; sourceTree = SOURCE_ROOT; };
+		06A559E15743573B01A4F736 /* cidr_misc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_misc.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_misc.c; sourceTree = SOURCE_ROOT; };
+		07728838766EA1071541003E /* cidr_net.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_net.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_net.c; sourceTree = SOURCE_ROOT; };
+		0CA620ECBC535AF47934E128 /* NetworkUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkUtils.cpp; path = ../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/src/NetworkUtils.cpp; sourceTree = SOURCE_ROOT; };
+		0CF404CC30C22DFC004B4ECE /* ofxJSON.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxJSON.h; path = ../../../../addons/ofxJSON/src/ofxJSON.h; sourceTree = SOURCE_ROOT; };
+		0E650D639761A3A72AE8078C /* DirectoryWatcherManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DirectoryWatcherManager.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryWatcherManager.h; sourceTree = SOURCE_ROOT; };
+		0F0E975CB27AC3CADA447469 /* OAuth20Credentials.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OAuth20Credentials.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/OAuth20Credentials.h; sourceTree = SOURCE_ROOT; };
+		0F3AD347765786B18B793BC1 /* FileSystemRouteHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FileSystemRouteHandler.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/FileSystemRouteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		0F62F5D0FB7CA4EBC78BD000 /* BaseServerSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseServerSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseServerSettings.h; sourceTree = SOURCE_ROOT; };
+		1064B801ACDF392FE6F89DF0 /* DefaultClientHeaders.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultClientHeaders.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultClientHeaders.h; sourceTree = SOURCE_ROOT; };
+		1118190D1B14ADEF7A353DFC /* FileSystemRoute.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FileSystemRoute.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/FileSystemRoute.cpp; sourceTree = SOURCE_ROOT; };
+		11D5DD9F3065238392369A31 /* ExpireLRUCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ExpireLRUCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/ExpireLRUCache.h; sourceTree = SOURCE_ROOT; };
+		120BCFAF95A0C844F1E92EC1 /* BaseRequest.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BaseRequest.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BaseRequest.cpp; sourceTree = SOURCE_ROOT; };
+		126B1BBACED427BD4F54BC45 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
+		12EB482751DC09F4F4F0DA8F /* snappy-stubs-internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "snappy-stubs-internal.h"; path = "../../../../addons/ofxIO/libs/snappy/src/snappy-stubs-internal.h"; sourceTree = SOURCE_ROOT; };
+		13B963D840064739E2CAD68F /* BaseServerSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BaseServerSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BaseServerSettings.cpp; sourceTree = SOURCE_ROOT; };
+		14ABA4BD999649A551BC4BE8 /* Context.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Context.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/Context.cpp; sourceTree = SOURCE_ROOT; };
+		15CC87299AEEB00E235D5E75 /* BaseRouteHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseRouteHandler.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseRouteHandler.h; sourceTree = SOURCE_ROOT; };
+		166BB487B37D4AA5146DA948 /* cidr_num.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_num.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_num.c; sourceTree = SOURCE_ROOT; };
+		170E2B4954949B7068A1C631 /* DirectoryUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DirectoryUtils.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryUtils.h; sourceTree = SOURCE_ROOT; };
+		1A019BE1D897B3BDFC076213 /* Base64Encoding.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Base64Encoding.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/Base64Encoding.h; sourceTree = SOURCE_ROOT; };
+		1B04B40FC57075FF85857437 /* DirectoryWatcher.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DirectoryWatcher.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/DirectoryWatcher.cpp; sourceTree = SOURCE_ROOT; };
+		1B6B66C5C907D7B0A555399C /* snappy-sinksource.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "snappy-sinksource.h"; path = "../../../../addons/ofxIO/libs/snappy/src/snappy-sinksource.h"; sourceTree = SOURCE_ROOT; };
+		1C6B4DBE7E916830607C2B0A /* SessionCache.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SessionCache.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/SessionCache.cpp; sourceTree = SOURCE_ROOT; };
+		1CFEFA8E64E6A31192D7081B /* CookieUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CookieUtils.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/CookieUtils.cpp; sourceTree = SOURCE_ROOT; };
+		1D41D6AC9E54B39581D8BAFE /* LinkFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinkFilter.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/LinkFilter.h; sourceTree = SOURCE_ROOT; };
+		1ED6055779FE8A5678D42E60 /* snappy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = snappy.h; path = ../../../../addons/ofxIO/libs/snappy/src/snappy.h; sourceTree = SOURCE_ROOT; };
+		2260F3321A9C6C811B3AFE14 /* DirectoryFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DirectoryFilter.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/DirectoryFilter.cpp; sourceTree = SOURCE_ROOT; };
+		247946311DE295D5D6C81CCF /* ofxHTTP.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxHTTP.h; path = ../../../../addons/ofxHTTP/src/ofxHTTP.h; sourceTree = SOURCE_ROOT; };
+		255FC41CC346563673AAF068 /* PostRouteHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PostRouteHandler.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/PostRouteHandler.h; sourceTree = SOURCE_ROOT; };
+		267D4E0182FDA311FA4CD255 /* DefaultResponseStreamFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultResponseStreamFilter.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultResponseStreamFilter.cpp; sourceTree = SOURCE_ROOT; };
+		28106439E4C1BD0282D1E98D /* CookieUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CookieUtils.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/CookieUtils.h; sourceTree = SOURCE_ROOT; };
+		281542957C25BFC80A7B3092 /* ByteBuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ByteBuffer.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/ByteBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		282C85A218BE9EAB9D93F236 /* DefaultServerAuthenticationManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultServerAuthenticationManager.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultServerAuthenticationManager.h; sourceTree = SOURCE_ROOT; };
+		28927EA59CC9789C85582D4B /* NetworkInterfaceListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NetworkInterfaceListener.h; path = ../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include/ofx/Net/NetworkInterfaceListener.h; sourceTree = SOURCE_ROOT; };
+		28B8AFC9496B5EB3394E9C3E /* DefaultClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultClient.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultClient.h; sourceTree = SOURCE_ROOT; };
+		2958550296872440E23223F7 /* BaseRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseRoute.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseRoute.h; sourceTree = SOURCE_ROOT; };
+		2985C4B955987C11C5DF9BAA /* BaseResponse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseResponse.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseResponse.h; sourceTree = SOURCE_ROOT; };
+		2B6059021600597FCD9CAE9E /* HiddenFileFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HiddenFileFilter.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/HiddenFileFilter.cpp; sourceTree = SOURCE_ROOT; };
+		2C9069F9AD2670389CE273FD /* ofSSLManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofSSLManager.cpp; path = ../../../../addons/ofxSSLManager/src/ofSSLManager.cpp; sourceTree = SOURCE_ROOT; };
+		2CFD4A28E0EC5007D0425CB8 /* ThreadSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ThreadSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/ThreadSettings.h; sourceTree = SOURCE_ROOT; };
+		2D4BBE241C157242003394A1 /* Postman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Postman.cpp; sourceTree = "<group>"; };
+		2D4BBE251C157242003394A1 /* Postman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postman.h; sourceTree = "<group>"; };
+		2D4BBE261C157242003394A1 /* Writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Writer.cpp; sourceTree = "<group>"; };
+		2D4BBE271C157242003394A1 /* Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Writer.h; sourceTree = "<group>"; };
+		2D4BBE2B1C157706003394A1 /* compile_mac_7_21_1.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = compile_mac_7_21_1.sh; sourceTree = "<group>"; };
+		2D4BBE2C1C157706003394A1 /* compile_mac_7_21_6.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = compile_mac_7_21_6.sh; sourceTree = "<group>"; };
+		2D4BBE361C157706003394A1 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		2D4BBE3A1C157706003394A1 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
+		2D4BBE3C1C157706003394A1 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
+		2D4BBE411C157706003394A1 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		2D4BBE441C157706003394A1 /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
+		2D4BBE451C157706003394A1 /* curlbuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlbuild.h; sourceTree = "<group>"; };
+		2D4BBE461C157706003394A1 /* curlrules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlrules.h; sourceTree = "<group>"; };
+		2D4BBE471C157706003394A1 /* curlver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlver.h; sourceTree = "<group>"; };
+		2D4BBE481C157706003394A1 /* easy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easy.h; sourceTree = "<group>"; };
+		2D4BBE491C157706003394A1 /* mprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprintf.h; sourceTree = "<group>"; };
+		2D4BBE4A1C157706003394A1 /* multi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multi.h; sourceTree = "<group>"; };
+		2D4BBE4B1C157706003394A1 /* stdcheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdcheaders.h; sourceTree = "<group>"; };
+		2D4BBE4C1C157706003394A1 /* typecheck-gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "typecheck-gcc.h"; sourceTree = "<group>"; };
+		2D4BBE4D1C157706003394A1 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		2D4BBE501C157706003394A1 /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
+		2D4BBE511C157706003394A1 /* curlbuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlbuild.h; sourceTree = "<group>"; };
+		2D4BBE521C157706003394A1 /* curlrules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlrules.h; sourceTree = "<group>"; };
+		2D4BBE531C157706003394A1 /* curlver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlver.h; sourceTree = "<group>"; };
+		2D4BBE541C157706003394A1 /* easy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easy.h; sourceTree = "<group>"; };
+		2D4BBE551C157706003394A1 /* mprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprintf.h; sourceTree = "<group>"; };
+		2D4BBE561C157706003394A1 /* multi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multi.h; sourceTree = "<group>"; };
+		2D4BBE571C157706003394A1 /* stdcheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdcheaders.h; sourceTree = "<group>"; };
+		2D4BBE581C157706003394A1 /* typecheck-gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "typecheck-gcc.h"; sourceTree = "<group>"; };
+		2D4BBE591C157706003394A1 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		2D4BBE5C1C157706003394A1 /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
+		2D4BBE5D1C157706003394A1 /* curlbuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlbuild.h; sourceTree = "<group>"; };
+		2D4BBE5E1C157706003394A1 /* curlrules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlrules.h; sourceTree = "<group>"; };
+		2D4BBE5F1C157706003394A1 /* curlver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlver.h; sourceTree = "<group>"; };
+		2D4BBE601C157706003394A1 /* easy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = easy.h; sourceTree = "<group>"; };
+		2D4BBE611C157706003394A1 /* mprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mprintf.h; sourceTree = "<group>"; };
+		2D4BBE621C157706003394A1 /* multi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multi.h; sourceTree = "<group>"; };
+		2D4BBE631C157706003394A1 /* stdcheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdcheaders.h; sourceTree = "<group>"; };
+		2D4BBE641C157706003394A1 /* typecheck-gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "typecheck-gcc.h"; sourceTree = "<group>"; };
+		2D4BBE651C157706003394A1 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		2D4BBE661C157706003394A1 /* ofxCurl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCurl.cpp; sourceTree = "<group>"; };
+		2D4BBE671C157706003394A1 /* ofxCurl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCurl.h; sourceTree = "<group>"; };
+		2D4BBE681C157706003394A1 /* ofxCurlException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCurlException.cpp; sourceTree = "<group>"; };
+		2D4BBE691C157706003394A1 /* ofxCurlException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCurlException.h; sourceTree = "<group>"; };
+		2D4BBE6A1C157706003394A1 /* ofxCurlFileDownload.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCurlFileDownload.cpp; sourceTree = "<group>"; };
+		2D4BBE6B1C157706003394A1 /* ofxCurlFileDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCurlFileDownload.h; sourceTree = "<group>"; };
+		2D4BBE6C1C157706003394A1 /* ofxCurlForm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCurlForm.cpp; sourceTree = "<group>"; };
+		2D4BBE6D1C157706003394A1 /* ofxCurlForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCurlForm.h; sourceTree = "<group>"; };
+		2D4BBE6E1C157706003394A1 /* ofxCurlFormType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCurlFormType.cpp; sourceTree = "<group>"; };
+		2D4BBE6F1C157706003394A1 /* ofxCurlFormType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCurlFormType.h; sourceTree = "<group>"; };
+		2D4BBE701C157706003394A1 /* ofxCurlFormTypeFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCurlFormTypeFile.cpp; sourceTree = "<group>"; };
+		2D4BBE711C157706003394A1 /* ofxCurlFormTypeFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCurlFormTypeFile.h; sourceTree = "<group>"; };
+		2D4BBE721C157706003394A1 /* ofxCurlFormTypeInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCurlFormTypeInput.cpp; sourceTree = "<group>"; };
+		2D4BBE731C157706003394A1 /* ofxCurlFormTypeInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCurlFormTypeInput.h; sourceTree = "<group>"; };
+		2EDE6C0F338CF9B41AD23BF3 /* snappy-stubs-public.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "snappy-stubs-public.h"; path = "../../../../addons/ofxIO/libs/snappy/src/snappy-stubs-public.h"; sourceTree = SOURCE_ROOT; };
+		30A1D0B8BD4E7EB3FC1AC8D8 /* NetworkInterfaceListener.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkInterfaceListener.cpp; path = ../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/src/NetworkInterfaceListener.cpp; sourceTree = SOURCE_ROOT; };
+		30C55AF5EF70A8FD3B3317E0 /* json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = json.h; path = ../../../../addons/ofxJSON/libs/jsoncpp/include/json/json.h; sourceTree = SOURCE_ROOT; };
+		31D94E68A09E84721DC2FA38 /* DefaultClientTask.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultClientTask.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultClientTask.h; sourceTree = SOURCE_ROOT; };
+		31DB248C0A164FADA86061F7 /* Compression.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Compression.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/Compression.h; sourceTree = SOURCE_ROOT; };
+		32DA6913AFBB7BC636BBB618 /* ByteBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ByteBuffer.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBuffer.h; sourceTree = SOURCE_ROOT; };
+		333729465221F85AB4EEECCF /* ExpireCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ExpireCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/ExpireCache.h; sourceTree = SOURCE_ROOT; };
+		3368C460B7F9600FBC1B8FE0 /* BasicPostServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BasicPostServer.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BasicPostServer.cpp; sourceTree = SOURCE_ROOT; };
+		3400734862164EB94F88DA6A /* ClientEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ClientEvents.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/ClientEvents.h; sourceTree = SOURCE_ROOT; };
+		345373628DA451A8CF14C2EE /* Compression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Compression.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/Compression.cpp; sourceTree = SOURCE_ROOT; };
+		34E4733CBE22C98D13B30862 /* ServerEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ServerEvents.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/ServerEvents.h; sourceTree = SOURCE_ROOT; };
+		3735D76B38C2CA6E267BF869 /* PutRequest.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PutRequest.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/PutRequest.cpp; sourceTree = SOURCE_ROOT; };
+		396B34372CE6F7900C055156 /* DefaultProxyProcessor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultProxyProcessor.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultProxyProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		3979A3FBB57D2F2426441194 /* HTTP.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HTTP.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/HTTP.h; sourceTree = SOURCE_ROOT; };
+		3AD1FF49C66F6538135F4536 /* BasicIPVideoServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BasicIPVideoServer.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BasicIPVideoServer.h; sourceTree = SOURCE_ROOT; };
+		3CF40A0F354BD3FA050960D0 /* cidr_inaddr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_inaddr.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_inaddr.c; sourceTree = SOURCE_ROOT; };
+		3E088C3D0527E315E697A4E1 /* AbstractServerTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AbstractServerTypes.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/AbstractServerTypes.h; sourceTree = SOURCE_ROOT; };
+		3FA654ED174BD809F19364A3 /* ofxMediaType.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxMediaType.h; path = ../../../../addons/ofxMediaType/src/ofxMediaType.h; sourceTree = SOURCE_ROOT; };
+		4442645B1E30EDDB5BC47CD7 /* UniqueExpireLRUCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UniqueExpireLRUCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/UniqueExpireLRUCache.h; sourceTree = SOURCE_ROOT; };
+		44FBADBA95C27F73858A337E /* StreamUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StreamUtils.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/StreamUtils.h; sourceTree = SOURCE_ROOT; };
+		45BA0F9207EBA98C868216FC /* IPVideoRouteSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IPVideoRouteSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/IPVideoRouteSettings.cpp; sourceTree = SOURCE_ROOT; };
+		46A5B56EFCD3C596B1AF648F /* ThreadErrorHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ThreadErrorHandler.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/ThreadErrorHandler.h; sourceTree = SOURCE_ROOT; };
+		46D89191877E96B11ADE5139 /* OAuth10RequestFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OAuth10RequestFilter.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/OAuth10RequestFilter.h; sourceTree = SOURCE_ROOT; };
+		474CEE5179D21225F9BD21D9 /* CIDRAddress.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CIDRAddress.cpp; path = ../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/src/CIDRAddress.cpp; sourceTree = SOURCE_ROOT; };
+		477A96FB8F969FDA7CDEDBB5 /* SessionSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SessionSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/SessionSettings.cpp; sourceTree = SOURCE_ROOT; };
+		47A8271C7D5A2B4D5579F4FC /* OAuth10Credentials.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OAuth10Credentials.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/OAuth10Credentials.cpp; sourceTree = SOURCE_ROOT; };
+		4834180AAF1A58F91EF59E8F /* WebSocketRouteSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = WebSocketRouteSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/WebSocketRouteSettings.h; sourceTree = SOURCE_ROOT; };
+		4AB8E1B3AB427662AC8F3C74 /* BaseRequest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseRequest.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseRequest.h; sourceTree = SOURCE_ROOT; };
+		4B495CF14DA4E99F9A5FF382 /* ofxIO.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxIO.h; path = ../../../../addons/ofxIO/src/ofxIO.h; sourceTree = SOURCE_ROOT; };
+		4BB90728FFDA1BDECB05D43E /* ThreadSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ThreadSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/ThreadSettings.cpp; sourceTree = SOURCE_ROOT; };
+		4D19E2890EE0E5596A733E4A /* ofxNetworkUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkUtils.h; path = ../../../../addons/ofxNetworkUtils/src/ofxNetworkUtils.h; sourceTree = SOURCE_ROOT; };
+		4D62B0D6E82F85DA1381849B /* Session.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Session.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/Session.cpp; sourceTree = SOURCE_ROOT; };
+		50BB13EEA7ACF967A0AA23D6 /* HTTPUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HTTPUtils.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/HTTPUtils.h; sourceTree = SOURCE_ROOT; };
+		53C8573EFDE2672CCA7A6CDB /* AbstractCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AbstractCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/AbstractCache.h; sourceTree = SOURCE_ROOT; };
+		544774376A21416B0DE0A785 /* RecursiveDirectoryIterator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RecursiveDirectoryIterator.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/RecursiveDirectoryIterator.cpp; sourceTree = SOURCE_ROOT; };
+		54DA0B5B17AA7A6D75E1BA37 /* UniqueAccessExpireCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UniqueAccessExpireCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/UniqueAccessExpireCache.h; sourceTree = SOURCE_ROOT; };
+		55253621A5C2A1880FC517A2 /* DefaultRequestStreamFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultRequestStreamFilter.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultRequestStreamFilter.h; sourceTree = SOURCE_ROOT; };
+		558DD2704C61955B71C6BBA3 /* PostRequest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PostRequest.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/PostRequest.h; sourceTree = SOURCE_ROOT; };
+		5629C44C233D992C9A7B78E1 /* GetRequest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = GetRequest.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/GetRequest.h; sourceTree = SOURCE_ROOT; };
+		57198E33C7E5D9B827BEDB65 /* AuthScope.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = AuthScope.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/AuthScope.cpp; sourceTree = SOURCE_ROOT; };
+		58CF3849D7FC886064F0A037 /* DefaultClientTaskQueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultClientTaskQueue.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultClientTaskQueue.h; sourceTree = SOURCE_ROOT; };
+		58F4B7ECBC474866871A377C /* IPVideoRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IPVideoRoute.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/IPVideoRoute.h; sourceTree = SOURCE_ROOT; };
+		59256D99829B2BC14C12B954 /* FileExtensionFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FileExtensionFilter.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/FileExtensionFilter.cpp; sourceTree = SOURCE_ROOT; };
+		5A799B1E52912E3D308DB2BC /* NetworkUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NetworkUtils.h; path = ../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include/ofx/Net/NetworkUtils.h; sourceTree = SOURCE_ROOT; };
+		5B3C22659882954D7ABB9C27 /* URIBuilder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = URIBuilder.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/URIBuilder.h; sourceTree = SOURCE_ROOT; };
+		5C69CD132F3DBC9BB465F8E7 /* BaseServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseServer.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseServer.h; sourceTree = SOURCE_ROOT; };
+		5EAB733905551F63E1498CCA /* cidr_compare.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_compare.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_compare.c; sourceTree = SOURCE_ROOT; };
+		5F2D51597CA68B9360B51679 /* PostRoute.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PostRoute.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/PostRoute.cpp; sourceTree = SOURCE_ROOT; };
+		5F9D427A5456D80B0C098647 /* ByteBufferWriter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ByteBufferWriter.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferWriter.h; sourceTree = SOURCE_ROOT; };
+		6028500321D57F48F3B5786E /* DefaultClientTaskQueue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultClientTaskQueue.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultClientTaskQueue.cpp; sourceTree = SOURCE_ROOT; };
+		61B2D32135C9CA4884C36567 /* WebSocketRouteSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = WebSocketRouteSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/WebSocketRouteSettings.cpp; sourceTree = SOURCE_ROOT; };
+		61C9D5D5012FD8A3D895D1D4 /* CredentialStore.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CredentialStore.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/CredentialStore.h; sourceTree = SOURCE_ROOT; };
+		6252892E0DC507C7FD813CF2 /* SessionAuthenticationRoute.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SessionAuthenticationRoute.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/SessionAuthenticationRoute.cpp; sourceTree = SOURCE_ROOT; };
+		62CFDAD2B6A446DA8F9F5F68 /* UniqueExpireCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UniqueExpireCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/UniqueExpireCache.h; sourceTree = SOURCE_ROOT; };
+		635827E085CB69B044531AB9 /* snappy-stubs-internal.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = "snappy-stubs-internal.cc"; path = "../../../../addons/ofxIO/libs/snappy/src/snappy-stubs-internal.cc"; sourceTree = SOURCE_ROOT; };
+		65DB12E2EDA92ED6A1BED653 /* Context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Context.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/Context.h; sourceTree = SOURCE_ROOT; };
+		665DFF03146464F025D4B988 /* TaskQueueEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TaskQueueEvents.h; path = ../../../../addons/ofxTaskQueue/libs/ofxTaskQueue/include/ofx/TaskQueueEvents.h; sourceTree = SOURCE_ROOT; };
+		673E215B133F54F380B2D358 /* Authentication.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Authentication.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/Authentication.h; sourceTree = SOURCE_ROOT; };
+		67DBE90223BD3B02683FF2E7 /* ClientEvents.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ClientEvents.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/ClientEvents.cpp; sourceTree = SOURCE_ROOT; };
+		68C5C479BE90595F1AFB1869 /* cidr_get.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_get.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_get.c; sourceTree = SOURCE_ROOT; };
+		697F5F61D7E08EA6A28C2FC8 /* ClientProgressStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ClientProgressStream.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/ClientProgressStream.cpp; sourceTree = SOURCE_ROOT; };
+		6A021BCA51A20EB942D50010 /* DefaultSessionProvider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultSessionProvider.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultSessionProvider.cpp; sourceTree = SOURCE_ROOT; };
+		6A649442D64FB7E15042D282 /* ofSSLManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofSSLManager.h; path = ../../../../addons/ofxSSLManager/src/ofSSLManager.h; sourceTree = SOURCE_ROOT; };
+		6A7153E0F5EFF5622F1EB21F /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxXmlSettings.h; path = ../../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
+		6ADEEA07D58D043F6532BEB9 /* Session.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Session.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/Session.h; sourceTree = SOURCE_ROOT; };
+		6B65EA0D91775060C7426523 /* AccessExpireCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AccessExpireCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/AccessExpireCache.h; sourceTree = SOURCE_ROOT; };
+		6D9DE1DA27554F03953831A6 /* SLIPEncoding.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SLIPEncoding.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/SLIPEncoding.cpp; sourceTree = SOURCE_ROOT; };
+		6E110C27DC1EC0C947630C2D /* WebSocketFrame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = WebSocketFrame.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/WebSocketFrame.cpp; sourceTree = SOURCE_ROOT; };
+		6E8DE3AA63F9739B0F005D9D /* MediaTypeMap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MediaTypeMap.h; path = ../../../../addons/ofxMediaType/libs/ofxMediaType/include/ofx/MediaTypeMap.h; sourceTree = SOURCE_ROOT; };
+		702218711ED194CC7C5AD491 /* OAuth10Credentials.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OAuth10Credentials.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/OAuth10Credentials.h; sourceTree = SOURCE_ROOT; };
+		7105B88C9EAD1BA84323DFBA /* ByteBufferReader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ByteBufferReader.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferReader.h; sourceTree = SOURCE_ROOT; };
+		711F0316288C4B0BD00F84E6 /* ByteBufferUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ByteBufferUtils.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/ByteBufferUtils.cpp; sourceTree = SOURCE_ROOT; };
+		720FC053F46F18DA7967AB46 /* PathFilterCollection.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PathFilterCollection.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/PathFilterCollection.cpp; sourceTree = SOURCE_ROOT; };
+		732F2E4679FDBD91FC544385 /* RecursiveDirectoryIteratorStategies.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RecursiveDirectoryIteratorStategies.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/RecursiveDirectoryIteratorStategies.cpp; sourceTree = SOURCE_ROOT; };
+		73A603B2E67AD0060E7B9C6C /* snappy.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = snappy.cc; path = ../../../../addons/ofxIO/libs/snappy/src/snappy.cc; sourceTree = SOURCE_ROOT; };
+		745B5B40AF1E9C55672143B6 /* libcidr_pow2_p.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = libcidr_pow2_p.h; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/include/libcidr_pow2_p.h; sourceTree = SOURCE_ROOT; };
+		74A0333951F7E9A7635977BB /* BaseAuthenticationRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseAuthenticationRoute.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseAuthenticationRoute.h; sourceTree = SOURCE_ROOT; };
+		74B737EC78BE8327AF250F14 /* HTTPAuthenticationRoute.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HTTPAuthenticationRoute.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/HTTPAuthenticationRoute.cpp; sourceTree = SOURCE_ROOT; };
+		7550F0FA2A375D7071F8871A /* DefaultClient.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultClient.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultClient.cpp; sourceTree = SOURCE_ROOT; };
+		77BBAEAB3D1B7EB9791927E7 /* FileSystemRouteSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FileSystemRouteSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/FileSystemRouteSettings.cpp; sourceTree = SOURCE_ROOT; };
+		785081894ED0E035B07060DA /* ofxJSONElement.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxJSONElement.h; path = ../../../../addons/ofxJSON/src/ofxJSONElement.h; sourceTree = SOURCE_ROOT; };
+		78EA641B603E84214FC3D9A7 /* PutRequest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PutRequest.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/PutRequest.h; sourceTree = SOURCE_ROOT; };
+		79A5390BD37CE860A345725B /* SessionAuthenticationRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SessionAuthenticationRoute.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/SessionAuthenticationRoute.h; sourceTree = SOURCE_ROOT; };
+		7A00BAE3BF16F60635763840 /* ClientProgressStream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ClientProgressStream.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/ClientProgressStream.h; sourceTree = SOURCE_ROOT; };
+		7A1DB4B454B3F2A73CF4A27F /* FileSystemRouteSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FileSystemRouteSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/FileSystemRouteSettings.h; sourceTree = SOURCE_ROOT; };
+		7A83CB9C24AFD7B1F8509456 /* SLIPEncoding.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SLIPEncoding.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/SLIPEncoding.h; sourceTree = SOURCE_ROOT; };
+		7CB88510AEE6C8D66EB6CFAA /* Compression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Compression.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/Compression.cpp; sourceTree = SOURCE_ROOT; };
+		7DAA7D8730B775ECE7907803 /* DirectoryUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DirectoryUtils.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/DirectoryUtils.cpp; sourceTree = SOURCE_ROOT; };
+		7EF4881E2C8B0F9A8B5C3A0E /* HexBinaryEncoding.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HexBinaryEncoding.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/HexBinaryEncoding.h; sourceTree = SOURCE_ROOT; };
+		7F2B51DD63456C17C041A54B /* libcidr_pow2_p.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = libcidr_pow2_p.h; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/libcidr_pow2_p.h; sourceTree = SOURCE_ROOT; };
+		80322D0F1E79312995C4F0B6 /* json-forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "json-forwards.h"; path = "../../../../addons/ofxJSON/libs/jsoncpp/include/json/json-forwards.h"; sourceTree = SOURCE_ROOT; };
+		80828BFE1E8827CDF5BD312F /* MediaTypeMap.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = MediaTypeMap.cpp; path = ../../../../addons/ofxMediaType/libs/ofxMediaType/src/MediaTypeMap.cpp; sourceTree = SOURCE_ROOT; };
+		821AADA5DA7AE562E9C8D312 /* AbstractMediaTypeProvider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AbstractMediaTypeProvider.h; path = ../../../../addons/ofxMediaType/libs/ofxMediaType/include/ofx/AbstractMediaTypeProvider.h; sourceTree = SOURCE_ROOT; };
+		8233E7B0CCE11CA0F6F5DB5A /* PostRouteEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PostRouteEvents.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/PostRouteEvents.h; sourceTree = SOURCE_ROOT; };
+		828ADE76D98FE73BAB445AB6 /* RegexPathFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RegexPathFilter.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/RegexPathFilter.h; sourceTree = SOURCE_ROOT; };
+		8291A1EE6AFADB08F4EB81EB /* RecursiveDirectoryIterator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RecursiveDirectoryIterator.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIterator.h; sourceTree = SOURCE_ROOT; };
+		83AC9DB9D4933E7DCC9FE3D3 /* BaseRouteSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseRouteSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseRouteSettings.h; sourceTree = SOURCE_ROOT; };
+		87149CBE656D0EB05425A7A0 /* IPVideoFrame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IPVideoFrame.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/IPVideoFrame.cpp; sourceTree = SOURCE_ROOT; };
+		87B684A3739F8A707A9E0D23 /* ByteBufferWriter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ByteBufferWriter.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/ByteBufferWriter.cpp; sourceTree = SOURCE_ROOT; };
+		8813B4D3F478C96A5658AC25 /* WebSocketFrame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = WebSocketFrame.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/WebSocketFrame.h; sourceTree = SOURCE_ROOT; };
+		886CF81858D714DC74935AD5 /* BaseRouteSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BaseRouteSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BaseRouteSettings.cpp; sourceTree = SOURCE_ROOT; };
+		888735670FC3573E96B52056 /* RecursiveDirectoryIteratorImpl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RecursiveDirectoryIteratorImpl.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIteratorImpl.h; sourceTree = SOURCE_ROOT; };
+		88FCF47B23FC1FF359118820 /* DeviceFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DeviceFilter.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/DeviceFilter.cpp; sourceTree = SOURCE_ROOT; };
+		8A1AAFCA8229730772DA41B8 /* SearchPath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SearchPath.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/SearchPath.h; sourceTree = SOURCE_ROOT; };
+		8AED12DBC5DC04739E95CD26 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlerror.cpp; path = ../../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
+		8CFF26CF6C2B0D42114A3E06 /* snappy-sinksource.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = "snappy-sinksource.cc"; path = "../../../../addons/ofxIO/libs/snappy/src/snappy-sinksource.cc"; sourceTree = SOURCE_ROOT; };
+		8ED0E72F8D95284DDA6C86F9 /* alphanum.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = alphanum.hpp; path = ../../../../addons/ofxIO/libs/alphanum/include/alphanum.hpp; sourceTree = SOURCE_ROOT; };
+		8FBDBA8D2DCA49DC504F1850 /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tinyxml.h; path = ../../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
+		92EA61B0C2D646EAA1A75880 /* IPVideoRoute.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IPVideoRoute.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/IPVideoRoute.cpp; sourceTree = SOURCE_ROOT; };
+		9337585FE37D499C86AF1ED8 /* RegexPathFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RegexPathFilter.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/RegexPathFilter.cpp; sourceTree = SOURCE_ROOT; };
+		94F0A60BDCAA64C7344B86D9 /* BasicIPVideoServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BasicIPVideoServer.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BasicIPVideoServer.cpp; sourceTree = SOURCE_ROOT; };
+		9591DECC7807B8414AFF68CB /* IPVideoFrameSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IPVideoFrameSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/IPVideoFrameSettings.cpp; sourceTree = SOURCE_ROOT; };
+		9634C4FDE80EB767A4286F8E /* Credentials.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Credentials.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/Credentials.cpp; sourceTree = SOURCE_ROOT; };
+		96D6115ED0C00F95C37DAAAC /* TaskQueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TaskQueue.h; path = ../../../../addons/ofxTaskQueue/libs/ofxTaskQueue/include/ofx/TaskQueue.h; sourceTree = SOURCE_ROOT; };
+		97976613DE2243652D233EC3 /* Cookie.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Cookie.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/Cookie.h; sourceTree = SOURCE_ROOT; };
+		97BF8D89D9F0E210A72F6248 /* DefaultCookieProcessor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultCookieProcessor.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultCookieProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		98FC691E4FB69B5E6C314D5D /* DefaultClientHeaders.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultClientHeaders.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultClientHeaders.cpp; sourceTree = SOURCE_ROOT; };
+		9BE0619E3C261818331D9615 /* PostRouteFileHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PostRouteFileHandler.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/PostRouteFileHandler.cpp; sourceTree = SOURCE_ROOT; };
+		9D39003438A80959F3B2CE04 /* PathFilterCollection.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PathFilterCollection.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/PathFilterCollection.h; sourceTree = SOURCE_ROOT; };
+		9F96E28722F93A73B4EB5899 /* ByteBufferUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ByteBufferUtils.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferUtils.h; sourceTree = SOURCE_ROOT; };
+		9FFE49D6C200F587CC7DBEAC /* BasicServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BasicServer.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BasicServer.cpp; sourceTree = SOURCE_ROOT; };
+		A0560B52D46AD5D387C856BA /* IPVideoRouteHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IPVideoRouteHandler.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/IPVideoRouteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		A0B8A4670172674E1EA10163 /* WebSocketConnection.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = WebSocketConnection.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/WebSocketConnection.h; sourceTree = SOURCE_ROOT; };
+		A0ED22A26C9AB04328DB996C /* cidr_addr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_addr.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_addr.c; sourceTree = SOURCE_ROOT; };
+		A34EA56B4BAD9894BDA92B33 /* CookieStore.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CookieStore.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/CookieStore.h; sourceTree = SOURCE_ROOT; };
+		A40C5B47D40CE3E4BCB102CA /* COBSEncoding.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = COBSEncoding.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/COBSEncoding.cpp; sourceTree = SOURCE_ROOT; };
+		A5D96974B44D0EE29115D6FB /* RecursiveDirectoryIteratorStategies.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RecursiveDirectoryIteratorStategies.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIteratorStategies.h; sourceTree = SOURCE_ROOT; };
+		A620DED2276BC470F35C0D09 /* IPVideoFrameQueue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IPVideoFrameQueue.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/IPVideoFrameQueue.cpp; sourceTree = SOURCE_ROOT; };
+		A63FEBDBFB4A0DA7E8E55F95 /* libcidr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = libcidr.h; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/include/libcidr.h; sourceTree = SOURCE_ROOT; };
+		A89E0FAB9155C1967092E9FA /* Compression.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Compression.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/Compression.h; sourceTree = SOURCE_ROOT; };
+		A8EAA362B5020032C52CF5B3 /* cidr_from_str.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_from_str.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_from_str.c; sourceTree = SOURCE_ROOT; };
+		AC5690FA49F2A534AD0B54DD /* FileExtensionFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FileExtensionFilter.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/FileExtensionFilter.h; sourceTree = SOURCE_ROOT; };
+		AF69D0DC3E8291126652F80A /* DefaultCookieProcessor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultCookieProcessor.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultCookieProcessor.h; sourceTree = SOURCE_ROOT; };
+		AF9469B6E77C8B9423CA9E0D /* ProgressMonitor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ProgressMonitor.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/ProgressMonitor.cpp; sourceTree = SOURCE_ROOT; };
+		B0FB3DC88EFAA36ECE21BA7C /* FileSystemRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FileSystemRoute.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/FileSystemRoute.h; sourceTree = SOURCE_ROOT; };
+		B0FB861B0D843DF212503B18 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlparser.cpp; path = ../../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
+		B1370A5C3EC2FC70161D3A70 /* OAuth20Credentials.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OAuth20Credentials.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/OAuth20Credentials.cpp; sourceTree = SOURCE_ROOT; };
+		B2386CC7CF9C6A555EACA327 /* BasicWebSocketServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BasicWebSocketServer.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BasicWebSocketServer.h; sourceTree = SOURCE_ROOT; };
+		B25ECDA022BB247C07B9BA45 /* CIDRAddress.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CIDRAddress.h; path = ../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include/ofx/Net/CIDRAddress.h; sourceTree = SOURCE_ROOT; };
+		B30BE6B89ADD3EA722D8C4B9 /* IPVideoFrame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IPVideoFrame.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/IPVideoFrame.h; sourceTree = SOURCE_ROOT; };
+		B322676FE372EB7B45C890B9 /* HTTPAuthenticationRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HTTPAuthenticationRoute.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/HTTPAuthenticationRoute.h; sourceTree = SOURCE_ROOT; };
+		B3D9ACBE2DC223DD7BE3C6F3 /* snappy-internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "snappy-internal.h"; path = "../../../../addons/ofxIO/libs/snappy/src/snappy-internal.h"; sourceTree = SOURCE_ROOT; };
+		B473107A1D00CCBB50716F4C /* Base64Encoding.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Base64Encoding.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/Base64Encoding.cpp; sourceTree = SOURCE_ROOT; };
+		B50688DDEBA9AED4F5A9FC5C /* PostRouteSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PostRouteSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/PostRouteSettings.h; sourceTree = SOURCE_ROOT; };
+		B62B345F4D311388AB0C1D02 /* PostRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PostRoute.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/PostRoute.h; sourceTree = SOURCE_ROOT; };
+		B71A2E358493BFBF81C2A0B4 /* CIDRAddress.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CIDRAddress.h; path = ../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include/ofx/CIDRAddress.h; sourceTree = SOURCE_ROOT; };
+		B7FE46B40A9DAE2331C96377 /* WebSocketConnection.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = WebSocketConnection.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/WebSocketConnection.cpp; sourceTree = SOURCE_ROOT; };
+		B84FDA0B973445658C63672A /* DirectoryWatcher.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DirectoryWatcher.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/DirectoryWatcher.h; sourceTree = SOURCE_ROOT; };
+		B8EB2EE1A903C9FBC47FF06A /* HTTPUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HTTPUtils.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/HTTPUtils.cpp; sourceTree = SOURCE_ROOT; };
+		BA80450995764F8FABAB1604 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
+		BB7D99E938AD28D14B561B00 /* SessionSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SessionSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/SessionSettings.h; sourceTree = SOURCE_ROOT; };
+		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		BBE2316468351B0CD2E18818 /* DefaultClientTask.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultClientTask.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultClientTask.cpp; sourceTree = SOURCE_ROOT; };
+		BDF7AAD9D6CF5B5999BDE61D /* IPVideoFrameQueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IPVideoFrameQueue.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/IPVideoFrameQueue.h; sourceTree = SOURCE_ROOT; };
+		BE12B1784B404002408D3FED /* CookieStore.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CookieStore.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/CookieStore.cpp; sourceTree = SOURCE_ROOT; };
+		BE4BB9704686CF8592C4631E /* DirectoryFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DirectoryFilter.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryFilter.h; sourceTree = SOURCE_ROOT; };
+		BE74E1FF1279003FAF0B4A9F /* lz4.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = lz4.c; path = ../../../../addons/ofxIO/libs/lz4/src/lz4.c; sourceTree = SOURCE_ROOT; };
+		BF59E86E4A50F81FA00D0D9B /* DefaultRedirectProcessor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultRedirectProcessor.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultRedirectProcessor.h; sourceTree = SOURCE_ROOT; };
+		C04561477D0F91280BF99B2E /* PostRequest.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PostRequest.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/PostRequest.cpp; sourceTree = SOURCE_ROOT; };
+		C278DC4756CACF934DB38FF1 /* BasicServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BasicServer.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BasicServer.h; sourceTree = SOURCE_ROOT; };
+		C37B3671048A176F5AA43CCC /* CredentialStore.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CredentialStore.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/CredentialStore.cpp; sourceTree = SOURCE_ROOT; };
+		C44A53DF5807C4A96DF505D9 /* DefaultRedirectProcessor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultRedirectProcessor.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultRedirectProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		C5249A57906B8AF8F221EC39 /* LinkFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LinkFilter.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/LinkFilter.cpp; sourceTree = SOURCE_ROOT; };
+		C52F676817310AE20D959835 /* ofxTaskQueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTaskQueue.h; path = ../../../../addons/ofxTaskQueue/src/ofxTaskQueue.h; sourceTree = SOURCE_ROOT; };
+		C5489045E0D343F320C17A4D /* WebSocketEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = WebSocketEvents.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/WebSocketEvents.h; sourceTree = SOURCE_ROOT; };
+		C735C6479489D7679AFD7D40 /* ByteBufferReader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ByteBufferReader.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/ByteBufferReader.cpp; sourceTree = SOURCE_ROOT; };
+		C92F17B229B5066CAFF67AC4 /* LRUCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LRUCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/LRUCache.h; sourceTree = SOURCE_ROOT; };
+		CBB438CE271C494537103AF3 /* WebSocketRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = WebSocketRoute.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/WebSocketRoute.h; sourceTree = SOURCE_ROOT; };
+		CC845E3F602DB5122E0D60A9 /* cidr_to_str.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = cidr_to_str.c; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/cidr_to_str.c; sourceTree = SOURCE_ROOT; };
+		CCFF90D27875972FE93EFA4B /* Credentials.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Credentials.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/Credentials.h; sourceTree = SOURCE_ROOT; };
+		CF9C632501FDD25D8F109C9A /* IPVideoFrameSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IPVideoFrameSettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/IPVideoFrameSettings.h; sourceTree = SOURCE_ROOT; };
+		CFCC4D9A0E6FD318EF963FE1 /* DefaultProxyProcessor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultProxyProcessor.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultProxyProcessor.h; sourceTree = SOURCE_ROOT; };
+		D05DC1D3810B9184B5F5BAE0 /* BaseAuthenticationRoute.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BaseAuthenticationRoute.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BaseAuthenticationRoute.cpp; sourceTree = SOURCE_ROOT; };
+		D2CF42BB60954A665623D277 /* AbstractTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AbstractTypes.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/AbstractTypes.h; sourceTree = SOURCE_ROOT; };
+		D2DE28BEA9143B96E209F9C5 /* BaseClient.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BaseClient.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BaseClient.cpp; sourceTree = SOURCE_ROOT; };
+		D4E933725CDB974F564CB7E6 /* AuthScope.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AuthScope.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/AuthScope.h; sourceTree = SOURCE_ROOT; };
+		D55D02C18CE4A7FA07A403B7 /* jsoncpp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = jsoncpp.cpp; path = ../../../../addons/ofxJSON/libs/jsoncpp/src/jsoncpp.cpp; sourceTree = SOURCE_ROOT; };
+		D828928F010A8EF2672455DF /* BasicPostServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BasicPostServer.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BasicPostServer.h; sourceTree = SOURCE_ROOT; };
+		D8DD2E6E20C64E2DFD910C0B /* StreamUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StreamUtils.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/StreamUtils.cpp; sourceTree = SOURCE_ROOT; };
+		D9E176FE1833BCA1425EAC7E /* PostRouteSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PostRouteSettings.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/PostRouteSettings.cpp; sourceTree = SOURCE_ROOT; };
+		D9E52F156110E298AC455FE1 /* GetRequest.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = GetRequest.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/GetRequest.cpp; sourceTree = SOURCE_ROOT; };
+		DAF54D157132ED0476B92757 /* BaseClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = BaseClient.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/BaseClient.h; sourceTree = SOURCE_ROOT; };
+		DB16C18CC07CB48D3D19D92C /* HiddenFileFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HiddenFileFilter.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/HiddenFileFilter.h; sourceTree = SOURCE_ROOT; };
+		DBCB22288613E38CE3F073E9 /* SearchPath.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SearchPath.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/SearchPath.cpp; sourceTree = SOURCE_ROOT; };
+		DC7EB3C3CC9E45B9D30649C8 /* COBSEncoding.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = COBSEncoding.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/COBSEncoding.h; sourceTree = SOURCE_ROOT; };
+		DD1D7BDAD39687C8D4D8527E /* Cookie.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Cookie.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/Cookie.cpp; sourceTree = SOURCE_ROOT; };
+		DE1D512978F3E97B31E8D596 /* DefaultRequestStreamFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DefaultRequestStreamFilter.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/DefaultRequestStreamFilter.cpp; sourceTree = SOURCE_ROOT; };
+		DE551DF2F48BEFA1C488B04C /* DirectoryWatcherManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DirectoryWatcherManager.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/DirectoryWatcherManager.cpp; sourceTree = SOURCE_ROOT; };
+		E191FEF32D660AB2666EABDF /* PostRouteHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PostRouteHandler.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/PostRouteHandler.cpp; sourceTree = SOURCE_ROOT; };
+		E3B7F5A4AA3147215BF3916C /* OAuth10RequestFilter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OAuth10RequestFilter.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/OAuth10RequestFilter.cpp; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+		E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		E4B69B5B0A3A1756003C02F2 /* tabParseDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabParseDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4C2424410CC5A17004149E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		E4C2424510CC5A17004149E2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		E4E7A6C15D492B501C595D42 /* SessionCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SessionCache.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/SessionCache.h; sourceTree = SOURCE_ROOT; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E4ECB0C56B07AE128C7D55CD /* ofxJSONElement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxJSONElement.cpp; path = ../../../../addons/ofxJSON/src/ofxJSONElement.cpp; sourceTree = SOURCE_ROOT; };
+		E546F60E13ADA5DF8185B25F /* PostRouteFileHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PostRouteFileHandler.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/PostRouteFileHandler.h; sourceTree = SOURCE_ROOT; };
+		E6032CB49338E3B5FC6CFC78 /* lz4.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = lz4.h; path = ../../../../addons/ofxIO/libs/lz4/src/lz4.h; sourceTree = SOURCE_ROOT; };
+		E72314E9C346DFBA18004257 /* UniqueAccessExpireLRUCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UniqueAccessExpireLRUCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/UniqueAccessExpireLRUCache.h; sourceTree = SOURCE_ROOT; };
+		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		E9097EB3F75BFECF259EC1DA /* libcidr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = libcidr.h; path = ../../../../addons/ofxNetworkUtils/libs/libcidr/src/libcidr.h; sourceTree = SOURCE_ROOT; };
+		EC2EC08A672D803A38144DCB /* HexBinaryEncoding.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HexBinaryEncoding.cpp; path = ../../../../addons/ofxIO/libs/ofxIO/src/HexBinaryEncoding.cpp; sourceTree = SOURCE_ROOT; };
+		ED48F5FF1DDE29ADC163AD56 /* WebSocketRoute.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = WebSocketRoute.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/WebSocketRoute.cpp; sourceTree = SOURCE_ROOT; };
+		F33879AEF54DAFDD6D539A9A /* URIBuilder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = URIBuilder.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/URIBuilder.cpp; sourceTree = SOURCE_ROOT; };
+		F6DAB54488929C9D9B88A042 /* AbstractClientTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AbstractClientTypes.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/AbstractClientTypes.h; sourceTree = SOURCE_ROOT; };
+		F830D92C30DC30B7FAD74059 /* DefaultResponseStreamFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DefaultResponseStreamFilter.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/DefaultResponseStreamFilter.h; sourceTree = SOURCE_ROOT; };
+		FD7AAD8BF2810F81D674365E /* AccessExpireLRUCache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AccessExpireLRUCache.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/AccessExpireLRUCache.h; sourceTree = SOURCE_ROOT; };
+		FDF14D2B80CBF56F861ECB29 /* ProgressMonitor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ProgressMonitor.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/ProgressMonitor.h; sourceTree = SOURCE_ROOT; };
+		FDF3CF11A611677CE992E4D4 /* BaseResponse.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = BaseResponse.cpp; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/src/BaseResponse.cpp; sourceTree = SOURCE_ROOT; };
+		FE781D40BBAF72FFCA5EAF18 /* ProxySettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ProxySettings.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/ProxySettings.h; sourceTree = SOURCE_ROOT; };
+		FEFC4DE689781139561D0C42 /* DeviceFilter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DeviceFilter.h; path = ../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO/DeviceFilter.h; sourceTree = SOURCE_ROOT; };
+		FF52FFD251BEB2E479E2C381 /* IPVideoRouteHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IPVideoRouteHandler.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/IPVideoRouteHandler.h; sourceTree = SOURCE_ROOT; };
+		FFADD8EFACED5D2547B561B0 /* FileSystemRouteHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FileSystemRouteHandler.h; path = ../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/FileSystemRouteHandler.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
+				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
+				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
+				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
+				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
+				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
+				E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */,
+				E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */,
+				E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */,
+				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
+				2D4BBE751C157706003394A1 /* libcurl.a in Frameworks */,
+				2D4BBE761C157706003394A1 /* libcurl.a in Frameworks */,
+				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
+				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
+				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
+				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
+				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
+				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		019C57E3532466BF02B7865E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A63FEBDBFB4A0DA7E8E55F95 /* libcidr.h */,
+				745B5B40AF1E9C55672143B6 /* libcidr_pow2_p.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		02258B57617E63D6251EF763 /* ofxHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				0851B5424E50ADC185E7ECE6 /* src */,
+				6F6836A5F2E1C798778BDC16 /* libs */,
+			);
+			name = ofxHTTP;
+			sourceTree = "<group>";
+		};
+		02C663A3035CB2AF8BCE07DC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BE74E1FF1279003FAF0B4A9F /* lz4.c */,
+				E6032CB49338E3B5FC6CFC78 /* lz4.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		0851B5424E50ADC185E7ECE6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				247946311DE295D5D6C81CCF /* ofxHTTP.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		086770EA564806B847975656 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4D19E2890EE0E5596A733E4A /* ofxNetworkUtils.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		0C7E611499E99D161F5A350A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C52F676817310AE20D959835 /* ofxTaskQueue.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		10D3F3F0B7A5F4F005A72281 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				A4ECA0BC36EFC00D37941DF6 /* libcidr */,
+				3267A0EC40EE3A074E568CC5 /* ofxNetworkUtils */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		136E83861B97B213D317964E /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				5A17383E6E5D023521EE3808 /* ofxMediaType */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		15A707E77379B89D9344B831 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				C3A8DDE8E7A2804A84F39AE4 /* ofxTaskQueue */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		15D44573EC8FB19C8A2B4DA1 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				70F449D423BB9FB6AC828E03 /* ofx */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		18AE707F3D8B3EBBC189224D /* ofxHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				CE1C443E131114BA6C882638 /* include */,
+				CB8B0D44E45A386BC486D892 /* src */,
+			);
+			name = ofxHTTP;
+			sourceTree = "<group>";
+		};
+		1E8BAE944B57D918C0D05BDF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2C9069F9AD2670389CE273FD /* ofSSLManager.cpp */,
+				6A649442D64FB7E15042D282 /* ofSSLManager.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */ = {
+			isa = PBXGroup;
+			children = (
+				6ECEF0D76BC33727823EADFF /* src */,
+				6E54289412D2D94F45A05113 /* libs */,
+			);
+			name = ofxXmlSettings;
+			sourceTree = "<group>";
+		};
+		1FE55F3FCBD156AC7D591F69 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				B40D93E4E6198327D6DA7BFA /* alphanum */,
+				8FE15F6815C4A8DE40915EAE /* lz4 */,
+				92CF4367AF54E202BCF9E084 /* ofxIO */,
+				D86EF5293C3BFC96A82C8EB7 /* snappy */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		22F89FAAB971681352F58BFB /* ofxTaskQueue */ = {
+			isa = PBXGroup;
+			children = (
+				0C7E611499E99D161F5A350A /* src */,
+				15A707E77379B89D9344B831 /* libs */,
+			);
+			name = ofxTaskQueue;
+			sourceTree = "<group>";
+		};
+		2865DAEF86B1907A704CA70B /* ofxJSON */ = {
+			isa = PBXGroup;
+			children = (
+				292AF6148769654D0DF26018 /* src */,
+				F40E80CB2D443CBA9581DD03 /* libs */,
+			);
+			name = ofxJSON;
+			sourceTree = "<group>";
+		};
+		292AF6148769654D0DF26018 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0CF404CC30C22DFC004B4ECE /* ofxJSON.h */,
+				E4ECB0C56B07AE128C7D55CD /* ofxJSONElement.cpp */,
+				785081894ED0E035B07060DA /* ofxJSONElement.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		2D4BBE2A1C157706003394A1 /* ofxCurl */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE2B1C157706003394A1 /* compile_mac_7_21_1.sh */,
+				2D4BBE2C1C157706003394A1 /* compile_mac_7_21_6.sh */,
+				2D4BBE361C157706003394A1 /* install.xml */,
+				2D4BBE371C157706003394A1 /* lib */,
+				2D4BBE411C157706003394A1 /* README.txt */,
+				2D4BBE421C157706003394A1 /* src */,
+			);
+			name = ofxCurl;
+			path = ../../../../addons/ofxCurl;
+			sourceTree = "<group>";
+		};
+		2D4BBE371C157706003394A1 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE381C157706003394A1 /* mac */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		2D4BBE381C157706003394A1 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE391C157706003394A1 /* llvm-gcc_i386 */,
+				2D4BBE3B1C157706003394A1 /* llvm-gcc_x86_64 */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		2D4BBE391C157706003394A1 /* llvm-gcc_i386 */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE3A1C157706003394A1 /* libcurl.a */,
+			);
+			path = "llvm-gcc_i386";
+			sourceTree = "<group>";
+		};
+		2D4BBE3B1C157706003394A1 /* llvm-gcc_x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE3C1C157706003394A1 /* libcurl.a */,
+			);
+			path = "llvm-gcc_x86_64";
+			sourceTree = "<group>";
+		};
+		2D4BBE421C157706003394A1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE431C157706003394A1 /* include_codeblocks */,
+				2D4BBE4E1C157706003394A1 /* include_llvm-gcc_i386 */,
+				2D4BBE5A1C157706003394A1 /* include_llvm-gcc_x86_64 */,
+				2D4BBE661C157706003394A1 /* ofxCurl.cpp */,
+				2D4BBE671C157706003394A1 /* ofxCurl.h */,
+				2D4BBE681C157706003394A1 /* ofxCurlException.cpp */,
+				2D4BBE691C157706003394A1 /* ofxCurlException.h */,
+				2D4BBE6A1C157706003394A1 /* ofxCurlFileDownload.cpp */,
+				2D4BBE6B1C157706003394A1 /* ofxCurlFileDownload.h */,
+				2D4BBE6C1C157706003394A1 /* ofxCurlForm.cpp */,
+				2D4BBE6D1C157706003394A1 /* ofxCurlForm.h */,
+				2D4BBE6E1C157706003394A1 /* ofxCurlFormType.cpp */,
+				2D4BBE6F1C157706003394A1 /* ofxCurlFormType.h */,
+				2D4BBE701C157706003394A1 /* ofxCurlFormTypeFile.cpp */,
+				2D4BBE711C157706003394A1 /* ofxCurlFormTypeFile.h */,
+				2D4BBE721C157706003394A1 /* ofxCurlFormTypeInput.cpp */,
+				2D4BBE731C157706003394A1 /* ofxCurlFormTypeInput.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2D4BBE431C157706003394A1 /* include_codeblocks */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE441C157706003394A1 /* curl.h */,
+				2D4BBE451C157706003394A1 /* curlbuild.h */,
+				2D4BBE461C157706003394A1 /* curlrules.h */,
+				2D4BBE471C157706003394A1 /* curlver.h */,
+				2D4BBE481C157706003394A1 /* easy.h */,
+				2D4BBE491C157706003394A1 /* mprintf.h */,
+				2D4BBE4A1C157706003394A1 /* multi.h */,
+				2D4BBE4B1C157706003394A1 /* stdcheaders.h */,
+				2D4BBE4C1C157706003394A1 /* typecheck-gcc.h */,
+				2D4BBE4D1C157706003394A1 /* types.h */,
+			);
+			path = include_codeblocks;
+			sourceTree = "<group>";
+		};
+		2D4BBE4E1C157706003394A1 /* include_llvm-gcc_i386 */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE4F1C157706003394A1 /* curl */,
+			);
+			path = "include_llvm-gcc_i386";
+			sourceTree = "<group>";
+		};
+		2D4BBE4F1C157706003394A1 /* curl */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE501C157706003394A1 /* curl.h */,
+				2D4BBE511C157706003394A1 /* curlbuild.h */,
+				2D4BBE521C157706003394A1 /* curlrules.h */,
+				2D4BBE531C157706003394A1 /* curlver.h */,
+				2D4BBE541C157706003394A1 /* easy.h */,
+				2D4BBE551C157706003394A1 /* mprintf.h */,
+				2D4BBE561C157706003394A1 /* multi.h */,
+				2D4BBE571C157706003394A1 /* stdcheaders.h */,
+				2D4BBE581C157706003394A1 /* typecheck-gcc.h */,
+				2D4BBE591C157706003394A1 /* types.h */,
+			);
+			path = curl;
+			sourceTree = "<group>";
+		};
+		2D4BBE5A1C157706003394A1 /* include_llvm-gcc_x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE5B1C157706003394A1 /* curl */,
+			);
+			path = "include_llvm-gcc_x86_64";
+			sourceTree = "<group>";
+		};
+		2D4BBE5B1C157706003394A1 /* curl */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE5C1C157706003394A1 /* curl.h */,
+				2D4BBE5D1C157706003394A1 /* curlbuild.h */,
+				2D4BBE5E1C157706003394A1 /* curlrules.h */,
+				2D4BBE5F1C157706003394A1 /* curlver.h */,
+				2D4BBE601C157706003394A1 /* easy.h */,
+				2D4BBE611C157706003394A1 /* mprintf.h */,
+				2D4BBE621C157706003394A1 /* multi.h */,
+				2D4BBE631C157706003394A1 /* stdcheaders.h */,
+				2D4BBE641C157706003394A1 /* typecheck-gcc.h */,
+				2D4BBE651C157706003394A1 /* types.h */,
+			);
+			path = curl;
+			sourceTree = "<group>";
+		};
+		3267A0EC40EE3A074E568CC5 /* ofxNetworkUtils */ = {
+			isa = PBXGroup;
+			children = (
+				15D44573EC8FB19C8A2B4DA1 /* include */,
+				F06A6CC1DE8AD93D3A0E1E5D /* src */,
+			);
+			name = ofxNetworkUtils;
+			sourceTree = "<group>";
+		};
+		3F13BF933566839ED4C7CCED /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D1C382A37EE661F51AA773CC /* ofx */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		406D7399CEFC4C539B676AFF /* ofxNetworkUtils */ = {
+			isa = PBXGroup;
+			children = (
+				086770EA564806B847975656 /* src */,
+				10D3F3F0B7A5F4F005A72281 /* libs */,
+			);
+			name = ofxNetworkUtils;
+			sourceTree = "<group>";
+		};
+		4365818B4FDD43E8E79C7982 /* ofx */ = {
+			isa = PBXGroup;
+			children = (
+				96D6115ED0C00F95C37DAAAC /* TaskQueue.h */,
+				665DFF03146464F025D4B988 /* TaskQueueEvents.h */,
+			);
+			name = ofx;
+			sourceTree = "<group>";
+		};
+		4A9E9C4D593FEAC751445421 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B3D9ACBE2DC223DD7BE3C6F3 /* snappy-internal.h */,
+				8CFF26CF6C2B0D42114A3E06 /* snappy-sinksource.cc */,
+				1B6B66C5C907D7B0A555399C /* snappy-sinksource.h */,
+				635827E085CB69B044531AB9 /* snappy-stubs-internal.cc */,
+				12EB482751DC09F4F4F0DA8F /* snappy-stubs-internal.h */,
+				2EDE6C0F338CF9B41AD23BF3 /* snappy-stubs-public.h */,
+				73A603B2E67AD0060E7B9C6C /* snappy.cc */,
+				1ED6055779FE8A5678D42E60 /* snappy.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		4BF286C389657955BDA84AA6 /* ofxSSLManager */ = {
+			isa = PBXGroup;
+			children = (
+				1E8BAE944B57D918C0D05BDF /* src */,
+			);
+			name = ofxSSLManager;
+			sourceTree = "<group>";
+		};
+		58AD3BD71B781D9BC25763C8 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				80322D0F1E79312995C4F0B6 /* json-forwards.h */,
+				30C55AF5EF70A8FD3B3317E0 /* json.h */,
+			);
+			name = json;
+			sourceTree = "<group>";
+		};
+		5A17383E6E5D023521EE3808 /* ofxMediaType */ = {
+			isa = PBXGroup;
+			children = (
+				8F72C8C7AB01DC4FE562FFFC /* include */,
+				A38A722D40B48826A2DC9FA7 /* src */,
+			);
+			name = ofxMediaType;
+			sourceTree = "<group>";
+		};
+		671923EC06F4340D8255DA22 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8ED0E72F8D95284DDA6C86F9 /* alphanum.hpp */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		6827DB82AAD37B20D509DEA8 /* ofxMediaType */ = {
+			isa = PBXGroup;
+			children = (
+				766D1646D6ED247266DF7448 /* src */,
+				136E83861B97B213D317964E /* libs */,
+			);
+			name = ofxMediaType;
+			sourceTree = "<group>";
+		};
+		6E54289412D2D94F45A05113 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				126B1BBACED427BD4F54BC45 /* tinyxml.cpp */,
+				8FBDBA8D2DCA49DC504F1850 /* tinyxml.h */,
+				8AED12DBC5DC04739E95CD26 /* tinyxmlerror.cpp */,
+				B0FB861B0D843DF212503B18 /* tinyxmlparser.cpp */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		6ECEF0D76BC33727823EADFF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BA80450995764F8FABAB1604 /* ofxXmlSettings.cpp */,
+				6A7153E0F5EFF5622F1EB21F /* ofxXmlSettings.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		6F6836A5F2E1C798778BDC16 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				18AE707F3D8B3EBBC189224D /* ofxHTTP */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		70F449D423BB9FB6AC828E03 /* ofx */ = {
+			isa = PBXGroup;
+			children = (
+				B71A2E358493BFBF81C2A0B4 /* CIDRAddress.h */,
+				BA927607FD4C8BD5D2119338 /* Net */,
+			);
+			name = ofx;
+			sourceTree = "<group>";
+		};
+		757966F93538BAB9826B6612 /* ofx */ = {
+			isa = PBXGroup;
+			children = (
+				B293CA3DD41FEC3AE137A892 /* HTTP */,
+			);
+			name = ofx;
+			sourceTree = "<group>";
+		};
+		766D1646D6ED247266DF7448 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3FA654ED174BD809F19364A3 /* ofxMediaType.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		81B9E335116A816EA1D2A2FA /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				D2CF42BB60954A665623D277 /* AbstractTypes.h */,
+				1A019BE1D897B3BDFC076213 /* Base64Encoding.h */,
+				32DA6913AFBB7BC636BBB618 /* ByteBuffer.h */,
+				7105B88C9EAD1BA84323DFBA /* ByteBufferReader.h */,
+				9F96E28722F93A73B4EB5899 /* ByteBufferUtils.h */,
+				5F9D427A5456D80B0C098647 /* ByteBufferWriter.h */,
+				DC7EB3C3CC9E45B9D30649C8 /* COBSEncoding.h */,
+				A89E0FAB9155C1967092E9FA /* Compression.h */,
+				FEFC4DE689781139561D0C42 /* DeviceFilter.h */,
+				BE4BB9704686CF8592C4631E /* DirectoryFilter.h */,
+				170E2B4954949B7068A1C631 /* DirectoryUtils.h */,
+				0E650D639761A3A72AE8078C /* DirectoryWatcherManager.h */,
+				AC5690FA49F2A534AD0B54DD /* FileExtensionFilter.h */,
+				7EF4881E2C8B0F9A8B5C3A0E /* HexBinaryEncoding.h */,
+				DB16C18CC07CB48D3D19D92C /* HiddenFileFilter.h */,
+				1D41D6AC9E54B39581D8BAFE /* LinkFilter.h */,
+				9D39003438A80959F3B2CE04 /* PathFilterCollection.h */,
+				828ADE76D98FE73BAB445AB6 /* RegexPathFilter.h */,
+				8A1AAFCA8229730772DA41B8 /* SearchPath.h */,
+				7A83CB9C24AFD7B1F8509456 /* SLIPEncoding.h */,
+			);
+			name = IO;
+			sourceTree = "<group>";
+		};
+		827E879AF9EC79A81A74CC6F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B473107A1D00CCBB50716F4C /* Base64Encoding.cpp */,
+				281542957C25BFC80A7B3092 /* ByteBuffer.cpp */,
+				C735C6479489D7679AFD7D40 /* ByteBufferReader.cpp */,
+				711F0316288C4B0BD00F84E6 /* ByteBufferUtils.cpp */,
+				87B684A3739F8A707A9E0D23 /* ByteBufferWriter.cpp */,
+				A40C5B47D40CE3E4BCB102CA /* COBSEncoding.cpp */,
+				345373628DA451A8CF14C2EE /* Compression.cpp */,
+				88FCF47B23FC1FF359118820 /* DeviceFilter.cpp */,
+				2260F3321A9C6C811B3AFE14 /* DirectoryFilter.cpp */,
+				7DAA7D8730B775ECE7907803 /* DirectoryUtils.cpp */,
+				1B04B40FC57075FF85857437 /* DirectoryWatcher.cpp */,
+				DE551DF2F48BEFA1C488B04C /* DirectoryWatcherManager.cpp */,
+				59256D99829B2BC14C12B954 /* FileExtensionFilter.cpp */,
+				EC2EC08A672D803A38144DCB /* HexBinaryEncoding.cpp */,
+				2B6059021600597FCD9CAE9E /* HiddenFileFilter.cpp */,
+				C5249A57906B8AF8F221EC39 /* LinkFilter.cpp */,
+				720FC053F46F18DA7967AB46 /* PathFilterCollection.cpp */,
+				544774376A21416B0DE0A785 /* RecursiveDirectoryIterator.cpp */,
+				732F2E4679FDBD91FC544385 /* RecursiveDirectoryIteratorStategies.cpp */,
+				9337585FE37D499C86AF1ED8 /* RegexPathFilter.cpp */,
+				DBCB22288613E38CE3F073E9 /* SearchPath.cpp */,
+				6D9DE1DA27554F03953831A6 /* SLIPEncoding.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		8F72C8C7AB01DC4FE562FFFC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				ACC9E99B2E5C5EA7CEDDB8FF /* ofx */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		8FE15F6815C4A8DE40915EAE /* lz4 */ = {
+			isa = PBXGroup;
+			children = (
+				02C663A3035CB2AF8BCE07DC /* src */,
+			);
+			name = lz4;
+			sourceTree = "<group>";
+		};
+		92CF4367AF54E202BCF9E084 /* ofxIO */ = {
+			isa = PBXGroup;
+			children = (
+				3F13BF933566839ED4C7CCED /* include */,
+				827E879AF9EC79A81A74CC6F /* src */,
+			);
+			name = ofxIO;
+			sourceTree = "<group>";
+		};
+		92D2E53B130F8B76190A8426 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A0ED22A26C9AB04328DB996C /* cidr_addr.c */,
+				5EAB733905551F63E1498CCA /* cidr_compare.c */,
+				A8EAA362B5020032C52CF5B3 /* cidr_from_str.c */,
+				68C5C479BE90595F1AFB1869 /* cidr_get.c */,
+				3CF40A0F354BD3FA050960D0 /* cidr_inaddr.c */,
+				0189C4C0BA9D0F4453903282 /* cidr_mem.c */,
+				06A559E15743573B01A4F736 /* cidr_misc.c */,
+				07728838766EA1071541003E /* cidr_net.c */,
+				166BB487B37D4AA5146DA948 /* cidr_num.c */,
+				CC845E3F602DB5122E0D60A9 /* cidr_to_str.c */,
+				E9097EB3F75BFECF259EC1DA /* libcidr.h */,
+				7F2B51DD63456C17C041A54B /* libcidr_pow2_p.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		977A836DD2C489CCC5E330FF /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				D486FC87F063317BB47E9FAC /* include */,
+				CCDC6F9CCF925CC402160B85 /* src */,
+			);
+			name = jsoncpp;
+			sourceTree = "<group>";
+		};
+		A38A722D40B48826A2DC9FA7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				80828BFE1E8827CDF5BD312F /* MediaTypeMap.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		A4ECA0BC36EFC00D37941DF6 /* libcidr */ = {
+			isa = PBXGroup;
+			children = (
+				019C57E3532466BF02B7865E /* include */,
+				92D2E53B130F8B76190A8426 /* src */,
+			);
+			name = libcidr;
+			sourceTree = "<group>";
+		};
+		A8792B4B23B2F70E1065D67F /* ofxIO */ = {
+			isa = PBXGroup;
+			children = (
+				D86C6322CF7554A9BE5EB8BF /* src */,
+				1FE55F3FCBD156AC7D591F69 /* libs */,
+			);
+			name = ofxIO;
+			sourceTree = "<group>";
+		};
+		ACC9E99B2E5C5EA7CEDDB8FF /* ofx */ = {
+			isa = PBXGroup;
+			children = (
+				821AADA5DA7AE562E9C8D312 /* AbstractMediaTypeProvider.h */,
+				6E8DE3AA63F9739B0F005D9D /* MediaTypeMap.h */,
+			);
+			name = ofx;
+			sourceTree = "<group>";
+		};
+		B293CA3DD41FEC3AE137A892 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				F6DAB54488929C9D9B88A042 /* AbstractClientTypes.h */,
+				3E088C3D0527E315E697A4E1 /* AbstractServerTypes.h */,
+				673E215B133F54F380B2D358 /* Authentication.h */,
+				D4E933725CDB974F564CB7E6 /* AuthScope.h */,
+				74A0333951F7E9A7635977BB /* BaseAuthenticationRoute.h */,
+				DAF54D157132ED0476B92757 /* BaseClient.h */,
+				4AB8E1B3AB427662AC8F3C74 /* BaseRequest.h */,
+				2985C4B955987C11C5DF9BAA /* BaseResponse.h */,
+				2958550296872440E23223F7 /* BaseRoute.h */,
+				15CC87299AEEB00E235D5E75 /* BaseRouteHandler.h */,
+				83AC9DB9D4933E7DCC9FE3D3 /* BaseRouteSettings.h */,
+				5C69CD132F3DBC9BB465F8E7 /* BaseServer.h */,
+				0F62F5D0FB7CA4EBC78BD000 /* BaseServerSettings.h */,
+				3AD1FF49C66F6538135F4536 /* BasicIPVideoServer.h */,
+				D828928F010A8EF2672455DF /* BasicPostServer.h */,
+				C278DC4756CACF934DB38FF1 /* BasicServer.h */,
+				B2386CC7CF9C6A555EACA327 /* BasicWebSocketServer.h */,
+				3400734862164EB94F88DA6A /* ClientEvents.h */,
+				7A00BAE3BF16F60635763840 /* ClientProgressStream.h */,
+				31DB248C0A164FADA86061F7 /* Compression.h */,
+				65DB12E2EDA92ED6A1BED653 /* Context.h */,
+				97976613DE2243652D233EC3 /* Cookie.h */,
+				A34EA56B4BAD9894BDA92B33 /* CookieStore.h */,
+				28106439E4C1BD0282D1E98D /* CookieUtils.h */,
+				CCFF90D27875972FE93EFA4B /* Credentials.h */,
+				61C9D5D5012FD8A3D895D1D4 /* CredentialStore.h */,
+				28B8AFC9496B5EB3394E9C3E /* DefaultClient.h */,
+				1064B801ACDF392FE6F89DF0 /* DefaultClientHeaders.h */,
+				31D94E68A09E84721DC2FA38 /* DefaultClientTask.h */,
+				58CF3849D7FC886064F0A037 /* DefaultClientTaskQueue.h */,
+				AF69D0DC3E8291126652F80A /* DefaultCookieProcessor.h */,
+				CFCC4D9A0E6FD318EF963FE1 /* DefaultProxyProcessor.h */,
+				BF59E86E4A50F81FA00D0D9B /* DefaultRedirectProcessor.h */,
+				55253621A5C2A1880FC517A2 /* DefaultRequestStreamFilter.h */,
+				F830D92C30DC30B7FAD74059 /* DefaultResponseStreamFilter.h */,
+				282C85A218BE9EAB9D93F236 /* DefaultServerAuthenticationManager.h */,
+				01910C9D01A83A56A01F6D2F /* DefaultSessionProvider.h */,
+				B0FB3DC88EFAA36ECE21BA7C /* FileSystemRoute.h */,
+				FFADD8EFACED5D2547B561B0 /* FileSystemRouteHandler.h */,
+				7A1DB4B454B3F2A73CF4A27F /* FileSystemRouteSettings.h */,
+				5629C44C233D992C9A7B78E1 /* GetRequest.h */,
+				3979A3FBB57D2F2426441194 /* HTTP.h */,
+				B322676FE372EB7B45C890B9 /* HTTPAuthenticationRoute.h */,
+				50BB13EEA7ACF967A0AA23D6 /* HTTPUtils.h */,
+				B30BE6B89ADD3EA722D8C4B9 /* IPVideoFrame.h */,
+				BDF7AAD9D6CF5B5999BDE61D /* IPVideoFrameQueue.h */,
+				CF9C632501FDD25D8F109C9A /* IPVideoFrameSettings.h */,
+				58F4B7ECBC474866871A377C /* IPVideoRoute.h */,
+				FF52FFD251BEB2E479E2C381 /* IPVideoRouteHandler.h */,
+				04B7358BA25AA4EF8FA86D9B /* IPVideoRouteSettings.h */,
+				702218711ED194CC7C5AD491 /* OAuth10Credentials.h */,
+				46D89191877E96B11ADE5139 /* OAuth10RequestFilter.h */,
+				0F0E975CB27AC3CADA447469 /* OAuth20Credentials.h */,
+				558DD2704C61955B71C6BBA3 /* PostRequest.h */,
+				B62B345F4D311388AB0C1D02 /* PostRoute.h */,
+				8233E7B0CCE11CA0F6F5DB5A /* PostRouteEvents.h */,
+				E546F60E13ADA5DF8185B25F /* PostRouteFileHandler.h */,
+				255FC41CC346563673AAF068 /* PostRouteHandler.h */,
+				B50688DDEBA9AED4F5A9FC5C /* PostRouteSettings.h */,
+				FDF14D2B80CBF56F861ECB29 /* ProgressMonitor.h */,
+				FE781D40BBAF72FFCA5EAF18 /* ProxySettings.h */,
+				78EA641B603E84214FC3D9A7 /* PutRequest.h */,
+				34E4733CBE22C98D13B30862 /* ServerEvents.h */,
+				6ADEEA07D58D043F6532BEB9 /* Session.h */,
+				79A5390BD37CE860A345725B /* SessionAuthenticationRoute.h */,
+				E4E7A6C15D492B501C595D42 /* SessionCache.h */,
+				BB7D99E938AD28D14B561B00 /* SessionSettings.h */,
+				44FBADBA95C27F73858A337E /* StreamUtils.h */,
+				46A5B56EFCD3C596B1AF648F /* ThreadErrorHandler.h */,
+				2CFD4A28E0EC5007D0425CB8 /* ThreadSettings.h */,
+				5B3C22659882954D7ABB9C27 /* URIBuilder.h */,
+				A0B8A4670172674E1EA10163 /* WebSocketConnection.h */,
+				C5489045E0D343F320C17A4D /* WebSocketEvents.h */,
+				8813B4D3F478C96A5658AC25 /* WebSocketFrame.h */,
+				CBB438CE271C494537103AF3 /* WebSocketRoute.h */,
+				4834180AAF1A58F91EF59E8F /* WebSocketRouteSettings.h */,
+			);
+			name = HTTP;
+			sourceTree = "<group>";
+		};
+		B40D93E4E6198327D6DA7BFA /* alphanum */ = {
+			isa = PBXGroup;
+			children = (
+				671923EC06F4340D8255DA22 /* include */,
+			);
+			name = alphanum;
+			sourceTree = "<group>";
+		};
+		BA927607FD4C8BD5D2119338 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				B25ECDA022BB247C07B9BA45 /* CIDRAddress.h */,
+				28927EA59CC9789C85582D4B /* NetworkInterfaceListener.h */,
+				5A799B1E52912E3D308DB2BC /* NetworkUtils.h */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BBE2A1C157706003394A1 /* ofxCurl */,
+				1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */,
+				02258B57617E63D6251EF763 /* ofxHTTP */,
+				A8792B4B23B2F70E1065D67F /* ofxIO */,
+				2865DAEF86B1907A704CA70B /* ofxJSON */,
+				6827DB82AAD37B20D509DEA8 /* ofxMediaType */,
+				406D7399CEFC4C539B676AFF /* ofxNetworkUtils */,
+				4BF286C389657955BDA84AA6 /* ofxSSLManager */,
+				22F89FAAB971681352F58BFB /* ofxTaskQueue */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7F985F515E0DE99003869B5 /* Accelerate.framework */,
+				E4C2424410CC5A17004149E2 /* AppKit.framework */,
+				E4C2424510CC5A17004149E2 /* Cocoa.framework */,
+				E4C2424610CC5A17004149E2 /* IOKit.framework */,
+				E45BE9710E8CC7DD009D7055 /* AGL.framework */,
+				E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */,
+				E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */,
+				E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */,
+				E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */,
+				E45BE9770E8CC7DD009D7055 /* CoreServices.framework */,
+				E45BE9790E8CC7DD009D7055 /* OpenGL.framework */,
+				E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */,
+				E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */,
+				E7E077E715D3B6510020DFD4 /* QTKit.framework */,
+			);
+			name = "system frameworks";
+			sourceTree = "<group>";
+		};
+		BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
+			);
+			name = "3rd party frameworks";
+			sourceTree = "<group>";
+		};
+		C3A8DDE8E7A2804A84F39AE4 /* ofxTaskQueue */ = {
+			isa = PBXGroup;
+			children = (
+				CC14DB5D54A8E1DA4C0C76A1 /* include */,
+			);
+			name = ofxTaskQueue;
+			sourceTree = "<group>";
+		};
+		CB8B0D44E45A386BC486D892 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				57198E33C7E5D9B827BEDB65 /* AuthScope.cpp */,
+				D05DC1D3810B9184B5F5BAE0 /* BaseAuthenticationRoute.cpp */,
+				D2DE28BEA9143B96E209F9C5 /* BaseClient.cpp */,
+				120BCFAF95A0C844F1E92EC1 /* BaseRequest.cpp */,
+				FDF3CF11A611677CE992E4D4 /* BaseResponse.cpp */,
+				0367E11F133E86D0C32A7467 /* BaseRouteHandler.cpp */,
+				886CF81858D714DC74935AD5 /* BaseRouteSettings.cpp */,
+				13B963D840064739E2CAD68F /* BaseServerSettings.cpp */,
+				94F0A60BDCAA64C7344B86D9 /* BasicIPVideoServer.cpp */,
+				3368C460B7F9600FBC1B8FE0 /* BasicPostServer.cpp */,
+				9FFE49D6C200F587CC7DBEAC /* BasicServer.cpp */,
+				0353DE3F85F9D8387218183E /* BasicWebSocketServer.cpp */,
+				67DBE90223BD3B02683FF2E7 /* ClientEvents.cpp */,
+				697F5F61D7E08EA6A28C2FC8 /* ClientProgressStream.cpp */,
+				7CB88510AEE6C8D66EB6CFAA /* Compression.cpp */,
+				14ABA4BD999649A551BC4BE8 /* Context.cpp */,
+				DD1D7BDAD39687C8D4D8527E /* Cookie.cpp */,
+				BE12B1784B404002408D3FED /* CookieStore.cpp */,
+				1CFEFA8E64E6A31192D7081B /* CookieUtils.cpp */,
+				9634C4FDE80EB767A4286F8E /* Credentials.cpp */,
+				C37B3671048A176F5AA43CCC /* CredentialStore.cpp */,
+				7550F0FA2A375D7071F8871A /* DefaultClient.cpp */,
+				98FC691E4FB69B5E6C314D5D /* DefaultClientHeaders.cpp */,
+				BBE2316468351B0CD2E18818 /* DefaultClientTask.cpp */,
+				6028500321D57F48F3B5786E /* DefaultClientTaskQueue.cpp */,
+				97BF8D89D9F0E210A72F6248 /* DefaultCookieProcessor.cpp */,
+				396B34372CE6F7900C055156 /* DefaultProxyProcessor.cpp */,
+				C44A53DF5807C4A96DF505D9 /* DefaultRedirectProcessor.cpp */,
+				DE1D512978F3E97B31E8D596 /* DefaultRequestStreamFilter.cpp */,
+				267D4E0182FDA311FA4CD255 /* DefaultResponseStreamFilter.cpp */,
+				6A021BCA51A20EB942D50010 /* DefaultSessionProvider.cpp */,
+				1118190D1B14ADEF7A353DFC /* FileSystemRoute.cpp */,
+				0F3AD347765786B18B793BC1 /* FileSystemRouteHandler.cpp */,
+				77BBAEAB3D1B7EB9791927E7 /* FileSystemRouteSettings.cpp */,
+				D9E52F156110E298AC455FE1 /* GetRequest.cpp */,
+				74B737EC78BE8327AF250F14 /* HTTPAuthenticationRoute.cpp */,
+				B8EB2EE1A903C9FBC47FF06A /* HTTPUtils.cpp */,
+				87149CBE656D0EB05425A7A0 /* IPVideoFrame.cpp */,
+				A620DED2276BC470F35C0D09 /* IPVideoFrameQueue.cpp */,
+				9591DECC7807B8414AFF68CB /* IPVideoFrameSettings.cpp */,
+				92EA61B0C2D646EAA1A75880 /* IPVideoRoute.cpp */,
+				A0560B52D46AD5D387C856BA /* IPVideoRouteHandler.cpp */,
+				45BA0F9207EBA98C868216FC /* IPVideoRouteSettings.cpp */,
+				47A8271C7D5A2B4D5579F4FC /* OAuth10Credentials.cpp */,
+				E3B7F5A4AA3147215BF3916C /* OAuth10RequestFilter.cpp */,
+				B1370A5C3EC2FC70161D3A70 /* OAuth20Credentials.cpp */,
+				C04561477D0F91280BF99B2E /* PostRequest.cpp */,
+				5F2D51597CA68B9360B51679 /* PostRoute.cpp */,
+				9BE0619E3C261818331D9615 /* PostRouteFileHandler.cpp */,
+				E191FEF32D660AB2666EABDF /* PostRouteHandler.cpp */,
+				D9E176FE1833BCA1425EAC7E /* PostRouteSettings.cpp */,
+				AF9469B6E77C8B9423CA9E0D /* ProgressMonitor.cpp */,
+				069B22C648596A80F0716834 /* ProxySettings.cpp */,
+				3735D76B38C2CA6E267BF869 /* PutRequest.cpp */,
+				4D62B0D6E82F85DA1381849B /* Session.cpp */,
+				6252892E0DC507C7FD813CF2 /* SessionAuthenticationRoute.cpp */,
+				1C6B4DBE7E916830607C2B0A /* SessionCache.cpp */,
+				477A96FB8F969FDA7CDEDBB5 /* SessionSettings.cpp */,
+				D8DD2E6E20C64E2DFD910C0B /* StreamUtils.cpp */,
+				4BB90728FFDA1BDECB05D43E /* ThreadSettings.cpp */,
+				F33879AEF54DAFDD6D539A9A /* URIBuilder.cpp */,
+				B7FE46B40A9DAE2331C96377 /* WebSocketConnection.cpp */,
+				6E110C27DC1EC0C947630C2D /* WebSocketFrame.cpp */,
+				ED48F5FF1DDE29ADC163AD56 /* WebSocketRoute.cpp */,
+				61B2D32135C9CA4884C36567 /* WebSocketRouteSettings.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		CC14DB5D54A8E1DA4C0C76A1 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4365818B4FDD43E8E79C7982 /* ofx */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		CCDC6F9CCF925CC402160B85 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D55D02C18CE4A7FA07A403B7 /* jsoncpp.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		CE1C443E131114BA6C882638 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				757966F93538BAB9826B6612 /* ofx */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		D1C382A37EE661F51AA773CC /* ofx */ = {
+			isa = PBXGroup;
+			children = (
+				53C8573EFDE2672CCA7A6CDB /* AbstractCache.h */,
+				6B65EA0D91775060C7426523 /* AccessExpireCache.h */,
+				FD7AAD8BF2810F81D674365E /* AccessExpireLRUCache.h */,
+				B84FDA0B973445658C63672A /* DirectoryWatcher.h */,
+				333729465221F85AB4EEECCF /* ExpireCache.h */,
+				11D5DD9F3065238392369A31 /* ExpireLRUCache.h */,
+				81B9E335116A816EA1D2A2FA /* IO */,
+				C92F17B229B5066CAFF67AC4 /* LRUCache.h */,
+				8291A1EE6AFADB08F4EB81EB /* RecursiveDirectoryIterator.h */,
+				888735670FC3573E96B52056 /* RecursiveDirectoryIteratorImpl.h */,
+				A5D96974B44D0EE29115D6FB /* RecursiveDirectoryIteratorStategies.h */,
+				54DA0B5B17AA7A6D75E1BA37 /* UniqueAccessExpireCache.h */,
+				E72314E9C346DFBA18004257 /* UniqueAccessExpireLRUCache.h */,
+				62CFDAD2B6A446DA8F9F5F68 /* UniqueExpireCache.h */,
+				4442645B1E30EDDB5BC47CD7 /* UniqueExpireLRUCache.h */,
+			);
+			name = ofx;
+			sourceTree = "<group>";
+		};
+		D486FC87F063317BB47E9FAC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				58AD3BD71B781D9BC25763C8 /* json */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		D86C6322CF7554A9BE5EB8BF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4B495CF14DA4E99F9A5FF382 /* ofxIO.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D86EF5293C3BFC96A82C8EB7 /* snappy */ = {
+			isa = PBXGroup;
+			children = (
+				4A9E9C4D593FEAC751445421 /* src */,
+			);
+			name = snappy;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E45BE5980E8CC70C009D7055 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */,
+				BBAB23C913894ECA00AA2426 /* system frameworks */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				E45BE5980E8CC70C009D7055 /* frameworks */,
+				E4B69B5B0A3A1756003C02F2 /* tabParseDebug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				2D4BBE241C157242003394A1 /* Postman.cpp */,
+				2D4BBE251C157242003394A1 /* Postman.h */,
+				2D4BBE261C157242003394A1 /* Writer.cpp */,
+				2D4BBE271C157242003394A1 /* Writer.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		F06A6CC1DE8AD93D3A0E1E5D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				474CEE5179D21225F9BD21D9 /* CIDRAddress.cpp */,
+				30A1D0B8BD4E7EB3FC1AC8D8 /* NetworkInterfaceListener.cpp */,
+				0CA620ECBC535AF47934E128 /* NetworkUtils.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		F40E80CB2D443CBA9581DD03 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				977A836DD2C489CCC5E330FF /* jsoncpp */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* tabParse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "tabParse" */;
+			buildPhases = (
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
+			);
+			name = tabParse;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* tabParseDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "tabParse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* tabParse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -f ../../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				40755491CDDD7249B25A1F2D /* ofxXmlSettings.cpp in Sources */,
+				B8A4986AE3CFD44755D311C7 /* tinyxml.cpp in Sources */,
+				28DCB9949680410908EFD4D5 /* tinyxmlerror.cpp in Sources */,
+				8AAF2BA4AFCBEC334841B989 /* tinyxmlparser.cpp in Sources */,
+				8AB7068786D43186E0B4E200 /* AuthScope.cpp in Sources */,
+				2ECACEC81C8F2265FBE57E79 /* BaseAuthenticationRoute.cpp in Sources */,
+				8EF16D9E4ECEFF6D6EDAF4DF /* BaseClient.cpp in Sources */,
+				C3E5B13E45A726EF0F1AA8C1 /* BaseRequest.cpp in Sources */,
+				A9A5D726930122BCAA126E6B /* BaseResponse.cpp in Sources */,
+				43D40A0DB1737BEC443B1370 /* BaseRouteHandler.cpp in Sources */,
+				75874080B2D7959FB461AB92 /* BaseRouteSettings.cpp in Sources */,
+				4D00A502289526B62801CCD8 /* BaseServerSettings.cpp in Sources */,
+				5F802B3B69EA29B59309B226 /* BasicIPVideoServer.cpp in Sources */,
+				D66CF2FC629FAD0491AC85F2 /* BasicPostServer.cpp in Sources */,
+				F889C3E281AFF84BF3750BAD /* BasicServer.cpp in Sources */,
+				1C10D381A2C55AE21314661E /* BasicWebSocketServer.cpp in Sources */,
+				6F757086B1E96DA4CDEF9C72 /* ClientEvents.cpp in Sources */,
+				1E1E4E7CA7043776D8448F2B /* ClientProgressStream.cpp in Sources */,
+				963A643498277B120C810E60 /* Compression.cpp in Sources */,
+				627B9C05E4CF2CBE3AFDA1D7 /* Context.cpp in Sources */,
+				6FD01B6D610C05BE5478B678 /* Cookie.cpp in Sources */,
+				78D761EF12E55A423437DF82 /* CookieStore.cpp in Sources */,
+				C36147486BE72D0DA5B0306F /* CookieUtils.cpp in Sources */,
+				2D4BBE7D1C157706003394A1 /* ofxCurlFormType.cpp in Sources */,
+				81DA782400651E878FAB961D /* Credentials.cpp in Sources */,
+				85B2799B3E4BF3C3C71A8308 /* CredentialStore.cpp in Sources */,
+				5B1D0986136169099DBEAF75 /* DefaultClient.cpp in Sources */,
+				7701B972B156FBCC8A542553 /* DefaultClientHeaders.cpp in Sources */,
+				0F78FC142B9080B7F3F0035A /* DefaultClientTask.cpp in Sources */,
+				62DA540C4C24E292746A6402 /* DefaultClientTaskQueue.cpp in Sources */,
+				8D7CD672CFFD0A71651AD237 /* DefaultCookieProcessor.cpp in Sources */,
+				AF5361D54EBA2496FA315C5B /* DefaultProxyProcessor.cpp in Sources */,
+				99EB33B4483C497524FBEBBE /* DefaultRedirectProcessor.cpp in Sources */,
+				24FBAC24EDB97A06143D8C05 /* DefaultRequestStreamFilter.cpp in Sources */,
+				51DDF0413FAAF0570B9F63CF /* DefaultResponseStreamFilter.cpp in Sources */,
+				85A8376A5E6F146EC85A9E2C /* DefaultSessionProvider.cpp in Sources */,
+				A8BF7C04D0347B605B5A0916 /* FileSystemRoute.cpp in Sources */,
+				2D4BBE7A1C157706003394A1 /* ofxCurlException.cpp in Sources */,
+				07598047748F925DB0398A9B /* FileSystemRouteHandler.cpp in Sources */,
+				2D4BBE7C1C157706003394A1 /* ofxCurlForm.cpp in Sources */,
+				EB7D0650D82FB939E1442966 /* FileSystemRouteSettings.cpp in Sources */,
+				56D1C894F543951FD01C43B5 /* GetRequest.cpp in Sources */,
+				88FAE4D2C64B6340EF5C9534 /* HTTPAuthenticationRoute.cpp in Sources */,
+				E6B6D9E199133D3EC4F86D64 /* HTTPUtils.cpp in Sources */,
+				0ABBA788D686393A544F521D /* IPVideoFrame.cpp in Sources */,
+				2D4BBE291C157242003394A1 /* Writer.cpp in Sources */,
+				0AA57038F831D0D5FF48327B /* IPVideoFrameQueue.cpp in Sources */,
+				AA16654F013932A46493A0B8 /* IPVideoFrameSettings.cpp in Sources */,
+				FE63147F1A1D2BE15DF11CF4 /* IPVideoRoute.cpp in Sources */,
+				96A67791267C6409AD7F5208 /* IPVideoRouteHandler.cpp in Sources */,
+				D65A66D5B9EE15D0CCDEA3B1 /* IPVideoRouteSettings.cpp in Sources */,
+				B4784D22FE2771E19BAB95EE /* OAuth10Credentials.cpp in Sources */,
+				2D4BBE791C157706003394A1 /* ofxCurl.cpp in Sources */,
+				3487813720F593EA9F715B8D /* OAuth10RequestFilter.cpp in Sources */,
+				384812B733207AC01221CE99 /* OAuth20Credentials.cpp in Sources */,
+				7A2AAAADE1F016D18814EA83 /* PostRequest.cpp in Sources */,
+				FC4046CCF3B53689DA98875A /* PostRoute.cpp in Sources */,
+				BE1B11D222F2F9E2261DA17D /* PostRouteFileHandler.cpp in Sources */,
+				7301B53C2B4B3A929B45D466 /* PostRouteHandler.cpp in Sources */,
+				4CE8741D8B1242B0049B02F6 /* PostRouteSettings.cpp in Sources */,
+				ABD5DFFB0C4F5453AF2AA3C0 /* ProgressMonitor.cpp in Sources */,
+				A745C5F0863AF40098BAD203 /* ProxySettings.cpp in Sources */,
+				22CE066401BC317F45C32142 /* PutRequest.cpp in Sources */,
+				0638064E94E86B32FD1B987B /* Session.cpp in Sources */,
+				F2878EC4D1E27145AFB329D5 /* SessionAuthenticationRoute.cpp in Sources */,
+				F4EE33DEA65A77ADCAF8C31A /* SessionCache.cpp in Sources */,
+				E4AEC4634BC9FB82CFFDEA34 /* SessionSettings.cpp in Sources */,
+				0094B7C956E4890A6B6D8398 /* StreamUtils.cpp in Sources */,
+				09D006C4501A83E7A07E4607 /* ThreadSettings.cpp in Sources */,
+				6B9CFABC810B67A8E45718C8 /* URIBuilder.cpp in Sources */,
+				9DC76F152856B337E4C60739 /* WebSocketConnection.cpp in Sources */,
+				2459D13CBC763577E05871A1 /* WebSocketFrame.cpp in Sources */,
+				095CB55515FA60050324EA26 /* WebSocketRoute.cpp in Sources */,
+				A06D22C525F88B6A778AF19C /* WebSocketRouteSettings.cpp in Sources */,
+				806C55028919E8FD6604ACB0 /* lz4.c in Sources */,
+				5C54D45F450D5CA6E5342949 /* Base64Encoding.cpp in Sources */,
+				8F8D94A8DC04BD3F46BBCB09 /* ByteBuffer.cpp in Sources */,
+				8CB390E9F6AE52F5ABC26323 /* ByteBufferReader.cpp in Sources */,
+				8658DA74AEA96271340193AD /* ByteBufferUtils.cpp in Sources */,
+				7B77D6300DD83374F4D5F353 /* ByteBufferWriter.cpp in Sources */,
+				0E54FFC5BA3428B898FCE736 /* COBSEncoding.cpp in Sources */,
+				49311DA2B2E6AF5197DD10C0 /* Compression.cpp in Sources */,
+				02B02FE7D809030071CAEB38 /* DeviceFilter.cpp in Sources */,
+				B8E92BE5338965AD25E5405D /* DirectoryFilter.cpp in Sources */,
+				C8A3654340FA19CCEF85E57D /* DirectoryUtils.cpp in Sources */,
+				4C2C4D34977A82DFC8441E67 /* DirectoryWatcher.cpp in Sources */,
+				467538F9ECE61DD5229DB7DF /* DirectoryWatcherManager.cpp in Sources */,
+				A02F4D0E8AE2892A1CA16B91 /* FileExtensionFilter.cpp in Sources */,
+				2A0E93150672208ADD4D9ACF /* HexBinaryEncoding.cpp in Sources */,
+				B824B3FB8017669EBF3D853B /* HiddenFileFilter.cpp in Sources */,
+				3B7D4012455D6A0D520692CC /* LinkFilter.cpp in Sources */,
+				2D4BBE7B1C157706003394A1 /* ofxCurlFileDownload.cpp in Sources */,
+				2D4BBE7F1C157706003394A1 /* ofxCurlFormTypeInput.cpp in Sources */,
+				F6BAF12EC174B695747D1AC0 /* PathFilterCollection.cpp in Sources */,
+				EFADA672A662E7EDFE4DCB76 /* RecursiveDirectoryIterator.cpp in Sources */,
+				5E509743BF2440EE6640FB4E /* RecursiveDirectoryIteratorStategies.cpp in Sources */,
+				DF372613DBE8D2ED83D61FBD /* RegexPathFilter.cpp in Sources */,
+				6518722324B737EE32C7602A /* SearchPath.cpp in Sources */,
+				119FB057E5E817B9424C845E /* SLIPEncoding.cpp in Sources */,
+				48345E13969909271026905B /* snappy-sinksource.cc in Sources */,
+				6F610E0F9C11EE90BE468000 /* snappy-stubs-internal.cc in Sources */,
+				94F2B6420119C34BEB1AB705 /* snappy.cc in Sources */,
+				57753805D2FDAD6521FF2A81 /* ofxJSONElement.cpp in Sources */,
+				0C2C8F82B747F53EA6007BA9 /* jsoncpp.cpp in Sources */,
+				60761634232A3971F078C89C /* MediaTypeMap.cpp in Sources */,
+				294E5220B982D2C60BBCC0AA /* cidr_addr.c in Sources */,
+				A5609F2EA5A7A664CB96E40C /* cidr_compare.c in Sources */,
+				DD07EB78C73B8448B41DD3BB /* cidr_from_str.c in Sources */,
+				3624F6E249355C6AD52F2246 /* cidr_get.c in Sources */,
+				D87C21C0D14BA31F5985A4C0 /* cidr_inaddr.c in Sources */,
+				F8552291B3E66E56FF5C4D75 /* cidr_mem.c in Sources */,
+				2D4BBE281C157242003394A1 /* Postman.cpp in Sources */,
+				9BE3C0DE22A4D1D2C40E1BD3 /* cidr_misc.c in Sources */,
+				A2600C76EADF2D1D2BBC257E /* cidr_net.c in Sources */,
+				5556E1AED1AFE6AAC136A6B9 /* cidr_num.c in Sources */,
+				20EF3F70ECE0BB1C1ED0307C /* cidr_to_str.c in Sources */,
+				48939C170D2BA531CD665CB7 /* CIDRAddress.cpp in Sources */,
+				543A45609D350B0B2170790A /* NetworkInterfaceListener.cpp in Sources */,
+				042C1224FDA073D4898E6FB1 /* NetworkUtils.cpp in Sources */,
+				2D4BBE7E1C157706003394A1 /* ofxCurlFormTypeFile.cpp in Sources */,
+				908E35E8C3112BF401854331 /* ofSSLManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../../addons/ofxXmlSettings/libs,
+					../../../../addons/ofxXmlSettings/src,
+					../../../../addons/ofxHTTP/libs,
+					../../../../addons/ofxHTTP/libs/ofxHTTP,
+					../../../../addons/ofxHTTP/libs/ofxHTTP/include,
+					../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx,
+					../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP,
+					../../../../addons/ofxHTTP/libs/ofxHTTP/src,
+					../../../../addons/ofxHTTP/src,
+					../../../../addons/ofxIO/libs,
+					../../../../addons/ofxIO/libs/alphanum,
+					../../../../addons/ofxIO/libs/alphanum/include,
+					../../../../addons/ofxIO/libs/lz4,
+					../../../../addons/ofxIO/libs/lz4/src,
+					../../../../addons/ofxIO/libs/ofxIO,
+					../../../../addons/ofxIO/libs/ofxIO/include,
+					../../../../addons/ofxIO/libs/ofxIO/include/ofx,
+					../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO,
+					../../../../addons/ofxIO/libs/ofxIO/src,
+					../../../../addons/ofxIO/libs/snappy,
+					../../../../addons/ofxIO/libs/snappy/src,
+					../../../../addons/ofxIO/src,
+					../../../../addons/ofxJSON/libs,
+					../../../../addons/ofxJSON/libs/jsoncpp,
+					../../../../addons/ofxJSON/libs/jsoncpp/include,
+					../../../../addons/ofxJSON/libs/jsoncpp/include/json,
+					../../../../addons/ofxJSON/libs/jsoncpp/src,
+					../../../../addons/ofxJSON/src,
+					../../../../addons/ofxMediaType/libs,
+					../../../../addons/ofxMediaType/libs/ofxMediaType,
+					../../../../addons/ofxMediaType/libs/ofxMediaType/include,
+					../../../../addons/ofxMediaType/libs/ofxMediaType/include/ofx,
+					../../../../addons/ofxMediaType/libs/ofxMediaType/src,
+					../../../../addons/ofxMediaType/src,
+					../../../../addons/ofxNetworkUtils/libs,
+					../../../../addons/ofxNetworkUtils/libs/libcidr,
+					../../../../addons/ofxNetworkUtils/libs/libcidr/include,
+					../../../../addons/ofxNetworkUtils/libs/libcidr/src,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include/ofx,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include/ofx/Net,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/src,
+					../../../../addons/ofxNetworkUtils/src,
+					../../../../addons/ofxSSLManager/libs,
+					../../../../addons/ofxSSLManager/src,
+					../../../../addons/ofxTaskQueue/libs,
+					../../../../addons/ofxTaskQueue/libs/ofxTaskQueue,
+					../../../../addons/ofxTaskQueue/libs/ofxTaskQueue/include,
+					../../../../addons/ofxTaskQueue/libs/ofxTaskQueue/include/ofx,
+					../../../../addons/ofxTaskQueue/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-lpthread",
+					"-mtune=native",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../../addons/ofxXmlSettings/libs,
+					../../../../addons/ofxXmlSettings/src,
+					../../../../addons/ofxHTTP/libs,
+					../../../../addons/ofxHTTP/libs/ofxHTTP,
+					../../../../addons/ofxHTTP/libs/ofxHTTP/include,
+					../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx,
+					../../../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP,
+					../../../../addons/ofxHTTP/libs/ofxHTTP/src,
+					../../../../addons/ofxHTTP/src,
+					../../../../addons/ofxIO/libs,
+					../../../../addons/ofxIO/libs/alphanum,
+					../../../../addons/ofxIO/libs/alphanum/include,
+					../../../../addons/ofxIO/libs/lz4,
+					../../../../addons/ofxIO/libs/lz4/src,
+					../../../../addons/ofxIO/libs/ofxIO,
+					../../../../addons/ofxIO/libs/ofxIO/include,
+					../../../../addons/ofxIO/libs/ofxIO/include/ofx,
+					../../../../addons/ofxIO/libs/ofxIO/include/ofx/IO,
+					../../../../addons/ofxIO/libs/ofxIO/src,
+					../../../../addons/ofxIO/libs/snappy,
+					../../../../addons/ofxIO/libs/snappy/src,
+					../../../../addons/ofxIO/src,
+					../../../../addons/ofxJSON/libs,
+					../../../../addons/ofxJSON/libs/jsoncpp,
+					../../../../addons/ofxJSON/libs/jsoncpp/include,
+					../../../../addons/ofxJSON/libs/jsoncpp/include/json,
+					../../../../addons/ofxJSON/libs/jsoncpp/src,
+					../../../../addons/ofxJSON/src,
+					../../../../addons/ofxMediaType/libs,
+					../../../../addons/ofxMediaType/libs/ofxMediaType,
+					../../../../addons/ofxMediaType/libs/ofxMediaType/include,
+					../../../../addons/ofxMediaType/libs/ofxMediaType/include/ofx,
+					../../../../addons/ofxMediaType/libs/ofxMediaType/src,
+					../../../../addons/ofxMediaType/src,
+					../../../../addons/ofxNetworkUtils/libs,
+					../../../../addons/ofxNetworkUtils/libs/libcidr,
+					../../../../addons/ofxNetworkUtils/libs/libcidr/include,
+					../../../../addons/ofxNetworkUtils/libs/libcidr/src,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include/ofx,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/include/ofx/Net,
+					../../../../addons/ofxNetworkUtils/libs/ofxNetworkUtils/src,
+					../../../../addons/ofxNetworkUtils/src,
+					../../../../addons/ofxSSLManager/libs,
+					../../../../addons/ofxSSLManager/src,
+					../../../../addons/ofxTaskQueue/libs,
+					../../../../addons/ofxTaskQueue/libs/ofxTaskQueue,
+					../../../../addons/ofxTaskQueue/libs/ofxTaskQueue/include,
+					../../../../addons/ofxTaskQueue/libs/ofxTaskQueue/include/ofx,
+					../../../../addons/ofxTaskQueue/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-lpthread",
+					"-mtune=native",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "tabParse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "tabParse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
