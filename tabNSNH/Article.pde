@@ -55,7 +55,7 @@ class Article {
   
     public void logData()
     {
-        println("\nARTCILE: \nTITLE:\t" + title + "\n" + "SUB:\t\t" + subtitle + "\n" + "BODY:\t" + body + "\n" + "DATE:\t" + date);
+        println("\nARTCILE: \nTITLE:\t" + title + "\n" + "SUB:" + subtitle + "\n" + "BODY:\t" + body + "\n" + "DATE:\t" + date);
     }
   
     // Present
@@ -74,7 +74,7 @@ class Article {
   
     public void draw()
     {
-        fill(50);
+        fill(255);
         textFont(mTitleFont);
         text("TITLE", mXPos + mWidth/2 /*- (mTitleFont.stringWidth(title)/2)*/, 96);
         line(mXPos + 54, 104, width - 54, 104);
@@ -85,6 +85,21 @@ class Article {
         String b = "asdsadsads asdsadsadj  asdsa dsadsa  asd sdjl kask asdlsajd   \nlasjdsalj dasld  lsjdslajddas lsa ";
         textFont(mBodyFont);
         text(b, mXPos + 54, 192);  
+    }
+    
+        public void drawDebug()
+    {
+        fill(255); stroke(255);
+        textFont(mTitleFont);
+        text("THIS WILL BE A TITLE", mXPos + mWidth/4 /*- (mTitleFont.stringWidth(title)/2)*/, pgheight/4);
+        line(mXPos + 54, pgheight/4 + 8, width - 54, pgheight/4 + 8);
+        
+        textFont(mSubtitleFont);
+        text("and this will be a subtitle", mXPos + mWidth/4 + 20 /*- (mTitleFont.stringWidth(title))*/, pgheight/4 + 48);
+    
+        String b = "This is a body.\n\nThere will be various types of information here, depeniding upon what type\nof post this is.\n\nBlogs, Events, Articles, and Community Announcements are \npossible types";
+        textFont(mBodyFont);
+        text(b, mXPos + 54, pgheight/4 + 96);  
     }
     
     
