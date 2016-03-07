@@ -2,20 +2,21 @@
 private void drawImageScreen(int xpos)
 {
   image_buffer.beginDraw();
-    //fill(255, 0, 0);
-    //rect(xpos, 0, pgwidth, pgheight);
-    
-    stroke(255);
-    line(xpos + 54, 192, pgwidth - 54, 192); // top
-    line(xpos + 54, 192, xpos + 54, 624); // left
-    line(pgwidth - 54, 624, pgwidth - 54, 192); // right
-    line(xpos + 54, 624, pgwidth - 54, 624); // bottom
-    line(xpos + 54, 192, pgwidth - 54, 624); // cross dr
-    line(xpos + 54, 624, pgwidth - 54, 192); // cross dl
-    
-    fill(255);
-    textSize(24);
-    text("--this will be an image --", xpos + pgwidth/4, 700);   
+  //fill(255, 0, 0);
+  //rect(xpos, 0, pgwidth, pgheight);
+  int pad = pgwidth/10;
+  int top = pgheight/8;
+  stroke(255);
+  line(xpos + pad, top + pad * 2, pgwidth - pad, top + pad * 2); // top
+  line(xpos + pad, top + pad * 2, xpos + pad, pad * 10); // left
+  line(pgwidth - pad, pad * 10, pgwidth - pad, top + pad * 2); // right
+  line(xpos + pad, pad * 10, pgwidth - pad, pad * 10); // bottom
+  line(xpos + pad, top + pad * 2, pgwidth - pad, pad * 10); // cross dr
+  line(xpos + pad, pad * 10, pgwidth - pad, top + pad * 2); // cross dl
+  
+  fill(255);
+  textSize(48);
+  text("--this will be an image --", xpos + pgwidth/4, pgheight/2 + pad * 2);   
     
   image_buffer.endDraw();
   image(image_buffer, xpos, 0, pgwidth, pgheight); 
@@ -26,8 +27,8 @@ private void drawMetaScreen(int xpos)
   meta_buffer.beginDraw();
     fill(255);
     //rect(xpos, 0, pgwidth, pgheight);
-    textSize(60);
-    text("--COMING SOON --", xpos + pgwidth/16, pgheight/4);
+    textSize(96);
+    text("--COMING SOON --", xpos + pgwidth/8, pgheight/2);
   meta_buffer.endDraw();
   image(meta_buffer, xpos, 0, pgwidth, pgheight); 
 }

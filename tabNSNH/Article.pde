@@ -65,9 +65,9 @@ class Article {
   
     public void setup()
     {
-        mTitleFont     = createFont("fonts/Open Sans.ttf", 32);
-        mSubtitleFont  = createFont("fonts/Open Sans.ttf", 24);
-        mBodyFont      = createFont("fonts/Open Sans.ttf", 14);
+        mTitleFont     = createFont("fonts/Open Sans.ttf", 72);
+        mSubtitleFont  = createFont("fonts/Open Sans.ttf", 48);
+        mBodyFont      = createFont("fonts/Open Sans.ttf", 24);
     }
   
     public void update()
@@ -94,15 +94,15 @@ class Article {
     {
         fill(255); stroke(255);
         textFont(mTitleFont);
-        text("THIS WILL BE A TITLE", mXPos + mWidth/4 /*- (mTitleFont.stringWidth(title)/2)*/, pgheight/4);
-        line(mXPos + 54, pgheight/4 + 8, width - 54, pgheight/4 + 8);
+        text("THIS WILL BE A TITLE", mXPos + mWidth/6 , pgheight/4);
+        line(mXPos + (pgwidth/10), pgheight/4 + 16, width - (pgwidth/10), pgheight/4 + 16);
         
         textFont(mSubtitleFont);
-        text("and this will be a subtitle", mXPos + mWidth/4 + 20 /*- (mTitleFont.stringWidth(title))*/, pgheight/4 + 48);
+        text("and this will be a subtitle", mXPos + mWidth/4 + 20, pgheight/4 + 72);
     
-        String b = "This is a body.\n\nThere will be various types of information here, depeniding upon what type\nof post this is.\n\nBlogs, Events, Articles, and Community Announcements are \npossible types";
+        String b = "This is a text body.\n\nThere will be various types of information here, depeniding upon what type\nof post this is.\n\nBlogs, Events, Articles, and Community Announcements are \npossible types";
         textFont(mBodyFont);
-        text(b, mXPos + 54, pgheight/4 + 96);  
+        text(b, mXPos + (pgwidth/10), pgheight/2);  
     }
     
     

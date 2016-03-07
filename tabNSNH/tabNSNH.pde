@@ -14,7 +14,8 @@ private static final int pgheight = 1920;
 
 void setup()
 {
-  size(3240, 1920);
+  fullScreen(SPAN);
+  //size(3240, 1920);
   
     // JSON
     //if(readJSON())
