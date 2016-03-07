@@ -17,10 +17,12 @@ void setup()
   size(1620, 960);
   
     // JSON
-    if(readJSON())
-    {
-        writeJSONToArticleArray();
-    }
+    //if(readJSON())
+    //{
+    //    writeJSONToArticleArray();
+    //}
+    Article tmp = new Article();
+    mArticles.add(tmp);
     
     // PGraphics
     image_buffer = createGraphics(pgwidth, pgheight);

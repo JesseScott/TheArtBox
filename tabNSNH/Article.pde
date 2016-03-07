@@ -16,7 +16,10 @@ class Article {
     
     // Constructors
     
-    Article(){}
+    Article()
+    {
+      setup();
+    }
     
     Article(String _title, String _subtitle, String _body, String _date)
     {
