@@ -9,12 +9,12 @@ PGraphics image_buffer;
 PGraphics meta_buffer;
 PGraphics news_buffer;
 
-private static final int pgwidth = 540;
-private static final int pgheight = 960;
+private static final int pgwidth = 1080;
+private static final int pgheight = 1920;
 
 void setup()
 {
-  size(1620, 960);
+  size(3240, 1920);
   
     // JSON
     //if(readJSON())
