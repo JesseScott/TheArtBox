@@ -1,6 +1,7 @@
 class Article {
    
- 
+    // Vars
+    
     int    yOffset;
     PFont  mTitleFont;
     PFont  mSubtitleFont;
@@ -15,7 +16,7 @@ class Article {
     
     
     // Constructors
-    
+   
     Article()
     {
       setup();
