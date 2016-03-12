@@ -5,7 +5,7 @@ private void drawImageScreen(int xpos)
   
   if(DEBUG) 
   {
-    fill(255, 0, 0);
+    fill(255, 0, 0, 50);
     rect(xpos, 0, pgwidth, pgheight);
     
     int pad = pgwidth/10;
@@ -21,7 +21,7 @@ private void drawImageScreen(int xpos)
     fill(255);
     textSize(pgwidth * 0.05);
     String msg = "--this will be an image --";
-    text(msg, xpos + startingHorizontalPositionForString(msg), pgheight/2 + pad * 2);   
+    text(msg, xpos + ((pgwidth-textWidth(msg))-(textWidth(msg)/4)), pgheight/2 + pad * 2);   
   }
   
   image_buffer.endDraw();
@@ -34,10 +34,11 @@ private void drawMetaScreen(int xpos)
   
   if(DEBUG) 
   {
-    fill(255);
-    //rect(xpos, 0, pgwidth, pgheight);
-    textSize(96);
-    text("--COMING SOON --", xpos + pgwidth/8, pgheight/2);
+    fill(0, 255, 0, 50);
+    rect(xpos, 0, pgwidth, pgheight);
+    textSize(pgwidth * 0.1);
+    String msg = "--COMING SOON --";
+    text(msg, xpos + (pgwidth-textWidth(msg)), pgheight/2);
   }
   
   meta_buffer.endDraw();
@@ -50,9 +51,10 @@ private void drawNewsScreen(int xpos)
   
   if(DEBUG) 
   {  
-    //fill(0, 0, 255);
-    //rect(xpos, 0, pgwidth, pgheight);
-    mArticles.get(current_article).drawDebug();
+    fill(0, 0, 255, 50);
+    stroke(255, 50);
+    rect(xpos, 0, pgwidth, pgheight);
+    mArticles.get(current_article).draw();
   }
   
   news_buffer.endDraw();

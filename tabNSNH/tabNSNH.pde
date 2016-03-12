@@ -43,7 +43,7 @@ void draw()
 {
   background(0);
   
-  drawImageScreen(pgwidth * 0);
+  //drawImageScreen(pgwidth * 0);
   //drawMetaScreen (pgwidth * 1);
-  //drawNewsScreen (pgwidth * 2);
+  drawNewsScreen (pgwidth * 2);
 }

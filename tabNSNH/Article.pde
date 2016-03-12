@@ -66,9 +66,9 @@ class Article {
   
     public void setup()
     {
-        mTitleFont     = createFont("fonts/Open Sans.ttf", 72);
-        mSubtitleFont  = createFont("fonts/Open Sans.ttf", 48);
-        mBodyFont      = createFont("fonts/Open Sans.ttf", 24);
+        mTitleFont     = createFont("fonts/Open Sans.ttf", pgwidth * 0.075);
+        mSubtitleFont  = createFont("fonts/Open Sans.ttf", pgwidth * 0.050);
+        mBodyFont      = createFont("fonts/Open Sans.ttf", pgwidth * 0.025);
     }
   
     public void update()
@@ -80,20 +80,23 @@ class Article {
     {
         fill(255);
         textFont(mTitleFont);
-        text("TITLE", mXPos + mWidth/2 /*- (mTitleFont.stringWidth(title)/2)*/, 96);
-        line(mXPos + 54, 104, width - 54, 104);
+        String title = "TITLE";
+        text(title, mXPos + (pgwidth/2)-(textWidth(title)/2), 96);
+        line(mXPos + 54, 104, mXPos + mWidth - 54, 104);
         
         textFont(mSubtitleFont);
-        text("subtitle subtitle", mXPos + mWidth/2 /*- (mTitleFont.stringWidth(title))*/, 144);
+        String subtitle = "subtitle subtitle";
+        text(subtitle, mXPos + (pgwidth/2)-(textWidth(subtitle)/2), 144);
     
-        String b = "asdsadsads asdsadsadj  asdsa dsadsa  asd sdjl kask asdlsajd   \nlasjdsalj dasld  lsjdslajddas lsa ";
         textFont(mBodyFont);
-        text(b, mXPos + 54, 192);  
+        String body = "asdsadsads asdsadsadj  asdsa dsadsa  asd sdjl kask asdlsajd   \nlasjdsalj dasld  lsjdslajddas lsa ";
+        text(body, mXPos + (pgwidth/2)-(textWidth(body)/2), 192);
     }
     
-        public void drawDebug()
+    public void drawDebug()
     {
-        fill(255); stroke(255);
+        fill(255); 
+        stroke(255);
         textFont(mTitleFont);
         text("THIS WILL BE A TITLE", mXPos + mWidth/6 , pgheight/4);
         line(mXPos + (pgwidth/10), pgheight/4 + 16, width - (pgwidth/10), pgheight/4 + 16);
