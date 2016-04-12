@@ -2,36 +2,54 @@
 
 Parse.Cloud.afterSave("Artwork", function (request, response)
 {
-   console.log('\n\n\nafterSave -- Artwork');
+   console.log('\n\n\nAfterSave -- Artwork\n\n');
 
    Parse.Cloud.useMasterKey();
-
    var _ = require('underscore.js');
    var Image = require("parse-image");
 
-   var artwork = request.object;
-   var url = artwork.get("file").url();
-   console.log(' URL is ' + url);
+   var resize = Parse.Cloud.httpRequest({url: request.object.get("file").url()})
 
-   var resize = Parse.Cloud.httpRequest({url: url})
-       // Create an Image from the data.
        .then(function(response) {
          var promise = Parse.Promise.as();
 
          promise = promise.then(function() {
-           console.log('Http Request!');
+           // Create an Image from the data.
            var image = new Image();
            return image.setData(response.buffer);
          })
          // Crop the image.
          .then(function(image) {
-           console.log("Scaling Image");
-            var _width = 800, _height = 600;
-            _height = Math.floor((image.height() * _width) / image.width());
-            console.log("..scale to " + _width + " x " + _height);
+            console.log("Scaling Image");
+            var max = 1800;
+            var width = image.width();
+            var height = image.height();
+            if(width > height)
+            {
+              if(width > max) {
+                height *= max / width;
+                width = max;
+              }
+            }
+            else if(height > width) {
+              if(height > max) {
+                width *= max / height;
+                height = max;
+              }
+            }
+            else if (height == width) {
+              if(height > max) {
+                width  = max;
+                height = max;
+              }
+            }
+            else {
+              console.log('Skipping Scale');
+            }
+            console.log("..scaled to " + width + " x " + height);
             return image.scale({
-                   width: _width,
-                   height: _height
+                   width: width,
+                   height: height
                });
          })
          // Convert Image to JPEG
@@ -58,7 +76,7 @@ Parse.Cloud.afterSave("Artwork", function (request, response)
               request.object.set("file", file);
               return request.object.save();
          });
-       console.log('Returning...');
+
        return promise;
      });
 
@@ -66,12 +84,12 @@ Parse.Cloud.afterSave("Artwork", function (request, response)
    // Wrap It Up
    resize.then(function(result)
    {
-     console.log('Success!');
-     response.success();
+     console.log('Success!' + result + '\n\n');
+     response.success(result);
    },
    function (error)
    {
-    console.log('Got Error ' + error.code + ' : ' + error.message);
+    console.log('Got Error ' + error.code + ' : ' + error.message + '\n\n');
     response.error(error);
   });
 
